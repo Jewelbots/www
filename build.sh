@@ -21,18 +21,12 @@ done
 
 DEPLOY_DIRECTORY="/var/src/www"
 
-if ${ENVIRONMENT = "dev"} 
-	if [-d "$DEPLOY_DIRECTORY"]; then
-	    cp ./www $DEPLOY_DIRECTORY
-	    else
-	    mkdir /var/src/www
-            cp ./www $DEPLOY_DIRECTORY
-	fi
+if [ $ENVIRONMENT = "dev" ]; then 
+      	mkdir -p $DEPLOY_DIRECTORY && cp ./www -R $DEPLOY_DIRECTORY
 	cd $DEPLOY_DIRECTORY
-	find . -type f -exec sed -i '' 's/\{{MIN}}//g {} +
-	
+	find . -type f -exec sed -i.bak '' 's/\{{MIN}}//g' {} +
 fi
-if ${ENVIRONMENT = "prod"}
+if [ $ENVIRONMENT == "prod" ]; then
 	find . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
 	do
 		cd $file
@@ -55,14 +49,10 @@ if ${ENVIRONMENT = "prod"}
 	git push origin $current_tag
 
 
-      if [-d "$DEPLOY_DIRECTORY"]; then
-      	cp ./www $DEPLOY_DIRECTORY
-      else
-        mkdir /var/src/www
-        cp ./www $DEPLOY_DIRECTORY
+      	mkdir -p $DEPLOY_DIRECTORY && cp ./www -R $DEPLOY_DIRECTORY
       fi
       cd $DEPLOY_DIRECTORY
-      find . -type f -name '*.html' -exec sed -i '' 's/\{{MIN}}/-min/g {} +
+      find . -type f -name '*.html' -exec sed -i.bak '' 's/\{{MIN}}/-min/g' {} +
       sudo service nginx restart
 fi
 
