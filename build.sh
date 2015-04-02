@@ -28,6 +28,10 @@ if [ $ENVIRONMENT = "dev" ]; then
         find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/1/g' {} +
 fi
 if [ $ENVIRONMENT == "prod" ]; then
+    mkdir -p $DEPLOY_DIRECTORY && cp -R ./www/ $DEPLOY_DIRECTORY
+    cd $DEPLOY_DIRECTORY
+    cd ./www
+
     find . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
     do
     cd $file
@@ -49,8 +53,6 @@ if [ $ENVIRONMENT == "prod" ]; then
     git commit -m "generating build for version $current_build"
     git push origin $current_tag
    
-    mkdir -p $DEPLOY_DIRECTORY && cp -R ./www/ $DEPLOY_DIRECTORY
-    cd $DEPLOY_DIRECTORY
     find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}/\-min/g' {} +
 fi
 
