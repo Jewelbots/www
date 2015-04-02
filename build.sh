@@ -25,6 +25,7 @@ if [ $ENVIRONMENT = "dev" ]; then
       	mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
 	cd $DEPLOY_DIRECTORY
 	find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}//g' {} +
+        find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/1/g' {} +
 fi
 if [ $ENVIRONMENT == "prod" ]; then
     find . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
@@ -42,7 +43,7 @@ if [ $ENVIRONMENT == "prod" ]; then
 
     current_build =$(date +%s)
     current_tag = `date +%Y.%m.%d.%H%M`
-    find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/$current_build/g' {} +
+    find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/$current_tag/g' {} +
     git add .
     git tag -a $ $current_tag -m 'Production deployment build $current_tag'
     git commit -m "generating build for version $current_build"
