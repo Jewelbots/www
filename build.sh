@@ -19,7 +19,7 @@ esac
 shift
 done
 
-DEPLOY_DIRECTORY="/var/src/www"
+DEPLOY_DIRECTORY="/var/src/"
 
 if [ $ENVIRONMENT = "dev" ]; then 
       	mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
