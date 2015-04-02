@@ -46,8 +46,8 @@ if [ $ENVIRONMENT == "prod" ]; then
     cd -
     done
 
-    current_build =$(date +%s)
-    current_tag = `date +%Y.%m.%d.%H%M`
+    current_build=$(date +%s)
+    current_tag=`date +%Y.%m.%d.%H%M`
     find . -type f -name '*.html' -exec sed -i .bak "s/{{VERSION}}/$current_tag/g" {} +
     cd "$source_dir"
     git add .
