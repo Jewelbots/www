@@ -33,13 +33,13 @@ if [ $ENVIRONMENT == "prod" ]; then
     cd $DEPLOY_DIRECTORY
     cd ./www
 
-    find . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
+    gfind . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
     do
     cd $file
     yuicompressor -o '.css$:-min.css' *.css
     cd -
     done
-    find . -type f -name '*.js' -printf '%h\n' | sort | uniq | while read file
+    gfind . -type f -name '*.js' -printf '%h\n' | sort | uniq | while read file
     do
     cd $file
     yuicompressor -o '.js$:-min.js' *.js
