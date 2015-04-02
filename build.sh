@@ -20,7 +20,7 @@ shift
 done
 
 DEPLOY_DIRECTORY="/var/src/"
-
+rm -rf /var/src/www/
 if [ $ENVIRONMENT = "dev" ]; then 
       	mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
 	cd $DEPLOY_DIRECTORY
