@@ -29,7 +29,7 @@ if [ $ENVIRONMENT = "dev" ]; then
 fi
 if [ $ENVIRONMENT == "prod" ]; then
     source_dir="$PWD"
-    mkdir -p $DEPLOY_DIRECTORY && cp -R ./www/ $DEPLOY_DIRECTORY
+    mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
     cd $DEPLOY_DIRECTORY
     cd ./www
 
@@ -48,7 +48,7 @@ if [ $ENVIRONMENT == "prod" ]; then
 
     current_build =$(date +%s)
     current_tag = `date +%Y.%m.%d.%H%M`
-    find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/$current_tag/g' {} +
+    find . -type f -name '*.html' -exec sed -i .bak "s/{{VERSION}}/$current_tag/g" {} +
     cd "$source_dir"
     git add .
     git tag -a $ $current_tag -m 'Production deployment build $current_tag'
