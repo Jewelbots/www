@@ -1,6 +1,6 @@
 .idea*
 .DS_Store*
-
+*.swp
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
