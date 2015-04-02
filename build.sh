@@ -50,7 +50,7 @@ if [ $ENVIRONMENT == "prod" ]; then
     current_tag=`date +%Y.%m.%d.%H%M`
     find . -type f -name '*.html' -exec sed -i .bak "s/{{VERSION}}/$current_tag/g" {} +
     cd "$source_dir"
-    git tag -a $ $current_tag -m "Production deployment build $current_tag"
+    git tag -a $current_tag -m "Production deployment build $current_tag"
     git commit -m "generating build for version $current_build"
     git push origin tag $current_tag
    
