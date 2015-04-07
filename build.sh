@@ -53,6 +53,7 @@ if [ $ENVIRONMENT == "prod" ]; then
     
 
     git tag -a $current_tag -m "Production deployment build $current_tag file version: $current_build"
+    git add .
     git commit -m "generating build for version $current_build"
     git push origin tag $current_tag
     git checkout $current_tag
