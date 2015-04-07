@@ -19,7 +19,6 @@ $(window).resize(function(){
 });
 
 $(window).bind('orientationchange', function(event) {
-
 	F5_size_section_cta_top();
 	F3_override_home_link();
 });
