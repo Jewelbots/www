@@ -24,8 +24,8 @@ rm -rf /var/src/www/
 if [ $ENVIRONMENT = "dev" ]; then 
       	mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
 	cd $DEPLOY_DIRECTORY
-	find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}//g' {} +
-        find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/1/g' {} +
+	find . -type f -name '*.html' -exec sed -i '' 's/{{MIN}}//g' {} +
+        find . -type f -name '*.html' -exec sed -i '' 's/{{VERSION}}/1/g' {} +
 fi
 if [ $ENVIRONMENT == "prod" ]; then
     gfind . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
@@ -43,15 +43,15 @@ if [ $ENVIRONMENT == "prod" ]; then
 
     current_build=$(date +%s)
     current_tag=`date +%Y.%m.%d.%H%M`
-    find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}/\-min/g' {} +
-    find . -type f -name '*.html' -exec sed -i .bak "s/{{VERSION}}/$current_build/g" {} +
+    find . -type f -name '*.html' -exec sed -i '' 's/{{MIN}}/\-min/g' {} +
+    find . -type f -name '*.html' -exec sed -i '' "s/{{VERSION}}/$current_build/g" {} +
     
     git checkout -b $current_build
     git add .
     git commit -m "generating build for version $current_tag and branch: $current_build"
     git push origin $current_build
     eb deploy jewliebots-dev
+    git checkout master
 fi
-git checkout master
 
 
