@@ -46,10 +46,10 @@ if [ $ENVIRONMENT == "prod" ]; then
     find . -type f -name '*.html' -exec sed -i '' 's/{{MIN}}/\-min/g' {} +
     find . -type f -name '*.html' -exec sed -i '' "s/{{VERSION}}/$current_build/g" {} +
     
-    git checkout -b $current_build
+    git checkout -b $current_tag
     git add .
-    git commit -m "generating build for version $current_tag and branch: $current_build"
-    git push origin $current_build
+    git commit -m "generating build for branch $current_tag and version: $current_build"
+    git push origin $current_tag
     eb deploy jewliebots-dev
     git checkout master
 fi
