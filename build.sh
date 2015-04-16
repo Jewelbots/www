@@ -24,15 +24,10 @@ rm -rf /var/src/www/
 if [ $ENVIRONMENT = "dev" ]; then 
       	mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
 	cd $DEPLOY_DIRECTORY
-	find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}//g' {} +
-        find . -type f -name '*.html' -exec sed -i .bak 's/{{VERSION}}/1/g' {} +
+	find . -type f -name '*.html' -exec sed -i '' 's/{{MIN}}//g' {} +
+        find . -type f -name '*.html' -exec sed -i '' 's/{{VERSION}}/1/g' {} +
 fi
 if [ $ENVIRONMENT == "prod" ]; then
-    source_dir="$PWD"
-    mkdir -p $DEPLOY_DIRECTORY && cp -R ./www $DEPLOY_DIRECTORY
-    cd $DEPLOY_DIRECTORY
-    cd ./www
-    pwd
     gfind . -type f -name '*.css' -printf '%h\n' | sort | uniq | while read file
     do
     cd $file
@@ -48,15 +43,15 @@ if [ $ENVIRONMENT == "prod" ]; then
 
     current_build=$(date +%s)
     current_tag=`date +%Y.%m.%d.%H%M`
-    find . -type f -name '*.html' -exec sed -i .bak 's/{{MIN}}/\-min/g' {} +
-    find . -type f -name '*.html' -exec sed -i .bak "s/{{VERSION}}/$current_build/g" {} +
-    cd "$source_dir"
-    pwd
-    git tag -a $current_tag -m "Production deployment build $current_tag file version: $current_build"
-    git commit -m "generating build for version $current_build"
-    git push origin tag $current_tag
-   
+    find . -type f -name '*.html' -exec sed -i '' 's/{{MIN}}/\-min/g' {} +
+    find . -type f -name '*.html' -exec sed -i '' "s/{{VERSION}}/$current_build/g" {} +
+    
+    git checkout -b $current_tag
+    git add .
+    git commit -m "generating build for branch $current_tag and version: $current_build"
+    git push origin $current_tag
+    eb deploy jewliebots-dev
+    git checkout master
 fi
-
 
 

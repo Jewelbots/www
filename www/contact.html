@@ -90,15 +90,16 @@
 				<a class="icon" href="http://www.jewliebots.com/">Home</a>
 				<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
 				<img class="wordmark" src="assets/images/header_wordmark.png" />
-				<a class="cta_large" href="#">Sign up for Mailing-List</a>
+				<a class="cta_large" href="#">Launching soon, Be the first to know</a>
 
 				<ul class="navigation">
-					<li><a class="cta" href="#">Sign up for Mailing-List</a></li>
-					<li><a href="http://jewliebots.com/about.html">About</a></li>
+					<li><a class="cta" href="#">Launching soon, Be the first to know</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about.html">About</a></li>
 					<!--<li><a href="#">Blog</a></li>-->
-					<li><a href="http://jewliebots.com/contact.html">Contact</a></li>
-					<li><a href="http://jewliebots.com/privacy.html">Privacy</a></li>
-					<!--<li><a class="small" href="http://jewliebots.com/privacy.html">Privacy</a></li><br />-->
+					<li><a href="/contact.html">Contact</a></li>
+					<li><a href="/privacy.html">Privacy</a></li>
+					<!--<li><a class="small" href="/privacy.html">Privacy</a></li><br />-->
 				</ul>
 
 			</div><!--//header -->
@@ -147,11 +148,10 @@
 						</ul><!--//social -->
 
 						<ul class="navigation">
-							<li><a href="http://jewliebots.com/about.html">About</a></li>
-							<li><a href="http://jewliebots.com/">Home</a></li>
+							<li><a href="/about.html">About</a></li>
 							<!--<li><a href="#">Blog</a></li>-->
-							<li><a href="http://jewliebots.com/contact.html">Contact</a></li>
-							<li><a href="http://jewliebots.com/privacy.html">Privacy</a></li><br />
+							<li><a href="/contact.html">Contact</a></li>
+							<li><a href="/privacy.html">Privacy</a></li><br />
 							<!--<li><a class="small" href="#">Terms & Privacy Policy</a></li>-->
 						</ul>
 
@@ -174,7 +174,15 @@
 	</div><!--//site_container -->
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/site-scripts.js"></script>
+	<script type="text/javascript" src="assets/scripts/site-scripts{{MIN}}.js?v={{VERSION}}"></script>
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  		ga('create', 'UA-61700726-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
 
 </body>
 </html>
