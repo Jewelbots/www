@@ -66,7 +66,7 @@ function F3_toggle_mobile_nav(){
 }
 //
 //
-//-- hiode nav
+//-- hide nav
 function F5_hide_navigation_mobile(){
 	if($(window).width()>767){
 		$('.header ul.navigation').css({'display':'none'});
@@ -107,6 +107,16 @@ function F5_size_section_cta_top(){
 
 	$('#section_cta_top').css({'height': $('#site_container').width()/1.333-70+'px' });
 	$('#section_cta_top').css({'max-height': $(window).height()-20 });
+	
+
+	/*
+	if($('#section_cta_top').height() < 1010 && $(window).width() > 1280){
+		$('#section_cta_top .cta').css({'top': $(window).height()-400 });
+	} else {
+		$('#section_cta_top .cta').css({'top': '' });
+	}
+	*/
+
 }
 //
 //
@@ -143,14 +153,57 @@ function F7_change_color(color){
 	$('#section_how').removeClass('color_1');
 	$('#section_how').removeClass('color_2');
 	$('#section_how').removeClass('color_3');
+	$('#section_how').removeClass('color_4');
+	$('#section_how').removeClass('color_5');
+	
+	$('#section_what .circle').removeClass('active');
+	
+	$('.simulator #option_1_1').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	$('.simulator #option_1_2').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	$('.simulator #option_1_3').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	$('.simulator #option_1_4').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	$('.simulator #option_1_5').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
 	
 	if(color=="c1"){
 		$('#section_how').addClass('color_1');
+		$('.simulator #option_1_1').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+		$('.simulator #option_1_gif').attr('src',animation_1.src);
+		$('#section_what #circle_1').addClass('active');
 	}
 	if(color=="c2"){
 		$('#section_how').addClass('color_2');
+		$('.simulator #option_1_2').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+		$('.simulator #option_1_gif').attr('src',animation_1.src);
+		$('#section_what #circle_2').addClass('active');
 	}
 	if(color=="c3"){
 		$('#section_how').addClass('color_3');
+		$('.simulator #option_1_3').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+		$('.simulator #option_1_gif').attr('src',animation_1.src);
+		$('#section_what #circle_3').addClass('active');
+	}
+	if(color=="c4"){
+		$('#section_how').addClass('color_4');
+		$('.simulator #option_1_4').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+		$('.simulator #option_1_gif').attr('src',animation_1.src);
+		$('#section_what #circle_4').addClass('active');
+	}
+	if(color=="c5"){
+		$('#section_how').addClass('color_5');
+		$('.simulator #option_1_5').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+		$('.simulator #option_1_gif').attr('src',animation_1.src);
+		$('#section_what #circle_5').addClass('active');
 	}
 }
+//
+//
+//-- plays the blinking animation upon click
+var animation_1 = new Image();
+	animation_1.src ='assets/images/section_what_jb_option_1_gif.gif';
+
+var animation_2 = new Image();
+    animation_2.src ='http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072';
+
+$('.simulator #option_1_gif').click(function() {
+  $(this).attr('src',animation_2.src);
+});

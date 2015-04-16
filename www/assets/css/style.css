@@ -82,20 +82,22 @@ body {
 	url('../../assets/fonts/entypo-social.ttf') format('truetype'),
 	url('../../assets/fonts/entypo-social.svg#svgFontName') format('svg'); }
 }
-
+strong {
+	font-weight: 500;
+}
 /* ───────────────── COLORS ──────────────── */
 /*
 
 super light green		rgba(75,210,190,1.0);
-light_green					rgba(115,200,190,1.0);
-dark green					rgba(0,165,150,1.0);
-teal								rgba(0,150,155,1.0);
+light_green				rgba(115,200,190,1.0);
+dark green				rgba(0,165,150,1.0);
+teal					rgba(0,150,155,1.0);
 
-temp jb c1					rgba(50,135,110,1.0);
-temp jb c2					rgba(255,25,80,1.0);
-temp jb c3					rgba(165,125,205,1.0);
+temp jb c1				rgba(50,135,110,1.0);
+temp jb c2				rgba(255,25,80,1.0);
+temp jb c3				rgba(165,125,205,1.0);
 
-cta red							rgba(255,66,66,1.0);
+cta red					rgba(255,66,66,1.0);
 cta red shadow			rgba(140,40,40,1.0);
 
 */
@@ -194,7 +196,7 @@ cta red shadow			rgba(140,40,40,1.0);
 #header_container .header a.cta_large {
 	display: block;
 	position: absolute;
-	width: 260px;
+	width: 380px;
 	height: 50px;
 	top: 40px;
 	right: 60px;
@@ -257,8 +259,8 @@ cta red shadow			rgba(140,40,40,1.0);
 	opacity: 1.0;
 }
 #header_container .header_sticky a.cta_large, #header_container .header_sticky_full a.cta_large {
-	top: 20px;
-	right: 40px;
+	top: 17px;
+	right: 20px;
 }
 
 /* - navigation - */
@@ -354,7 +356,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	#header_container .header ul.navigation li a.cta {
 		display: block;
 		position: relative;
-		width: 260px;
+		width: 300px;
 		height: 52px;
 		margin: 40px auto 20px auto;
 		padding: 0 0 0 0;
@@ -365,9 +367,9 @@ cta red shadow			rgba(140,40,40,1.0);
 		font-family: "museo-sans",sans-serif;
 		font-style: normal;
 		font-weight: 500;
-		font-size: 14px;
+		font-size: 12px;
 		line-height: 50px;
-		letter-spacing: 1px;
+		letter-spacing: 0px;
 		text-indent: 0;
 		text-transform: uppercase;
 		color: rgba(255,255,255,1.0);
@@ -529,7 +531,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	display: block;
 	position: fixed;
 	width: 500px;
-	height: 360px;
+	height: 380px;
 	left: 50%;
 	top: 90%;
 	right: 0px;
@@ -574,8 +576,8 @@ cta red shadow			rgba(140,40,40,1.0);
 	display: block;
 	position: relative;
 	width: auto;
-	height: 50px;
-	margin: 60px 0 0 0;
+	height: 64px;
+	margin: 40px 0 20px 0;
 	padding: 0 0 0 0;
 
 	font-family: "museo-sans-rounded",sans-serif;
@@ -585,7 +587,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	line-height: 36px;
 	letter-spacing: 1px;
 	text-indent: 0;
-	text-transform: none;
+	text-transform: uppercase;
 	text-align: center;
 	color: rgba(0,165,150,1.0);
 
@@ -792,11 +794,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* ───── index.php ──────────────────────────────────────────────────────────── */
 
-/* - panel_1 - */
-
-/*
-attention min-height !!! .index #section_cta_top && .index #section_cta_top .slideshow .slides
-*/
+/* - panel_1 - *//* attention min-height !!! .index #section_cta_top && .index #section_cta_top .slideshow .slides */
 
 .index #section_cta_top {
 	display: block;
@@ -876,8 +874,9 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 .index #section_cta_top .cta {
 	display: block;
 	position: absolute;
-	width: 700px;
+	width: 880px;
 	height: auto;
+	max-height: 1010px;
 	left: 100px;
 	top: 300px;
 	margin: 0 0 0 0;
@@ -1078,11 +1077,13 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 .index #section_what .copy {
 	display: block;
 	position: relative;
-	width: 400px;
+	width: 100%;
+	max-width: 1180px;
 	height: auto;
-	margin: 150px 0 0 200px;
-	padding: 0 0 0 0;
-	
+	margin: 0 auto 0 auto;
+	padding: 140px 60px 0 60px;
+
+	z-index: 2;
 }
 .index #section_what .copy h3 {
 	display: block;
@@ -1109,6 +1110,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	display: block;
 	position: relative;
 	width: 100%;
+	max-width: 420px;
 	height: auto;
 	margin: 0 0 20px 0;
 	padding: 0 0 0 0;
@@ -1123,6 +1125,8 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	text-transform: none;
 	text-align: left;
 	color: rgba(75,210,190,1.0);
+	
+	z-index: 2;
 }
 .index #section_what .copy a {
 	display: block;
@@ -1148,16 +1152,190 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	color: rgba(0,150,155,0.5);
 }
 
-@media (max-width: 1023px) {}
+.index #section_what .copy .simulator {
+	display: block;
+	position: absolute;
+	width: 45%;
+	height: auto;
+	top: 80px;
+	right: 140px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	
+	z-index: 1;
+}
+.index #section_what .copy .simulator img {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	right: 0px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.index #section_what .copy .simulator #option_1_1, .index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5, .index #section_what .copy .simulator #option_1_none {
+	width: 80%;
+	top: 80px;
+	right: 50px;
+}
+.index #section_what .copy .simulator #option_1_1 {
+	display: block;
+}
+.index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5 {
+	display: none;
+}
+
+.index #section_what .copy ul {
+	display: block;
+	position: absolute;
+	top: 140px;
+	right: 100px;
+	margin: 0 0 0 0;
+	
+	z-index: 3;
+}
+.index #section_what .copy ul li {
+	margin: 0 0 0 0;
+}
+.index #section_what .copy ul li p.color {
+	margin: 20px 0 10px 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 26px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(75,210,190,1.0);
+}
+.index #section_what .copy ul li a {
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-decoration: none;
+	text-align: left;
+}
+.index #section_what .copy ul li a div.circle {
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 15px 15px 0px 0px;
+	padding: 0 0 0 0;
+
+	text-indent: 35px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	opacity: 1.0;
+}
+.index #section_what .copy ul li a div.circle:hover {
+	opacity: 0.7;
+}
+.index #section_what .copy ul li a div.active {
+	width: 30px;
+	height: 30px;
+	margin: 10px 15px -5px -5px;
+
+	line-height: 30px;
+	text-indent: 40px;
+
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	opacity: 1.0;
+}
+
+@media (max-width: 1180px) {
+	.index #section_what .copy p {
+		max-width: 360px;
+	}
+	.index #section_what .copy ul {
+		top: 140px;
+		right: 140px;
+	}
+	.index #section_what .copy .simulator {
+		display: block;
+		position: absolute;
+		width: 40%;
+		top: 80px;
+		right: 180px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	
+		z-index: 1;
+	}
+	.index #section_what .copy .simulator img {
+	}
+
+	.index #section_what .copy .simulator #option_1_1, .index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5, .index #section_what .copy .simulator #option_1_none {
+		width: 80%;
+		top: 80px;
+		right: 50px;
+	}
+}
+@media (max-width: 1023px) {
+	.index #section_what .copy {
+		display: block;
+		position: relative;
+
+		width: 100%;
+		max-width: 880px;
+		height: auto;
+		margin: 0 auto 0 auto;
+		padding: 100px 60px 0 60px;
+	}
+	.index #section_what .copy p {
+		max-width: 320px;
+	}
+	.index #section_what .copy ul {
+		display: block;
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+	.index #section_what .copy .simulator {
+		width: 55%;
+		top: 160px;
+		right: 0px;
+	}
+	.index #section_what .copy .simulator #option_1_1, .index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5, .index #section_what .copy .simulator #option_1_none {
+		width: 80%;
+		top: 60px;
+		right: 40px;
+	}
+}
 @media (max-width: 767px) {
+	.index #section_what {
+		background-image: none;
+	}
+	.index #section_what .copy ul {
+		display: none;
+		position: relative;
+		width: 100%;
+	}
+	.index #section_what .copy ul li a {
+		text-align: center;
+	}
 	.index #section_what .copy {
 		display: block;
 		position: relative;
 		width: 100%;
 		height: auto;
 		margin: 0 0 0 0;
-		padding: 60px 20px 0 20px;
-	
+		padding: 60px 20px 60px 20px;
 	}
 	.index #section_what .copy h3 {
 		width: 100%;
@@ -1170,6 +1348,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	}
 	.index #section_what .copy p {
 		width: 100%;
+		max-width: 100%;
 		margin: 0 0 20px 0;
 		padding: 0 0 0 0;
 
@@ -1184,6 +1363,23 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	.index #section_what .copy a:hover {
 		color: rgba(0,150,155,0.5);
 	}
+	.index #section_what .copy .simulator {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: auto;
+		top: 0;
+		right: 0;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	
+		z-index: 1;
+	}
+	.index #section_what .copy .simulator #option_1_1, .index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5, .index #section_what .copy .simulator #option_1_none {
+		width: 80%;
+		top: 60px;
+		right: 40px;
+	}
 }
 
 
@@ -1194,7 +1390,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	min-height: 700px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	background-color: rgba(90,225,200,1.0);
+	background-color: rgba(6,216,159,1.0);
 
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
@@ -1205,19 +1401,19 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 .index #section_how .copy {
 	display: block;
 	position: relative;
-	float: right;
-	width: 400px;
+	width: 100%;
+	max-width: 1180px;
 	height: auto;
-	margin: 200px 200px 0 0;
-	padding: 0 0 0 0;
+	margin: 0 auto 0 auto;
+	padding: 0px 0 0 0;
 }
 .index #section_how .copy h3 {
 	display: block;
 	position: relative;
-	width: 100%;
+	width: 40%;
 	height: auto;
-	margin: 0 0 10px 0;
-	padding: 0 0 0 0;
+	margin: 0 0 10px 50%;
+	padding: 200px 0 0 0;
 
 	font-family: "museo-sans-rounded",sans-serif;
 	font-style: normal;
@@ -1236,10 +1432,10 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 .index #section_how .copy p {
 	display: block;
 	position: relative;
-	width: 100%;
+	width: 40%;
 	height: auto;
-	margin: 0 0 20px 0;
-	padding: 0 0 0 0;
+	margin: 0 0 0 50%;
+	padding: 0 0 20px 0;
 
 	font-family: "museo-sans",sans-serif;
 	font-style: normal;
@@ -1253,15 +1449,41 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	color: rgba(75,210,190,1.0);
 	color: rgba(255,255,255,1.0);
 }
+.index #section_how .copy img.iphone_app {
+	display: block;
+	position: absolute;
+	width: 630px;
+	height: auto;
+	top: 0px;
+	left: 3%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.index #section_how .copy img.iphone_app_gif {
+	display: block;
+	position: absolute;
+	width: 630px;
+	height: auto;
+	top: 0px;
+	left: 3%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
 
 .index #section_how.color_1 {
-	background-color: rgba(50,135,110,1.0);
+	background-color: rgba(6,216,159,1.0);
 }
 .index #section_how.color_2 {
-	background-color: rgba(255,25,80,1.0);
+	background-color: rgba(197,113,234,1.0);
 }
 .index #section_how.color_3 {
-	background-color: rgba(165,125,205,1.0);
+	background-color: rgba(29,96,131,1.0);
+}
+.index #section_how.color_4 {
+	background-color: rgba(61,158,184,1.0);
+}
+.index #section_how.color_5 {
+	background-color: rgba(143,34,63,1.0);
 }
 .index #section_how.color_1 .copy h3, .index #section_how.color_2 .copy h3, .index #section_how.color_3 .copy h3 {
 	color: rgba(255,255,255,1.0);
@@ -1272,7 +1494,80 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	color: rgba(255,255,255,1.0);
 }
 
-@media (max-width: 1023px) {}
+@media (max-width: 1023px) {
+	.index #section_how .copy {
+		display: block;
+		position: relative;
+		width: 100%;
+		max-width: 880px;
+		height: auto;
+		margin: 0 auto 0 auto;
+		padding: 100px 60px 0 60px;
+	}
+	.index #section_how .copy h3 {
+		display: block;
+		position: relative;
+		width: 60%;
+		height: auto;
+		margin: 0 0 10px 45%;
+		padding: 60px 0 0 0;
+
+		font-family: "museo-sans-rounded",sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 36px;
+		letter-spacing: 1px;
+		text-indent: 0;
+		text-transform: uppercase;
+		text-align: left;
+		color: rgba(90,225,200,1.0);
+		color: rgba(255,255,255,1.0);
+
+		text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+	}
+	.index #section_how .copy p {
+		display: block;
+		position: relative;
+		width: 50%;
+		height: auto;
+		margin: 0 0 0 45%;
+		padding: 0 0 20px 0;
+
+		font-family: "museo-sans",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 0;
+		text-indent: 0;
+		text-transform: none;
+		text-align: left;
+		color: rgba(75,210,190,1.0);
+		color: rgba(255,255,255,1.0);
+	}
+
+	.index #section_how .copy img.iphone_app {
+		display: block;
+		position: absolute;
+		width: 400px;
+		height: auto;
+		top: 60px;
+		left: 0px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	.index #section_how .copy img.iphone_app_gif {
+		display: block;
+		position: absolute;
+		width: 400px;
+		height: auto;
+		top: 60px;
+		left: 0px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+}
 @media (max-width: 767px) {
 	.index #section_how .copy {
 		display: block;
@@ -1294,19 +1589,24 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	}
 	.index #section_how .copy p {
 		width: 100%;
-		margin: 0 0 20px 0;
-		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+		padding: 0 0 20px 0;
 
 		font-size: 16px;
 		line-height: 26px;
 		text-align: center;
 	}
-	.index #section_how .copy a {
-		color: rgba(0,150,155,0.5);
-		text-align: center;
+
+	.index #section_how .copy img.iphone_app {
+		display: block;
+		position: relative;
+		width: 80%;
+		height: auto;
+		margin: -90px auto -100px auto;
+		padding: 0 0 0 0;
 	}
-	.index #section_how .copy a:hover {
-		color: rgba(0,150,155,0.5);
+	.index #section_how .copy img.iphone_app_gif {
+		display: none;
 	}
 }
 
@@ -1318,16 +1618,18 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	min-height: 700px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,1.0);/**/
 }
 .index #section_opensource .copy {
 	display: block;
 	position: relative;
-	width: 550px;
+	width: 100%;
+	max-width: 1180px;
 	height: auto;
-	margin: 200px 0 0 200px;
-	padding: 0 0 0 0;
-	
+	margin: 0 auto 0 auto;
+	padding: 160px 60px 0 60px;
+
+	z-index: 2;
 }
 .index #section_opensource .copy h3 {
 	display: block;
@@ -1354,6 +1656,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	display: block;
 	position: relative;
 	width: 100%;
+	max-width: 500px;
 	height: auto;
 	margin: 0 0 20px 0;
 	padding: 0 0 0 0;
@@ -1366,25 +1669,6 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	letter-spacing: 0;
 	text-indent: 0;
 	text-transform: none;
-	text-align: left;
-	color: rgba(0,150,155,1.0);
-}
-.index #section_opensource .copy h4 {
-	display: block;
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin: 30px 0 0 0;
-	padding: 0 0 0 0;
-
-	font-family: "museo-sans",sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 36px;
-	letter-spacing: 1px;
-	text-indent: 0;
-	text-transform: uppercase;
 	text-align: left;
 	color: rgba(0,150,155,1.0);
 }
@@ -1428,6 +1712,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	text-decoration: underline;
 	color: rgba(0,150,155,0.5);
 }
+
 .index #section_opensource .copy img {
 	display: inline-block;
 	position: relative;
@@ -1436,8 +1721,45 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	margin: 40px 10px 0 -5px;
 	padding: 0 0 0 0;
 }
+.index #section_opensource .copy img.desktop {
+	display: block;
+	position: absolute;
+	width: auto;
+	height: 560px;
+	margin: -370px 10px 0 380px;
+	padding: 0 0 0 0;
 
-@media (max-width: 1023px) {}
+	z-index: -1;
+}
+.index #section_opensource .copy img.mobile {
+	display: none;
+}
+
+@media (max-width: 1180px) {
+	.index #section_opensource .copy img.desktop {
+		height: 520px;
+		margin: -360px 10px 0 340px;
+	}
+}
+@media (max-width: 1023px) {
+	.index #section_opensource .copy {
+		display: block;
+		position: relative;
+
+		width: 100%;
+		max-width: 880px;
+		height: auto;
+		margin: 0 auto 0 auto;
+		padding: 100px 60px 0 60px;
+	}
+	.index #section_opensource .copy p {
+		width: 400px;
+	}
+	.index #section_opensource .copy img.desktop {
+		height: 460px;
+		margin: -300px 10px 0 260px;
+	}
+}
 @media (max-width: 767px) {
 	.index #section_opensource .copy {
 		display: block;
@@ -1465,6 +1787,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	}
 	.index #section_opensource .copy p {
 		width: 100%;
+		max-width: 100%;
 		margin: 0 0 20px 0;
 		padding: 0 0 0 0;
 
@@ -1493,6 +1816,20 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 		height: 50px;
 		margin: 10px auto 0 auto;
 		padding: 0 0 0 0;
+	}
+
+	.index #section_opensource .copy img.desktop {
+		display: none;
+	}
+	.index #section_opensource .copy img.mobile {
+		display: block;
+		position: relative;
+		width: auto;
+		height: 360px;
+		margin: 0 auto 30px auto;
+		padding: 0 0 0 0;
+
+		z-index: -1;
 	}
 }
 
@@ -1992,7 +2329,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	position: relative;
 	width: 100%;
 	height: auto;
-	margin: 0 0 40px 0;
+	margin: 0 0 20px 0;
 	padding: 0 0 0 0;
 
 	font-family: "museo-sans-rounded",sans-serif;
@@ -2013,15 +2350,15 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	position: relative;
 	width: 100%;
 	height: auto;
-	margin: 0 auto 40px auto;
+	margin: 0 0 40px 0;
 	padding: 0 0 40px 0;
 	border-bottom: solid 1px rgba(0,150,155,1.0);
 
 	font-family: "museo-sans",sans-serif;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 22px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 26px;
 	letter-spacing: 0;
 	text-indent: 0;
 	text-transform: none;
@@ -2029,27 +2366,84 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	color: rgba(0,150,155,1.0);
 }
 
-.privacy #section_policy .copy h3 {
-	margin: 0 0 10px 0;
-	padding: 0 0 0 0;
+.privacy #section_policy .copy h2 {
+	max-width: 100%;
+	margin: 40px 0 10px 0;
+	padding: 30px 0 0 0;
+	border-top: dashed 1px rgba(0,150,155,0.6);
 
-	font-size: 16px;
-	line-height: 26px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 20px;
 	letter-spacing: 0px;
 	text-transform: uppercase;
-	color: rgba(0,150,155,1.0);
+	color: rgba(0,130,135,1.0);
+
+	text-shadow: 0px 0px 0px rgba(0,0,0,1.0);
+}
+
+.privacy #section_policy .copy h3 {
+	max-width: 600px;
+	margin: 10px 0 10px 0;
+	padding: 10px 0 0 0;
+
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	color: rgba(0,130,135,1.0);
 
 	text-shadow: 0px 0px 0px rgba(0,0,0,1.0);
 }
 .privacy #section_policy .copy p.small {
-	margin: 0 auto 20px auto;
-	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	padding: 0 0 10px 0;
 	border-bottom: solid 0px rgba(0,150,155,1.0);
 
 	font-size: 14px;
 	line-height: 22px;
 }
+.privacy #section_policy .copy ul {
+	margin: 5px 0 10px 25px;
+	padding: 0 0 0 0;
 
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,150,155,1.0);
+
+	list-style: disc;
+}
+.privacy #section_policy .copy ul li {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,150,155,1.0);
+
+	list-style: disc;
+}
+.privacy #section_policy .copy a {
+	font-weight: 500;
+	color: rgba(0,130,135,1.0);
+
+	text-decoration: underline;
+}
 
 @media (max-width: 1023px) {
 	.privacy #section_hero_top {
@@ -2120,7 +2514,7 @@ attention min-height !!! .index #section_cta_top && .index #section_cta_top .sli
 	font-style: normal;
 	font-weight: 500;
 	font-size: 42px;
-	line-height: 36px;
+	line-height: 40px;
 	letter-spacing: 1px;
 	text-indent: 0;
 	text-transform: uppercase;
