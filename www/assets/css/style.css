@@ -2572,6 +2572,10 @@ cta red shadow			rgba(140,40,40,1.0);
 	text-align: center;
 	text-transform: uppercase;
 	color: rgba(255,255,255,1.0);
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 	
 	-webkit-transition: .17s ease-in-out;
 	-moz-transition: .17s ease-in-out;
