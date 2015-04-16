@@ -198,8 +198,8 @@ function F7_change_color(color){
 //
 //
 //-- plays the blinking animation upon click
-var animation_1 = new Image();
-	animation_1.src ='assets/images/section_what_jb_option_1_gif.gif';
+//var animation_1 = new Image();
+	//animation_1.src ='assets/images/section_what_jb_option_1_gif.gif';
 
 var animation_2 = new Image();
     animation_2.src ='http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072';
