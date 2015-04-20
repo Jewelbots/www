@@ -50,7 +50,7 @@ if [ $ENVIRONMENT == "prod" ]; then
     git add .
     git commit -m "generating build for branch $current_tag and version: $current_build"
     git push origin $current_tag
-    eb deploy jewliebots-dev
+    eb deploy jewelbots-prod
     git checkout master
 fi
 
