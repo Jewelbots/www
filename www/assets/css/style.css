@@ -278,6 +278,16 @@ cta red shadow			rgba(140,40,40,1.0);
 		display: none;
 	}
 }
+@media (max-width: 900px) {
+	#header_container .header img.wordmark {
+		width: 132px;
+		height: 50px;
+		left: -100px;
+		top: 0px;
+
+		opacity: 0.0;
+	}
+}
 @media (max-width: 767px) {
 	#header_container .header {
 		height: auto;
