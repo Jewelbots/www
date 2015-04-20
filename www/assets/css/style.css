@@ -1243,6 +1243,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	padding: 0 0 0 0;
 
 	text-indent: 35px;
+	white-space: nowrap;
 
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
