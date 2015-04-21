@@ -1835,8 +1835,8 @@ cta red shadow			rgba(140,40,40,1.0);
 	.index #section_opensource .copy img.mobile {
 		display: block;
 		position: relative;
-		width: auto;
-		height: 360px;
+		width: 100%;
+		height: auto;
 		margin: 0 auto 30px auto;
 		padding: 0 0 0 0;
 
