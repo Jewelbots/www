@@ -54,3 +54,7 @@ a {
 *, *:before, *:after {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+input, textarea, submit {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}

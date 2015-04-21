@@ -108,6 +108,8 @@ function F5_size_section_cta_top(){
 	$('#section_cta_top').css({'height': $('#site_container').width()/1.333-70+'px' });
 	$('#section_cta_top').css({'max-height': $(window).height()-20 });
 	
+	$('.index #section_cta_top .slideshow .slides').css({'left': -($('.index #section_cta_top .slideshow .slides').width()-$('#site_container').width())/2 });
+	
 
 	/*
 	if($('#section_cta_top').height() < 1010 && $(window).width() > 1280){
