@@ -711,8 +711,8 @@ cta red shadow			rgba(140,40,40,1.0);
 		height: auto;
 		margin: 50px 0 20px 0;
 
-		font-size: 30px;
-		line-height: 30px;
+		font-size: 22px;
+		line-height: 24px;
 	}
 	#modal_cta form p {
 		display: block;
@@ -1026,10 +1026,10 @@ cta red shadow			rgba(140,40,40,1.0);
 	.index #section_cta_top .cta {
 		width: 80%;
 		left: 10%;
-		top: 160px;
+		top: 120px;
 	}
 	.index #section_cta_top .cta h1 {
-		margin: 0 0 20px 0;
+		margin: 0 0 10px 0;
 
 		font-size: 26px;
 		line-height: 32px;
@@ -1037,7 +1037,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		text-align: center;
 	}
 	.index #section_cta_top .cta p {
-		margin: 0 0 40px 0;
+		margin: 0 0 20px 0;
 
 		font-size: 16px;
 		line-height: 22px;
