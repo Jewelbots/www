@@ -1996,6 +1996,12 @@ cta red shadow			rgba(140,40,40,1.0);
 	text-align: left;
 	color: rgba(170,170,170,1.0);
 }
+.about #section_team .members a {
+	font-weight: 500;
+	color: rgba(0,130,135,1.0);
+
+	text-decoration: underline;
+}
 
 .about #section_team .members .member_left {
 	display: block;
