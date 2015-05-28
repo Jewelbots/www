@@ -36,7 +36,7 @@ gulp.task('move-statics', function () {
   gulp.src('src/images/favicon.*')
       .pipe(gulp.dest('dist'));
   gulp.src('src/images/**')
-      .pipe(gulp.dest('dist/images'));
+      .pipe(gulp.dest('dist/assets/images'));
 });
 
 gulp.task('scripts',  function () {
