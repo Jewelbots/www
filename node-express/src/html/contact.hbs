@@ -32,8 +32,8 @@
 
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<link type="text/css" rel="stylesheet" href="assets/css/style-reset{{MIN}}.css?v={{VERSION}}" media="screen" />
-	<link type="text/css" rel="stylesheet" href="assets/css/style{{MIN}}.css?v={{VERSION}}" media="screen, projection" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
 
 	<script src="//use.typekit.net/rbz5qur.js"></script><!--// import font families: MUSEO Regular, Rounded, Condensed -->
 	<script>try{Typekit.load();}catch(e){}</script><!--// if concerns about performance let's talk -->
@@ -176,7 +176,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--fa1cf03ade09c3fe6
 	</div><!--//site_container -->
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/site-scripts{{MIN}}.js?v={{VERSION}}"></script>
+    <script type="text/javascript" src="{{ assetPath "js/site-scripts.js" }}"></script>
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

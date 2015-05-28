@@ -13,34 +13,40 @@ var rev = require('gulp-rev');
 var handlebarOpts = {
   helpers: {
     assetPath: function (path, context) {
-      return ['dist/assets', context.data.root[path]].join('/');
+      var typeAndFile = path.split('/');
+      return ['assets'+ '/' + typeAndFile[0], context.data.root[typeAndFile[1]]].join('/');
     }
   }
 
 };
 
-gulp.task('compile', function () {
-  //var manifest = JSON.parse(fs.readFileSync('dist/assets/manifest.json', 'utf8'));
-
+gulp.task('compile',['scripts', 'sass'], function () {
+  var manifest = JSON.parse(fs.readFileSync('dist/manifest', 'utf8'));
   return gulp.src('src/html/*.hbs')
+      .pipe(handlebars(manifest, handlebarOpts))
+      .pipe(rename(function(path) {
+        path.extname = '.html'
+      }))
       .pipe(gulp.dest('dist'));
-      //.pipe(handlebars(manifest, handlebarOpts))
-      //.pipe(rename(function(path) {
-      //  path.suffix = '';
-      //  path.suffix += '.html';
-      //}))
-
-
 });
 
-gulp.task('scripts', function () {
+gulp.task('move-statics', function () {
+  gulp.src('src/html/robots.txt')
+      .pipe(gulp.dest('dist'))
+  gulp.src('src/images/favicon.*')
+      .pipe(gulp.dest('dist'));
+  gulp.src('src/images/**')
+      .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('scripts',  function () {
   return gulp.src('src/js/*.js')
     .pipe(uglify())
     .pipe(debug())
     .pipe(rev())
-    .pipe(gulp.dest('dist/assets/scripts'))
-    .pipe(rev.manifest({
-      base: 'dist',
+    .pipe(gulp.dest('dist/assets/js'))
+      .pipe(rev.manifest('dist/manifest',{
+      base: 'assets',
       merge: true
     }))
     .pipe(gulp.dest('dist'))
@@ -55,8 +61,8 @@ gulp.task('sass', function () {
     })
     .pipe(rev())
     .pipe(gulp.dest('./dist/assets/css'))
-    .pipe(rev.manifest({
-      base: 'dist',
+    .pipe(rev.manifest('dist/manifest',{
+      base: 'assets',
       merge: true
     }))
     .pipe(gulp.dest('dist'))
@@ -68,7 +74,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', ['scripts','sass', 'watch', 'compile']);
-gulp.task('build', ['scripts','sass', 'compile']);
+gulp.task('build', ['scripts','sass', 'compile', 'move-statics']);
 gulp.task('deploy', ['scripts','sass', 'compile']);
 
 
