@@ -28,15 +28,22 @@ app.use(flash());
 
 app.use('/', routes);
 app.post('/subscribe', function (req, res) {
-  mc.lists.subscribe(
-      {
-        id: '419ec4b9b5',
-        email: {email: req.body.EMAIL}
-      } ,
+  var mcRequest =  {
+    id: '419ec4b9b5',
+    email: {email: req.body.EMAIL},
+    merge_vars : {
+      EMAIL: req.body.EMAIL
+    },
+    double_optin: false,
+    send_welcome: true
+  };
+  mc.lists.subscribe(mcRequest,
       function(data) {
+        console.log(data);
         res.redirect('/newsletter_thankyou.html');
       },
       function(error) {
+        console.log(error);
         if (error.error) {
           req.flash = error.code + ": " + error.error;
           console.log(error);
@@ -44,7 +51,7 @@ app.post('/subscribe', function (req, res) {
           console.log(error);
           req.flash = "There was an error subscribing the user";
         }
-        res.redirect('/privacy.html');
+        res.redirect('/');
       }
   );
 });

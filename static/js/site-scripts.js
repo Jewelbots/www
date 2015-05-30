@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	F2_remove_preloader();
 	F5_size_section_cta_top();
-	
+	$("#cta_link").click(function(event) {
+	  event.preventDefault();
+	  F4_CTA_modal('open');
+	});
 	var timer;
 	timer = window.setTimeout( function(){ F2_slideshow_play('next'); }, F2_delay);
 
