@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /newsletter_confirm.html
+Disallow: /newsletter_thankyou.html
