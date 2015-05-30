@@ -7,4 +7,6 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-src/dist/*
+dist/*
+npm-debug.log
+

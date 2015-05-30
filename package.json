@@ -12,7 +12,9 @@
     "express": "~4.12.4",
     "jade": "~1.9.2",
     "morgan": "~1.5.3",
-    "serve-favicon": "~2.2.1"
+    "serve-favicon": "~2.2.1",
+    "mailchimp-api": "^2.0.7",
+    "connect-flash": "^0.1.1"
   },
   "devDependencies": {
     "connect-flash": "^0.1.1",
@@ -26,7 +28,6 @@
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sass": "^2.0.1",
     "gulp-uglify": "^1.2.0",
-    "mailchimp-api": "^2.0.7",
     "stream-combiner2": "^1.0.2"
   }
 }
