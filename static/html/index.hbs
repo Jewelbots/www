@@ -10,7 +10,7 @@
 	***********************************************************************************************************
 
 		www.jewelbots.com
-		v.0.5
+		v.0.9
                                 _ _           _       
            (♥) _____      _____| | |__   ___ | |_ ___ 
            | |/ _ \ \ /\ / / _ \ | '_ \ / _ \| __/ __|
@@ -40,7 +40,7 @@
 
 	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
+mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
 
 	<script>(function() {
 		var _fbq = window._fbq || (window._fbq = []);
@@ -71,7 +71,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 		<div class="panel_r"></div>
 	</div><!--//preloader -->
 	<div id="modal_cta">
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal" novalidate>
+		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
 			<a class="close" href="javascript:void(0);">X</a>
 			<h2>Launching soon, <br /> be the first to know</h2>
 			<p>Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.</p>
@@ -98,10 +98,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 				<a class="icon" href="/">Home</a>
 				<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
 				<img class="wordmark" src="assets/images/header_wordmark.png" />
-				<a class="cta_large mixpanel-newsletter_header cta_link"  href="#">Launching soon, Be the first to know</a>
+				<a class="cta_large mixpanel-newsletter_header cta_link" href="javascript:void(0);">Launching soon, Be the first to know</a>
 
 				<ul class="navigation">
-					<li><a class="cta mixpanel-newsletter_header cta_link">Launching soon, Be the first to know</a></li>
+					<li><a class="cta mixpanel-newsletter_header cta_link" href="javascript:void(0);">Launching soon, Be the first to know</a></li>
 					<li><a href="/">Home</a></li>
 					<li><a href="/about.html">About</a></li>
 					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
@@ -123,7 +123,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 						that teach girls how to code:
 					</h1>
 					<p>Smart jewelry for a smarter generation</p>
-					<form action="/subscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_hero" novalidate>
+					<form action="/subscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_hero">
 
 						<div class="mc-field-group">
 							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Your email!" onfocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
@@ -134,13 +134,14 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 							<div class="response" id="mce-success-response" style="display:none"></div>
 						</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 						<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="I'm in!" name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_hero"></div>
+						<div class="clear"><input type="submit" value="I'm in!" name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_hero" onClick="return ValidateEvents()"></div>
 					</form>
 				</div><!--//cta -->
 				<div class="slideshow">
 					<img id="slide_1" class="slides" src="assets/images/section_cta_top_background_1.jpg" />
 					<img id="slide_2" class="slides" src="assets/images/section_cta_top_background_2.jpg" />
 					<img id="slide_3" class="slides" src="assets/images/section_cta_top_background_3.jpg" />
+					<img id="slide_1b" class="slides" src="assets/images/section_cta_top_background_1b.jpg" />
 				</div><!--//slideshow -->
 				<a class="heart" href="javascript:void;" onClick="F3_scroll_to_ID('#section_what','200');"></a>
 			</div><!--//section_cta_top -->
@@ -161,7 +162,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 
 					<div class="simulator">
 						<img id="background" src="assets/images/section_what_jb_option_background.png" />
-						<img id="option_1_none" src="assets/images/section_what_jb_option_1_none.jpg" />
 						<img id="option_1_1" src="assets/images/section_what_jb_option_1_1.jpg" />
 						<img id="option_1_2" src="assets/images/section_what_jb_option_1_2.jpg" />
 						<img id="option_1_3" src="assets/images/section_what_jb_option_1_3.jpg" />
@@ -198,7 +198,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 			</div><!--//section_opensource -->
 
 			<div id="section_cta_bottom" class="section">
-				
+
 				<div class="copy">
 					<h3>Launching soon, <br />Be the first to know</h3>
 					<p>
@@ -206,17 +206,17 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 						where and when to get your Jewelbots
 					</p>
 					<img class="logo" src="assets/images/section_cta_bottom_logo_jewelbots.png" />
-					<a class="cta mixpanel-newsletter_footer cta_link" href="">Sign up for Mailing-List</a>
-					
+					<a class="cta mixpanel-newsletter_footer cta_link" href="javascript:void(0);">Sign up for Mailing-List</a>
+
 				</div><!--//copy -->
 				<div id="footer_container">
 					<div class="footer">
 
 						<ul class="social">
-							<li><a class="facebook" href="https://www.facebook.com/jewelbots" target="_blank"></a></li>
-							<li><a class="twitter" href="https://twitter.com/jewelbots" target="_blank"></a></li>
-							<li><a class="instagram" href="https://instagram.com/jewelbots" target="_blank"></a></li>
-							<li><a class="pinterest" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank"></a></li>
+							<li><a class="facebook" href="https://www.facebook.com/jewelbots" target="_blank">f</a></li>
+							<li><a class="twitter" href="https://twitter.com/jewelbots" target="_blank">t</a></li>
+							<li><a class="instagram" href="https://instagram.com/jewelbots" target="_blank">i</a></li>
+							<li><a class="pinterest" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank">p</a></li>
 						</ul><!--//social -->
 
 						<ul class="navigation">
@@ -272,11 +272,15 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
 			var test = "";
 		 	var test_id = 1 % Math.ceil(2 * Math.random());
 			if (test_id) {
-				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB1" });
+				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB2" });
 			} else {
-				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB1" });
+				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB2" });
 				//open modal if Version B is served
-				F4_CTA_modal('open');
+				$('#slide_1').css('display', 'none');
+				$('#slide_2').css('display', 'none');
+				$('#slide_3').css('display', 'none');
+				$('#section_cta_top .cta h1').text('The Friendship Bracelet for the iPhone Era!');
+				$('#section_cta_top .cta').addClass('cta_right');
 			}
 		});
 		//
@@ -301,32 +305,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script>
         })();
         window._fbq = window._fbq || [];
         window._fbq.push(['track', 'PixelInitialized', {}]);
-    </script>
-    <script>
-    $(document).ready(function() {
-      var valid_email_address = function(email) {
-        var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-        return pattern.test(email);
-      }
-      $('#subscribe').submit(function() {
-        if (!valid_email_address($("#email").val())) {
-          $(".message").html('Please make sure you enter a valid email address.');
-        } else {
-          $(".message").html("<span style='color:green;'>does this work??!?!</span>");
-          $.ajax({
-            url: 'subscribe',
-            data: $('#subscribe').serialize(),
-            type: 'POST',
-            success: function(msg) {
-              debugger;
-            }
-          });
-        }
-        return false;
-      });
-    });
-
-
     </script>
     <noscript>
         <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1489130194710434&amp;ev=PixelInitialized" />

@@ -40,7 +40,7 @@ app.post('/subscribe', function (req, res) {
   mc.lists.subscribe(mcRequest,
       function(data) {
         console.log(data);
-        res.redirect('/newsletter_thankyou.html');
+        res.redirect('/newsletter_thankyou.html?confirmed=yes');
       },
       function(error) {
         console.log(error);
