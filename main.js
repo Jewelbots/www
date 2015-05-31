@@ -5,14 +5,15 @@ var logger = require('morgan');
 var flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 
 var mcapi = require('./node_modules/mailchimp-api/mailchimp');
 
 var app = express();
 
-mc = new mcapi.Mailchimp('fea3465fb94788aaa891cf145f90c432-us3');
+var mailchimpApiKey = require('./keys/mc.json');
+mc = new mcapi.Mailchimp(mailchimpApiKey.apiKey);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
