@@ -32,12 +32,11 @@ if [ $ENVIRONMENT == "prod" ]; then
     current_build=$(date +%s)
     current_tag=`date +%Y.%m.%d.%H%M`
     
-    git tag -a $current_tag -m "generating build for tag $current_tag and version: $current_build"'
+    git tag -a $current_tag -m "generating build for tag $current_tag and version: $current_build"
     gulp build
     git commit -m "generating build for branch $current_tag and version: $current_build"
     git push origin $current_tag
-    eb deploy jewelbots-node-dev
-    git checkout master
+    eb deploy jewelbots-node-prod
 fi
 
 
