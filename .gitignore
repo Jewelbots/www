@@ -8,8 +8,8 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 npm-debug.log
-!.sass-cache/**
-!.sass-cache/
+.sass-cache/**
+.sass-cache/
 keys/
 dist/
 node_modules/
