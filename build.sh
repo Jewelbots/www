@@ -25,6 +25,10 @@ if [ $ENVIRONMENT = "dev" ]; then
     gulp build
     npm start
 fi
+if [ $ENVIRONMENT = "staging" ]; then
+    gulp build
+    eb deploy jewelbots-node-dev
+fi
 if [ $ENVIRONMENT == "prod" ]; then
     
     current_build=$(date +%s)
@@ -35,7 +39,7 @@ if [ $ENVIRONMENT == "prod" ]; then
     git add .
     git commit -m "generating build for branch $current_tag and version: $current_build"
     git push origin $current_tag
-    eb deploy jewelbots-node
+    eb deploy jewelbots-node-prod
     git checkout master
 fi
 
