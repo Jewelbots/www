@@ -19,8 +19,6 @@ esac
 shift
 done
 
-DEPLOY_DIRECTORY="/var/src/"
-rm -rf /var/src/www/
 if [ $ENVIRONMENT = "dev" ]; then 
     gulp build
     npm start
@@ -34,12 +32,11 @@ if [ $ENVIRONMENT == "prod" ]; then
     current_build=$(date +%s)
     current_tag=`date +%Y.%m.%d.%H%M`
     
-    git checkout -b $current_tag
+    git tag -a $current_tag -m "generating build for tag $current_tag and version: $current_build"'
     gulp build
-    git add .
     git commit -m "generating build for branch $current_tag and version: $current_build"
     git push origin $current_tag
-    eb deploy jewelbots-node-prod
+    eb deploy jewelbots-node-dev
     git checkout master
 fi
 
