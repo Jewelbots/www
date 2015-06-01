@@ -52,7 +52,7 @@ app.post('/subscribe', function (req, res) {
           console.log(error);
           req.flash = "There was an error subscribing the user";
         }
-        res.redirect('/');
+        res.redirect('/?source=newsletter_error');
       }
   );
 });
@@ -62,7 +62,8 @@ app.post('/subscribe', function (req, res) {
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  next(err);
+  //next(err);
+  res.redirect('/404.html');
 });
 
 // error handlers
