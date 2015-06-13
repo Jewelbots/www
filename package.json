@@ -14,8 +14,9 @@
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1",
     "mailchimp-api": "^2.0.7",
-    "connect-flash": "^0.1.1"
-  },
+    "connect-flash": "^0.1.1",
+    "stream-combiner2": "^1.0.2"
+},
   "devDependencies": {
     "connect-flash": "^0.1.1",
     "gulp": "^3.8.11",
@@ -27,7 +28,6 @@
     "gulp-rev": "^4.0.0",
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sass": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
-    "stream-combiner2": "^1.0.2"
-  }
+    "gulp-uglify": "^1.2.0"
+    }
 }
