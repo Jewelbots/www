@@ -36,7 +36,8 @@ if [ $ENVIRONMENT == "prod" ]; then
     gulp build
     git commit -m "generating build for branch $current_tag and version: $current_build"
     git push origin $current_tag
-    eb deploy jewelbots-www-dev
+    zip -r jewelbots-marketing.zip . -x *.git*
+    eb deploy 
 fi
 
 
