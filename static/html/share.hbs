@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Contact Jewelbots - The friendship-bracelet for the iPhone</title>
+	<title>Jewelbots Kickstarter - The friendship-bracelet for the iPhone era</title>
 	<meta name="description" lang="en" content="We love to hear from you." />
 	<meta name="keywords" lang="en" content="jewelbots, jewliebot, contact, nyc" />
 
@@ -40,6 +40,7 @@
 	</head>
 
 	<body>
+					<marquee class="marquee"><span>Thank you for sharing.</span></marquee>
 		<div class="share-button"></div>
 
 	</body>
@@ -47,7 +48,7 @@
 		config = {
 			url : "http://jewelbots.com/kickstarter",
 			title : "Jewelbots, the Kickstarter!",
-			description : "Jewelbots, smart jewelry for a smarter generation. Indulge creativity, build friendships, learn to code.",
+			description : "Jewelbots, smart friendship bracelets that teach girls to code",
 			image : "http://www.jewelbots.com/assets/images/section_opensource_image_desktop.jpg"
 		}
 		new Share(".share-button", config);
@@ -60,5 +61,16 @@
        position: fixed; /* or absolute */
        top: 50%;
        left: 45%;
-     }
+		 }
+		 .marquee{
+				height: 400px;
+			  padding-top: 50px;
+				position: fixed;
+				color: white;
+				font-family: "Comic Sans MS", "Comic Sans", cursive;
+				font-size: 60pt;
+			}
+			.marquee span{
+							    text-shadow: 2px 2px #ff0000;
+			}
 </html>
