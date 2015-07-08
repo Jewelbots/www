@@ -57,7 +57,7 @@ app.post('/subscribe', function (req, res) {
   );
 });
 
-
+app.set('trust proxy', true);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -66,6 +66,13 @@ app.use(function(req, res, next) {
   res.redirect('/404.html');
 });
 
+app.use(function(req, res, next) {
+  if (req.headers.host.slice(0, 4) === 'www.' ) {
+    var newHost = req.headers.host.slice(4);
+    return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
+  }
+    next();
+});
 // error handlers
 
 // development error handler
