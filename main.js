@@ -24,8 +24,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'dist')));
+app.all('*', function(req, res, next) {
+  res.redirect('https://www.kickstarter.com/projects/1345510482/jewelbots-friendship-bracelets-that-teach-girls-to')
+});
+//app.use(express.static(path.join(__dirname, 'dist')));
 app.use(flash());
+
 
 app.use('/', routes);
 app.post('/subscribe', function (req, res) {
@@ -66,13 +70,6 @@ app.use(function(req, res, next) {
   res.redirect('/404.html');
 });
 
-app.use(function(req, res, next) {
-  if (req.headers.host.slice(0, 4) === 'www.' ) {
-    var newHost = req.headers.host.slice(4);
-    return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
-  }
-    next();
-});
 // error handlers
 
 // development error handler
