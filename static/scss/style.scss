@@ -32,7 +32,7 @@ body {
 	margin: 0 auto 0 auto;
 	padding: 0 0 0 0;
 	background-color: rgba(255,255,255,1.0);
-	
+
 	-webkit-box-shadow: 0px 1px 100px 0px rgba(0,0,0,0.10);
 	   -moz-box-shadow: 0px 1px 100px 0px rgba(0,0,0,0.10);
 	        box-shadow: 0px 1px 100px 0px rgba(0,0,0,0.10);
@@ -90,7 +90,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	padding: 0 0 0 0;
 	border-bottom: solid 2px rgba(115,200,190,0.0);
 	background-color: rgba(255,255,255,0.0);
-	
+
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
 	     -o-transition: .3s ease-in-out;
@@ -121,7 +121,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 	text-indent: -999px;
 	overflow: hidden;
-	
+
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
 	     -o-transition: .3s ease-in-out;
@@ -143,7 +143,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	top: 20px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	
+
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
 	     -o-transition: .3s ease-in-out;
@@ -153,12 +153,14 @@ cta red shadow			rgba(140,40,40,1.0);
 #header_container .header a.cta_large {
 	display: block;
 	position: absolute;
-	width: 380px;
+	width: 300px;
 	height: 50px;
 	top: 40px;
 	right: 60px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
+	/*background-color: rgba(255,66,66,1.0);*/
+	background-color: rgba(55,220,120,1.0);
 	background-color: rgba(255,66,66,1.0);
 	border-bottom: 2px solid rgba(140,40,40,1.0);
 
@@ -176,7 +178,7 @@ cta red shadow			rgba(140,40,40,1.0);
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-	
+
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
 	     -o-transition: .3s ease-in-out;
@@ -986,6 +988,49 @@ cta red shadow			rgba(140,40,40,1.0);
 
 	color: rgba(255,255,255,0.8);
 }
+.index #section_cta_top .cta a.cta_kickstarter {
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 50px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	/*background-color: rgba(255,66,66,1.0);*/
+	background-color: rgba(55,220,120,1.0);
+	background-color: rgba(255,66,66,1.0);
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 50px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(255,255,255,1.0);
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+
+	-webkit-transition: .3s ease-in-out;
+	   -moz-transition: .3s ease-in-out;
+	     -o-transition: .3s ease-in-out;
+	    -ms-transition: .3s ease-in-out;
+	        transition: .3s ease-in-out;
+}
+.index #section_cta_top .cta a.cta_kickstarter:hover {
+	height: 48px;
+	margin: 1px 0 0 0;
+	padding: 0 0 0 0;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(255,255,255,0.0);
+
+	color: rgba(255,255,255,0.8);
+}
+
 
 @media (max-width: 1023px) {
 	.index #section_cta_top .cta {
@@ -1033,7 +1078,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	.index #section_cta_top .cta form #mc-embedded-subscribe {
 	  width: 30%;
 		margin: -61px 0 0 70%;
-		
+
 		font-size: 16px;
 	}
 	.index #section_cta_top .cta form #mc-embedded-subscribe:hover {
@@ -1111,7 +1156,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	text-transform: none;
 	text-align: left;
 	color: rgba(75,210,190,1.0);
-	
+
 	z-index: 2;
 }
 .index #section_what .copy a {
@@ -1147,7 +1192,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	right: 140px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	
+
 	z-index: 1;
 }
 .index #section_what .copy .simulator img {
@@ -1179,7 +1224,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	top: 140px;
 	right: 100px;
 	margin: 0 0 0 0;
-	
+
 	z-index: 3;
 }
 .index #section_what .copy ul li {
@@ -1261,7 +1306,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		right: 180px;
 		margin: 0 0 0 0;
 		padding: 0 0 0 0;
-	
+
 		z-index: 1;
 	}
 	.index #section_what .copy .simulator img {
@@ -1359,7 +1404,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		right: 0;
 		margin: 0 0 0 0;
 		padding: 0 0 0 0;
-	
+
 		z-index: 1;
 	}
 	.index #section_what .copy .simulator #option_1_1, .index #section_what .copy .simulator #option_1_2, .index #section_what .copy .simulator #option_1_3, .index #section_what .copy .simulator #option_1_4, .index #section_what .copy .simulator #option_1_5 {
@@ -1563,7 +1608,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		height: auto;
 		margin: 0 0 0 0;
 		padding: 60px 20px 0 20px;
-	
+
 	}
 	.index #section_how .copy h3 {
 		width: 100%;
@@ -1823,7 +1868,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* --- about.html ----------------------------------------------------------- */
 .about {
-	
+
 }
 
 .about #section_hero_top {
@@ -2134,7 +2179,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* --- contact.html ------------------------------------------------------------------ */
 .contact {
-	
+
 }
 
 .contact #section_hero_top {
@@ -2245,7 +2290,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		line-height: 26px;
 	}
 }
-@media (max-width: 767px) {	
+@media (max-width: 767px) {
 	.contact #section_hero_top {
 		min-height: 320px;
 	}
@@ -2275,7 +2320,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* --- privacy.html ------------------------------------------------------------------ */
 .privacy {
-	
+
 }
 
 .privacy #section_hero_top {
@@ -2446,7 +2491,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		min-height: 320px;
 	}
 }
-@media (max-width: 767px) {	
+@media (max-width: 767px) {
 	.privacy #section_hero_top {
 		min-height: 240px;
 	}
@@ -2479,7 +2524,7 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* --- newsletter.html ------------------------------------------------------------------ */
 .newsletter {
-	
+
 }
 
 .newsletter #section_newsletter {
@@ -2671,7 +2716,7 @@ cta red shadow			rgba(140,40,40,1.0);
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-	
+
 	-webkit-transition: .17s ease-in-out;
 	-moz-transition: .17s ease-in-out;
 	-o-transition: .17s ease-in-out;
@@ -2867,7 +2912,7 @@ cta red shadow			rgba(140,40,40,1.0);
 #footer_container .footer p a {
 	text-decoration: none;
 	color: rgba(255,255,255,1.0);
-	
+
 	-webkit-transition: .17s ease-in-out;
 	-moz-transition: .17s ease-in-out;
 	-o-transition: .17s ease-in-out;
@@ -2930,7 +2975,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	}
 	#footer_container .footer ul.navigation li a {
 		padding: 0 0 0 0;
-		
+
 		font-size: 20px;
 		line-height: 30px;
 	}
