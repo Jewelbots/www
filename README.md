@@ -25,4 +25,6 @@ The build.sh file is used to deploy the static site to local dev boxes and Elast
 
 Pull requests and contributions welcome.
 
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
 
