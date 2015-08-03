@@ -21,4 +21,10 @@ The build.sh file is used to deploy the static site to local dev boxes and Elast
  - Creates a tag based on current state of app with references to minified CSS, and pushes that tag.
  - Deploys code to Elastic Beanstalk.
 
+###Contributions
+
+Pull requests and contributions welcome.
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
 
