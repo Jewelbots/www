@@ -10,9 +10,13 @@ On MAC OS X:
 
 `chmod +X ./bootstrap.sh`  
 `sudo ./bootstrap.sh`
+
+### To run the site
+
 `./build.sh -e dev`
 
 The site (by default) launches under `http://localhost:3000`.
+
 
 ###build.sh
 
@@ -20,5 +24,19 @@ The build.sh file is used to deploy the static site to local dev boxes and Elast
  - runs `gulp build`
  - Creates a tag based on current state of app with references to minified CSS, and pushes that tag.
  - Deploys code to Elastic Beanstalk.
+
+#### Usage for development:
+
+`./build.sh -e dev`
+
+####Usage for deploy:
+
+`./build.sh -e prod`
+
+###Contributions
+
+Pull requests and contributions welcome.
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 
