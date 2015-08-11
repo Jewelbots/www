@@ -39,4 +39,7 @@ Pull requests and contributions welcome.
 
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
+###Troubleshooting
+There seems to be an issue with the Bootstrap script, so if you experience an issue with Express and the mc.json file, edit that file to ensure there is only one key:value set in the file. Hopefully they will repair! 
+
 
