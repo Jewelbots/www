@@ -5,6 +5,10 @@ $(document).ready(function(){
 	  event.preventDefault();
 	  F4_CTA_modal('cta_open');
 	});
+	$(".cta_link_video").click(function(event) {
+	  event.preventDefault();
+	  F4_CTA_modal('cta_open_video');
+	});
 	var timer;
 	timer = window.setTimeout( function(){ F2_slideshow_play('next'); }, F2_delay);
 
@@ -18,12 +22,11 @@ $(window).scroll(function(){
 
 $(window).resize(function(){
 	F5_size_section_cta_top();	
-	F5_hide_navigation_mobile();	
+//	F5_hide_navigation_mobile();	
 });
 
 $(window).bind('orientationchange', function(event) {
 	F5_size_section_cta_top();
-	F3_override_home_link();
 });
 
 
@@ -92,23 +95,34 @@ function F4_CTA_modal(state){
 				$('#modal_cta').css('visibility', 'hidden');
 			});
 		});
+		$('#modal_cta .video').css('display', 'none');
 	}
 	if(state=='open' && F4_modal_was_open != 1){
+		$('#modal_cta .video').css('display', 'none');
 		F4_modal_was_open = 1;
 		$('#modal_cta').css('visibility', 'visible');
 		$('#modal_cta').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		$('#modal_cta form').css('display', 'block');
 		$('#modal_cta form').stop().show().animate({
 			opacity: 1.0,
 			top: "40%"
 		}, 200, function() { /* do nothing */ });
 	}
 	if(state=='cta_open'){
+		$('#modal_cta .video').css('display', 'none');
 		$('#modal_cta').css('visibility', 'visible');
 		$('#modal_cta').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		$('#modal_cta form').css('display', 'block');
 		$('#modal_cta form').stop().show().animate({
 			opacity: 1.0,
 			top: "40%"
 		}, 200, function() { /* do nothing */ });
+	}
+	if(state=='cta_open_video'){
+		$('#modal_cta .video').css('display', 'block');
+		$('#modal_cta').css('visibility', 'visible');
+		$('#modal_cta').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		$('#modal_cta form').css('display', 'none');
 	}
 }
 $('#modal_cta form a.close').click(function(){ F4_CTA_modal('close'); });
@@ -170,17 +184,17 @@ function F7_change_color(color){
 	
 	$('#section_how').removeClass('color_1');
 	$('#section_how').removeClass('color_2');
-	$('#section_how').removeClass('color_3');
+	$('#section_how').removeClass('color_3');/*
 	$('#section_how').removeClass('color_4');
-	$('#section_how').removeClass('color_5');
+	$('#section_how').removeClass('color_5');*/
 	
 	$('#section_what .circle').removeClass('active');
 	
 	$('.simulator #option_1_1').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
 	$('.simulator #option_1_2').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
 	$('.simulator #option_1_3').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
-	$('.simulator #option_1_4').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
-	$('.simulator #option_1_5').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	//$('.simulator #option_1_4').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
+	//$('.simulator #option_1_5').stop(true, true).fadeOut(500, function() { /* do nothing as of yet */ });
 	
 	if(color=="c1"){
 		$('#section_how').addClass('color_1');
@@ -200,16 +214,16 @@ function F7_change_color(color){
 		$('.simulator #option_1_gif').attr('src',animation_1.src);
 		$('#section_what #circle_3').addClass('active');
 	}
-	if(color=="c4"){
-		$('#section_how').addClass('color_4');
-		$('.simulator #option_1_4').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
-		$('.simulator #option_1_gif').attr('src',animation_1.src);
-		$('#section_what #circle_4').addClass('active');
-	}
-	if(color=="c5"){
-		$('#section_how').addClass('color_5');
-		$('.simulator #option_1_5').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
-		$('.simulator #option_1_gif').attr('src',animation_1.src);
-		$('#section_what #circle_5').addClass('active');
-	}
+	//if(color=="c4"){
+	//	$('#section_how').addClass('color_4');
+	//	$('.simulator #option_1_4').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+	//	$('.simulator #option_1_gif').attr('src',animation_1.src);
+	//	$('#section_what #circle_4').addClass('active');
+	//}
+	//if(color=="c5"){
+	//	$('#section_how').addClass('color_5');
+	//	$('.simulator #option_1_5').stop(true, true).delay(0).fadeIn(1000, function() { /* do nothing as of yet */ });
+	//	$('.simulator #option_1_gif').attr('src',animation_1.src);
+	//	$('#section_what #circle_5').addClass('active');
+	//}
 }

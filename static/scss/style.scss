@@ -224,18 +224,75 @@ cta red shadow			rgba(140,40,40,1.0);
 
 /* - navigation - */
 #header_container .header ul.navigation {
-	display: none;
+	display: inline-block;
+	position: relative;
+	float: right;
+	width: auto;
+	height: auto;
+	top: 0px;
+	right: 0px;
+	margin: 0 0 0 0;
+	padding: 0 20px 0 0;
+
+	text-align: left;
+	z-index: 99999;
 }
-#header_container .header ul.navigation li {}
-#header_container .header ul.navigation li a {}
-#header_container .header ul.navigation li a.small {}
-#header_container .header ul.navigation li a.cta {}
-#header_container .header ul.navigation li a.cta:hover {}
+#header_container .header ul.navigation li {
+	display: inline-block;
+	padding: 0px;
+}
+#header_container .header ul.navigation li a {
+	display: block;
+	padding: 0 10px 0 10px;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: 0;
+	color: rgba(115,200,190,1.0);
+	color: rgba(0,150,155,1.0);
+	text-decoration: none;
+}
+#header_container .header ul.navigation li a.cta {
+	display: block;
+	position: relative;
+	width: auto;
+	height: 52px;
+	margin: 20px 20px 0 20px;
+	padding: 0 20px 0 20px;
+	background-color: rgba(255,66,66,1.0);
+	border-radius: 5px;
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 50px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: uppercase;
+	color: rgba(255,255,255,1.0);
+	text-align: center;
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+#header_container .header ul.navigation li a.cta:hover {
+	height: 52px;
+	margin: 20px 20px 0 20px;
+	padding: 0 20px 0 20px;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(140,40,40,1.0);
+
+	color: rgba(255,255,255,0.8);
+}
 
 @media (max-width: 1023px) {
-	#header_container .header ul.navigation {
-		display: none;
-	}
+	#header_container .header ul.navigation {}
 }
 @media (max-width: 900px) {
 	#header_container .header img.wordmark {
@@ -253,6 +310,8 @@ cta red shadow			rgba(140,40,40,1.0);
 		min-height: 62px;
 		border-bottom: solid 2px rgba(115,200,190,1.0);
 		background-color: rgba(255,255,255,1.0);
+
+		text-align: center;
 
 		-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 		-moz-box-shadow:    0px 5px 5px 0px rgba(0,0,0,0.1);
@@ -283,14 +342,12 @@ cta red shadow			rgba(140,40,40,1.0);
 
 		opacity: 0.0;
 	}
-	#header_container .header a.cta_large {
-		display: none;
-	}
 
 	/* - navigation - */
 	#header_container .header ul.navigation {
 		display: none;
 		position: relative;
+		float: none;
 		width: 100%;
 		height: auto;
 		top: 0;
@@ -301,6 +358,7 @@ cta red shadow			rgba(140,40,40,1.0);
 		text-align: center;
 	}
 	#header_container .header ul.navigation li {
+		display: block;
 		padding: 0px;
 	}
 	#header_container .header ul.navigation li a {
@@ -315,12 +373,6 @@ cta red shadow			rgba(140,40,40,1.0);
 		letter-spacing: 0;
 		color: rgba(115,200,190,1.0);
 		text-decoration: none;
-	}
-	#header_container .header ul.navigation li a.small {
-		margin: 0 0 -10px 0;
-		padding: 20px 0 0 0;
-		font-size: 16px;
-		line-height: 30px;
 	}
 	#header_container .header ul.navigation li a.cta {
 		display: block;
@@ -648,6 +700,73 @@ cta red shadow			rgba(140,40,40,1.0);
 	color: rgba(255,255,255,0.8);
 }
 
+
+#modal_cta .video {
+	display: block;
+	position: fixed;
+	width: 820px;
+	height: 560px;
+	left: 50%;
+	top: 40px;
+	right: 0px;
+	bottom: 0px;
+	margin: 0 0 0 -410px;
+	padding: 10px 10px 10px 10px;
+	background-color: rgba(255,255,255,1.0);
+	border: solid 0px rgba(40,40,40,0.8);
+
+	z-index: 1001;
+
+	-webkit-border-radius: 7px;
+	   -moz-border-radius: 7px;
+          border-radius: 7px;
+
+	/*
+	-webkit-box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	   -moz-box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	        box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	*/
+}
+#modal_cta .video a.cta {
+	display: block;
+	position: relative;
+	width: 360px;
+	height: 60px;
+	margin: 10px auto 0 auto;
+	padding: 0 0 0 0;
+	background-color: rgba(255,66,66,1.0);
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 60px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgba(255,255,255,1.0);
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+
+	-webkit-transition: .17s ease-in-out;
+	-moz-transition: .17s ease-in-out;
+	-o-transition: .17s ease-in-out;
+	-ms-transition: .17s ease-in-out;
+	transition: .17s ease-in-out;
+}
+#modal_cta .video a.cta:hover {
+	height: 59px;
+	margin: 11px auto 0 auto;
+	padding: 0 0 0 0;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(255,255,255,0.0);
+
+	color: rgba(255,255,255,0.8);
+}
 @media (max-width: 1023px) {}
 @media (max-width: 767px) {
 	#modal_cta {}
@@ -843,16 +962,23 @@ cta red shadow			rgba(140,40,40,1.0);
 .index #section_cta_top .cta {
 	display: block;
 	position: absolute;
-	width: 880px;
+	width: 80%;
 	height: auto;
+	top: 300px;
 	max-height: 1010px;
-	left: 100px;
-	top: 380px;
-	margin: 0 0 0 0;
+	margin: 0 10% 0 10%;
 	padding: 0 0 0 0;
 
 	text-transform: uppercase;
 	z-index: 99;
+}
+.index #section_cta_top .cta img {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 20px 0 40px 0;
 }
 .index #section_cta_top .cta_right {
 	display: block;
@@ -884,7 +1010,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	line-height: 36px;
 	letter-spacing: 1px;
 	text-indent: 0;
-	text-align: left;
+	text-align: center;
 	color: rgba(255,255,255,1.0);
 
 	text-shadow: 0px 1px 2px rgba(0,0,0,1.0);
@@ -894,7 +1020,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	position: relative;
 	width: auto;
 	height: auto;
-	margin: 0 0 30px 0;
+	margin: 0 auto 30px auto;
 	padding: 0 0 0 0;
 
 	font-family: "museo-sans",sans-serif;
@@ -905,11 +1031,51 @@ cta red shadow			rgba(140,40,40,1.0);
 	letter-spacing: 0;
 	text-indent: 0;
 	text-transform: none;
-	text-align: left;
+	text-align: center;
 	color: rgba(255,255,255,1.0);
 
 	text-shadow: 0px 0px 2px rgba(0,0,0,1.0);
 }
+
+
+.index #section_cta_top .cta a.button {
+	display: block;
+	position: relative;
+	width: 180px;
+	height: 52px;
+	margin: 20px auto 0 auto;
+	padding: 0 20px 0 20px;
+	background-color: rgba(255,66,66,1.0);
+	border-radius: 5px;
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 50px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: uppercase;
+	color: rgba(255,255,255,1.0);
+	text-align: center;
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+.index #section_cta_top .cta a.button:hover {
+	height: 52px;
+	margin: 20px auto 0 auto;
+	padding: 0 20px 0 20px;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(140,40,40,1.0);
+
+	color: rgba(255,255,255,0.8);
+}
+
+
+
 .index #section_cta_top .cta form {
 	display: block;
 	position: relative;
@@ -1032,9 +1198,10 @@ cta red shadow			rgba(140,40,40,1.0);
 }
 
 
+
+
 @media (max-width: 1023px) {
 	.index #section_cta_top .cta {
-		left: 60px;
 		top: 250px;
 	}
 	.index #section_cta_top .cta_right {
@@ -1045,8 +1212,6 @@ cta red shadow			rgba(140,40,40,1.0);
 }
 @media (max-width: 767px) {
 	.index #section_cta_top .cta {
-		width: 80%;
-		left: 10%;
 		top: 120px;
 	}
 	.index #section_cta_top .cta h1 {
@@ -1241,7 +1406,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	position: absolute;
 	width: 100%;
 	height: auto;
-	top: 0px;
+	top: 30px;
 	right: 0px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -1262,8 +1427,8 @@ cta red shadow			rgba(140,40,40,1.0);
 .index #section_what .copy ul {
 	display: block;
 	position: absolute;
-	top: 140px;
-	right: 100px;
+	top: 180px;
+	right: 140px;
 	margin: 0 0 0 0;
 
 	z-index: 3;
@@ -1463,7 +1628,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	min-height: 700px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	background-color: rgba(6,216,159,1.0);
+	background-color: rgba(123,203,186,1.0);
 
 	-webkit-transition: .3s ease-in-out;
 	   -moz-transition: .3s ease-in-out;
@@ -1478,15 +1643,15 @@ cta red shadow			rgba(140,40,40,1.0);
 	max-width: 1180px;
 	height: auto;
 	margin: 0 auto 0 auto;
-	padding: 0px 0 0 0;
+	padding: 0 0 0 0;
 }
 .index #section_how .copy h3 {
 	display: block;
 	position: relative;
 	width: 40%;
 	height: auto;
-	margin: 0 0 10px 50%;
-	padding: 200px 0 0 0;
+	margin: 0px 0 10px 50%;
+	padding: 150px 0 0 0;
 
 	font-family: "museo-sans-rounded",sans-serif;
 	font-style: normal;
@@ -1544,13 +1709,13 @@ cta red shadow			rgba(140,40,40,1.0);
 }
 
 .index #section_how.color_1 {
-	background-color: rgba(6,216,159,1.0);
+	background-color: rgba(123,203,186,1.0);
 }
 .index #section_how.color_2 {
-	background-color: rgba(197,113,234,1.0);
+	background-color: rgba(246,108,88,1.0);
 }
 .index #section_how.color_3 {
-	background-color: rgba(29,96,131,1.0);
+	background-color: rgba(189,144,205,1.0);
 }
 .index #section_how.color_4 {
 	background-color: rgba(61,158,184,1.0);
