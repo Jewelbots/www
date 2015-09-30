@@ -1297,6 +1297,191 @@ cta red shadow			rgba(140,40,40,1.0);
 	right: 0px;
 }
 
+/* - panel_2 + shop - */
+.index #section_shop .copy {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 1180px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 60px 60px 0 60px;
+
+	z-index: 2;
+}
+
+.index #section_shop .copy h2 {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto 10px auto;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans-rounded",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 36px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+.index #section_shop .copy p {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto 20px auto;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+}
+.index #section_shop .copy ul.products {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.index #section_shop .copy ul.products li {
+	display: inline-block;
+	position: relative;
+	width: 33%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.index #section_shop .copy ul.products li img {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.index #section_shop .copy ul.products li h4 {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans-rounded",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 36px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+}
+.index #section_shop .copy ul.products li p {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto 20px auto;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+}
+.index #section_shop .copy ul.products li p span {
+	display: none;
+}
+.index #section_shop .copy ul.products li .buy {
+	display: block;
+	position: relative;
+	width: 110px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	text-align: center;
+}
+
+.index #section_shop .copy .note {
+	display: block;
+	position: relative;
+    width: 100%;
+    height: auto;
+    margin: 60px 0 50px 0;
+    padding: 20px;
+    background-color: rgb(245,245,245);
+    border: solid 1px rgb(210,210,210);
+
+    border-radius: 10px 10px 10px 10px;
+		-moz-border-radius: 10px 10px 10px 10px;
+		-webkit-border-radius: 10px 10px 10px 10px;
+
+    text-align: center;
+}
+.index #section_shop .copy .note h1 {
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: uppercase;
+	color: rgb(40,40,40);
+}
+.index #section_shop .copy .note p {
+	padding: 10px 40px 0 40px;
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	color: rgb(100,100,100);
+}
+.index #section_shop .copy .note p span {
+	font-style: normal;
+	text-decoration: underline;
+	font-weight: 500;
+	color: rgb(60,60,60);
+}
+
+@media (max-width: 1023px) {
+	.index #section_shop .copy ul.products li {
+		width: 30%;
+	}
+}
+@media (max-width: 767px) {
+	.index #section_shop .copy ul.products li {
+		width: 100%;
+	}
+}
+
 /* - panel_2 - */
 .index #section_what {
 	display: block;
@@ -2898,6 +3083,8 @@ cta red shadow			rgba(140,40,40,1.0);
 	margin: 0 auto 0 auto;
 	padding: 0 0 0 0;
 }
+
+/*- CTA button for footer -*/
 #section_cta_bottom .copy a.cta {
 	display: block;
 	position: relative;
@@ -2938,6 +3125,88 @@ cta red shadow			rgba(140,40,40,1.0);
 
 	color: rgba(255,255,255,0.8);
 }
+
+#section_cta_bottom .copy form {
+	display: block;
+	position: relative;
+	width: 420px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+}
+#section_cta_bottom .copy form #mce-EMAIL {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 60px;
+	margin: 0 0 0 0;
+  padding: 0 20px 0 20px;
+  border: solid 1px rgba(40,40,40,0.2);
+  background-color: rgba(245,245,245,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 60px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,165,150,1.0);
+
+	-webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.2);
+	   -moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.2);
+					box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.2);
+
+		   -webkit-border-top-left-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		       -moz-border-radius-topleft: 5px;
+		    -moz-border-radius-bottomleft: 5px;
+		           border-top-left-radius: 5px;
+		        border-bottom-left-radius: 5px;
+}
+#section_cta_bottom .copy form #mc-embedded-subscribe {
+	display: block;
+	position: relative;
+	width: 120px;
+	height: 62px;
+	margin: -61px 0 0 300px;
+	padding: 0 0 0 0;
+	background-color: rgba(255,66,66,1.0);
+	border: 0px ;
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 60px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-transform: none;
+	color: rgba(255,255,255,1.0);
+
+	   -webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	        -moz-border-radius-topleft: 5px;
+       -moz-border-radius-bottomleft: 5px;
+             border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+	cursor: pointer;
+}
+#section_cta_bottom .copy form #mc-embedded-subscribe:hover {
+	height: 60px;
+	margin: -60px 0 0 300px;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(140,40,40,1.0);
+
+	color: rgba(255,255,255,0.8);
+}
+
+
+
 
 @media (max-width: 1023px) {}
 @media (max-width: 767px) {
@@ -2986,6 +3255,20 @@ cta red shadow			rgba(140,40,40,1.0);
 		border-bottom: 1px solid rgba(255,255,255,0.0);
 
 		color: rgba(255,255,255,0.8);
+	}
+
+	#section_cta_bottom .copy form {
+		width: 280px;
+	}
+	#section_cta_bottom .copy form #mce-EMAIL {
+	  width: 200px;
+	}
+	#section_cta_bottom .copy form #mc-embedded-subscribe {
+		width: 80px;
+		margin: -61px 0 0 200px;
+	}
+	#section_cta_bottom .copy form #mc-embedded-subscribe:hover {
+		margin: -60px 0 0 200px;
 	}
 }
 
