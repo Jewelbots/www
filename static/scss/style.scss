@@ -700,6 +700,72 @@ cta red shadow			rgba(140,40,40,1.0);
 	color: rgba(255,255,255,0.8);
 }
 
+#modal_cta form.shop {
+	display: block;
+	position: fixed;
+	width: 500px;
+	height: 460px;
+	left: 50%;
+	top: 90%;
+	right: 0px;
+	bottom: 0px;
+	margin: -160px 0 0 -250px;
+	padding: 0 0 0 0;
+	background-color: rgba(255,255,255,1.0);
+	border: solid 0px rgba(40,40,40,0.8);
+
+	z-index: 1000;
+
+	-webkit-border-radius: 7px;
+	   -moz-border-radius: 7px;
+          border-radius: 7px;
+
+	/*
+	-webkit-box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	   -moz-box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	        box-shadow: 0px 1px 27px 2px rgba(0,0,0,0.5);
+	*/
+}
+#modal_cta form.shop h2 {
+	margin: 30px 0 0px 0;
+}
+#modal_cta form.shop img {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+#modal_cta form.shop h4 {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans-rounded",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 36px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+}
+#modal_cta form.shop .buy {
+	display: block;
+	position: relative;
+	width: 120px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	text-align: center;
+}
+
 
 #modal_cta .video {
 	display: block;
