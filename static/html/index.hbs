@@ -76,18 +76,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			<a class="cta" href="http://shop.jewelbots.com">Pre-order your Jewelbot</a>
 		</div>
 		<form class="shop">
-			<a class="close" href="javascript:void(0);">X</a>
+			<a class="close mixpanel-shop_modal_close" href="javascript:void(0);">X</a>
 			<h2>Pre-Order Started!</h2>
 			<img src="assets/images/2-pack.jpg" style="display: block; width: 60%; margin: -20px auto 0 auto;" />
 			<h4>Twinnie 2-Pack</h4>
 			<p>Jewelbots opened their online store for presales. <!--Jewelry designed to spark girl's interest in coding, be the first on your block!--></p>
-			<div class="buy">
-				<div data-embed_type="product" data-shop="jewelbots.myshopify.com" data-product_name="Twinnie 2-Pack" data-product_handle="twinnie-2-pack" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="PRE-ORDER" data-button_background_color="00cdb4" data-button_text_color="ffffff"></div>
-				<script type="text/javascript">
-				document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-				</script>
-				<noscript><a class="mixpanel-shop_buy_2_pack" href="https://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Twinnie 2-Pack</a></noscript>
-			</div>
+			<a class="cta mixpanel-shop_modal" href="http://shop.jewelbots.com">Pre-order your Jewelbot</a>
 		</form>
 		<!--
 		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
@@ -122,7 +116,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
 					<li><a href="/contact.html">Contact</a></li>
 					<!--<li><a href="/privacy.html">Privacy</a></li>-->
-					<li><a class="cta" href="http://shop.jewelbots.com/">Pre-Order Now</a></li>
+					<li><a class="cta mixpanel-shop_header" href="http://shop.jewelbots.com/">Pre-Order Now</a></li>
 				</ul>
 			</div><!--//header -->
 		</div><!--//header_container -->
@@ -279,7 +273,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<div class="response" id="mce-success-response" style="display:none"></div>
 						</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 						<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+						<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_footer"></div>
 					</form>
 
 				</div><!--//copy -->
@@ -363,6 +357,8 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 	//	mixpanel.track_links(".mixpanel-kickstarter_hero", "Kickstarter - clicked", {"Position": "hero"});
 		//mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
 		mixpanel.track_links(".mixpanel-shop_header", "Pre-Sale - clicked", {"Position": "header"});
+		mixpanel.track_links(".mixpanel-shop_modal", "Pre-Sale - clicked", {"Position": "modal"});
+		mixpanel.track_links(".mixpanel-shop_modal_close", "Pre-Sale - closed", {"Position": "modal"});
 		mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
 		//mixpanel.track_forms(".mixpanel-newsletter_hero", "Newsletter - clicked", {"Position": "hero"});
 		//mixpanel.track_forms(".mixpanel-newsletter_modal", "Newsletter - clicked", {"Position": "modal"});

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	F2_remove_preloader();
-	F5_size_section_cta_top();
+	//F5_size_section_cta_top();
 	
 	F4_CTA_modal('cta_open');
 	
@@ -24,12 +24,12 @@ $(window).scroll(function(){
 });
 
 $(window).resize(function(){
-	F5_size_section_cta_top();	
+	//F5_size_section_cta_top();	
 //	F5_hide_navigation_mobile();	
 });
 
 $(window).bind('orientationchange', function(event) {
-	F5_size_section_cta_top();
+	//F5_size_section_cta_top();
 });
 
 
