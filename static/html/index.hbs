@@ -75,18 +75,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			<iframe src="https://player.vimeo.com/video/127438820?autoplay=0&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			<a class="cta" href="http://shop.jewelbots.com">Pre-order your Jewelbot</a>
 		</div>
-		<form class="shop">
-			<a class="close mixpanel-shop_modal_close" href="javascript:void(0);">X</a>
-			<h2>Pre-Order Started!</h2>
-			<img src="assets/images/2-pack.jpg" style="display: block; width: 60%; margin: -20px auto 0 auto;" />
-			<h4>Twinnie 2-Pack</h4>
-			<p>Jewelbots opened their online store for presales. <!--Jewelry designed to spark girl's interest in coding, be the first on your block!--></p>
-			<a class="cta mixpanel-shop_modal" href="http://shop.jewelbots.com">Pre-order your Jewelbot</a>
-		</form>
-		<!--
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
+		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate">
 			<a class="close" href="javascript:void(0);">X</a>
-			<h2>Launching soon, <br /> be the first to know</h2>
+			<h2>Be the first to know</h2>
 			<p>Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.</p>
 
 			<div class="mc-field-group">
@@ -96,17 +87,17 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			<div id="mce-responses" class="clear">
 				<div class="response" id="mce-error-response" style="display:none"></div>
 				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div><!- - real people should not fill this in and expect good things - do not remove this or risk form bot signups- ->
+			</div><!--real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 			<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-			<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-		</form>-->
+			<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_modal_submitted"></div>
+		</form>
 		<div class="background"></div>
 	</div><!--//modal_cta -->
 
 	<div id="site_container">
 
 		<div id="header_container">
-			<div class="header header_sticky_full">
+			<div class="header">
 				<a class="icon" href="/">Home</a>
 				<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
 				<img class="wordmark" src="assets/images/header_wordmark.png" />
@@ -116,7 +107,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
 					<li><a href="/contact.html">Contact</a></li>
 					<!--<li><a href="/privacy.html">Privacy</a></li>-->
-					<li><a class="cta mixpanel-shop_header" href="http://shop.jewelbots.com/">Pre-Order Now</a></li>
+					<li><a class="cta mixpanel-shop_header" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','100');">Pre-Order Now</a></li>
 				</ul>
 			</div><!--//header -->
 		</div><!--//header_container -->
@@ -131,7 +122,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					</h1>
 					<img src="assets/images/press_wired.png" />
 					<p>Jewelbots: Friendship Bracelets That Teach Girls To Code</p>
-					<a class="button cta_link_video" href="javascript:void;">Watch the Video</a>
 				</div><!--//cta -->
 
 				<div class="slideshow">
@@ -141,7 +131,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<!--<img id="slide_1b" class="slides" src="assets/images/section_cta_top_background_1b.jpg" />-->
 
 				</div><!--//slideshow -->
-				<a class="heart" href="javascript:void;" onClick="F3_scroll_to_ID('#section_what','200');"></a>
+				<a class="heart" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','100');"></a>
 			</div><!--//section_cta_top -->
 
 			<div id="section_shop" class="section color_1">
@@ -155,17 +145,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<ul class="products">
 						<li>
 							<img src="assets/images/section_1_jewelbot_1pack.jpg" />
-							<script type="text/javascript">
-							
-							</script>
 							<h4>Jewelbot</h4>
 							<p>$ 69<span>.00</span></p>
 							<div class="buy">
-								<div data-embed_type="product" data-shop="jewelbots.myshopify.com" data-product_name="Jewelbot" data-product_handle="jewelbot" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="PRE-ORDER" data-button_background_color="00cdb4" data-button_text_color="ffffff"></div>
-								<script type="text/javascript">
-								document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-								</script>
-								<noscript><a class="mixpanel-shop_buy_1_pack" href="https://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Jewelbot</a></noscript>
+								<a class="cta mixpanel-shop_buy_1_pack" href="http://shop.jewelbots.com/cart/4818647172:1">Pre-Order</a>
 							</div>
 						</li>
 						<li>
@@ -173,11 +156,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<h4>Twinnie 2-Pack</h4>
 							<p>$ 99<span>.00</span></p>
 							<div class="buy">
-								<div data-embed_type="product" data-shop="jewelbots.myshopify.com" data-product_name="Twinnie 2-Pack" data-product_handle="twinnie-2-pack" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="PRE-ORDER" data-button_background_color="00cdb4" data-button_text_color="ffffff"></div>
-								<script type="text/javascript">
-								document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-								</script>
-								<noscript><a class="mixpanel-shop_buy_2_pack" href="https://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Twinnie 2-Pack</a></noscript>
+								<a class="cta mixpanel-shop_buy_2_pack" href="http://shop.jewelbots.com/cart/4818676612:1">Pre-Order</a>
 							</div>
 						</li>
 						<li>
@@ -185,11 +164,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<h4>Bestie 3-Pack</h4>
 							<p>$ 139<span>.00</span></p>
 							<div class="buy">
-								<div data-embed_type="product" data-shop="jewelbots.myshopify.com" data-product_name="Bestie 3-Pack" data-product_handle="bestie-3-pack" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="PRE-ORDER" data-button_background_color="00cdb4" data-button_text_color="ffffff"></div>
-								<script type="text/javascript">
-								document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-								</script>
-								<noscript><a href="https://jewelbots.myshopify.com/cart/4818685316:1" target="_blank">Buy Bestie 3-Pack</a></noscript>
+								<a class="cta mixpanel-shop_buy_3_pack" href="http://shop.jewelbots.com/cart/4818685316:1">Pre-Order</a>
 							</div>
 						</li>
 					</ul>
@@ -262,9 +237,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						where and when to get your Jewelbots
 					</p>
 					<img class="logo" src="assets/images/section_cta_bottom_logo_jewelbots.png" />
-					<!--<a class="cta mixpanel-newsletter_footer cta_link" href="javascript:void(0);">Sign up for Mailing-List</a>-->
-
-					<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
+					<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate">
 						<div class="mc-field-group">
 							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 						</div>
@@ -273,9 +246,8 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<div class="response" id="mce-success-response" style="display:none"></div>
 						</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 						<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_footer"></div>
+						<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn mixpanel-newsletter_footer_submitted"></div>
 					</form>
-
 				</div><!--//copy -->
 				<div id="footer_container">
 					<div class="footer">
@@ -286,7 +258,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<li><a class="instagram" href="https://instagram.com/jewelbots" target="_blank">i</a></li>
 							<li><a class="pinterest" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank">p</a></li>
 						</ul><!--//social -->
-
 						<ul class="navigation">
 							<li><a href="/about.html">About</a></li>
 							<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
@@ -294,13 +265,11 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<li><a href="/privacy.html">Privacy</a></li><br />
 							<!--<li><a class="small" href="#">Terms & Privacy Policy</a></li>-->
 						</ul>
-
 						<p>
 							50 Eldrige St, 5th Floor, New York, NY 10002<br />
 							<a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a><br />
 							(862) 201-3065<br />
 						</p>
-
 						<p class="small">
 							Jewelbots © 2015 &nbsp; | &nbsp; Made with love in NYC &nbsp; | &nbsp; Changing the world one Jewelbot at a time
 						</p>
@@ -353,16 +322,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		});*/
 		//
 		// track page load and source
-		//mixpanel.track_links(".mixpanel-kickstarter_header", "Kickstarter - clicked", {"Position": "header"});
-	//	mixpanel.track_links(".mixpanel-kickstarter_hero", "Kickstarter - clicked", {"Position": "hero"});
-		//mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
 		mixpanel.track_links(".mixpanel-shop_header", "Pre-Sale - clicked", {"Position": "header"});
-		mixpanel.track_links(".mixpanel-shop_modal", "Pre-Sale - clicked", {"Position": "modal"});
-		mixpanel.track_links(".mixpanel-shop_modal_close", "Pre-Sale - closed", {"Position": "modal"});
-		mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
-		//mixpanel.track_forms(".mixpanel-newsletter_hero", "Newsletter - clicked", {"Position": "hero"});
-		//mixpanel.track_forms(".mixpanel-newsletter_modal", "Newsletter - clicked", {"Position": "modal"});
-		//onclick="mixpanel.track('SHOP: add to cart', {'Product': '3-Pack', 'Position': 'WWW - HOME' });"
+		
+		mixpanel.track_links(".mixpanel-shop_buy_1_pack", "Pre-Sale - added to cart", {"Product": "1-pack added"});
+		mixpanel.track_links(".mixpanel-shop_buy_2_pack", "Pre-Sale - added to cart", {"Product": "2-pack added"});
+		mixpanel.track_links(".mixpanel-shop_buy_3_pack", "Pre-Sale - added to cart", {"Product": "3-pack added"});
+		
 
 	</script>
     <script>

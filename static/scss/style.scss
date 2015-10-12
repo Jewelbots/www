@@ -241,6 +241,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	display: inline-block;
 	padding: 0px;
 }
+
 #header_container .header ul.navigation li a {
 	display: block;
 	padding: 0 10px 0 10px;
@@ -251,9 +252,13 @@ cta red shadow			rgba(140,40,40,1.0);
 	font-size: 18px;
 	line-height: 20px;
 	letter-spacing: 0;
-	color: rgba(115,200,190,1.0);
-	color: rgba(0,150,155,1.0);
+	/* color: rgba(115,200,190,1.0);*/
+	/* color: rgba(0,150,155,1.0);*/
+	color: rgba(255,255,255,1.0);
 	text-decoration: none;
+}
+#header_container .header_sticky ul.navigation li a, #header_container .header_sticky_full ul.navigation li a {
+	color: rgba(0,150,155,1.0);
 }
 #header_container .header ul.navigation li a.cta {
 	display: block;
@@ -1484,11 +1489,53 @@ cta red shadow			rgba(140,40,40,1.0);
 .index #section_shop .copy ul.products li .buy {
 	display: block;
 	position: relative;
-	width: 110px;
+	width: auto;
 	height: auto;
 	margin: 0 auto 0 auto;
 	padding: 0 0 0 0;
 	text-align: center;
+}
+.index #section_shop .copy ul.products li .buy a.cta {
+	display: block;
+	position: relative;
+	width: 120px;
+	height: 50px;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	/*background-color: rgba(255,66,66,1.0);*/
+	background-color: rgba(55,220,120,1.0);
+	background-color: rgba(255,66,66,1.0);
+	border-bottom: 2px solid rgba(140,40,40,1.0);
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 50px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(255,255,255,1.0);
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+
+	-webkit-transition: .3s ease-in-out;
+	   -moz-transition: .3s ease-in-out;
+	     -o-transition: .3s ease-in-out;
+	    -ms-transition: .3s ease-in-out;
+	        transition: .3s ease-in-out;
+}
+.index #section_shop .copy ul.products li .buy a.cta:hover {
+	height: 48px;
+	margin: 1px auto 0 auto;
+	padding: 0 0 0 0;
+	background-color: rgba(235,46,46,1.0);
+	border-bottom: 1px solid rgba(255,255,255,0.0);
+
+	color: rgba(255,255,255,0.8);
 }
 
 .index #section_shop .copy .note {
