@@ -2,7 +2,7 @@ $(document).ready(function(){
 	F2_remove_preloader();
 	//F5_size_section_cta_top();
 	
-	//F4_CTA_modal('cta_open');
+	F4_CTA_modal('cta_open');
 	
 	$(".cta_link").click(function(event) {
 	  event.preventDefault();
