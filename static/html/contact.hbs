@@ -65,7 +65,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 	<![endif]-->
 
 	<div id="modal_cta">
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
+		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal_submitted">
 			<a class="close" href="javascript:void(0);">X</a>
 			<h2>Launching soon, <br /> be the first to know</h2>
 			<p>Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.</p>
@@ -133,7 +133,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<img class="logo" src="assets/images/section_cta_bottom_logo_jewelbots.png" />
 					<!--<a class="cta mixpanel-newsletter_footer cta_link" href="javascript:void(0);">Sign up for Mailing-List</a>-->
 
-					<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal">
+					<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_footer_submitted">
 						<div class="mc-field-group">
 							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 						</div>
@@ -222,14 +222,14 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		});*/
 		//
 		// track page load and source
-		//mixpanel.track_links(".mixpanel-kickstarter_header", "Kickstarter - clicked", {"Position": "header"});
-	//	mixpanel.track_links(".mixpanel-kickstarter_hero", "Kickstarter - clicked", {"Position": "hero"});
-		//mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
 		mixpanel.track_links(".mixpanel-shop_header", "Pre-Sale - clicked", {"Position": "header"});
-		mixpanel.track_links(".mixpanel-newsletter_footer", "Newsletter - clicked", {"Position": "footer"});
-		//mixpanel.track_forms(".mixpanel-newsletter_hero", "Newsletter - clicked", {"Position": "hero"});
-		//mixpanel.track_forms(".mixpanel-newsletter_modal", "Newsletter - clicked", {"Position": "modal"});
-		//onclick="mixpanel.track('SHOP: add to cart', {'Product': '3-Pack', 'Position': 'WWW - HOME' });"
+		
+		mixpanel.track_links(".mixpanel-shop_buy_1_pack", "Pre-Sale - added to cart", {"Product": "1-pack added"});
+		mixpanel.track_links(".mixpanel-shop_buy_2_pack", "Pre-Sale - added to cart", {"Product": "2-pack added"});
+		mixpanel.track_links(".mixpanel-shop_buy_3_pack", "Pre-Sale - added to cart", {"Product": "3-pack added"});
+	
+		mixpanel.track_forms(".mixpanel-newsletter_modal_submitted", "Newsletter - clicked", {"Position": "modal"});
+		mixpanel.track_forms(".mixpanel-newsletter_footer_submitted", "Newsletter - clicked", {"Position": "footer"});
 
 	</script>
     <script>
