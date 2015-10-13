@@ -968,7 +968,7 @@ cta red shadow			rgba(140,40,40,1.0);
 }
 
 .index #section_cta_top .slideshow {
-	display: block;
+	display: none;
 	position: absolute;
 	width: 100%;
 	height: auto;
@@ -1024,10 +1024,10 @@ cta red shadow			rgba(140,40,40,1.0);
 	color: rgba(255,255,255,0.5);
 }
 .index #section_cta_top a.heart:before {
-   content: "scroll down";
+   content: "";
 }
 .index #section_cta_top a.heart:hover:before {
-   content: "scroll down";
+   content: "";
 }
 
 .index #section_cta_top .cta {
@@ -1144,8 +1144,6 @@ cta red shadow			rgba(140,40,40,1.0);
 
 	color: rgba(255,255,255,0.8);
 }
-
-
 
 .index #section_cta_top .cta form {
 	display: block;
