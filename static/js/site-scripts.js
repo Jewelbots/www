@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
 	F4_add_sticky_header();
-	F4_CTA_modal_init();
+	//F4_CTA_modal_init();
 });
 
 $(window).resize(function(){
