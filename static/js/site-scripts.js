@@ -8,10 +8,10 @@ $(document).ready(function(){
 	  event.preventDefault();
 	  //F4_CTA_modal('cta_open');
 	});
-	$(".cta_link_video").click(function(event) {
-	  event.preventDefault();
-	  F4_CTA_modal('cta_open_video');
-	});
+	//$(".cta_link_video").click(function(event) {
+	  //event.preventDefault();
+	  //F4_CTA_modal('cta_open_video');
+	//});
 	var timer;
 	timer = window.setTimeout( function(){ F2_slideshow_play('next'); }, F2_delay);
 
