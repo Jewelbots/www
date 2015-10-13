@@ -2,11 +2,11 @@ $(document).ready(function(){
 	F2_remove_preloader();
 	//F5_size_section_cta_top();
 	
-	F4_CTA_modal('cta_open');
+	//F4_CTA_modal('cta_open');
 	
 	$(".cta_link").click(function(event) {
 	  event.preventDefault();
-	  F4_CTA_modal('cta_open');
+	  //F4_CTA_modal('cta_open');
 	});
 	$(".cta_link_video").click(function(event) {
 	  event.preventDefault();
@@ -20,12 +20,12 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
 	F4_add_sticky_header();
-	//F4_CTA_modal_init();
+	F4_CTA_modal_init();
 });
 
 $(window).resize(function(){
 	//F5_size_section_cta_top();	
-//	F5_hide_navigation_mobile();	
+	//F5_hide_navigation_mobile();	
 });
 
 $(window).bind('orientationchange', function(event) {
@@ -86,7 +86,7 @@ function F5_hide_navigation_mobile(){
 //-- fade in CTA modal
 var F4_modal_was_open = 0;
 function F4_CTA_modal_init(){
-	if($(window).scrollTop() > $(window).height() * 2){
+	if($(window).scrollTop() > $(window).height() * 3){
 		F4_CTA_modal('open');
 	}
 }
