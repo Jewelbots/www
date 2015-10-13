@@ -8,10 +8,10 @@ $(document).ready(function(){
 	  event.preventDefault();
 	  //F4_CTA_modal('cta_open');
 	});
-	$(".cta_link_video").click(function(event) {
-	  event.preventDefault();
-	  F4_CTA_modal('cta_open_video');
-	});
+	//$(".cta_link_video").click(function(event) {
+	  //event.preventDefault();
+	  //F4_CTA_modal('cta_open_video');
+	//});
 	var timer;
 	timer = window.setTimeout( function(){ F2_slideshow_play('next'); }, F2_delay);
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
 	F4_add_sticky_header();
-	F4_CTA_modal_init();
+	//F4_CTA_modal_init();
 });
 
 $(window).resize(function(){
