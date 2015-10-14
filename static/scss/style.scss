@@ -2015,7 +2015,9 @@ cta red shadow			rgba(140,40,40,1.0);
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 }
-
+.index #section_how .copy img.icons {
+	width: 100%;
+}
 .index #section_how.color_1 {
 	background-color: rgba(123,203,186,1.0);
 }
@@ -2115,6 +2117,9 @@ cta red shadow			rgba(140,40,40,1.0);
 	}
 }
 @media (max-width: 767px) {
+	.index #section_how .copy img.icons {
+		display: none;
+	}
 	.index #section_how .copy {
 		display: block;
 		position: relative;
