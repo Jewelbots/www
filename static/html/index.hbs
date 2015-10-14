@@ -299,8 +299,11 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB2" });
 				$('.test_A').css('display', 'block');
 				$('.test_B').css('display', 'none');
+				/*
 				$('.index #section_shop .copy ul.products li .buy a.cta').css('background-color', 'rgba(255,66,66,1.0)');
-				$('.index #section_cta_top .cta a.cta_presales').css('background-color', 'rgba(255,66,66,1.0)');
+				$('.index #section_cta_top .cta a.cta_presales').css('background-color', 'rgba(255,66,66,1.0)');*/
+				$('.index #section_shop .copy ul.products li .buy a.cta').css('background-color', 'rgba(80,155,225,1.0)');
+				$('.index #section_cta_top .cta a.cta_presales').css('background-color', 'rgba(80,155,225,1.0)');
 			} else {
 				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB2" });
 				$('.test_A').css('display', 'none');
