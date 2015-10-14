@@ -1035,7 +1035,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	position: absolute;
 	width: 80%;
 	height: auto;
-	top: 140px;
+	top: 120px;
 	max-height: 1010px;
 	margin: 0 10% 0 10%;
 	padding: 0 0 0 0;
@@ -1049,7 +1049,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	width: 100px;
 	height: auto;
 	margin: 0 auto 0 auto;
-	padding: 10px 0 20px 0;
+	padding: 10px 0 10px 0;
 }
 .index #section_cta_top .cta_right {
 	display: block;
@@ -1071,7 +1071,8 @@ cta red shadow			rgba(140,40,40,1.0);
 	position: relative;
 	width: auto;
 	height: auto;
-	margin: 0 0 0px 0;
+	max-width: 750px;
+	margin: 0 auto 0px auto;
 	padding: 0 0 0 0;
 
 	font-family: "museo-sans-rounded",sans-serif;
@@ -1091,13 +1092,13 @@ cta red shadow			rgba(140,40,40,1.0);
 	position: relative;
 	width: auto;
 	height: auto;
-	margin: 0 auto 30px auto;
+	margin: 10px auto 5px auto;
 	padding: 0 0 0 0;
 
 	font-family: "museo-sans",sans-serif;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 26px;
 	letter-spacing: 0;
 	text-indent: 0;
@@ -1278,11 +1279,13 @@ cta red shadow			rgba(140,40,40,1.0);
 	}
 	.index #section_cta_top .cta p {
 		margin: 0 auto 0 auto;
+		font-size: 18px;
+		line-height: 26px;
 	}
 }
 @media (max-width: 767px) {
 	.index #section_cta_top .cta {
-		top: 70px;
+		top: 90px;
 	}
 	.index #section_cta_top .cta h1 {
 		margin: 0 0 0px 0;
@@ -1304,7 +1307,7 @@ cta red shadow			rgba(140,40,40,1.0);
 	}
 	
 	.index #section_cta_top .cta p {
-		margin: 0 0 20px 0;
+		margin: 0 0 0px 0;
 
 		font-size: 16px;
 		line-height: 22px;
