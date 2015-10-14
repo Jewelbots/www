@@ -70,29 +70,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		<div class="panel_l"></div>
 		<div class="panel_r"></div>
 	</div><!--//preloader -->
-	<div id="modal_cta">
-		<div class="video">
-			<iframe src="https://player.vimeo.com/video/127438820?autoplay=0&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<a class="cta" href="http://shop.jewelbots.com">Pre-order your Jewelbot</a>
-		</div>
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel-newsletter_modal_submitted">
-			<a class="close" href="javascript:void(0);">X</a>
-			<h2>Be the first to know</h2>
-			<p>Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.</p>
-
-			<div class="mc-field-group">
-				<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-			</div>
-
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div><!--real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-			<div class="clear"><input type="submit" value="I'm IN." name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-		</form>
-		<div class="background"></div>
-	</div><!--//modal_cta -->
 
 	<div id="site_container">
 
@@ -101,13 +78,13 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				<a class="icon" href="/">Home</a>
 				<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
 				<img class="wordmark" src="assets/images/header_wordmark.png" />
-				<ul class="navigation">
+				<ul class="navigation hide">
 					<li><a href="/">Home</a></li>
 					<li><a href="/about.html">About</a></li>
 					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
 					<li><a href="/contact.html">Contact</a></li>
 					<!--<li><a href="/privacy.html">Privacy</a></li>-->
-					<li><a class="cta mixpanel-shop_header" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','100');">Pre-Order Now</a></li>
+					<li><a class="cta mixpanel-shop_header" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','80');">Pre-Order Now</a></li>
 				</ul>
 			</div><!--//header -->
 		</div><!--//header_container -->
@@ -117,21 +94,27 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			<div id="section_cta_top" class="section">
 
 				<div class="cta">
-					<h1>Jewelbots: Friendship Bracelets That Teach Girls To Code</h1>
+					<h1 class="test_A">Smart Jewelry <br /> for a Smarter Generation</h1>
+					<h1 class="test_B">Smart Jewelry <br /> for a Smarter Generation</h1>
 					<p>
 						»The most interesting wearable I’ve seen this year«
 					</p>
 					<img src="assets/images/press_wired.png" />
-					
+					<a class="cta_presales mixpanel-shop_hero" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','80');">Pre-Order</a>
+					<p class="small test_A">
+						Order <span>BEFORE DECEMBER 1</span> to be part of<br />
+						the first shipment of Jewelbots.
+					</p>
+					<p class="test_B">
+						Order yours now to be guaranteed <br />to get it in spring 2016!
+					</p>
 				</div><!--//cta -->
+				<img class="jewelbots" src="assets/images/jewelbots.png" />
 
-				<div class="slideshow">
-					<img id="slide_1" class="slides" src="assets/images/section_cta_top_background_2.jpg" />
-					<img id="slide_2" class="slides" src="assets/images/section_cta_top_background_2.jpg" />
-					<img id="slide_3" class="slides" src="assets/images/section_cta_top_background_2.jpg" />
-					<!--<img id="slide_1b" class="slides" src="assets/images/section_cta_top_background_1b.jpg" />-->
+				<iframe src="https://player.vimeo.com/video/142426771?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1440" height="810" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-				</div><!--//slideshow -->
+				<div class="alpha">&nbsp;</div>
+
 				<a class="heart" href="javascript:void;" onClick="F3_scroll_to_ID('#section_shop','100');"></a>
 			</div><!--//section_cta_top -->
 
@@ -309,24 +292,27 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		mixpanel.track("Page Loaded", {"Page Name": "Home", "Page Source": page_source });
 		//
 		// track A/B tests
-		/*$(function() {
+		$(function() {
 			var test = "";
 		 	var test_id = 1 % Math.ceil(2 * Math.random());
 			if (test_id) {
 				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB2" });
+				$('.test_A').css('display', 'block');
+				$('.test_B').css('display', 'none');
+				$('.index #section_shop .copy ul.products li .buy a.cta').css('background-color', 'rgba(255,66,66,1.0)');
+				$('.index #section_cta_top .cta a.cta_presales').css('background-color', 'rgba(255,66,66,1.0)');
 			} else {
 				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB2" });
-				//open modal if Version B is served
-				$('#slide_1').css('display', 'none');
-				$('#slide_2').css('display', 'none');
-				$('#slide_3').css('display', 'none');
-				$('#section_cta_top .cta h1').text('The Friendship Bracelet for the iPhone Era!');
-				$('#section_cta_top .cta').addClass('cta_right');
+				$('.test_A').css('display', 'none');
+				$('.test_B').css('display', 'block');
+				$('.index #section_shop .copy ul.products li .buy a.cta').css('background-color', 'rgba(80,155,225,1.0)');
+				$('.index #section_cta_top .cta a.cta_presales').css('background-color', 'rgba(80,155,225,1.0)');
 			}
-		});*/
+		});
 		//
 		// track page load and source
 		mixpanel.track_links(".mixpanel-shop_header", "Pre-Sale - clicked", {"Position": "header"});
+		mixpanel.track_links(".mixpanel-shop_hero", "Pre-Sale - clicked", {"Position": "hero"});
 		
 		mixpanel.track_links(".mixpanel-shop_buy_1_pack", "Pre-Sale - added to cart", {"Product": "1-pack added"});
 		mixpanel.track_links(".mixpanel-shop_buy_2_pack", "Pre-Sale - added to cart", {"Product": "2-pack added"});
