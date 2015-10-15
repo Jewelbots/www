@@ -100,3 +100,45 @@ function F7_change_color(color){
 		$('#section_what #circle_3').addClass('active');
 	}
 }
+//
+//
+//-- F9__module_socialfeed_tweets ----------------------------------//
+var F9__current_image = 0;
+window.socialtimerFired = function() {
+	//--loop through the images
+	if(F9__current_image < 9){
+		$('#tweet_'+F9__current_image).animate({ opacity: 0.0 }, 500, function() {
+			$('#tweet_'+F9__current_image).css({'display': 'none'});
+			F9__current_image = F9__current_image + 1;
+			$('#tweet_'+F9__current_image).animate({ opacity: 1.0 }, 200, function() {});
+		});
+	} else {
+		F9__current_image = 0;
+		$('#tweet_0').css({'display': 'block'});
+		$('#tweet_1').css({'display': 'block'});
+		$('#tweet_2').css({'display': 'block'});
+		$('#tweet_3').css({'display': 'block'});
+		$('#tweet_4').css({'display': 'block'});
+		$('#tweet_5').css({'display': 'block'});
+		$('#tweet_6').css({'display': 'block'});
+		$('#tweet_7').css({'display': 'block'});
+		$('#tweet_8').css({'display': 'block'});
+		$('#tweet_9').css({'display': 'block'});
+		$('#tweet_0').animate({ opacity: 1.0 }, 200, function() {});
+		$('#tweet_1').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_2').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_3').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_4').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_5').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_6').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_7').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_8').animate({ opacity: 0.0 }, 200, function() {});
+		$('#tweet_9').animate({ opacity: 0.0 }, 200, function() {});
+	}
+	window.module_socialfeed_socialtimerFired = setTimeout(socialtimerFired, 5000);
+};
+window.reset_module_hero_slideshow = function() {
+	clearTimeout(window.module_socialfeed_socialtimerFired);
+	window.module_socialfeed_socialtimerFired = setTimeout(socialtimerFired, 5000);
+};
+window.module_socialfeed_socialtimerFired = setTimeout(socialtimerFired, 5000);
