@@ -3001,3 +3001,364 @@ cta red shadow			rgba(140,40,40,1.0);
 		line-height: 22px;
 	}
 }
+
+
+
+
+
+
+/* @group------ section_twitter -----------------*/
+.index #section_twitter {
+	display: block;
+	position: relative;
+	height: auto;
+	min-height: 400px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background-color: rgba(90,225,200,1.0);
+	background-color: #c7d9e1;
+	background-color: #eaeaea;
+}
+.index #section_twitter .copy {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 1180px;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 20px 60px 0 60px;
+
+	z-index: 2;
+}
+.index #section_twitter .copy h3 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 10px 0 10px 0;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans-rounded",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 36px;
+	letter-spacing: 1px;
+	text-indent: 0;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(0,150,155,1.0);
+
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+.index #section_twitter #tweetcontainer li.tweet {
+	display: block;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	margin: 0 120px 20px 120px;
+
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+.index #section_twitter #tweetcontainer .tweet .user {
+	display: block;
+	position: relative;
+	float: right;
+	width: 35%;
+	height: auto;
+	margin: 0 0 20px 0;
+}
+.index #section_twitter #tweetcontainer .tweet .user img {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: auto;
+	margin: 0 0 10px 0;
+
+	        border-radius: 50px 50px 50px 50px;
+	   -moz-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
+	border: 4px solid rgba(255,255,255,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet .user span {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,150,155,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet .user span:first-of-type {
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.index #section_twitter #tweetcontainer .tweet p.tweet {
+	display: block;
+	position: relative;
+	width: 60%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 20px 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 30px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(170,170,170,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet p.tweet img {
+	width: 20px;
+	height: auto;
+}
+.index #section_twitter #tweetcontainer .tweet p.tweet a {
+	font-weight: 300;
+
+	color: rgba(170,170,170,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet p.tweet a:hover {
+	color: rgba(0,150,155,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet p.timePosted {
+	display: none;
+	position: relative;
+	width: 60%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 20px 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 26px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,150,155,1.0);
+}
+.index #section_twitter #tweetcontainer .tweet p.interact a {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 10px 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 26px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: left;
+	color: rgba(0,150,155,1.0);
+}
+
+.index #section_twitter #tweetcontainer  ul li {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	opacity: 0;
+}
+
+.index #section_twitter #tweetcontainer ul #tweet_0 {
+	opacity: 1;
+	z-index: 910;
+}
+.index #section_twitter #tweetcontainer ul #tweet_1 {
+	z-index: 909;
+}
+.index #section_twitter #tweetcontainer ul #tweet_2 {
+	z-index: 907;
+}
+.index #section_twitter #tweetcontainer ul #tweet_3 {
+	z-index: 906;
+}
+.index #section_twitter #tweetcontainer ul #tweet_4 {
+	z-index: 905;
+}
+.index #section_twitter #tweetcontainer ul #tweet_5 {
+	z-index: 904;
+}
+.index #section_twitter #tweetcontainer ul #tweet_6 {
+	z-index: 903;
+}
+.index #section_twitter #tweetcontainer ul #tweet_7 {
+	z-index: 902;
+}
+.index #section_twitter #tweetcontainer ul #tweet_8 {
+	z-index: 901;
+}
+.index #section_twitter #tweetcontainer ul #tweet_9 {
+	z-index: 900;
+}
+
+
+@media (max-width: 1279px) {
+}
+@media (max-width: 1023px) {
+	.index #section_twitter .copy {
+		display: block;
+		position: relative;
+		width: 100%;
+		max-width: 1180px;
+		height: auto;
+		margin: 0 auto 0 auto;
+		padding: 20px 20px 0 20px;
+
+		z-index: 2;
+	}
+	.index #section_twitter #tweetcontainer li.tweet {
+		width: auto;
+		margin: 0 0 20px 0;
+	}
+	.index #section_twitter {
+		width: auto;
+		height: 450px;
+		max-height: 450px;
+	}
+
+	.index #section_twitter #tweetcontainer .tweet .user {
+		width: 100%;
+		float: none;
+		margin: 0 0 0 0;
+	}
+	.index #section_twitter #tweetcontainer .tweet .user img {
+		width: 70px;
+		margin: 0 0 10px 0;
+	}
+	.index #section_twitter #tweetcontainer .tweet .user span {
+		display: inline-block;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: 0 0 0 0;
+		padding: 0 10px 0 0;
+
+		font-family: "museo-sans",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 1px;
+		line-height: 20px;
+		letter-spacing: 0;
+		text-indent: 0;
+		text-transform: none;
+		text-align: left;
+		color: rgba(0,150,155,1.0);
+	}
+	.index #section_twitter #tweetcontainer .tweet .user span:first-of-type {
+		font-weight: 500;
+		font-size: 16px;
+	}
+
+	.index #section_twitter #tweetcontainer .tweet p.tweet {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin: 0 0 0 0;
+		padding: 10px 0 0 0;
+
+		font-family: "museo-sans",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0;
+		text-indent: 0;
+		text-transform: none;
+		text-align: left;
+		color: rgba(170,170,170,1.0);
+	}
+	.index #section_twitter #tweetcontainer .tweet p.tweet img {
+		width: 20px;
+		height: auto;
+	}
+	.index #section_twitter #tweetcontainer .tweet p.tweet a {
+		font-weight: 300;
+
+		color: rgba(170,170,170,1.0);
+	}
+	.index #section_twitter #tweetcontainer .tweet p.tweet a:hover {
+		color: rgba(0,150,155,1.0);
+	}
+	.index #section_twitter #tweetcontainer .tweet p.timePosted {
+		display: none;
+		position: relative;
+		width: 60%;
+		height: auto;
+		margin: 0 0 0 0;
+		padding: 20px 0 0 0;
+
+		font-family: "museo-sans",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 26px;
+		letter-spacing: 0;
+		text-indent: 0;
+		text-transform: none;
+		text-align: left;
+		color: rgba(0,150,155,1.0);
+	}
+	.index #section_twitter #tweetcontainer .tweet p.interact a {
+		display: inline-block;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: 0 0 0 0;
+		padding: 0 10px 0 0;
+
+		font-family: "museo-sans",sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 26px;
+		letter-spacing: 0;
+		text-indent: 0;
+		text-transform: none;
+		text-align: left;
+		color: rgba(0,150,155,1.0);
+	}
+	
+}
+@media (max-width: 767px) {
+}
+/* @end */
+
+
+
