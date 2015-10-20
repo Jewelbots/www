@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	F2_remove_preloader();
 	$(window).resize(); //-- and force
 });
 
@@ -21,23 +20,6 @@ $(window).bind('orientationchange', function(event) {
 //-- scroll to a specific ID
 function F3_scroll_to_ID(id, shift){
 	$('html,body').stop().animate({scrollTop: $(id).offset().top -shift}, 700);
-}
-//
-//
-//-- remove preloader once site is loaded // add a bit of delay
-function F2_remove_preloader() {
-	
-	var delay = 500; //-- for testing
-
-	$('#preloader .panel_l').delay(500+delay).animate({ 'width' : '0%' }, 700 );
-	$('#preloader .panel_r').delay(500+delay).animate({ 'width' : '0%' }, 700 );
-	$('#preloader img').delay(200+delay).animate({ 'opacity' : '0.0' }, 300 );
-	$('#preloader').delay(500+delay).animate({'opacity':'0.0'}, 700);
-	
-	$('#preloader').delay(0+delay).animate({'opacity':'0.0'}, 700, function() {
-		$('#preloader').hide();
-	});
-
 }
 //
 //
