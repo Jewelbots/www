@@ -31,12 +31,16 @@ gulp.task('compile',['scripts', 'sass'], function () {
 });
 
 gulp.task('move-statics', function () {
-  gulp.src(['static/html/robots.txt', 'static/images/favicon.*', ])
+  gulp.src(['static/html/robots.txt', 'static/images/favicon.*' ])
     .pipe(gulp.dest('dist')),
   gulp.src('static/images/favicon.*')
     .pipe(gulp.dest('dist')),
   gulp.src('static/images/**')
     .pipe(gulp.dest('dist/assets/images'))
+  gulp.src(['static/js/site-scripts_v5.js'])
+   .pipe(gulp.dest('dist/assets/js')),
+  gulp.src(['static/scss/style_v5.css' ])
+   .pipe(gulp.dest('dist/assets/css'))
 });
 
 gulp.task('scripts',  function () {
