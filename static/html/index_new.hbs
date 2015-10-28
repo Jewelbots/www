@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="//cdn.optimizely.com/js/3728406291.js"></script>
+	<meta charset="utf-8" />
+	<title>Jewelbots - The friendship-bracelet for the Smartphone era</title>
+	<meta name="description" lang="en" content="Ignite their curiosity! Jewelbots - programmable friendship bracelets for the modern world." />
+	<meta name="keywords" lang="en" content="jewelbots, wearables, friendship bracelet, nyc, tech, code, learn, open source, iphone, android" />
+
+	<!--
+	***********************************************************************************************************
+
+		www.jewelbots.com
+		v.5.3
+                                _ _           _
+           (♥) _____      _____| | |__   ___ | |_ ___
+           | |/ _ \ \ /\ / / _ \ | '_ \ / _ \| __/ __|
+           | |  __/\ V  V /  __/ | |_) | (_) | |_\__ \
+          _/ |\___| \_/\_/ \___|_|_.__/ \___/ \__|___/
+         |__/
+
+	***********************************************************************************************************
+	-->
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="15" />
+	<meta name="google-site-verification" content="WkWMC2U0n_lT3U1t_-PhLM0CGoeS25ux-D6LGOwu8Fg" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	<link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
+	<link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
+
+	<script src="//use.typekit.net/rbz5qur.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!-- Mixpanel Code -->
+	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
+	<!-- End Mixpanel Code -->
+
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '108847092786155');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=108847092786155&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+
+</head>
+<body>
+	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div id="site_container" class="index">
+		<div id="content_container">
+
+			<div id="jewelbot">
+				<img id="band_1" class="band" src="assets/images/jewelbot_band_1.png" />
+				<img id="band_2" class="band" src="assets/images/jewelbot_band_2.png" />
+				<img id="band_3" class="band active" src="assets/images/jewelbot_band_3.png" />
+				<img id="band_4" class="band" src="assets/images/jewelbot_band_4.png" />
+				<img id="band_5" class="band" src="assets/images/jewelbot_band_5.png" />
+
+				<img id="shadow" class="shadow active" src="assets/images/jewelbot_shadow.png" />
+				<img id="board" class="board active" src="assets/images/jewelbot_board.png" />
+				<img id="led" class="led active" src="assets/images/jewelbot_led.png" />
+
+				<img id="charm_1" class="charm" src="assets/images/jewelbot_charm_1.png" />
+				<img id="charm_2" class="charm" src="assets/images/jewelbot_charm_2.png" />
+				<img id="charm_3" class="charm" src="assets/images/jewelbot_charm_3.png" />
+				<img id="charm_4" class="charm" src="assets/images/jewelbot_charm_4.png" />
+				<img id="charm_5" class="charm active" src="assets/images/jewelbot_charm_5.png" />
+				<img id="charm_6" class="charm" src="assets/images/jewelbot_charm_6.png" />
+			</div><!--//jewelbot -->
+
+			<div class="section_header">
+				<div class="header">
+					<a class="icon" href="/">Home</a>
+					<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
+					<img class="wordmark" src="assets/images/index_section_header_wordmark.png" />
+					<ul class="navigation">
+						<li><a class="cta mxp-interaction_action_clicked_pre_order_header" href="javascript:void;" onClick="F4__scroll_to_ID('#section_sale','90');">Pre-Order Now</a></li>
+					</ul>
+				</div><!--//header -->
+			</div><!--//section_header -->
+			<div class="section_hero">
+				<h1 class="test_A">The worlds first<br /> programmable friendship bracelet.</h1>
+				<h1 class="test_B">Spark Their Creativity</h1>
+				<!--
+				<h1>Spark Their Creativity</h1>
+				<h1>Ignite Their Curiosity</h1>
+				<h1>Get Them Excited</h1>
+				-->
+				<p class="test_A">Spark Their Creativity. Get your kid coding today!</p>
+				<p class="test_B">The worlds first programmable friendship bracelet. Get your kid coding today!</p>
+				<div class="cta" onClick="javascript:F4__scroll_to_ID('#section_sale', '90'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_hero'});"></div>
+				<p class="small">
+					Order yours now to<br />
+					be part of the first shipment in 2016.
+					<img class="arrow" src="assets/images/index_section_hero_arrow_down.png" />
+				</p>
+			</div><!--//section_hero -->
+			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
+			<div class="section_meet">
+				<div class="column_left">
+					<h2>Meet Jewelbots</h2>
+					<p>
+						Jewelbots are more than just pretty jewelry, they are a powerful communication tool. Kids can make their bracelet light up when their friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways! 
+					</p>
+					<div class="feature_1 feature" onClick="javascript:F7__Jewelbot_feature('feature_1'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_1'});">
+						<h4>Power of open source</h4>
+						<p>
+							Jewelbots are powered by the Arduino IDE, a powerful, yet easy to learn language intended for anyone making interactive projects.
+						</p>
+						<div class="pointer">
+							<img class="feature_off" src="assets/images/index_section_meet_feature_1_off.png">
+							<img class="feature_on" src="assets/images/index_section_meet_feature_1_on.png">
+						</div>
+					</div>
+				</div><!--//column_left -->
+				<div class="column_right">
+					<div class="feature_2 feature" onClick="javascript:F7__Jewelbot_feature('feature_2'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_2'});">
+						<h4>4 Powerful LEDs</h4>
+						<p>
+							16.7 million variations of rainbow fun!
+						</p>
+						<div class="pointer">
+							<img class="feature_off" src="assets/images/index_section_meet_feature_2_off.png">
+							<img class="feature_on" src="assets/images/index_section_meet_feature_2_on.png">
+						</div>
+					</div>
+					<div class="feature_3 feature" onClick="javascript:F7__Jewelbot_feature('feature_3'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_3'});">
+						<h4>Replaceable Charm</h4>
+						<p>
+							Pop them on and off, different colors, shapes and if you want, print your own!
+						</p>
+						<div class="pointer">
+							<img class="feature_off" src="assets/images/index_section_meet_feature_3_off.png">
+							<img class="feature_on" src="assets/images/index_section_meet_feature_3_on.png">
+						</div>
+					</div>
+					<div class="feature_4 feature" onClick="javascript:F7__Jewelbot_feature('feature_4'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_4'});">
+						<h4>Stylish Nylon Band</h4>
+						<p>
+							Match you mood, your style, express yourself.
+						</p>
+						<div class="pointer">
+							<img class="feature_off" src="assets/images/index_section_meet_feature_4_off.png">
+							<img class="feature_on" src="assets/images/index_section_meet_feature_4_on.png">
+						</div>
+					</div>
+				</div><!--//column_right -->
+			</div><!--//section_meet -->
+			<div class="section_features">
+				<h3>Jewelbots Features</h3>
+				<div class="column_left">
+					<h4>Lights</h4>
+					<p>
+						Jewelbots have 4 lights that can be programmed to react to other Jewelbots. No other Jewelbots in the area? Not to worry. You can still program it to light up when it’s time for class, or to remind you to practice your violin!
+					</p>
+					<h4>Messaging</h4>
+					<p>
+						All Jewelbots have a tiny motor in it that vibrates when it gets a message. Kids can send messages to their friends who are nearby by simply pressing on their Jewelbots, no phone required! 
+					</p>
+					<h4>The App</h4>
+					<p>
+						Using the free Jewelbots app for iPhone and Android, kids can set how their Jewelbot behaves and interacts to their friends. Don’t have a phone? Jewelbots can still be used without the app!
+					</p>
+				</div><!--//column_left -->
+				<div class="column_right">
+					<h4>Programming</h4>
+					<p>
+						Jewelbots have a micro USB port on the side, and it can be directly connected to a computer. Using the free Arduino software, kids can program their Jewelbots to do all sorts of cool things Kids can then upload their code to our site and share and collaborate with other Jewelbot users.
+					</p>
+					<h4>Safety</h4>
+					<p>
+						We are making a product for kids and their safety is our number one priority. We don’t store any personal data of any kind, and we never use GPS or location to locate a Jewelbots.
+					</p>
+				</div><!--//column_right -->
+				<ul class="colorpicker">
+					<li><div id="color_1" class="active" onClick="F3__section_features('show_color_1');">&nbsp;</div></li>
+					<li><div id="color_2" class="active" onClick="F3__section_features('show_color_2');">&nbsp;</div></li>
+					<li><div id="color_3" class="active" onClick="F3__section_features('show_color_3');">&nbsp;</div></li>
+					<li><div id="color_4" class="active" onClick="F3__section_features('show_color_4');">&nbsp;</div></li>
+					<li><div id="color_5" class="active" onClick="F3__section_features('show_color_5');">&nbsp;</div></li>
+				</ul>
+				<div class="cta" onClick="javascript:F3__section_features('open_details'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_features_details'});">Read the Full Technical Specification</div>
+			</div><!--//section_features -->
+			<div class="section_features_details" id="section_features_details">
+				<div class="column_left">
+					<h4>Specifications</h4>
+					<p class="note">* Final colors and specs may vary slightly.</p>
+
+					<h5>Whats Included</h5>
+					<p>Every bracelet will ship with 3 different color bands, a Jewelbots charm and a charging cable:</p>
+					<img class="band" src="assets/images/index_section_features_details_band_1.png" />
+					<img class="band" src="assets/images/index_section_features_details_band_2.png" />
+					<img class="band" src="assets/images/index_section_features_details_band_3.png" />
+					<img class="usb" src="assets/images/index_section_features_details_usb_cable.png" />
+
+					<h5>Dimensions</h5>
+					<p class="nopadding">32.5 x 32.5 x 14mm</p>
+
+					<h5>Band</h5>
+					<p class="nopadding">16mm wide and 230mm long</p>
+
+					<!--<h5>Weight</h5>
+					<p>28g / 0.99oz or 32g / 1.13ox</p>-->
+
+					<h5>Sensors & Components</h5>
+					<ul>
+						<li><span>•</span>Vibration motor</li>
+						<li><span>•</span>4x LEDs, 16.7mill colors</li>
+						<li><span>•</span>Bluetooth 4.0</li>
+					</ul>
+
+					<h5>Batteries & Power</h5>
+					<ul>
+						<li><span>•</span>Battery life: up to 1-2 days</li>
+						<li><span>•</span>Battery type: Lithium-polymer</li>
+						<li><span>•</span>Charge time: 3-4 hours</li>
+					</ul>
+
+					<h5>Environmental Requirements</h5>
+					<ul>
+						<li><span>•</span>Operating temperature: 14° to 113° F</li>
+					</ul>
+				</div><!--//column_left -->
+				<div class="column_right">
+					<h5>Materials</h5>
+					<ul>
+						<li><span>•</span>Nylon Band</li>
+						<li><span>•</span>Plastic Casing</li>
+					</ul>
+
+					<h5>Care</h5>
+					<p>The Jewelbot nylon band can be washed by hand. The charms should be wiped with a wet cloth. The cases should only be wiped with a dry cloth.</p>
+
+					<h5>Water Resitance</h5>
+					<p>Jewelbots are splash resistant. Do not bath, shower or swim with your Jewelbot on.</p>
+
+					<!--<h5>Jewelbots Board & SDK</h5>
+					<p>To come</p>-->
+
+					<h5>Syncing & Bluethooth</h5>
+					<p class="nopadding">Jewelbots syncs wirelessly to tablets, iOS and Android smartphones using Bluetooth 4.0+ wireless technology.</p>
+					<ul>
+						<li><span>•</span>Syncing range: 20 feet</li>
+						<li><span>•</span>Syncing to desktop computers requires a USB connection</li>
+						<li><span>•</span>Syncing to mobile devices require Bluetooth 4.0+</li>
+						<li><span>•</span>Syncs with iPhone 4S and later, iPad 3 gen. and later, and leading Android devices</li>
+						<li><span>•</span>For Mac and Windows, we allow you to add code to your Jewelbot</li>
+					</ul>
+				</div><!--//column_right -->
+				<div class="clear">&nbsp;</div><!--//clear -->
+			</div><!--//section_features_details -->
+			<div class="section_software">
+				<div class="app">
+					<div class="app_container">
+						<img src="assets/images/index_section_software_iphone.png" />
+						<img src="assets/images/index_section_software_iphone_app.gif" />
+					</div>
+					<div class="column_right">
+						<h3>The Jewelbots App</h3>
+						<!--<h4>»Getting her to code doesn’t have to be as hard as getting her to eat vegetables.«</h4>-->
+						<p>
+							<!--Every beginning can be difficult and intimidating. So we’ve created the Jewelbots app.--> Using basic if/then statements, girls begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. The can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they got a hang of it, they can use the app to write little mods and take their skills further:
+						</p>
+						<div id="mod_1" class="mod"><img src="assets/images/index_section_software_mod_instagram.png" /><span>Instagram Mod: </span>light up when I get an new like</div>
+						<div id="mod_2" class="mod"><img src="assets/images/index_section_software_mod_twitter.png" /><span>Twitter Mod: </span>vibrate when I get a new follower</div>
+						<div id="mod_3" class="mod"><img src="assets/images/index_section_software_mod_facebook.png" /><span>Facebook Mod: </span>flash when Daddy writes a message</div>
+						<p>
+							…the mod possibilities are endless.<br /> And of course – Jewelbots basic functions can be used without a phone.
+						</p>
+						<div class="cta" onClick="javascript:F2__section_software('open_desktop'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_desktop'});">Jewelbots is open source - learn more</div>
+					</div><!--//column_right -->
+				</div><!--//app -->
+				<div class="desktop">
+					<div class="column_left">
+						<h3>
+							Open Source<br />
+							Their Imagination
+							is the Limit
+						</h3>
+						<h4>
+							»Certainly there's a phenomenon around open source. You know free software will be a vibrant area. There will be a lot of neat things that get done there«
+							<span>– Bill Gates</span>
+						</h4>
+						<p>
+							Jewelbots are also open source, so for the  curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up they get a call on their phone, why not? 
+						</p>
+						<div class="cta" onClick="javascript:F2__section_software('open_app');  mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_app'});"><img class="left" src="assets/images/index_section_software_btn_app_left.png" />The Jewelbots app - easy as<img class="right" src="assets/images/index_section_software_btn_app_right.png" /></div>
+					</div><!--//column_left -->
+					<div class="column_right">
+						<p>
+							<img class="left" src="assets/images/index_section_software_arduino.png" />
+							<span>Arduino</span> is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.
+						</p>
+					</div><!--//column_right -->
+					
+				</div><!--//desktop -->
+			</div><!--//section_software -->
+			<div class="section_sale" id="section_sale">
+				<h3>Get Your Jewelbot Today!</h3>
+				<h4>Order before December 1 to be part of the first shipment of Jewelbots.</h4>
+				<ul class="products">
+					<li>
+						<img src="assets/images/index_section_sale_product_jewelbot_2pack.jpg" />
+						<h5>Twinnie 2-Pack</h5>
+						<p>$ 99</p>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_1pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Pre-order</a>
+					</li><!--
+				 --><li>
+						<img src="assets/images/index_section_sale_product_jewelbot_1pack.jpg" />
+						<h5>Jewelbot</h5>
+						<p>$ 69</p>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_2pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Pre-order</a>
+					</li><!--
+				 --><li>
+						<img src="assets/images/index_section_sale_product_jewelbot_3pack.jpg" />
+						<h5>Bestie 3-Pack</h5>
+						<p>$ 139</p>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_3pack" href="http://jewelbots.myshopify.com/cart/4818685316:1" target="_blank">Pre-order</a>
+					</li>
+				</ul>
+				<p class="note">
+					<span>This is a pre-sale. Product aims to ship by Spring 2016. Shipping timelines are estimates.</span><br />
+					Actual design of charm and bands may vary slightly. Every bracelet will ship with 3 different color bands.<br />
+					Actual colors may differ. Because this is a pre-order, you are eligible for a full refund at any time before your merchandise ships.
+				</p>
+			</div><!--//section_sale -->
+			<div class="section_video">
+				<div class="overlay">
+					<h3>Bill Nye says AWESOME!</h3>
+					<h4>
+						Public opinion - that’s all well and good - but hard facts are better.<br />
+						See what Bill Nye has to say about Jewelbots.
+					</h4>
+						<div class="cta" onClick="javascript:F1__section_video('play'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_video'});"><img src="assets/images/index_section_video_cta_play.png" />Watch the video</div>
+						<p>0:39</p>
+				</div>
+				<iframe id="video_bill_nye" width="560" height="315" src="https://www.youtube.com/embed/XL7JzO4QjXw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div><!--//section_video -->
+			<div class="section_press">
+				<h3>What others say</h3>
+				<h4>»The most interesting wearable I’ve seen this year«</h4>
+				<img class="wired" src="assets/images/index_section_press_article_wired.png" />
+				<ul class="press">
+					<li class="quarter"><img src="assets/images/index_section_press_article_forbes.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_bustle.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_verge.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_psfk.jpg" /></li><!--
+
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_techcrunch.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_businessinsider.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_britco.jpg" /></li><!--
+
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_glamour.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_teenvogue.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_yahoo.jpg" /></li><!--
+				 --><li class="quarter"><img src="assets/images/index_section_press_article_buzzfeed.jpg" /></li>
+				</ul>
+			</div><!--//section_press -->
+			<div class="section_newsletter">
+				<h3 class="test_A">The Jewelbot Newsletter</h3>
+				<p class="test_A">
+					Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.
+				</p>
+				<h3 class="test_B">1+1 = Superhero!</h3>
+				<p class="test_B">
+					Sign up for our newsletter and become someone’s superhero.<br />
+					Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>.
+				</p>
+				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email">
+					<div class="mc-field-group">
+						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+					<div class="clear desktop"><input type="submit" value="Make someone happy" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+					<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+				</form>
+			</div><!--//section_newsletter -->
+			<div class="section_footer">
+				<img class="logo" src="assets/images/index_section_footer_background_logo.png" />
+				<p class="large">
+					We at Jewelbots are passionate about the power of code and technology.<br />
+					So we've created Jewelbot to fuse fashion, technology, and friendship.<br />
+					It’s a device that harnesses the creativity and exuberance of young women to teach them a critical new language that will serve them for years to come.
+				</p>
+				<ul class="social">
+					<li><a class="facebook mxp-interaction_action_clicked_social_fb" href="https://www.facebook.com/jewelbots" target="_blank">f</a></li>
+					<li><a class="twitter mxp-interaction_action_clicked_social_tw" href="https://twitter.com/jewelbots" target="_blank">t</a></li>
+					<li><a class="instagram mxp-interaction_action_clicked_social_in" href="https://instagram.com/jewelbots" target="_blank">i</a></li>
+					<li><a class="pinterest mxp-interaction_action_clicked_social_pi" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank">p</a></li>
+				</ul><!--//social -->
+				<ul class="navigation">
+					<li><a href="/about.html">About</a></li>
+					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+					<li><a href="/privacy.html">Privacy</a></li><br />
+					<!--<li><a class="small" href="#">Terms & Privacy Policy</a></li>-->
+				</ul>
+				<p class="address">
+					50 Eldrige St, 5th Floor, New York, NY 10002<br />
+					<a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a><br />
+					(862) 201-3065<br />
+				</p>
+				<p class="credits">
+					Jewelbots © 2015 &nbsp; | &nbsp; Made with love in NYC &nbsp; | &nbsp; Changing the world one Jewelbot at a time
+				</p>
+				<a class="mxp-interaction_action_clicked_section_footer_mxp" href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+				<br />
+				<br />
+			</div><!--//section_footer -->
+			
+		</div><!--//content_container -->
+	</div><!--//site_container -->
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ assetPath "js/site-scripts.js" }}"></script>
+	<script type="text/javascript">
+		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+		//-- A/B TESTS - 
+		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+		//
+		//
+		$(function() {
+			var test = "";
+		 	var test_id = 1 % Math.ceil(2 * Math.random());
+			if (test_id) {
+				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB5" });
+				$('.test_A').css('display', 'block');
+				$('.test_B').css('display', 'none');
+			} else {
+				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB5" });
+				$('.test_A').css('display', 'none');
+				$('.test_B').css('display', 'block');
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+		//-- MIXPANEL - 
+		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
+		//
+		//
+		//-- SALES {STEP: reached_cart, reached_checkout, reached_thankyou / PRODUCT: jewelbot_1pack, jewelbot_2pack, jewelbot_3pack / ACTION: added_to_cart, removed_from_cart, cleared_cart }
+		//
+		//-- STEP
+		mixpanel.track_links(".mxp-sales_step_reached_cart",        "SALES", {"STEP": "reached_cart"});
+		mixpanel.track_links(".mxp-sales_step_reached_checkout",    "SALES", {"STEP": "reached_checkout"});
+		mixpanel.track_links(".mxp-sales_step_reached_thankyou",    "SALES", {"STEP": "reached_thankyou"});
+		//-- PRODUCT
+		mixpanel.track_links(".mxp-sales_product_jewelbot_1pack",   "SALES", {"PRODUCT": "jewelbot_1pack"});
+		mixpanel.track_links(".mxp-sales_product_jewelbot_2pack",   "SALES", {"PRODUCT": "jewelbot_2pack"});
+		mixpanel.track_links(".mxp-sales_product_jewelbot_3pack",   "SALES", {"PRODUCT": "jewelbot_3pack"});
+		//-- ACTION
+		mixpanel.track_links(".mxp-sales_action_added_to_cart",     "SALES", {"ACTION": "added_to_cart"});
+		mixpanel.track_links(".mxp-sales_action_removed_from_cart", "SALES", {"ACTION": "removed_from_cart"});
+		mixpanel.track_links(".mxp-sales_action_cleared_cart",      "SALES", {"ACTION": "cleared_cart"});
+		//
+		//
+		//-- NEWSLETTER {STEP: typed_email, submitted_email, subscribed_email, newsletter_step_error_email / ACTION: updated_email, unsubscribed_email / POSITION: modal, footer }
+		//
+		//-- STEP
+		mixpanel.track_links(".mxp-newsletter_step_typed_email",      		"NEWSLETTER", {"STEP": "typed_email"});
+		mixpanel.track_forms(".mxp-newsletter_step_submitted_email",    	"NEWSLETTER", {"STEP": "submitted_email"});
+		mixpanel.track_links(".mxp-newsletter_step_subscribed_email",    	"NEWSLETTER", {"STEP": "subscribed_email"});
+		mixpanel.track_links(".mxp-newsletter_step_error_email",    		"NEWSLETTER", {"STEP": "error_email"});
+		//-- ACTION
+		mixpanel.track_links(".mxp-newsletter_action_updated_email",		"NEWSLETTER", {"ACTION": "updated_email"});
+		mixpanel.track_links(".mxp-newsletter_action_unsubscribed_email",   "NEWSLETTER", {"ACTION": "unsubscribed_email"});
+		//-- POSITION
+		mixpanel.track_links(".mxp-newsletter_position_modal",				"NEWSLETTER", {"POSITION": "modal"});
+		mixpanel.track_links(".mxp-newsletter_position_footer",				"NEWSLETTER", {"POSITION": "footer"});
+		//
+		//
+		//-- INTERACTION {STEP: scrolled_sec_1, scrolled_sec_1, ... scrolled_sec_10, / ACTION: clicked_social_fb, clicked_social_tw, clicked_social_in, clicked_social_pi, clicked_pre_order }
+		//
+		//-- STEP
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_1",      		"INTERACTION", {"STEP": "scrolled_sec_1"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_2",      		"INTERACTION", {"STEP": "scrolled_sec_2"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_3",      		"INTERACTION", {"STEP": "scrolled_sec_3"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_4",      		"INTERACTION", {"STEP": "scrolled_sec_4"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_5",      		"INTERACTION", {"STEP": "scrolled_sec_5"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_6",      		"INTERACTION", {"STEP": "scrolled_sec_6"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_7",      		"INTERACTION", {"STEP": "scrolled_sec_7"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_8",      		"INTERACTION", {"STEP": "scrolled_sec_8"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_9",      		"INTERACTION", {"STEP": "scrolled_sec_9"});
+		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_10",			"INTERACTION", {"STEP": "scrolled_sec_10"});
+		//-- ACTION
+		mixpanel.track_links(".mxp-interaction_action_clicked_social_fb",				"INTERACTION", {"ACTION": "clicked_social_fb"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_social_tw",				"INTERACTION", {"ACTION": "clicked_social_tw"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_social_in",				"INTERACTION", {"ACTION": "clicked_social_in"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_social_pi",				"INTERACTION", {"ACTION": "clicked_social_pi"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_header",		"INTERACTION", {"ACTION": "clicked_pre_order_header"}); /* header */
+		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_hero",			"INTERACTION", {"ACTION": "clicked_pre_order_hero"}); /* hero */
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_app",				"INTERACTION", {"ACTION": "clicked_section_app"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_desktop",			"INTERACTION", {"ACTION": "clicked_section_desktop"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_watch_video",				"INTERACTION", {"ACTION": "clicked_section_video"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_features_details","INTERACTION", {"ACTION": "clicked_section_features_details"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_footer_mxp",		"INTERACTION", {"ACTION": "clicked_section_footer_mxp"});
+		
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_1",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_1"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_2",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_2"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
+		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
+		//
+		//
+		//-- PAGE {NAME: www_home, www_about, www_contact, www_privacy, www_terms / SOURCE: ... }
+		//
+		// track page load and source
+		var page_source = getUrlVars()["source"];
+		function getUrlVars() {
+		    var vars = {};
+		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		        vars[key] = value;
+		    });
+		    return vars;
+		}
+		mixpanel.register("PAGE", {"NAME": "www_home"}, 100);
+		mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
+		//
+		// -->>>> overwrite modal on www_home:
+		F4_modal_was_open = 1;
+		//
+		//
+		//
+		// track Newsletter - subscribed_email
+		if (page_source=="newsletter_error"){
+			mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
+		}
+	</script>
+</body>
+</html>
