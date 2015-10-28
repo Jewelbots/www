@@ -25,7 +25,6 @@ $(window).scroll(function(){
 	F6__add_sticky_header();
 	F7__jewelbot_place();
 	F9__mxp_interaction_step_scrolled();
-	F4_CTA_modal_init();
 
 	$(window).resize(); //-- and force
 });
@@ -332,7 +331,7 @@ function F7__jewelbot_style(charm, led, board, shadow, band, blink){
 		$( '#jewelbot #'+blink ).addClass('active');
 	}
 }
-function F7__Jewelbot_feature(feature){
+function F7__Jeweblbot_feature(feature){
 	
 	$( '.feature' ).each(function( index ) {
 		$(this).removeClass('active');
@@ -400,7 +399,7 @@ function F8__section_meet(action){
 }
 //
 //
-//-- F9__mxp_interaction_step_scrolled() ----------------------------//
+//-- F9__mxp_interaction_step_scrolled() ---------------------------------------//
 var F9__section_1  = 'untracked';
 var F9__section_2  = 'untracked';
 var F9__section_3  = 'untracked';
@@ -454,37 +453,6 @@ function F9__mxp_interaction_step_scrolled(){
 		mixpanel.track("INTERACTION", {"STEP": "scrolled_sec_6"});
 	}
 }
-//
-//
-//-- F4_modal_was_open() --------------------------------------------//
-var F4_modal_was_open = 0; //-->>>> delete last line www_home to open there.
-function F4_CTA_modal_init(){
-	if($(window).scrollTop() + $(window).height() > $(document).height()-1){
-		F4_CTA_modal('open');
-	}
-}
-function F4_CTA_modal(state){
-	if(state=='close'){
-		$('#modal_cta form').stop().animate({'opacity':'0.0', 'top':'0%'}, 500, function() {
-			$('#modal_cta').stop().animate({'opacity':'0.0'}, 200, function() {
-				$('#modal_cta').stop().hide();
-			});
-		});
-		mixpanel.track("Newsletter - modal closed", {});
-	}
-	if(state=='open' && F4_modal_was_open != 1){
-		//F4_modal_was_open = 1;
-		$('#modal_cta').stop().show();
-		$('#modal_cta').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
-		$('#modal_cta form').css({'display': 'block'});
-		$('#modal_cta form').css({'opacity': '1'});
-		$('#modal_cta form').stop().show().animate({'top':'40%'}, 200, function() { /* do nothing */ });
-		mixpanel.track("Newsletter - modal opened", {});
-	}
-}
-$('#modal_cta form a.close').click(function(){ F4_CTA_modal('close'); });
-$('#modal_cta .background').click(function(){ F4_CTA_modal('close'); });
-$('#modal_cta .background').click(function(){ F4_CTA_modal('close'); });
 
 //
 //

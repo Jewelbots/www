@@ -396,6 +396,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		    return vars;
 		}
 		mixpanel.track("Page Loaded", {"Page Name": "Home", "Page Source": page_source });
+		mixpanel.register({'user type': 'free trial'}, 100);
 		//
 		// track A/B tests
 		$(function() {
