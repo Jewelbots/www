@@ -122,8 +122,8 @@ function F3__section_features(action){
 		}
 
 		if( $(window).height() > 700 ){
-			$('.index .section_features .column_left').css('margin-top', ($(window).height()-$('.index .section_features .column_left').height()-300)/2 );
-			$('.index .section_features .column_right').css('margin-top', ($(window).height()-$('.index .section_features .column_right').height()-300)/2 );
+			$('.index .section_features .column_left').css('margin-top', ($(window).height()-$('.index .section_features .column_left').height()-250)/2 );
+			$('.index .section_features .column_right').css('margin-top', ($(window).height()-$('.index .section_features .column_left').height()-250)/2 );
 			$('.index .section_features h3').css('padding-top', ($(window).height()-$('.index .section_features .column_right').height()-300)/2 );
 			
 			//-- this is important as the columns are fixed to the bottom
