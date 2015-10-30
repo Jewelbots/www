@@ -45,6 +45,49 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
 mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
 	<!-- End Mixpanel Code -->
 
+	<script type="text/javascript">
+
+	function getQueryParam(url, param) {
+	// Expects a raw URL
+	param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	var regexS = "[\\?&]" + param + "=([^&#]*)",
+	regex = new RegExp( regexS ),
+	results = regex.exec(url);
+	if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+	  return '';
+	  } else {
+	  return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+	  }
+	};
+
+	function campaignParams() {
+	var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+	, kw = ''
+	, params = {}
+	, first_params = {};
+
+	var index;
+	for (index = 0; index < campaign_keywords.length; ++index) {
+	  kw = getQueryParam(document.URL, campaign_keywords[index]);
+	  if (kw.length) {
+	    params[campaign_keywords[index] + ' [last touch]'] = kw;
+	  }
+	}
+	for (index = 0; index < campaign_keywords.length; ++index) {
+	  kw = getQueryParam(document.URL, campaign_keywords[index]);
+	  if (kw.length) {
+	    first_params[campaign_keywords[index] + ' [first touch]'] = kw;
+	  }
+	}
+
+	mixpanel.people.set(params);
+	mixpanel.people.set_once(first_params);
+	mixpanel.register(params);
+	}
+
+	campaignParams();
+	</script>
+
 	<!-- Facebook Pixel Code -->
 	<script>
 	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -437,6 +480,15 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/site-scripts_v5.js"></script>
+	<script type="text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-62323216-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 	<script type="text/javascript">
 		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 		//-- A/B TESTS - 
