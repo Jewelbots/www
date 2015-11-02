@@ -2476,6 +2476,10 @@ body {}
 	filter: gray; /* IE6-9 */
 	-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
+#site_container.index .section_press ul.press li a:hover img {
+	opacity: 1.0;
+	-webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
 #site_container.index .section_press ul.press li.quarter {
 	width: 22%;
 	margin: 0 1.5% 0 1.5%;
