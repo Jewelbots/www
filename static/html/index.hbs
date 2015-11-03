@@ -109,6 +109,31 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+	<div id="modal_cta">
+		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_modal">
+
+			<a class="close" href="javascript:void();" >X</a>
+			<h2 class="test_A">1+1 = Superhero!</h2>
+			<img class="test_B" src="assets/images/modal_headline.png" style="display: block; margin: 0 auto 0 auto; height: 134px; padding: 40px 0 20px 0;" />
+			<p>
+				Sign up for our newsletter and become someone’s superhero.<br />
+				Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>
+			</p>
+
+			<div class="mc-field-group">
+				<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+			<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+			<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+		</form>
+		<div class="background"></div>
+	</div><!--//modal_cta -->
+
 	<div id="site_container" class="index">
 		<div id="content_container">
 
@@ -422,25 +447,26 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				</ul>
 			</div><!--//section_press -->
 			<div class="section_newsletter">
-				<h3 class="test_A">The Jewelbot Newsletter</h3>
+				<h3 class="test_A">1+1 = Superhero!</h3>
 				<p class="test_A">
-					Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.
+					Sign up for our newsletter and become someone’s superhero.<br />
+					Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>.
 				</p>
-				<h3 class="test_B">1+1 = Superhero!</h3>
+				<img class="test_B" src="assets/images/index_section_newsletter_headline.png" style="display: block; margin: 0 auto 0 auto; height: 134px; padding: 40px 0 0 0;" />
 				<p class="test_B">
 					Sign up for our newsletter and become someone’s superhero.<br />
 					Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>.
 				</p>
-				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email">
+				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_footer">
 					<div class="mc-field-group">
-						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'footer'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
 					</div>
 					<div id="mce-responses" class="clear">
 						<div class="response" id="mce-error-response" style="display:none"></div>
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-					<div class="clear desktop"><input type="submit" value="Make someone happy" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+					<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
 					<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
 				</form>
 			</div><!--//section_newsletter -->
@@ -536,9 +562,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		//-- NEWSLETTER {STEP: typed_email, submitted_email, subscribed_email, newsletter_step_error_email / ACTION: updated_email, unsubscribed_email / POSITION: modal, footer }
 		//
 		//-- STEP
-		mixpanel.track_links(".mxp-newsletter_step_typed_email",      		"NEWSLETTER", {"STEP": "typed_email"});
-		mixpanel.track_forms(".mxp-newsletter_step_submitted_email",    	"NEWSLETTER", {"STEP": "submitted_email"});
-		mixpanel.track_links(".mxp-newsletter_step_subscribed_email",    	"NEWSLETTER", {"STEP": "subscribed_email"});
+		mixpanel.track_links(".mxp-newsletter_step_typed_email",     		"NEWSLETTER", {"STEP": "typed_email"});
+		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_modal", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});
+		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_footer", "NEWSLETTER", {"STEP": "submitted_email", "POSITION": "footer"});
+		mixpanel.track_links(".mxp-newsletter_step_subscribed_email",		"NEWSLETTER", {"STEP": "subscribed_email"});
 		mixpanel.track_links(".mxp-newsletter_step_error_email",    		"NEWSLETTER", {"STEP": "error_email"});
 		//-- ACTION
 		mixpanel.track_links(".mxp-newsletter_action_updated_email",		"NEWSLETTER", {"ACTION": "updated_email"});
