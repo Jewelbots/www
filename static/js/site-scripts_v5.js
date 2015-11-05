@@ -171,12 +171,12 @@ function F6__section_hero(action){
 	if(action=='size'){
 		$('.index .section_hero').css('height', $(window).height() );
 
-		if( $(window).height() > 600 ){
+		if( $(window).height() > 800 ){
 			$('.index .section_hero h1').css('padding-top', ($(window).height()/2 -250) );
 		} else {
 			$('.index .section_hero h1').css('padding-top', '110px' );
 		}
-		if( $(window).width() < 400 ){
+		if( $(window).width() < 800 ){
 			$('.index .section_hero h1').css('padding-top', '95px' );
 		}
 	}
@@ -185,7 +185,7 @@ function F6__section_hero(action){
 //
 //-- F6__add_sticky_header ------------------------------------------//
 function F6__add_sticky_header(){
-	if($(window).scrollTop() > 100 && $(window).width()>767){
+	if($(window).scrollTop() > 10 && $(window).width()>767){
 		$('.section_header').addClass('header_sticky');
 	} else {
 		$('.section_header').removeClass('header_sticky');
@@ -211,6 +211,8 @@ var F7__position_2 = 'inactive';
 var F7__position_3 = 'inactive';
 var F7__position_4 = 'inactive';
 var F7__position_5 = 'inactive';
+var F7__position_6 = 'inactive';
+var F7__position_7 = 'inactive';
 var F7__section_height = '700';
 function F7__jewelbot_place(){
 
@@ -228,6 +230,8 @@ function F7__jewelbot_place(){
 		F7__position_3 = 'inactive';
 		F7__position_4 = 'inactive';
 		F7__position_5 = 'inactive';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'inactive';
 	}
 	else if( $(window).scrollTop() > F7__section_height-100 && $(window).scrollTop() < F7__section_height*2-100 ){
 		F7__position_1 = 'inactive';
@@ -235,6 +239,8 @@ function F7__jewelbot_place(){
 		F7__position_3 = 'inactive';
 		F7__position_4 = 'inactive';
 		F7__position_5 = 'inactive';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'inactive';
 	}
 	else if( $(window).scrollTop() > F7__section_height*2-100 && $(window).scrollTop() < F7__section_height*3-100 ){
 		F7__position_1 = 'inactive';
@@ -242,6 +248,8 @@ function F7__jewelbot_place(){
 		F7__position_3 = 'active';
 		F7__position_4 = 'inactive';
 		F7__position_5 = 'inactive';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'inactive';
 	}
 	else if( $(window).scrollTop() > F7__section_height*3-100 && $(window).scrollTop() < F7__section_height*4-100 ){
 		F7__position_1 = 'inactive';
@@ -249,13 +257,35 @@ function F7__jewelbot_place(){
 		F7__position_3 = 'inactive';
 		F7__position_4 = 'active';
 		F7__position_5 = 'inactive';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'inactive';
 	}
-	else if( $(window).scrollTop() > F7__section_height*4-100 && $(window).scrollTop() < F7__section_height*5-100 && F3__section_features_open == 'yes'){
+	else if( $(window).scrollTop() > F7__section_height*4-100 && $(window).scrollTop() < F7__section_height*5-100 ){
 		F7__position_1 = 'inactive';
 		F7__position_2 = 'inactive';
 		F7__position_3 = 'inactive';
 		F7__position_4 = 'inactive';
 		F7__position_5 = 'active';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'inactive';
+	}
+	else if( $(window).scrollTop() > F7__section_height*5-100 && $(window).scrollTop() < F7__section_height*6-100 && F3__section_features_open == 'yes'){
+		F7__position_1 = 'inactive';
+		F7__position_2 = 'inactive';
+		F7__position_3 = 'inactive';
+		F7__position_4 = 'inactive';
+		F7__position_5 = 'inactive';
+		F7__position_6 = 'active';
+		F7__position_7 = 'inactive';
+	}
+	else if( $(window).scrollTop() > F7__section_height*6-100 && $(window).scrollTop() < F7__section_height*7-100 && F3__section_features_open == 'yes'){
+		F7__position_1 = 'inactive';
+		F7__position_2 = 'inactive';
+		F7__position_3 = 'inactive';
+		F7__position_4 = 'inactive';
+		F7__position_5 = 'inactive';
+		F7__position_6 = 'inactive';
+		F7__position_7 = 'active';
 	}
 	F7__jewelbot('position');
 }
@@ -273,27 +303,43 @@ function F7__jewelbot(action){
 					$('#jewelbot').css('top', '460px' );
 				}
 				$('#jewelbot').removeClass('rotated');
-				F7__jewelbot_style('charm_5','led','board','shadow','band_3','blink_0');
+				$('#jewelbot').removeClass('hidden');
+				F7__jewelbot_style('charm_3','led','board','shadow','band_4','blink_0');
 			}
 			if(F7__position_2 == 'active'){
 				$('#jewelbot').css('top', (F7__section_height*2) - (F7__section_height/2) + 210 );
 				$('#jewelbot').addClass('rotated');
+				$('#jewelbot').removeClass('hidden');
 				F7__jewelbot_style('charm_1','led','board','shadow','band_2','blink_0');
 			}
 			if(F7__position_3 == 'active'){
 				$('#jewelbot').css('top', (F7__section_height*3) - (F7__section_height/2) + 190 );
-				$('#jewelbot').addClass('rotated');
-				F7__jewelbot_style('charm_6','led','board','shadow','band_4','blink_0');
+				$('#jewelbot').addClass('hidden');
+				F7__jewelbot_style('charm_4','led','board','shadow','band_4','blink_0');
 			}
 			if(F7__position_4 == 'active'){
 				$('#jewelbot').css('top', (F7__section_height*4) - (F7__section_height/2) + 210 );
 				$('#jewelbot').addClass('rotated');
-				F7__jewelbot_style('charm_3','led','board','shadow','band_4','blink_0');
+				$('#jewelbot').removeClass('hidden');
+				F7__jewelbot_style('charm_6','led','board','shadow','band_4','blink_0');
 			}
 			if(F7__position_5 == 'active'){
 				$('#jewelbot').css('top', (F7__section_height*5) - (F7__section_height/2) + 210 );
 				$('#jewelbot').addClass('rotated');
+				$('#jewelbot').removeClass('hidden');
+				F7__jewelbot_style('charm_1','led','board','shadow','band_1','blink_0');
+			}
+			if(F7__position_6 == 'active'){
+				$('#jewelbot').css('top', (F7__section_height*6) - (F7__section_height/2) + 210 );
+				$('#jewelbot').addClass('rotated');
+				$('#jewelbot').removeClass('hidden');
+				F7__jewelbot_style('charm_5','led','board','shadow','band_3','blink_0');
+			}
+			if(F7__position_7 == 'active'){
+			/*	$('#jewelbot').css('top', (F7__section_height*7) - (F7__section_height/2) + 210 );
+				$('#jewelbot').addClass('rotated');
 				F7__jewelbot_style('charm_2','led','board','shadow','band_5','blink_0');
+			*/
 			}
 		}
 	}
