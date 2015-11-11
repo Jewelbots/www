@@ -319,7 +319,7 @@ function F7__jewelbot(action){
 				if( F7__section_height > 700 ){
 					$('#jewelbot').css('top', (F7__section_height/2)+150 );
 				} else {
-					$('#jewelbot').css('top', '460px' );
+					$('#jewelbot').css('top', '520px' );
 				}
 				$('#jewelbot').removeClass('rotated');
 				$('#jewelbot').removeClass('hidden');
