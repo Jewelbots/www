@@ -40,53 +40,43 @@
 	<script>try{Typekit.load();}catch(e){}</script>
 
 	<!-- Mixpanel Code -->
-	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
-	<!-- End Mixpanel Code -->
-
-	<script type="text/javascript">
-
-	function getQueryParam(url, param) {
-	// Expects a raw URL
-	param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-	var regexS = "[\\?&]" + param + "=([^&#]*)",
-	regex = new RegExp( regexS ),
-	results = regex.exec(url);
-	if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
-	  return '';
-	  } else {
-	  return decodeURIComponent(results[1]).replace(/\+/g, ' ');
-	  }
-	};
-
-	function campaignParams() {
-	var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
-	, kw = ''
-	, params = {}
-	, first_params = {};
-
-	var index;
-	for (index = 0; index < campaign_keywords.length; ++index) {
-	  kw = getQueryParam(document.URL, campaign_keywords[index]);
-	  if (kw.length) {
-	    params[campaign_keywords[index] + ' [last touch]'] = kw;
-	  }
-	}
-	for (index = 0; index < campaign_keywords.length; ++index) {
-	  kw = getQueryParam(document.URL, campaign_keywords[index]);
-	  if (kw.length) {
-	    first_params[campaign_keywords[index] + ' [first touch]'] = kw;
-	  }
-	}
-
-	mixpanel.people.set(params);
-	mixpanel.people.set_once(first_params);
-	mixpanel.register(params);
-	}
-
-	campaignParams();
+	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 	</script>
+	<!-- // T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
+	<script>
+	mixpanel.init("9de67913ff56693e76306919cc0fe64e", {
+	    loaded: function() {
+			//-- 1) track the page name
+			var page_source = getUrlVars()["source"];
+			function getUrlVars() {
+			    var vars = {};
+			    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			        vars[key] = value;
+			    });
+			    return vars;
+			}
+			mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
+			//
+			// -->>>> overwrite modal on www_home:
+			F4_modal_was_open = 1;
+			//
+			//
+			//
+			// track Newsletter - subscribed_email
+			if (page_source=="newsletter_error"){
+				mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
+			}
+
+			//-- 2) export distinct_id and funnel for shopify --> opens an iframe and syncs user ID --> same iframe will be opened on final checkout and thus close the funnel
+			var distinct_id = mixpanel.get_distinct_id();
+			var iframe = document.createElement('iframe');
+		    iframe.style.display = "none";
+		    iframe.src = "https://jewelbots.myshopify.com/pages/mxp-tracking/?step=reached_products&distinct_id="+distinct_id;
+		    document.body.appendChild(iframe);
+	    }
+	});
+	</script>
+	<!-- End Mixpanel Code -->
 
 	<!-- Facebook Pixel Code -->
 	<script>
@@ -102,7 +92,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 	src="https://www.facebook.com/tr?id=108847092786155&ev=PageView&noscript=1"
 	/></noscript>
 	<!-- End Facebook Pixel Code -->
-
 </head>
 <!-- InviteReferrals Integration --><div id='invtrflfloatbtn'></div><script>var invite_referrals = window.invite_referrals || {}; (function() { invite_referrals.auth = { bid_e : 'F475306EC8BDE90B07294074877D5B26', bid : '8751', t : '420', email : '', userParams : {'fname': '', 'lname': '' } };var script = document.createElement('script');script.async = true;script.src = (document.location.protocol == 'https:' ? '//d11yp7khhhspcr.cloudfront.net' : '//cdn.invitereferrals.com') + '/js/invite-referrals-1.0.js';var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();</script>
 <body>
@@ -390,19 +379,19 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<img src="assets/images/index_section_sale_product_jewelbot_1pack.jpg" />
 						<h5>Jewelbot</h5>
 						<p>$ 49</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_2pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Now</a>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_2pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Now</a>
 					</li><!--
 				 --><li>
 						<img src="assets/images/index_section_sale_product_jewelbot_2pack.jpg" />
 						<h5>Twinnie 2-Pack</h5>
 						<p>$ 89</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_1pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Now</a>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_1pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Now</a>
 					</li><!--
 				 --><li>
 						<img src="assets/images/index_section_sale_product_jewelbot_3pack.jpg" />
 						<h5>Bestie 3-Pack</h5>
 						<p>$ 119</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_product_jewelbot_3pack" href="http://jewelbots.myshopify.com/cart/4818685316:1" target="_blank">Buy Now</a>
+						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_3pack" href="http://jewelbots.myshopify.com/cart/4818685316:1" target="_blank">Buy Now</a>
 					</li>
 				</ul>
 				<p class="note">
@@ -526,11 +515,11 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			var test = "";
 		 	var test_id = 1 % Math.ceil(2 * Math.random());
 			if (test_id) {
-				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB7" });
+				mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB7" });
 				$('.test_A').css('display', 'block');
 				$('.test_B').css('display', 'none');
 			} else {
-				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB7" });
+				mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB7" });
 				$('.test_A').css('display', 'none');
 				$('.test_B').css('display', 'block');
 			}
@@ -604,31 +593,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_2",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_2"});
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
-		//
-		//
-		//-- PAGE {NAME: www_home, www_about, www_contact, www_privacy, www_terms / SOURCE: ... }
-		//
-		// track page load and source
-		var page_source = getUrlVars()["source"];
-		function getUrlVars() {
-		    var vars = {};
-		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-		        vars[key] = value;
-		    });
-		    return vars;
-		}
-		mixpanel.register("PAGE", {"NAME": "www_home"}, 100);
-		mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
-		//
-		// -->>>> overwrite modal on www_home:
-		F4_modal_was_open = 1;
-		//
-		//
-		//
-		// track Newsletter - subscribed_email
-		if (page_source=="newsletter_error"){
-			mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
-		}
 	</script>
 </body>
 </html>
