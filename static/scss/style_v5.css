@@ -2718,9 +2718,10 @@ body {}
 		display: block;
 		position: relative;
 		width: auto;
-		height: 100px;
+		height: auto;
+		max-width: 90%;
 		margin: 0 auto 0 auto;
-		padding: 40px 15px 0 15px;
+		padding: 0 15px 0 15px;
 	}
 	#site_container.index .section_newsletter p {}
 	#site_container.index .section_newsletter p a {}
@@ -4289,7 +4290,7 @@ body {}
 	width: auto;
 	height: 146px;
 	margin: 0 auto 0 auto;
-	padding: 40px 15px 0 15px;
+	padding: 40px 0 0 0;
 }
 #site_container.ambassador .section_newsletter p {
 	display: block;
@@ -4445,9 +4446,10 @@ body {}
 		display: block;
 		position: relative;
 		width: auto;
-		height: 100px;
+		height: auto;
+		max-width: 90%;
 		margin: 0 auto 0 auto;
-		padding: 40px 15px 0 15px;
+		padding: 40px 0 0 0;
 	}
 	#site_container.ambassador .section_newsletter p {}
 	#site_container.ambassador .section_newsletter p a {}
