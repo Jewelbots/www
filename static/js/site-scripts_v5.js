@@ -393,7 +393,7 @@ function F7__jewelbot_style(charm, led, board, shadow, band, blink){
 		$( '#jewelbot #'+blink ).addClass('active');
 	}
 }
-function F7__Jeweblbot_feature(feature){
+function F7__Jewelbot_feature(feature){
 	
 	$( '.feature' ).each(function( index ) {
 		$(this).removeClass('active');
