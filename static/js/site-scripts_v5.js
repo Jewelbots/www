@@ -9,6 +9,7 @@ $(document).ready(function(){
 	F7__jewelbot('position');
 	F7__jewelbot_place();
 	F8__section_meet('size');
+	F4_CTA_modal('open');
 
 	$(window).resize(); //-- and force
 });
@@ -160,13 +161,13 @@ function F4__scroll_to_ID(id, shift){
 //-- F5__section_sale(action) ---------------------------------------//
 function F5__section_sale(action){
 	if(action=='size'){
-		$('.index .section_sale').css('height', $(window).height() );
-		if($(window).width() < 767 ){
+	//	$('.index .section_sale').css('height', $(window).height() );
+		if($(window).width() < 1024 ){
 			$('.index .section_sale').css('height', 'auto' );
 		}
 
-		if( $(window).height() > 800 ){
-			$('.index .section_sale ul.products').css('margin-top', ($(window).height()-$('.index .section_sale ul.products').height()-300)/2 );
+		if( $(window).height() > 1024 ){
+		//	$('.index .section_sale ul.products').css('margin-top', ($(window).height()-$('.index .section_sale ul.products').height()-300)/2 );
 		} else {
 			$('.index .section_sale ul.products').css('margin-top', '0px' );
 		}

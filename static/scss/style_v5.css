@@ -2006,8 +2006,9 @@ body {}
 	position: relative;
 	width: auto;
 	height: auto;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
+	max-width: 800px;
+	margin: 0 auto 0 auto;
+	padding: 0 10px 0 10px;
 
 	font-weight: 300;
 	font-size: 20px;
@@ -2155,7 +2156,10 @@ body {}
 		line-height: 40px;
 	}
 	#site_container.index .section_sale h4 {
-		padding: 10px 0 0 0;
+		padding: 10px 10px 0 10px;
+
+		font-size: 15px;
+		line-height: 20px;
 	}
 
 	#site_container.index .section_sale ul.products {
