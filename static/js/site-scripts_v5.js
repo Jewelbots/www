@@ -9,7 +9,6 @@ $(document).ready(function(){
 	F7__jewelbot('position');
 	F7__jewelbot_place();
 	F8__section_meet('size');
-	F4_CTA_modal('open');
 
 	$(window).resize(); //-- and force
 });
