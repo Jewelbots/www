@@ -158,6 +158,7 @@ function F4__scroll_to_ID(id, shift){
 //
 //
 //-- F5__section_sale(action) ---------------------------------------//
+var F5__section_xmasspecials_open = 'no';
 function F5__section_sale(action){
 	if(action=='size'){
 	//	$('.index .section_sale').css('height', $(window).height() );
@@ -170,6 +171,19 @@ function F5__section_sale(action){
 		} else {
 			$('.index .section_sale ul.products').css('margin-top', '0px' );
 		}
+	}
+	if(action=='open_xmasspecial' && F5__section_xmasspecials_open=='no'){
+		$('.index .section_sale_xmasspecial').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ 
+		//	$('.index .section_sale_xmasspecial').css('height', $(window).height() );
+		//	if($(window).width() < 767 ){
+				$('.index .section_sale_xmasspecial').css('height', 'auto' );
+		//	}
+		});
+		$('.index .section_sale .cta_xmasspecial').animate({ opacity: 0.0 }, 500, function() {
+			$('.index .section_sale .cta_xmasspecial').css({'display': 'none'});
+		});
+		F4__scroll_to_ID('#section_sale_xmasspecial', '0');
+		F5__section_xmasspecials_open = 'yes';
 	}
 }
 //
