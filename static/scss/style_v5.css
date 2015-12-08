@@ -2204,6 +2204,20 @@ body {}
 	line-height: 20px;
 	color: rgb(0,205,180);
 }
+#site_container.index .section_sale p.note span.special {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	max-width: 800px;
+	margin: 0 auto 20px auto;
+	padding: 0 0 0 0;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgb(140,145,150);
+}
 #site_container.index .section_sale p.note span {
 	font-weight: 700;
 }
