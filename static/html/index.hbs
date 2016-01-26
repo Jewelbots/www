@@ -43,7 +43,7 @@
 	</script>
 	<!-- // T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
 	<script>
-	mixpanel.init("9de67913ff56693e76306919cc0fe64e", {
+	mixpanel.init("bf14c79a96fff9bd324e6bd6715347e8", {
 	    loaded: function() {
 			//-- 1) track the page name
 			var page_source = getUrlVars()["source"];
@@ -157,19 +157,20 @@
 				</div><!--//header -->
 			</div><!--//section_header -->
 			<div class="section_hero">
-				<h1>The world's first<br /> programmable friendship<br /> bracelet.</h1>
+				<h1><br /><br /> Give her an advantage</h1>
 				<!--
 				<h1>Spark Their Creativity</h1>
 				<h1>Ignite Their Curiosity</h1>
 				<h1>Get Them Excited</h1>
 				-->
-				<p>Spark Their Creativity. Get your kid coding today!</p>
+				<p>The world's first programmable friendship bracelet.<br /> Get your kid coding today!</p><br /><br />
 				<div class="cta" onClick="javascript:F4__scroll_to_ID('#section_sale', '90'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_hero'});"></div>
 				<p class="small">
 					Order yours now to<br />
 					be part of the first shipment in 2016.
 					<img class="arrow" src="assets/images/index_section_hero_arrow_down.png" />
 				</p>
+				<iframe src="https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div><!--//section_hero -->
 			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
 			<div class="section_meet">
@@ -389,7 +390,7 @@
 						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Now</a><!--11581083652:1-->
 					</li><!--
 				 --><li>
-						<img src="assets/images/index_section_sale_product_jewelbot_3pack_xmas_2.jpg" />
+						<img src="assets/images/index_section_sale_product_jewelbot_3pack_wk.jpg" />
 						<h5>Bestie 3-Pack + Wearables Kit</h5>
 						<p>$139</p>
 						<!--<img style="width: 100%;" src="assets/images/index_section_sale_product_jewelbot_3pack_xmas_info.jpg" />-->
@@ -644,5 +645,6 @@
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
 	</script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

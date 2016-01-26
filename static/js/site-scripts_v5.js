@@ -202,6 +202,26 @@ function F6__section_hero(action){
 			$('.index .section_hero h1').css('padding-top', '95px' );
 		}
 
+		if($(window).width() / $(window).height() < 1.78){
+			$('.index .section_hero iframe').css('height', $(window).height() +100 );
+			$('.index .section_hero iframe').css('width', ($(window).height() +100)*1.78 );
+		} else {
+			$('.index .section_hero iframe').css('width', $(window).width() + +100 );
+			$('.index .section_hero iframe').css('height', ($(window).width() +100)/1.78 );
+		}
+		/*
+		$('.section_video').css('height', $('.section_video').width()/1.90 );
+		$('.section_video iframe').css('height', $('.section_video').width()/1.90 );
+		if($(window).width()>1023){
+			$('.section_video h3').css('margin-top', $('.section_video').height()/2 );
+		} else if ($(window).width()>500){
+			$('.section_video h3').css('margin-top', $('.section_video').height()/2-100 );
+		} else {
+			$('.section_video h3').css('margin-top', '50px' );
+		}
+		*/
+
+
 		$('.ambassador .section_hero').css('height', $(window).height() );
 
 		if( $(window).height() > 800 ){
@@ -258,8 +278,8 @@ function F7__jewelbot_place(){
 
 	//-- get position
 	if( $(window).scrollTop() < F7__section_height-100 ){
-		F7__position_1 = 'active';
-		F7__position_2 = 'inactive';
+		F7__position_1 = 'inactive';
+		F7__position_2 = 'active';
 		F7__position_3 = 'inactive';
 		F7__position_4 = 'inactive';
 		F7__position_5 = 'inactive';
