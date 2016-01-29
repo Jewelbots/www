@@ -203,11 +203,11 @@ function F6__section_hero(action){
 		}
 
 		if($(window).width() / $(window).height() < 1.78){
-			$('.index .section_hero iframe').css('height', $(window).height() +100 );
-			$('.index .section_hero iframe').css('width', ($(window).height() +100)*1.78 );
+			$('.index .section_hero #video').css('height', $(window).height() +100 );
+			$('.index .section_hero #video').css('width', ($(window).height() +100)*1.78 );
 		} else {
-			$('.index .section_hero iframe').css('width', $(window).width() + +100 );
-			$('.index .section_hero iframe').css('height', ($(window).width() +100)/1.78 );
+			$('.index .section_hero #video').css('width', $(window).width() + +100 );
+			$('.index .section_hero #video').css('height', ($(window).width() +100)/1.78 );
 		}
 		/*
 		$('.section_video').css('height', $('.section_video').width()/1.90 );

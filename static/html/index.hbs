@@ -43,7 +43,7 @@
 	</script>
 	<!-- // T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
 	<script>
-	mixpanel.init("bf14c79a96fff9bd324e6bd6715347e8", {
+	mixpanel.init("9de67913ff56693e76306919cc0fe64e", {
 	    loaded: function() {
 			//-- 1) track the page name
 			var page_source = getUrlVars()["source"];
@@ -67,11 +67,12 @@
 			}
 
 			//-- 2) export distinct_id and funnel for shopify --> opens an iframe and syncs user ID --> same iframe will be opened on final checkout and thus close the funnel
-			var distinct_id = mixpanel.get_distinct_id();
+			/*var distinct_id = mixpanel.get_distinct_id();
 			var iframe = document.createElement('iframe');
 		    iframe.style.display = "none";
 		    iframe.src = "https://jewelbots.myshopify.com/pages/mxp-tracking/?step=reached_products&distinct_id="+distinct_id;
 		    document.body.appendChild(iframe);
+			*/
 	    }
 	});
 	</script>
@@ -170,7 +171,7 @@
 					be part of the first shipment in 2016.
 					<img class="arrow" src="assets/images/index_section_hero_arrow_down.png" />
 				</p>
-				<iframe src="https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe id="video" src="https://player.vimeo.com/video/153084824?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div><!--//section_hero -->
 			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
 			<div class="section_meet">
@@ -575,6 +576,8 @@
 			}
 		});
 	</script>-->
+
+
 	<script type="text/javascript">
 		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
 		//-- MIXPANEL - 
@@ -645,5 +648,24 @@
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
 		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
 	</script>
+    <script type="text/javascript">
+        (function(d){
+            var vimeoIframe = d.getElementsByClassName("section_hero")[0].appendChild(d.createElement('iframe')),
+                    doc = vimeoIframe.contentWindow.document;
+            vimeoIframe.setAttribute("webkitallowfullscreen", '');
+            vimeoIframe.setAttribute("mozallowfullscreen", '');
+            vimeoIframe.setAttribute('allowfullscreen','');
+            // style the iframe with some CSS
+            vimeoIframe.style.cssText = "position:absolute;width:500px;height:281";
+            var tagToWrite = '<body onload="' +
+                    'var d = document;d.getElementsByTagName(\'head\')[0].' +
+                    'appendChild(d.createElement(\'script\')).src' +
+                    '=\'https:\/\/player.vimeo.com\/video\/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0\'">';
+            console.log(tagToWrite);
+            doc.open().write(tagToWrite);
+            doc.close(); //iframe onload event happens
+
+        })(document);
+    </script>
 </body>
 </html>

@@ -536,7 +536,7 @@ body {}
 	padding: 0 0 0 0;
 }
 
-#site_container.index .section_hero iframe {
+#site_container.index .section_hero #video {
 	display: block;
 	position: absolute;
 	width: 100%;
