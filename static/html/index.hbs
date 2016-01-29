@@ -170,6 +170,7 @@
 					be part of the first shipment in 2016.
 					<img class="arrow" src="assets/images/index_section_hero_arrow_down.png" />
 				</p>
+				<iframe id="vimeoIframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 			</div><!--//section_hero -->
 			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
@@ -650,21 +651,9 @@
 
     <script type="text/javascript">
         (function(d){
-            var vimeoIframe = d.getElementsByClassName("section_hero")[0].appendChild(d.createElement('iframe')),
-                    doc = vimeoIframe.contentWindow.document;
-            vimeoIframe.setAttribute("webkitallowfullscreen", '');
-            vimeoIframe.setAttribute("mozallowfullscreen", '');
-            vimeoIframe.setAttribute('allowfullscreen','');
-            // style the iframe with some CSS
+            var vimeoIframe = d.getElementById('vimeoIframe');
             vimeoIframe.style.cssText = "position:absolute;width:500px;height:281";
-            var tagToWrite = '<body onload="' +
-                    'var d = document;d.getElementsByTagName(\'head\')[0].' +
-                    'appendChild(d.createElement(\'script\')).src' +
-                    '=\'https:\/\/player.vimeo.com\/video\/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0\'">';
-            console.log(tagToWrite);
-            doc.open().write(tagToWrite);
-            doc.close(); //iframe onload event happens
-
+            vimeoIframe.src ='https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0';
         })(document);
     </script>
 </body>
