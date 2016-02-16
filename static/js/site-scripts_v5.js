@@ -17,7 +17,7 @@ $(window).scroll(function(){
 	F6__add_sticky_header();
 	F7__jewelbot_place();
 	F9__mxp_interaction_step_scrolled();
-	F4_CTA_modal_init();
+	//F4_CTA_modal_init();
 
 	$(window).resize(); //-- and force
 });
@@ -31,6 +31,7 @@ $(window).resize(function(){
 	F7__jewelbot('position');
 	F7__jewelbot_place();
 	F8__section_meet('size');
+	F11__modal_video('size');
 });
 
 $(window).bind('orientationchange', function(event) {
@@ -587,6 +588,46 @@ function F4_CTA_modal(state){
 $('#modal_cta form a.close').click(function(){ F4_CTA_modal('close'); });
 $('#modal_cta .background').click(function(){ F4_CTA_modal('close'); });
 $('#modal_cta .background').click(function(){ F4_CTA_modal('close'); });
+//
+//
+//-- F11__modal_video(state) -------------------------------------------------------//
+function F11__modal_video(state){
+	if(state=='close'){
+		$('#modal_video').stop().animate({'opacity':'0.0'}, 200, function() {
+			$('#modal_video').stop().hide();
+		});
+		//-- 1: unload video
+		(function(d){
+			var modal_video_iframe = d.getElementById('modal_video_iframe');
+			modal_video_iframe.src ='foo';
+		})(document);
+	}
+	if(state=='open'){
+		$('#modal_video').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		
+		//-- 1: load video
+		(function(d){
+			var modal_video_iframe = d.getElementById('modal_video_iframe');
+			modal_video_iframe.src ='https://player.vimeo.com/video/155051675?autoplay=1&loop=0&title=0&byline=0&portrait=0';
+		})(document);
+		//-- 2: size video
+		F11__modal_video('size');
+	}
+	if(state=='size'){
+		$('#modal_video .wrapper').css('height', $('#modal_video .wrapper').width() / 1.78 );
+
+		if( $(window).width() / $(window).height() < 1.78 ){
+			$('#modal_video').css('position', 'fixed' );
+			$('#modal_video .wrapper').css('margin-top', ( $(window).height()-$('#modal_video .wrapper').height() ) / 2  );
+		} else {
+			$('#modal_video').css('position', 'absolute' );
+			$('#modal_video .wrapper').css('margin-top', '50px' );
+		}
+	}
+}
+$('#modal_video  a.close').click(function(){ F11__modal_video('close'); });
+$('#modal_video .background').click(function(){ F11__modal_video('close'); });
+$('#modal_video .background').click(function(){ F11__modal_video('close'); });
 //
 //
 //
