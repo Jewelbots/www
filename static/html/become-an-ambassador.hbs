@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Jewelbots - Become a Jewelbots Ambassador</title>
-	<meta name="description" lang="en" content="Get special offers, discounts and care packages with stickers and other fun stuff when you become an early adopter." />
+	<title>Ambassador Program | Jewelbots - The friendship-bracelet for the Smartphone era</title>
+	<meta name="description" lang="en" content="Ignite their curiosity! Jewelbots - programmable friendship bracelets for the modern world." />
 	<meta name="keywords" lang="en" content="jewelbots, wearables, friendship bracelet, nyc, tech, code, learn, open source, iphone, android" />
 
 	<!--
 	***********************************************************************************************************
 
 		www.jewelbots.com
-		v.5.4
+		v.6.1
                                 _ _           _
            (♥) _____      _____| | |__   ___ | |_ ___
            | |/ _ \ \ /\ / / _ \ | '_ \ / _ \| __/ __|
@@ -32,137 +32,137 @@
 
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
-	<link type="text/css" rel="stylesheet" href="assets/css/style_v5.css" media="screen, projection" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
 
 	<script src="//use.typekit.net/rbz5qur.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<!-- Mixpanel Code -->
+	<!-- MIXPANEL  ⬇ -->
 	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
-	<!-- End Mixpanel Code -->
-
+	<script type="text/javascript">
+		//-- 1) track the page name
+		var page_source = getUrlVars()["source"];
+		function getUrlVars() {
+		    var vars = {};
+		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		        vars[key] = value;
+		    });
+		    return vars;
+		}
+		mixpanel.track("PAGE", {"NAME": "www_ambassador", "SOURCE": page_source });
+	</script>
+	<!-- MIXPANEL  ⬆ -->
+	<!-- ZENDESK  ⬇ -->
+	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","jewelbots.zendesk.com");
+	/*]]>*/</script>
+	<!-- ZENDESK  ⬆ -->
 </head>
 <body>
-	<!--[if lt IE 7]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+	<div id="modal_newsletter">
+		<div class="modal">
+			<script>mixpanel.track_forms(".mixpanel_modal_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});</script>
+			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
-	<div id="modal_cta">
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_modal">
+				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
+				<h1>Sign up, then save!</h1>
+				<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
 
-			<a class="close" href="javascript:void();" >X</a>
-			<img src="assets/images/modal_headline.png" />
-			<p>
-				Sign up for our newsletter and become someone’s superhero.<br />
-				Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>
-			</p>
+				<div class="mc-field-group">
+					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe + Save" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
 
-			<div class="mc-field-group">
-				<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-			<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-			<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-		</form>
-		<div class="background"></div>
-	</div><!--//modal_cta -->
+			</form>
+		</div>
+		<div class="background" onClick="modal_newsletter('close');"></div>
+	</div><!--//modal_newsletter -->
+
+	<div id="modal_video">
+		<div class="wrapper">
+			<a class="close" href="javascript:void();" onClick="modal_video('close');">X</a>
+			<iframe id="modal_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<div class="background" onClick="modal_video('close');"></div>
+	</div><!--//modal_video -->
 
 	<div id="site_container" class="ambassador">
 		<div id="content_container">
 
 			<div class="section_header">
-				<div class="header">
-					<a class="icon" href="/">Home</a>
-					<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
-					<img class="wordmark" src="assets/images/index_section_header_wordmark.png" />
+				<div class="header_default header_sticky"><!-- //header_default //header_default_nav //header_sticky-->
+					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
+						<img class="logo_icon_small" src="assets/images/index_section_header__icon_small.png" />
+						<img class="logo_icon_large" src="assets/images/index_section_header__icon_large.png" />
+						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
+					</a>
 					<ul class="navigation">
-						<li><a class="cta mxp-interaction_action_clicked_pre_order_header" href="http://www.jewelbots.com" target="_self">Buy Now</a></li>
+						<li><a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">Home</a></li>
+						<li><a href="/about.html" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_story', 'POSITION': 'header'});">Story</a></li>
+						<!--<<li><a href="/team.html" target="+self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_team', 'POSITION': 'header'});">Team</a></li>-->
+						<li><a href="http://jewelbots.tumblr.com/" target="_blank" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_blog', 'POSITION': 'header'});">Blog</a></li>
+						<li><a href="/jobs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_jobs', 'POSITION': 'header'});">Jobs</a></li>
+						<!--<<li><a href="/media_kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_mediakit', 'POSITION': 'header'});">Media Kit</a></li>-->
+						<li><a href="/privacy.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_privacy', 'POSITION': 'header'});">Privacy</a></li>
+						<li><a class="active" href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_ambassador', 'POSITION': 'header'});">Become an Ambassador</a></li>
 					</ul>
+
+					<a class="cta_preorder" href="/index.html" target="_self"onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Pre-Order Now</a>
+					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
 				</div><!--//header -->
 			</div><!--//section_header -->
+
 			<div class="section_hero">
 				<h1>Jewelbots Ambassador Search</h1>
 				<p>Become a brand ambassador today to receive exclusive offers and fun Jewelbots swag.</p>
-				<div class="cta" onClick="javascript:F4__scroll_to_ID('#section_ambassador', '90'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_find_out_more'});"></div>
+				<div class="cta_join" onClick="javascript:scroll('#section_copy', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_learnmore_ambassador', 'POSITION': 'hero'});">Learn More</div>
+				<p class="small">
+					To learn more please<br />
+					scroll down.
+					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
+				</p>
+				<div class="background"></div>
 			</div><!--//section_hero -->
-			<div class="section_ambassador" id="section_ambassador">
-				<!--<h3>The Jewelbots Ambassador Program</h3>
-				<h4>How to become an early adopter</h4>-->
-				<div class="column_left">
-					<p>
-						We’re searching for kids, ages 8-18 to join our Ambassador Program. Ambassadors are trendsetters or early adopters with strong opinions about technology and style. We want creative kids, tweens and teens to tell us their opinions and help to shape our products, design and brand!
-					</p>
-					<p>
-						Ambassador roles will evolve with our brand. The primary duties of an ambassador will be supplying honest feedback and helping spread the word about Jewelbots. We’ll frequently send surveys, content for review, special announcements and exclusive offers by mail or email to our ambassadors. To thank our young assistants, we’ll be sending regular care packages that include Jewelbots swag, interactive products and more!<br />
-						It takes just a minute or two to sign yourself up or nominate a kid who would be perfect for the role!<br /><br />
-						Together, let’s get kids coding!
-					</p>
-				</div><!--//column_left -->
-				<div class="column_right">
-					<img src="assets/images/ambassador_section_ambassador_image_desktop.jpg" />
-				</div><!--//column_right -->
-				<a class="cta" href="https://docs.google.com/a/jewelbots.com/forms/d/1c9bcOYUCt0YEkbs9i8A46_zVZi1ww5n9eoPGeEx8Sto/viewform" target="_blank" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_ambassador_cta'});">Ambassador Sign-up!</a>
-			</div><!--//section_ambassador -->
-			<div class="section_video">
-				<div class="overlay">
-					<h3>Meet some of our Ambassadors</h3>
-					<h4>
-						See what other girls are saying about Jewelbots
-					</h4>
-						<div class="cta" onClick="javascript:F1__section_video('play_vimeo'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_video'});"><img src="assets/images/index_section_video_cta_play.png" />Watch the video</div>
+
+			<div class="section_copy" id="section_copy">
+				<div class="opening">
+					<h2>Become a Jewelbots Ambassador</h2>
+					<p>We’re searching for kids, ages 8-18 to join our Ambassador Program. Ambassadors are trendsetters or early adopters with strong opinions about technology and style. We want creative kids, tweens and teens to tell us their opinions and help to shape our products, design and brand!</p>
 				</div>
-				<iframe id="video" src="https://player.vimeo.com/video/145149602?color=ff0179&title=0&byline=0&portrait=0&api=1" width="1440" height="810" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div><!--//section_video -->
-			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
-			<div class="section_newsletter">
-				<br />
-				<img src="assets/images/index_section_newsletter_headline.png" />
-				<p>
-					Sign up for our newsletter and become someone’s superhero.<br />
-					Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>.
-				</p>
-				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_footer">
-					<div class="mc-field-group">
-						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'footer'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
-					</div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-					<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-					<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-				</form>
-			</div><!--//section_newsletter -->
+				<img src="assets/images/ambassador_section_copy__jewelbots_ambassador_program.jpg" />
+				<p>Ambassador roles will evolve with our brand. The primary duties of an ambassador will be supplying honest feedback and helping spread the word about Jewelbots. We’ll frequently send surveys, content for review, special announcements and exclusive offers by mail or email to our ambassadors. To thank our young assistants, we’ll be sending regular care packages that include Jewelbots swag, interactive products and more!</p>
+				<p>It takes just a minute or two to sign yourself up or nominate a kid who would be perfect for the role!</p>
+				<h3>Together, let’s get kids coding!</h3>
+				<a class="cta" href="https://docs.google.com/a/jewelbots.com/forms/d/1c9bcOYUCt0YEkbs9i8A46_zVZi1ww5n9eoPGeEx8Sto/viewform" target="_blank">Ambassador Sign-up!</a>
+				<div class="clear"></div>
+				<div class="hr dashed"></div>
+
+			</div><!--//section_copy -->
+
 			<div class="section_footer">
-				<img class="logo" src="assets/images/index_section_footer_background_logo.png" />
-				<p class="large">
-					We at Jewelbots are passionate about the power of code and technology.<br />
-					So we've created Jewelbot to fuse fashion, technology, and friendship.<br />
-					It’s a device that harnesses the creativity and exuberance of young women to teach them a critical new language that will serve them for years to come.
-				</p>
-				<ul class="social">
-					<li><a class="facebook mxp-interaction_action_clicked_social_fb" href="https://www.facebook.com/jewelbots" target="_blank">f</a></li>
-					<li><a class="twitter mxp-interaction_action_clicked_social_tw" href="https://twitter.com/jewelbots" target="_blank">t</a></li>
-					<li><a class="instagram mxp-interaction_action_clicked_social_in" href="https://instagram.com/jewelbots" target="_blank">i</a></li>
-					<li><a class="pinterest mxp-interaction_action_clicked_social_pi" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank">p</a></li>
-				</ul><!--//social -->
+				<img class="logo" src="assets/images/site_section_footer__logo.png" />
 				<ul class="navigation">
-					<li><a href="/about.html">About</a></li>
-					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
-					<li><a href="/contact.html">Contact</a></li>
-					<li><a href="/privacy.html">Privacy</a></li><br />
-					<!--<li><a class="small" href="#">Terms & Privacy Policy</a></li>-->
+					<!--<li><a href="/faqs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_faqs', 'POSITION': 'footer'});">Help</a></li>-->
+					<li><a href="/about.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_about', 'POSITION': 'footer'});">Story</a></li>
+					<!--<<li><a href="/team.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_team', 'POSITION': 'footer'});">Team</a></li>-->
+					<li><a href="http://jewelbots.tumblr.com/" target="_blank" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_blog', 'POSITION': 'footer'});">Blog</a></li>
+					<li><a href="/jobs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_jobs', 'POSITION': 'footer'});">Jobs</a></li>
+					<li><a href="/intro-to-wearables-kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_introwk', 'POSITION': 'footer'});">Wearables</a></li>
+					<li><a class="active" href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_ambassador', 'POSITION': 'footer'});">Ambassador</a></li>
+					<!--<<li><a href="/media_kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_mediakit', 'POSITION': 'footer'});">Media Kit</a></li>-->
+					<li><a href="/privacy.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_privacy', 'POSITION': 'footer'});">Privacy</a></li>
+					<!--<<li><a href="/terms.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_terms', 'POSITION': 'footer'});">Terms</a></li><br />-->
+					<li><a href="/contact.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_contact', 'POSITION': 'footer'});">Contact</a></li>
 				</ul>
 				<p class="address">
-					50 Eldrige St, 5th Floor, New York, NY 10002<br />
+					50 Eldridge Street, 5th Floor, New York, NY 10002<br />
 					<a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a><br />
 					(862) 201-3065<br />
 				</p>
@@ -170,16 +170,14 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					Jewelbots © 2015 &nbsp; | &nbsp; Made with love in NYC &nbsp; | &nbsp; Changing the world one Jewelbot at a time
 				</p>
 				<a class="mxp-interaction_action_clicked_section_footer_mxp" href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-				<br />
-				<br />
 			</div><!--//section_footer -->
-			
+
 		</div><!--//content_container -->
 	</div><!--//site_container -->
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-	<script type="text/javascript" src="assets/js/site-scripts_v5.js"></script>
+	<script type="text/javascript" src="{{ assetPath "js/site-scripts.js" }}"></script>
+	<!-- GOOGLE  ⬇ -->
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -189,109 +187,36 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 	  ga('create', 'UA-62323216-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
-	<!--<script type="text/javascript">
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//- - A/B TESTS - 
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//
-		//
-		$(function() {
-			var test = "";
-		 	var test_id = 1 % Math.ceil(2 * Math.random());
-			if (test_id) {
-				mixpanel.track("AB Tests", {"Version": "A", "Tested": "AB7" });
-				$('.test_A').css('display', 'block');
-				$('.test_B').css('display', 'none');
-			} else {
-				mixpanel.track("AB Tests", {"Version": "B", "Tested": "AB7" });
-				$('.test_A').css('display', 'none');
-				$('.test_B').css('display', 'block');
-			}
-		});
-	</script>-->
+	<!-- GOOGLE  ⬆ -->
+	<!-- RUN  ⬇ -->
 	<script type="text/javascript">
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//-- MIXPANEL - 
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//
-		//
-		//-- SALES {STEP: reached_cart, reached_checkout, reached_thankyou / PRODUCT: jewelbot_1pack, jewelbot_2pack, jewelbot_3pack / ACTION: added_to_cart, removed_from_cart, cleared_cart }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-sales_step_reached_cart",        "SALES", {"STEP": "reached_cart"});
-		mixpanel.track_links(".mxp-sales_step_reached_checkout",    "SALES", {"STEP": "reached_checkout"});
-		mixpanel.track_links(".mxp-sales_step_reached_thankyou",    "SALES", {"STEP": "reached_thankyou"});
-		//-- PRODUCT
-		mixpanel.track_links(".mxp-sales_product_jewelbot_1pack",   "SALES", {"PRODUCT": "jewelbot_1pack"});
-		mixpanel.track_links(".mxp-sales_product_jewelbot_2pack",   "SALES", {"PRODUCT": "jewelbot_2pack"});
-		mixpanel.track_links(".mxp-sales_product_jewelbot_3pack",   "SALES", {"PRODUCT": "jewelbot_3pack"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-sales_action_added_to_cart",     "SALES", {"ACTION": "added_to_cart"});
-		mixpanel.track_links(".mxp-sales_action_removed_from_cart", "SALES", {"ACTION": "removed_from_cart"});
-		mixpanel.track_links(".mxp-sales_action_cleared_cart",      "SALES", {"ACTION": "cleared_cart"});
-		//
-		//
-		//-- NEWSLETTER {STEP: typed_email, submitted_email, subscribed_email, newsletter_step_error_email / ACTION: updated_email, unsubscribed_email / POSITION: modal, footer }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-newsletter_step_typed_email",     		"NEWSLETTER", {"STEP": "typed_email"});
-		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_modal", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});
-		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_footer", "NEWSLETTER", {"STEP": "submitted_email", "POSITION": "footer"});
-		mixpanel.track_links(".mxp-newsletter_step_subscribed_email",		"NEWSLETTER", {"STEP": "subscribed_email"});
-		mixpanel.track_links(".mxp-newsletter_step_error_email",    		"NEWSLETTER", {"STEP": "error_email"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-newsletter_action_updated_email",		"NEWSLETTER", {"ACTION": "updated_email"});
-		mixpanel.track_links(".mxp-newsletter_action_unsubscribed_email",   "NEWSLETTER", {"ACTION": "unsubscribed_email"});
-		//-- POSITION
-		mixpanel.track_links(".mxp-newsletter_position_modal",				"NEWSLETTER", {"POSITION": "modal"});
-		mixpanel.track_links(".mxp-newsletter_position_footer",				"NEWSLETTER", {"POSITION": "footer"});
-		//
-		//
-		//-- INTERACTION {STEP: scrolled_sec_1, scrolled_sec_1, ... scrolled_sec_10, / ACTION: clicked_social_fb, clicked_social_tw, clicked_social_in, clicked_social_pi, clicked_pre_order }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_1",      		"INTERACTION", {"STEP": "scrolled_sec_1"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_2",      		"INTERACTION", {"STEP": "scrolled_sec_2"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_3",      		"INTERACTION", {"STEP": "scrolled_sec_3"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_4",      		"INTERACTION", {"STEP": "scrolled_sec_4"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_5",      		"INTERACTION", {"STEP": "scrolled_sec_5"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_6",      		"INTERACTION", {"STEP": "scrolled_sec_6"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_7",      		"INTERACTION", {"STEP": "scrolled_sec_7"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_8",      		"INTERACTION", {"STEP": "scrolled_sec_8"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_9",      		"INTERACTION", {"STEP": "scrolled_sec_9"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_10",			"INTERACTION", {"STEP": "scrolled_sec_10"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_fb",				"INTERACTION", {"ACTION": "clicked_social_fb"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_tw",				"INTERACTION", {"ACTION": "clicked_social_tw"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_in",				"INTERACTION", {"ACTION": "clicked_social_in"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_pi",				"INTERACTION", {"ACTION": "clicked_social_pi"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_header",		"INTERACTION", {"ACTION": "clicked_pre_order_header"}); /* header */
-		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_hero",			"INTERACTION", {"ACTION": "clicked_pre_order_hero"}); /* hero */
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_app",				"INTERACTION", {"ACTION": "clicked_section_app"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_desktop",			"INTERACTION", {"ACTION": "clicked_section_desktop"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_watch_video",				"INTERACTION", {"ACTION": "clicked_section_video"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_features_details","INTERACTION", {"ACTION": "clicked_section_features_details"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_footer_mxp",		"INTERACTION", {"ACTION": "clicked_section_footer_mxp"});
-		
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_1",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_1"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_2",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_2"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
-		//
-		//
-		//-- PAGE {NAME: www_home, www_about, www_contact, www_privacy, www_terms / SOURCE: ... }
-		//
-		// track page load and source
-		var page_source = getUrlVars()["source"];
-		function getUrlVars() {
-		    var vars = {};
-		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-		        vars[key] = value;
-		    });
-		    return vars;
-		}
-		mixpanel.register("PAGE", {"NAME": "www_ambassador"}, 100);
-		mixpanel.track("PAGE", {"NAME": "www_ambassador", "SOURCE": page_source });
+		$(function() {
+			modal_newsletter('open_fixed');
+		});
 	</script>
+	<!-- RUN  ⬆ -->
+	<!-- ADROLL  ⬇ -->
+	<script type="text/javascript">
+	    adroll_adv_id = "P27U42Q3XBE6ZCSRCWXVAR";
+	    adroll_pix_id = "UVVRJMOBUZCFBECOB6ZDVH";
+	    /* OPTIONAL: provide email to improve user identification */
+	    /* adroll_email = "username@example.com"; */
+	    (function () {
+	        var _onload = function(){
+	            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+	            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+	            var scr = document.createElement("script");
+	            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+	            scr.setAttribute('async', 'true');
+	            scr.type = "text/javascript";
+	            scr.src = host + "/j/roundtrip.js";
+	            ((document.getElementsByTagName('head') || [null])[0] ||
+	                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+	        };
+	        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+	        else {window.attachEvent('onload', _onload)}
+	    }());
+	</script>
+	<!-- ADROLL  ⬆ -->
 </body>
 </html>

@@ -1,1 +1,165 @@
-function F3_scroll_to_ID(t,a){$("html,body").stop().animate({scrollTop:$(t).offset().top-a},700)}function F4_add_sticky_header(){$(window).scrollTop()>100&&$(window).width()>767?$("#header_container .header").addClass("header_sticky"):$("#header_container .header").removeClass("header_sticky")}function F3_toggle_mobile_nav(){$("#header_container ul.navigation").stop(!0,!0).slideToggle("slow",function(){})}function F5_hide_navigation_mobile(){$(window).width()>767&&$(".header ul.navigation").css({display:"none"})}function F7_change_color(t){$("#section_how").removeClass("color_1"),$("#section_how").removeClass("color_2"),$("#section_how").removeClass("color_3"),$("#section_what .circle").removeClass("active"),$(".simulator #option_1_1").stop(!0,!0).fadeOut(500,function(){}),$(".simulator #option_1_2").stop(!0,!0).fadeOut(500,function(){}),$(".simulator #option_1_3").stop(!0,!0).fadeOut(500,function(){}),"c1"==t&&($("#section_how").addClass("color_1"),$(".simulator #option_1_1").stop(!0,!0).delay(0).fadeIn(1e3,function(){}),$(".simulator #option_1_gif").attr("src",animation_1.src),$("#section_what #circle_1").addClass("active")),"c2"==t&&($("#section_how").addClass("color_2"),$(".simulator #option_1_2").stop(!0,!0).delay(0).fadeIn(1e3,function(){}),$(".simulator #option_1_gif").attr("src",animation_1.src),$("#section_what #circle_2").addClass("active")),"c3"==t&&($("#section_how").addClass("color_3"),$(".simulator #option_1_3").stop(!0,!0).delay(0).fadeIn(1e3,function(){}),$(".simulator #option_1_gif").attr("src",animation_1.src),$("#section_what #circle_3").addClass("active"))}function F4_CTA_modal_init(){$(window).scrollTop()+$(window).height()>$(document).height()-1&&F4_CTA_modal("open")}function F4_CTA_modal(t){"close"==t&&($("#modal_cta form").stop().animate({opacity:"0.0",top:"0%"},500,function(){$("#modal_cta").stop().animate({opacity:"0.0"},200,function(){$("#modal_cta").stop().hide()})}),mixpanel.track("Newsletter - modal closed",{})),"open"==t&&1!=F4_modal_was_open&&($("#modal_cta").stop().show(),$("#modal_cta").stop().show().animate({opacity:"1.0"},500,function(){}),$("#modal_cta form").css({display:"block"}),$("#modal_cta form").css({opacity:"1"}),$("#modal_cta form").stop().show().animate({top:"40%"},200,function(){}),mixpanel.track("Newsletter - modal opened",{}))}function F10__add_product_presale(t,a){"plus"==t?("1pack"==a&&F10__quantity_1pack<F10__max_add&&(F10__quantity_1pack+=1,$("#jewelbot_1 .interface p").text(F10__quantity_1pack)),"2pack"==a&&F10__quantity_2pack<F10__max_add&&(F10__quantity_2pack+=1,$("#jewelbot_2 .interface p").text(F10__quantity_2pack)),"3pack"==a&&F10__quantity_3pack<F10__max_add&&(F10__quantity_3pack+=1,$("#jewelbot_3 .interface p").text(F10__quantity_3pack))):("1pack"==a&&F10__quantity_1pack>0&&(F10__quantity_1pack-=1,$("#jewelbot_1 .interface p").text(F10__quantity_1pack)),"2pack"==a&&F10__quantity_2pack>0&&(F10__quantity_2pack-=1,$("#jewelbot_2 .interface p").text(F10__quantity_2pack)),"3pack"==a&&F10__quantity_3pack>0&&(F10__quantity_3pack-=1,$("#jewelbot_3 .interface p").text(F10__quantity_3pack))),F10__total=F10__price_1pack*F10__quantity_1pack+F10__price_2pack*F10__quantity_2pack+F10__price_3pack*F10__quantity_3pack,$(".checkout .total span").text(F10__total),F10__savings=F10__quantity_1pack*F10__savings_1pack+F10__quantity_2pack*F10__savings_2pack+F10__quantity_3pack*F10__savings_3pack,$(".checkout .savings span").text(F10__savings),$("#add_to_cart #product_input").remove();for(var _=0;_<F10__quantity_1pack;_++)$('<input type="hidden" name="id[]" value="4818647172" id="product_input">').prependTo("#add_to_cart");for(var _=0;_<F10__quantity_2pack;_++)$('<input type="hidden" name="id[]" value="4818676612" id="product_input">').prependTo("#add_to_cart");for(var _=0;_<F10__quantity_3pack;_++)$('<input type="hidden" name="id[]" value="4818685316" id="product_input">').prependTo("#add_to_cart")}$(document).ready(function(){$(window).resize()}),$(window).scroll(function(){F4_add_sticky_header(),F4_CTA_modal_init()}),$(window).resize(function(){}),$(window).bind("orientationchange",function(t){});var F4_modal_was_open=0;$("#modal_cta form a.close").click(function(){F4_CTA_modal("close")}),$("#modal_cta .background").click(function(){F4_CTA_modal("close")}),$("#modal_cta .background").click(function(){F4_CTA_modal("close")});var F9__current_image=0;window.socialtimerFired=function(){9>F9__current_image?$("#tweet_"+F9__current_image).animate({opacity:0},500,function(){$("#tweet_"+F9__current_image).css({display:"none"}),F9__current_image+=1,$("#tweet_"+F9__current_image).animate({opacity:1},200,function(){})}):(F9__current_image=0,$("#tweet_0").css({display:"block"}),$("#tweet_1").css({display:"block"}),$("#tweet_2").css({display:"block"}),$("#tweet_3").css({display:"block"}),$("#tweet_4").css({display:"block"}),$("#tweet_5").css({display:"block"}),$("#tweet_6").css({display:"block"}),$("#tweet_7").css({display:"block"}),$("#tweet_8").css({display:"block"}),$("#tweet_9").css({display:"block"}),$("#tweet_0").animate({opacity:1},200,function(){}),$("#tweet_1").animate({opacity:0},200,function(){}),$("#tweet_2").animate({opacity:0},200,function(){}),$("#tweet_3").animate({opacity:0},200,function(){}),$("#tweet_4").animate({opacity:0},200,function(){}),$("#tweet_5").animate({opacity:0},200,function(){}),$("#tweet_6").animate({opacity:0},200,function(){}),$("#tweet_7").animate({opacity:0},200,function(){}),$("#tweet_8").animate({opacity:0},200,function(){}),$("#tweet_9").animate({opacity:0},200,function(){})),window.module_socialfeed_socialtimerFired=setTimeout(socialtimerFired,5e3)},window.reset_module_hero_slideshow=function(){clearTimeout(window.module_socialfeed_socialtimerFired),window.module_socialfeed_socialtimerFired=setTimeout(socialtimerFired,5e3)},window.module_socialfeed_socialtimerFired=setTimeout(socialtimerFired,5e3),F10__price_1pack=69,F10__price_2pack=99,F10__price_3pack=139,F10__savings_1pack=0,F10__savings_2pack=39,F10__savings_3pack=68,F10__quantity_1pack=0,F10__quantity_2pack=0,F10__quantity_3pack=0,F10__total=0,F10__savings=0,F10__max_add=5,jQuery("#add_to_cart").click(function(){if(F10__quantity_1pack+F10__quantity_2pack+F10__quantity_3pack==0)return alert("Please add a Jewelbot to your cart!"),mixpanel.track("Pre-Sale - error"),!1;for(var t=0;t<F10__quantity_1pack;t++)mixpanel.track("Pre-Sale - added to cart",{Product:"1-pack added"});for(var t=0;t<F10__quantity_2pack;t++)mixpanel.track("Pre-Sale - added to cart",{Product:"2-pack added"});for(var t=0;t<F10__quantity_3pack;t++)mixpanel.track("Pre-Sale - added to cart",{Product:"3-pack added"});return mixpanel.track("Pre-Sale - submitted"),!0});
+$(document).ready(function(){
+	//index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
+	$(window).resize(); //-- and force
+});
+
+$(window).scroll(function(){
+	header();
+
+	$(window).resize(); //-- and force
+});
+
+$(window).resize(function(){
+
+});
+
+$(window).bind('orientationchange', function(event) {
+
+	$(window).resize(); //-- and force
+});
+
+
+//--------------------------------------------------------------------------------------//
+//
+//
+//-- scroll(id, shift) ------------------------------------//
+function scroll(id, shift){
+	$('html,body').stop().animate({scrollTop: $(id).offset().top -shift}, 700);
+}
+//
+//
+//-- header(state) -------------------------------------------------------//
+function header(state){
+	if($(window).scrollTop() > 1){
+		$('.index .header_default').addClass('header_sticky');
+	} else {
+		$('.index .header_default').removeClass('header_sticky');
+	}
+}
+//
+//
+//-- modal_newsletter(state) ---------------------------------------------//
+function modal_newsletter(state){
+	if(state=='open_overlay'){
+		$('#content_container').addClass('blurred');
+
+		$('#modal_newsletter').addClass('overlay');
+		$('#modal_newsletter.overlay').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
+	}
+	if(state=='open_fixed'){
+		$('#modal_newsletter').addClass('fixed');
+		$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+	}
+	if(state=='close'){
+		$('#content_container').removeClass('blurred');
+
+		$('#modal_newsletter .modal').stop().animate({'opacity':'0.0', 'top':'-50%'}, 500, function() {
+			$('#modal_newsletter').stop().animate({'opacity':'0.0'}, 200, function() {
+				$('#modal_newsletter').stop().hide();
+				$('#modal_newsletter .modal').css('opacity', '1.0' );
+
+				$('#modal_newsletter').removeClass('overlay');
+				$('#modal_newsletter').removeClass('fixed');
+			});
+		});
+	}
+}
+//
+//
+//-- modal_video(state) --------------------------------------------------//
+function modal_video(state){
+	if(state=='open_jewelbotspromo'){
+		$('#content_container').addClass('blurred');
+
+		$('#modal_video').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		
+		//-- 1: load video
+		(function(d){
+			var modal_video_iframe = d.getElementById('modal_video_iframe');
+			modal_video_iframe.src ='https://player.vimeo.com/video/155051675?autoplay=1&loop=0&title=0&byline=0&portrait=0';
+		})(document);
+		//-- 2: size video
+		modal_video('size');
+	}
+	if(state=='open_billnyepromo'){
+		$('#content_container').addClass('blurred');
+
+		$('#modal_video').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		
+		//-- 1: load video
+		(function(d){
+			var modal_video_iframe = d.getElementById('modal_video_iframe');
+			modal_video_iframe.src ='https://www.youtube.com/embed/XL7JzO4QjXw?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1';
+		})(document);
+		//-- 2: size video
+		modal_video('size');
+	}
+	if(state=='size'){
+		$('#modal_video .wrapper').css('height', $('#modal_video .wrapper').width() / 1.78 );
+
+		if( $(window).width() / $(window).height() < 1.78 ){
+			$('#modal_video').css('position', 'fixed' );
+			$('#modal_video .wrapper').css('margin-top', ( $(window).height()-$('#modal_video .wrapper').height() ) / 2  );
+		} else {
+			$('#modal_video').css('position', 'absolute' );
+			$('#modal_video .wrapper').css('margin-top', '50px' );
+		}
+	}
+	if(state=='close'){
+		$('#content_container').removeClass('blurred');
+
+		$('#modal_video').stop().animate({'opacity':'0.0'}, 200, function() {
+			$('#modal_video').stop().hide();
+		});
+		//-- 1: unload video
+		(function(d){
+			var modal_video_iframe = d.getElementById('modal_video_iframe');
+			modal_video_iframe.src ='foo';
+		})(document);
+	}
+}
+//
+//
+//-- index_section_hero(state) -------------------------------------------//
+function index_section_hero(state){
+	if(state=='playvideo'){
+		//-- 1: load video
+		(function(d){
+			var hero_video_iframe = d.getElementById('hero_video_iframe');
+			hero_video_iframe.src ='https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0';
+		})(document);
+		//-- 2: size video
+		if($(window).width() / $(window).height() < 1.78){
+			$('.index .section_hero iframe').css('height', $(window).height() +90 );
+			$('.index .section_hero iframe').css('width', ($(window).height() +90)*1.78 );
+		} else {
+			$('.index .section_hero iframe').css('width', $(window).width() + +90 );
+			$('.index .section_hero iframe').css('height', ($(window).width() +90)/1.78 );
+		}
+	}
+}
+//
+//
+//-- index_section_specs(action) -----------------------------------//
+var section_specs = 'no';
+function index_section_specs(action){
+	if(action=='open'){
+		$('.index .section_specs').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ });
+		$('.index .section_meet a.specs').animate({ opacity: 0.0 }, 500, function() {
+			$('.index .section_meet a.specs').css({'display': 'none'});
+		});
+		scroll('#section_specs', '70');
+		section_specs = 'yes';
+	}
+}
+//
+//
+//-- index_section_sales(action) -----------------------------------//
+function index_section_sales(action){
+	if(action=='swap_3pack' && $(window).width()<768){
+		var content = document.getElementById('pack_3_swap');
+		var parent = content.parentNode;
+		parent.insertBefore(content, parent.lastChild);
+	}
+}

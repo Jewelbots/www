@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Jewelbots - The friendship-bracelet for the Smartphone era</title>
+	<title>Jewelbots | The friendship-bracelet for the Smartphone era</title>
 	<meta name="description" lang="en" content="Ignite their curiosity! Jewelbots - programmable friendship bracelets for the modern world." />
 	<meta name="keywords" lang="en" content="jewelbots, wearables, friendship bracelet, nyc, tech, code, learn, open source, iphone, android" />
 
@@ -10,7 +10,7 @@
 	***********************************************************************************************************
 
 		www.jewelbots.com
-		v.5.3
+		v.6.1
                                 _ _           _
            (♥) _____      _____| | |__   ___ | |_ ___
            | |/ _ \ \ /\ / / _ \ | '_ \ / _ \| __/ __|
@@ -32,262 +32,162 @@
 
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
-	<link type="text/css" rel="stylesheet" href="assets/css/style_v5.css" media="screen, projection" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
 
 	<script src="//use.typekit.net/rbz5qur.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<!-- Mixpanel Code -->
-	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+	<!-- MIXPANEL  ⬇ -->
+	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("bf14c79a96fff9bd324e6bd6715347e8");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
+	<script type="text/javascript">
+		//-- 1) track the page name
+		var page_source = getUrlVars()["source"];
+		function getUrlVars() {
+		    var vars = {};
+		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		        vars[key] = value;
+		    });
+		    return vars;
+		}
+		mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
+		if (page_source=="newsletter_error"){
+			alert('Something went wrong. Please try to subscribe again or contact us hi@jewelbots.com');
+			mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
+		}
 	</script>
-	<!-- // T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
-	<script>
-	mixpanel.init("9de67913ff56693e76306919cc0fe64e", {
-	    loaded: function() {
-			//-- 1) track the page name
-			var page_source = getUrlVars()["source"];
-			function getUrlVars() {
-			    var vars = {};
-			    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-			        vars[key] = value;
-			    });
-			    return vars;
-			}
-			mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
-			//
-			// -->>>> overwrite modal on www_home:
-			F4_modal_was_open = 0;
-			//
-			//
-			//
-			// track Newsletter - subscribed_email
-			if (page_source=="newsletter_error"){
-				mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
-			}
-
-			//-- 2) export distinct_id and funnel for shopify --> opens an iframe and syncs user ID --> same iframe will be opened on final checkout and thus close the funnel
-			var distinct_id = mixpanel.get_distinct_id();
-			var iframe = document.createElement('iframe');
-		    iframe.style.display = "none";
-		    iframe.src = "https://jewelbots.myshopify.com/pages/mxp-tracking/?step=reached_products&distinct_id="+distinct_id;
-		    document.body.appendChild(iframe);
-	    }
-	});
-	</script>
-	<!-- End Mixpanel Code -->
-
-	<!-- Facebook Pixel Code -->
-	<script>
-	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-	document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-	fbq('init', '108847092786155');
-	fbq('track', "PageView");</script>
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=108847092786155&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
+	<!-- MIXPANEL  ⬆ -->
+	<!-- ZENDESK  ⬇ -->
+	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","jewelbots.zendesk.com");
+	/*]]>*/</script>
+	<!-- ZENDESK  ⬆ -->
 </head>
-<!-- InviteReferrals Integration --><!--<div id='invtrflfloatbtn'></div><script>var invite_referrals = window.invite_referrals || {}; (function() { invite_referrals.auth = { bid_e : 'F475306EC8BDE90B07294074877D5B26', bid : '8751', t : '420', email : '', userParams : {'fname': '', 'lname': '' } };var script = document.createElement('script');script.async = true;script.src = (document.location.protocol == 'https:' ? '//d11yp7khhhspcr.cloudfront.net' : '//cdn.invitereferrals.com') + '/js/invite-referrals-1.0.js';var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();</script>-->
 <body>
-	<!--[if lt IE 7]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+	<div id="modal_newsletter">
+		<div class="modal">
+			<script>mixpanel.track_forms(".mixpanel_modal_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});</script>
+			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
-	<div id="modal_cta">
-		<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_modal">
+				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
+				<h1>Sign up, then save!</h1>
+				<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
 
-			<a class="close" href="javascript:void();" >X</a>
-			<img src="assets/images/modal_headline.png" />
-			<p>
-				Sign up for our newsletter and become someone’s superhero.<br />
-				Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>
-			</p>
-			<div class="mc-field-group">
-				<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-			<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-			<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-			<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-		</form>
-		<div class="background"></div>
-	</div><!--//modal_cta -->
+				<div class="mc-field-group">
+					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe + Save" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+
+			</form>
+		</div>
+		<div class="background" onClick="modal_newsletter('close');"></div>
+	</div><!--//modal_newsletter -->
 
 	<div id="modal_video">
 		<div class="wrapper">
-			<a class="close" href="javascript:void();" >X</a>
+			<a class="close" href="javascript:void();" onClick="modal_video('close');">X</a>
 			<iframe id="modal_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
-		<div class="background"></div>
+		<div class="background" onClick="modal_video('close');"></div>
 	</div><!--//modal_video -->
 
 	<div id="site_container" class="index">
 		<div id="content_container">
 
-			<!-- InviteReferrals Integration --><div id='invtrflfloatbtn'></div><script>var invite_referrals = window.invite_referrals || {}; (function() { invite_referrals.auth = { bid_e : 'F475306EC8BDE90B07294074877D5B26', bid : '8751', t : '420', email : '', userParams : {'fname': '', 'lname': '' } };var script = document.createElement('script');script.async = true;script.src = (document.location.protocol == 'https:' ? '//d11yp7khhhspcr.cloudfront.net' : '//cdn.invitereferrals.com') + '/js/invite-referrals-1.0.js';var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();</script>
-
-			<div id="jewelbot">
-				<img id="band_1" class="band" src="assets/images/jewelbot_band_1.png" />
-				<img id="band_2" class="band" src="assets/images/jewelbot_band_2.png" />
-				<img id="band_3" class="band active" src="assets/images/jewelbot_band_3.png" />
-				<img id="band_4" class="band" src="assets/images/jewelbot_band_4.png" />
-				<img id="band_5" class="band" src="assets/images/jewelbot_band_5.png" />
-
-				<img id="shadow" class="shadow active" src="assets/images/jewelbot_shadow.png" />
-				<img id="board" class="board active" src="assets/images/jewelbot_board.png" />
-				<img id="led" class="led active" src="assets/images/jewelbot_led_on.png" />
-
-				<img id="charm_1" class="charm" src="assets/images/jewelbot_charm_1.png" />
-				<img id="charm_2" class="charm" src="assets/images/jewelbot_charm_2.png" />
-				<img id="charm_3" class="charm" src="assets/images/jewelbot_charm_3.png" />
-				<img id="charm_4" class="charm" src="assets/images/jewelbot_charm_4.png" />
-				<img id="charm_5" class="charm active" src="assets/images/jewelbot_charm_5.png" />
-				<img id="charm_6" class="charm" src="assets/images/jewelbot_charm_6.png" />
-			</div><!--//jewelbot -->
-
 			<div class="section_header">
-				<div class="header">
-					<a class="icon" href="/">Home</a>
-					<a class="icon_mobile" href="javascript:void();" onClick="F3_toggle_mobile_nav();">Home</a>
-					<img class="wordmark" src="assets/images/index_section_header_wordmark.png" />
+				<div class="header_default"><!-- //header_default //header_default_nav //header_sticky-->
+					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
+						<img class="logo_icon_small" src="assets/images/index_section_header__icon_small.png" />
+						<img class="logo_icon_large" src="assets/images/index_section_header__icon_large.png" />
+						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
+					</a>
 					<ul class="navigation">
-						<li><a href="http://jewelbots.com/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_header_cta'});">Become an Ambassador &nbsp; &nbsp; </a></li>
-						<li><a class="cta mxp-interaction_action_clicked_pre_order_header" href="javascript:void;" onClick="F4__scroll_to_ID('#section_sale','90');">Buy Now</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_meet','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Jewelbots</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Features</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_code','70');" target="_self" onClick="mmixpanel.track('INTERACTION', {'ACTION': 'clicked_code', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Learn to code</a></li>
+						<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Become an Ambassador</a></li>
 					</ul>
+
+					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Pre-Order Now</a>
+					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
 				</div><!--//header -->
 			</div><!--//section_header -->
+
 			<div class="section_hero">
-				<h1><br /><br /> Give her an advantage</h1>
-				<!--
-				<h1>Spark Their Creativity</h1>
-				<h1>Ignite Their Curiosity</h1>
-				<h1>Get Them Excited</h1>
-				-->
+				<h1><br /><br /> Give them an advantage</h1>
 				<p>The world's first programmable friendship bracelet.<br /> Get your kids coding today!</p><br /><br />
-				 &nbsp; &nbsp; <div class="cta_video" onClick="javascript:F11__modal_video('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_video_hero'});">Play Video</div> &nbsp; &nbsp; 
-				<div class="cta_order" onClick="javascript:F4__scroll_to_ID('#section_sale', '90'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_hero'});">Pre-order Now</div>
+				 &nbsp; &nbsp; <div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'hero'});">Play Video</div> &nbsp; &nbsp; 
+				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Pre-order Now</div>
 				<p class="small">
 					Order yours now to<br />
 					be part of the first shipment in 2016.
-					<img class="arrow" src="assets/images/index_section_hero_arrow_down.png" />
+					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
 				</p>
-				<iframe id="vimeoIframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+				<div class="press">
+					<img class="stars" src="assets/images/index_section_hero__stars.png" />
+					<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year«</a>
+					<img class="quote" src="assets/images/index_section_hero__press_wired.png">
+					<ul>
+						<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_hero__press_forbes.png" /></a></li><!--
+					 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_hero__press_bustle.png" /></a></li><!--
+					 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_hero__press_theverge.png" /></a></li><!--
+					 --><li><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_hero__press_psfk.png" /></a></li><!--
+					 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_hero__press_techcrunch.png" /></a></li><!--
+					 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_hero__press_businessinsider.png" /></a></li><!--
+					 --><li><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_hero__press_britco.png" /></a></li><!--
+					 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_hero__press_glamour.png" /></a></li><!--
+					 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_hero__press_teenvogue.png" /></a></li><!--
+					 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_hero__press_yahoo.png" /></a></li><!--
+					 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_hero__press_buzzfeed.png" /></a></li>
+					</ul>
+				</div>
+				<!--<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+				<div class="background"></div>
 			</div><!--//section_hero -->
-			<div class="section_mood"><!--//yeay!!!! --></div><!--//section_mood -->
-			<div class="section_meet">
-				<div class="column_left">
-					<h2>Meet Jewelbots</h2>
-					<p>
-						Jewelbots are more than just pretty jewelry, they are a powerful communication tool. Kids can make their bracelets light up when a friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways! 
-					</p>
-					<div class="feature_1 feature" onClick="javascript:F7__Jewelbot_feature('feature_1'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_1'});">
-						<h4>Power of open source</h4>
-						<p>
-							Jewelbots are powered by the Arduino IDE, a powerful, yet easy to learn language intended for anyone making interactive projects.
-						</p>
-						<div class="pointer">
-							<img class="feature_off" src="assets/images/index_section_meet_feature_1_off.png">
-							<img class="feature_on" src="assets/images/index_section_meet_feature_1_on.png">
-						</div>
-					</div>
-				</div><!--//column_left -->
-				<div class="column_right">
-					<div class="feature_2 feature" onClick="javascript:F7__Jewelbot_feature('feature_2'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_2'});">
-						<h4>4 Powerful LEDs</h4>
-						<p>
-							16.7 million variations of rainbow fun!
-						</p>
-						<div class="pointer">
-							<img class="feature_off" src="assets/images/index_section_meet_feature_2_off.png">
-							<img class="feature_on" src="assets/images/index_section_meet_feature_2_on.png">
-						</div>
-					</div>
-					<div class="feature_3 feature" onClick="javascript:F7__Jewelbot_feature('feature_3'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_3'});">
-						<h4>Replaceable Charm</h4>
-						<p>
-							Jewelbots come in different colors and shapes. You can even 3D print your own!
-						</p>
-						<div class="pointer">
-							<img class="feature_off" src="assets/images/index_section_meet_feature_3_off.png">
-							<img class="feature_on" src="assets/images/index_section_meet_feature_3_on.png">
-						</div>
-					</div>
-					<div class="feature_4 feature" onClick="javascript:F7__Jewelbot_feature('feature_4'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_meet_feature_4'});">
-						<h4>Stylish Nylon Band</h4>
-						<p>
-							Match your mood, your style, express yourself.
-						</p>
-						<div class="pointer">
-							<img class="feature_off" src="assets/images/index_section_meet_feature_4_off.png">
-							<img class="feature_on" src="assets/images/index_section_meet_feature_4_on.png">
-						</div>
-					</div>
-				</div><!--//column_right -->
-			</div><!--//section_meet -->
-			<div class="section_features">
-				<h3>Jewelbots Features</h3>
-				<div class="column_left">
-					<h4>Lights</h4>
-					<p>
-						Jewelbots have 4 lights that can be programmed to react to other Jewelbots. No other Jewelbots in the area? Not to worry. You can still program it to light up when it’s time for class, or to remind you to practice your violin!
-					</p>
-					<h4>Messaging</h4>
-					<p>
-						All Jewelbots have a tiny motor in them that vibrates when it gets a message. Kids can send messages to their friends who are nearby by simply pressing on their Jewelbots, no phone required! 
-					</p>
-					<h4>The App</h4>
-					<p>
-						Using the free Jewelbots app for iPhone and Android, kids can set how their Jewelbot behaves and interacts with their friends. Don’t have a phone? Jewelbots can still be used without the app!
-					</p>
-				</div><!--//column_left -->
-				<div class="column_right">
-					<h4>Programming</h4>
-					<p>
-						Jewelbots have a micro USB port on the side, and it can be directly connected to a computer. Using free Arduino software, kids can program their Jewelbots to do all sorts of cool things. Kids can then upload their code to our site and share and collaborate with other Jewelbot users.
-					</p>
-					<h4>For Safety</h4>
-					<p>
-						We are making a product for kids, and their safety is our number one priority. Jewelbots don’t contain a GPS and we don’t store any personal data of any kind.
-					</p>
-				</div><!--//column_right -->
-				<ul class="colorpicker">
-					<li><div id="color_1" class="active" onClick="F3__section_features('show_color_1');">&nbsp;</div></li>
-					<li><div id="color_2" class="active" onClick="F3__section_features('show_color_2');">&nbsp;</div></li>
-					<li><div id="color_3" class="active" onClick="F3__section_features('show_color_3');">&nbsp;</div></li>
-					<li><div id="color_4" class="active" onClick="F3__section_features('show_color_4');">&nbsp;</div></li>
-					<li><div id="color_5" class="active" onClick="F3__section_features('show_color_5');">&nbsp;</div></li>
+			
+
+			<div class="section_meet" id="section_meet">
+				<h3>Meet Jewelbots</h3>
+				<p>Jewelbots are more than just pretty jewelry, they are a powerful communication tool.</p>
+				<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />
+				<p>Kids can make their bracelets light up when a friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways! Jewelbots work alone, but are more fun with friends!</p>
+				<ul>
+					<li><img src="assets/images/index_section_meet__leds.png" /><p>4 powerful LEDs with 16.7mill colors</p></li><!--
+					<li><img class="background" src="assets/images/index_section_meet__icon_background_1.png" /><img src="assets/images/index_section_meet__battery.png" /><p>Rechargeable with 2-3 days of battery life</p></li>
+				 --><li><img src="assets/images/index_section_meet__battery.png" /><p>Rechargeable with 2-3 days of battery life</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__usb.png" /><p>Connects to your computer via USB 3.0</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__charms.png" /><p>Customizeable charms and bands</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__vibration.png" /><p>Programmable button and vibration motor</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__bluetooth.png" /><p>Build in Bluetooth 4.0</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__opensource.png" /><p>Open source technology using Arduino IDE</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__mesh.png" /><p>Multiple Jewelbots form a Mesh Network</p></li><!--
+				 --><li><img src="assets/images/index_section_meet__app.png" /><p>iOS & Android compatible</p></li>
 				</ul>
-				<div class="cta" onClick="javascript:F3__section_features('open_details'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_features_details'});">Full Technical Specification</div>
-			</div><!--//section_features -->
-			<div class="section_features_details" id="section_features_details">
-				<div class="column_left">
+				<p><img src="assets/images/index_section_meet__spy_2.png" width="100" /><span class="safetynote">We are making a product for kids, and their safety is our number one priority. Jewelbots don’t contain a GPS and we don’t store any personal data of any kind.</span><br /><a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open');">See full specifications</a></p>
+			</div><!--//section_meet -->
+			<div class="section_specs" id="section_specs">
+				<div class="left">
 					<h4>Specifications</h4>
 					<p class="note">* Final colors and specs may vary slightly.</p>
 
 					<h5>What's Included</h5>
 					<p>Every bracelet will ship with 3 different color bands, a Jewelbots charm and a charging cable:</p>
-					<img class="band" src="assets/images/index_section_features_details_band_1.png" />
-					<img class="band" src="assets/images/index_section_features_details_band_2.png" />
-					<img class="band" src="assets/images/index_section_features_details_band_3.png" />
-					<img class="usb" src="assets/images/index_section_features_details_usb_cable.png" />
+					<img class="band" src="assets/images/index_section_specs__band_1.png" />
+					<img class="band" src="assets/images/index_section_specs__band_2.png" />
+					<img class="band" src="assets/images/index_section_specs__band_3.png" />
+					<img class="usb" src="assets/images/index_section_specs__usbcable.png" />
 
 					<h5>Dimensions</h5>
 					<p class="nopadding">32.5 x 32.5 x 14mm</p>
 
 					<h5>Band</h5>
 					<p class="nopadding">16mm wide and 230mm long</p>
-
-					<!--<h5>Weight</h5>
-					<p>28g / 0.99oz or 32g / 1.13ox</p>-->
 
 					<h5>Sensors & Components</h5>
 					<ul>
@@ -307,8 +207,8 @@
 					<ul>
 						<li><span>•</span>Operating temperature: 14° to 113° F</li>
 					</ul>
-				</div><!--//column_left -->
-				<div class="column_right">
+				</div><!--//left -->
+				<div class="right">
 					<h5>Materials</h5>
 					<ul>
 						<li><span>•</span>Nylon Band</li>
@@ -321,9 +221,6 @@
 					<h5>Water Resitance</h5>
 					<p>Jewelbots are splash resistant. Do not bath, shower or swim with your Jewelbot on.</p>
 
-					<!--<h5>Jewelbots Board & SDK</h5>
-					<p>To come</p>-->
-
 					<h5>Syncing & Bluetooth</h5>
 					<p class="nopadding">Jewelbots sync wirelessly to tablets, iOS and Android smartphones using Bluetooth 4.0+ wireless technology.</p>
 					<ul>
@@ -333,207 +230,182 @@
 						<li><span>•</span>Syncs with iPhone 4S and later, iPad 3 gen. and later, and leading Android devices</li>
 						<li><span>•</span>For Mac and Windows, we allow you to add code to your Jewelbot</li>
 					</ul>
-				</div><!--//column_right -->
-				<div class="clear">&nbsp;</div><!--//clear -->
-			</div><!--//section_features_details -->
-			<div class="section_software">
-				<div class="app">
-					<div class="app_container">
-						<img src="assets/images/index_section_software_iphone.png" />
-						<img src="assets/images/index_section_software_iphone_app.gif" />
-					</div>
-					<div class="column_right">
-						<h3>The Jewelbots App</h3>
-						<!--<h4>»Getting her to code doesn’t have to be as hard as getting her to eat vegetables.«</h4>-->
-						<p>
-							<!--Every beginning can be difficult and intimidating. So we’ve created the Jewelbots app.--> Using basic if/then statements, girls begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. They can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they get a hang of it, they can use the app to write little mods and take their skills further:
-						</p>
-						<div id="mod_1" class="mod"><img src="assets/images/index_section_software_mod_instagram.png" /><span>Instagram Mod: </span>light up when you get an new like</div>
-						<div id="mod_2" class="mod"><img src="assets/images/index_section_software_mod_twitter.png" /><span>Twitter Mod: </span>vibrate when you get a new follower</div>
-						<div id="mod_3" class="mod"><img src="assets/images/index_section_software_mod_facebook.png" /><span>Facebook Mod: </span>flash when you get a message from your parents</div>
-						<p>
-							…the mod possibilities are endless.<br /> And of course – Jewelbots basic functions can be used without a phone.
-						</p>
-						<div class="cta" onClick="javascript:F2__section_software('open_desktop'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_desktop'});">Jewelbots is open source - learn more</div>
-					</div><!--//column_right -->
-				</div><!--//app -->
-				<div class="desktop">
-					<div class="column_left">
-						<h3>
-							Open Source<br />
-							Their Imagination
-							is the Limit
-						</h3>
-						<h4>
-							»Certainly there's a phenomenon around open source. You know free software will be a vibrant area. There will be a lot of neat things that get done there.«
-							<span>– Bill Gates</span>
-						</h4>
-						<p>
-							Jewelbots are also open source, so for the  curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not? 
-						</p>
-						<div class="cta" onClick="javascript:F2__section_software('open_app');  mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_app'});"><img class="left" src="assets/images/index_section_software_btn_app_left.png" />The Jewelbots app - easy as<img class="right" src="assets/images/index_section_software_btn_app_right.png" /></div>
-					</div><!--//column_left -->
-					<div class="column_right">
-						<p>
-							<img class="left" src="assets/images/index_section_software_arduino.png" />
-							<span>Arduino</span> is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.
-						</p>
-					</div><!--//column_right -->
-					
-				</div><!--//desktop -->
-			</div><!--//section_software -->
-			<div class="section_sale" id="section_sale">
-				<!--<h3>Get Your Jewelbot Today!</h3>-->
-				<h3>Pre-order your Jewelbot today.</h3>
-				<h4>Each 3-Pack includes our Jewelbots Wearables Kit which ships now - so you can start coding before your Jewelbot arrives.</h4>
-				<ul class="products">
-					<li>
-						<img src="assets/images/index_section_sale_product_jewelbot_1pack.jpg" />
-						<h5>Jewelbot</h5>
-						<p>$69</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Now</a>
-					</li><!--
-				 --><li>
-						<img src="assets/images/index_section_sale_product_jewelbot_2pack.jpg" />
-						<h5>Twinnie 2-Pack</h5>
-						<p><!--<span>$ 99</span>--> $99</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Now</a><!--11581083652:1-->
-					</li><!--
-				 --><li>
-						<img src="assets/images/index_section_sale_product_jewelbot_3pack_wk.jpg" />
-						<h5>Bestie 3-Pack + Wearables Kit</h5>
-						<p>$139</p>
-						<!--<img style="width: 100%;" src="assets/images/index_section_sale_product_jewelbot_3pack_xmas_info.jpg" />-->
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Buy Now</a><!--11581063300\:1 // 12045228868:1-->
-						<!--<div class="special">
-							Each 3-Pack presale includes our programmable Jewelbot Wearables Kit. If you pre-order by December 18, the Jewelbot Wearables Kit will ship to you in time for Christmas. (Shipping time guaranteed for US only)
-							<br />
-							<div class="cta_xmasspecial" onClick="javascript:F5__section_sale('open_xmasspecial'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_features_xmasspecial'});">Learn more</div>
-						</div>-->
-					</li>
-				</ul>
-				<div class="clear">&nbsp;</div><!--//clear -->
-				<p class="note">
-					<span class="special">Each 3-Pack presale includes our programmable Jewelbot Wearables Kit.</span>
-					<span>This is a pre-sale. Product aims to ship by Spring 2016. Shipping timelines are estimates.</span><br />
-					Actual design of charm and bands may vary slightly. Every bracelet will ship with 3 different color bands.<br />
-					Actual colors may differ. Because this is a pre-order, you are eligible for a full refund at any time before your merchandise ships.
-				</p>
-			</div><!--//section_sale -->
-			<!--<div class="section_sale_xmasspecial_intro">
-			</div>-->
-			<div class="section_sale_xmasspecial" id="section_sale_xmasspecial">
-				<h3>Jewelbot Wearables Kit</h3>
-				<h4>Each 3-Pack ships with our Jewelbots Wearable Kit so you can start coding before your Jewelbot arrives.</h4>
-				<p>
-					Because Jewelbots won’t be ready until spring, we want to send you the next best thing. So we have designed custom wearable kits for you to construct your own projects!<br /> Using these kits, along with our <a href="https://www.youtube.com/watch?v=6Od5JmaJIcs" target="_blank">Intro To Wearables Video</a>, you can make all kinds of cool projects right away, all while getting a jumpstart on coding in the same environment you will use to code your Jewelbots!
-				</p>
-				<div class="column_left">
-					<img src="assets/images/index_section_sale_xmasspecial_2.jpg" />
-				</div><!--//column_left -->
-				<div class="column_right">
-					<h6>What's in the Kit:</h6>
+				</div><!--//right -->
+				<img class="product" src="assets/images/index_section_specs__exploded.jpg" />
+				<div class="clear"></div>
+			</div><!--//section_specs -->
+			<div class="section_features" id="section_features">
+				<h3>Jewelbots Functionality</h3>
+				<div class="outofthebox">
+					<h4>Out of the box</h4>
 					<ul>
-						<li><span>•</span>1x Arduino Gemma</li>
-						<li><span>•</span>2x Batteries</li>
-						<li><span>•</span>1x Roll of Conductive Thread</li>
-						<li><span>•</span>5x Blue LED Squins</li>
-						<li><span>•</span>1x Battery Holder</li>
-						<li><span>•</span>1x Neddles</li>
+						<li><img src="assets/images/index_section_features__detect.png" />Detect nearby friends<br /><span>(no phone required)</span></li><!--
+					 --><li><img src="assets/images/index_section_features__messages.png" />Send secret messages</li>
 					</ul>
-					<p>
-						The <strong>Jewelbots Wearable Kit</strong> is a DIY kit, custom designed by the Jewelbots team to give you and a special kid an activity to do together. Pick an item of clothing, sew in LED lights, and program them to light up in fun patterns.<br /><br />The best part, is that you get practice coding using the Arduino IDE, the same software you will use to program your Jewelbot!<br /><br />
-					</p>
-					<div class="product">
-						<img src="assets/images/index_section_sale_xmasspecial_3.jpg" />
-						<h5>Jewelbots Wearables Kit</h5>
-						<p>$29</p>
-						<a class="cta mxp-sales_action_added_to_cart mxp-sales_step_reached_checkout mxp-sales_product_jewelbot_wearableskit" href="http://jewelbots.myshopify.com/cart/12183934404:1" target="_blank">Buy Now</a><!--11581063300\:1 // 12045228868:1-->
-					</div>
-				</div><!--//column_right -->
-				<div class="clear">&nbsp;</div><!--//clear -->
-			</div><!--//section_sale_xmasspecial -->
-			<div class="section_video">
-				<div class="overlay">
-					<h3>Bill Nye says AWESOME!</h3>
-					<h4>
-						Public opinion - that’s all well and good - but hard facts are better.<br />
-						See what Bill Nye has to say about Jewelbots.
-					</h4>
-						<div class="cta" onClick="javascript:F1__section_video('play'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_video'});"><img src="assets/images/index_section_video_cta_play.png" />Watch the video</div>
-						<p>0:39</p>
+				</div><!--
+			 --><div class="powerofcoding">
+					<h4>Through the power of coding</h4>
+					<ul>
+						<li><img src="assets/images/index_section_features__sms.png" />Send SMS/email</li><!--
+					 --><li><img src="assets/images/index_section_features__social.png" />Social media integration</li><!--
+					 --><li><img src="assets/images/index_section_features__weather.png" />Weather updates</li><!--
+					 --><li><img src="assets/images/index_section_features__parents.png" />Notify parents</li><!--
+					 --><li><img src="assets/images/index_section_features__drone.png" />Fly a drone</li><!--
+					 --><li><img src="assets/images/index_section_features__imagine.png" />Whatever they imagine...!</li>
+					</ul>
 				</div>
-				<iframe id="video_bill_nye" width="560" height="315" src="https://www.youtube.com/embed/XL7JzO4QjXw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</div><!--//section_video -->
-			<div class="section_press">
-				<h3>What others say</h3>
-				<a href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">
-					<h4>»The most interesting wearable I’ve seen this year«</h4>
-					<img class="wired" src="assets/images/index_section_press_article_wired.png" />
-				</a>
-				<ul class="press">
-					<li class="quarter"><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_press_article_forbes.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_press_article_bustle.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_press_article_verge.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_press_article_psfk.jpg" /></a></li><!--
-
-				 --><li class="quarter"><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_press_article_techcrunch.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_press_article_businessinsider.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_press_article_britco.jpg" /></a></li><!--
-
-				 --><li class="quarter"><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_press_article_glamour.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_press_article_teenvogue.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_press_article_yahoo.jpg" /></a></li><!--
-				 --><li class="quarter"><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_press_article_buzzfeed.jpg" /></a></li>
-				</ul>
-			</div><!--//section_press -->
+				<p>Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?</p>
+			</div><!--//section_features -->
+			<div class="section_code" id="section_code">
+				<div class="topic topic_1">
+					<div class="image"></div>
+					<img class="iphone" src="assets/images/index_section_code__iphone.png" />
+					<img class="iphone_app" src="assets/images/index_section_code__iphone_app.gif" />
+					<div class="copy">
+						<h3>Learn the Basics</h3>
+						<p>Using basic if/then statements, kids begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. They can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they get a hang of it, they can use the <strong>iOS + Android</strong> compatible app to write little mods such as have their Jewelbot light up when they get a new Instagram like. The mod possibilities are endless. And of course – Jewelbots basic functions can be used without a phone.</p>
+					</div>
+				</div><!--//topic_1 -->
+				<div class="topic topic_2">
+					<div class="image"></div>
+					<div class="copy">
+						<h3>Become a Master</h3>
+						<p>Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the <strong>Arduino IDE</strong>, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?<br/><br/><strong>Arduino</strong> is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects</p>
+					</div>
+				</div><!--//topic_2 -->
+				<div class="clear"></div>
+			</div><!--//section_code -->
 			<div class="section_newsletter">
-				<br />
-				<img src="assets/images/index_section_newsletter_headline.png" />
-				<p>
-					Sign up for our newsletter and become someone’s superhero.<br />
-					Every 50th email will win a Jewelbot - and we will donate another to <a href="https://www.scripted.org/" target="_blank">ScriptEd</a>.
-				</p>
-				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mxp-newsletter_step_submitted_email_footer">
+				<h3>Join our email list and $10 off your first order.</h3>
+				<script>mixpanel.track_forms(".mixpanel_section_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "index_section"});</script>
+				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_section_newsletter">
 					<div class="mc-field-group">
-						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'footer'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'index_section'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
 					</div>
 					<div id="mce-responses" class="clear">
 						<div class="response" id="mce-error-response" style="display:none"></div>
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-					<div class="clear desktop"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-					<div class="clear mobile"><input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+					<input type="submit" value="Join + Save" name="subscribe" id="mc-embedded-subscribe" class="btn">
 				</form>
+				<p>Stay tuned to our updates and special offers!<br /> Oh, and you are going to get your discount code right away.</p>
 			</div><!--//section_newsletter -->
-			<div class="section_footer">
-				<img class="logo" src="assets/images/index_section_footer_background_logo.png" />
-				<p class="large">
-					<!--We at Jewelbots are passionate about the power of code and technology.<br />
-					So we've created Jewelbot to fuse fashion, technology, and friendship.<br />
-					It’s a device that harnesses the creativity and exuberance of young women to teach them a critical new language that will serve them for years to come.-->
-					<span class="large">Become an Ambassador</span><br />
-					<span class="small">Get special offers, discounts and care packages with stickers and other fun stuff<br /> when you become an early adopter.</span><br /><br />
-					Are you a kid between the ages of 8-18? Are you a trendsetter, or someone who has strong opinions about style and technology? Do you want to help Jewelbots be even more awesome? If the answer is yes, then we’d love to have you be one of our Jewelbots Ambassadors!
-					<a class="cta" href="http://jewelbots.com/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_footer_cta'});">Become an Ambassador</a>
+			<div class="section_sale" id="section_sale">
+				<h3>Pre-Order Now and Save</h3><!--
+			 --><ul class="products">
+					<li class="pack_1">
+						<h5>JEWELBOT</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_1pack.jpg" />
+						<p class="list_price"><span>$79</span> List Price</p>
+						<p>$69 Pre-Order</p>
+						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Add to cart</a>
+					</li><!--
+				 --><li class="pack_3" id="pack_3_swap">
+						<h5 style="color: rgba(100,100,100,1.0);">BESTIE 3-PACK<br />incl. WEARABLES KIT</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_3pack_wk.jpg" />
+						<p class="list_price"><span>$159</span> List Price</p>
+						<p>$139 Pre-Order</p>
+						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a>
+					</li><!--
+				 --><li class="pack_2">
+						<h5>TWINNIE 2-PACK</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_2pack.jpg" />
+						<p class="list_price"><span>$119</span> List Price</p>
+						<p>$99 Pre-Order</p>
+						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a>
+						<script>
+							mixpanel.track_links('.mixpanel_1pack', 'SALES', {'PRODUCT': 'jewelbot_1pack'}); mixpanel.track_links('.mixpanel_1pack', 'SALES', {'ACTION': 'added_to_cart'});
+							mixpanel.track_links('.mixpanel_2pack', 'SALES', {'PRODUCT': 'jewelbot_2pack'}); mixpanel.track_links('.mixpanel_2pack', 'SALES', {'ACTION': 'added_to_cart'});
+							mixpanel.track_links('.mixpanel_3pack', 'SALES', {'PRODUCT': 'jewelbot_3pack'}); mixpanel.track_links('.mixpanel_3pack', 'SALES', {'ACTION': 'added_to_cart'});
+						</script>
+					</li>
+				</ul><!--
+			 --><div class="clear"></div>
+		</div><!--//section_sale -->
+			<div class="section_wearableskit">
+				<div class="line">&nbsp;</div>
+				<p class="note">Pre-Order a <strong>3-Pack</strong> and get a free <strong>Jewelbots Wearables Kit now.</strong><br />Kit usually ships within 1-2 days after you order so you can start right away.</p>
+				<div class="line">&nbsp;</div>
+				<div class="box">
+					<img class="product" src="assets/images/index_section_wearableskit__wearableskit.jpg" />
+					<div class="left">
+						<h3>Jewelbots Wearables Kit (1.0)</h3>
+						<p>The Jewelbots Wearable Kit is a DIY kit, custom designed by the Jewelbots team to give you and a special kid an activity to do together. Pick an item of clothing, sew in LED lights, and program them to light up in fun patterns. Using these kits, you can make all kinds of cool projects right away, all while getting a jumpstart on coding using the Arduino IDE, the same environment you will use to code your Jewelbots!</p>
+						<p class="list_price">$29 Individual Price</p>
+						<p class="offer_price">Free for all 3-Pack Orders</p>
+						<a class="cta_buy mixpanel_wk" href="https://jewelbots.myshopify.com/cart/12183934404:1?channel=buy_button" target="_blank">Buy Individually</a>
+						<script>
+							mixpanel.track_links('.mixpanel_wk', 'SALES', {'PRODUCT': 'wearables_kit'}); mixpanel.track_links('.mixpanel_wk', 'SALES', {'ACTION': 'added_to_cart'});
+						</script>
+					</div>
+					<div class="right">
+						<h6>What's in the Kit:</h6>
+						<ul>
+							<li><span>•</span>1x Arduino Gemma</li>
+							<li><span>•</span>2x Batteries (Type 2032)</li>
+							<li><span>•</span>1x Roll of Conductive Thread</li>
+							<li><span>•</span>5x Blue LED Squins</li>
+							<li><span>•</span>1x Battery Holder</li>
+							<li><span>•</span>1x Set of Neddles</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="info">
+					<li><img src="assets/images/index_section_sale__delivery_jb.png" /><p>Jewelbots Estimated Ship Date: Spring 2016</p></li>
+					<li><img src="assets/images/index_section_sale__refund.png" /><p>Full Refund as long as order has not shipped</p></li>
+					<li><img src="assets/images/index_section_sale__delivery_wk.png" /><p>Wearables Kits ship within 1-2 days</p></li>
+				</ul>
+				<p class="notepresale">
+					<span class="special">Each 3-Pack pre-order includes our programmable Jewelbot Wearables Kit 1.0.</span>
+					<span><strong>This is a pre-order.</strong> Product aims to ship by Spring 2016. Shipping timelines are estimates.</span><br />
+					Actual design of charm and bands may vary slightly. Every bracelet will ship with 3 different color bands.<br />
+					Actual colors may differ. <strong>Because this is a pre-order, you are eligible for a full refund</strong> at any time before your merchandise ships.
 				</p>
-				<ul class="social">
-					<li><a class="facebook mxp-interaction_action_clicked_social_fb" href="https://www.facebook.com/jewelbots" target="_blank">f</a></li>
-					<li><a class="twitter mxp-interaction_action_clicked_social_tw" href="https://twitter.com/jewelbots" target="_blank">t</a></li>
-					<li><a class="instagram mxp-interaction_action_clicked_social_in" href="https://instagram.com/jewelbots" target="_blank">i</a></li>
-					<li><a class="pinterest mxp-interaction_action_clicked_social_pi" href="https://www.pinterest.com/girldeveloper/jewliebots-trends/" target="_blank">p</a></li>
-				</ul><!--//social -->
+			</div><!--//section_wearableskit -->
+			<div class="section_video">
+				<div class="background">&nbsp;</div>
+				<h3>Bill Nye says AWESOME!</h3>
+				<div class="cta_video" onClick="javascript:scroll('#site_container','50'); modal_video('open_billnyepromo'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_video_BillNye', 'POSITION': 'section_video'});">Play Video</div>
+				<p>During our Kickstarter-Campaign, Bill Nye took the time to look at Jewelbots.<br /> See what he has to say about Jewelbots.</p>
+			</div><!--//section_video -->
+			<div class="section_press">
+				<img class="stars" src="assets/images/index_section_press__stars.png" />
+				<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year«</a>
+				<img class="quote" src="assets/images/index_section_press__wired.png">
+				<ul>
+					<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_press__forbes.png" /></a></li><!--
+				 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_press__bustle.png" /></a></li><!--
+				 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_press__theverge.png" /></a></li><!--
+				 --><li><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_press__psfk.png" /></a></li><!--
+				 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_press__techcrunch.png" /></a></li><!--
+				 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_press__businessinsider.png" /></a></li><!--
+				 --><li><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_press__britco.png" /></a></li><!--
+				 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_press__glamour.png" /></a></li><!--
+				 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_press__teenvogue.png" /></a></li><!--
+				 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_press__yahoo.png" /></a></li><!--
+				 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_press__buzzfeed.png" /></a></li>
+				</ul>
+			</div><!--//section_press -->
+			<div class="section_mood">
+			</div><!--//section_mood -->
+			<div class="section_footer">
+				<img class="logo" src="assets/images/site_section_footer__logo.png" />
 				<ul class="navigation">
-					<li><a href="/about.html">About</a></li>
-					<li><a href="/jobs.html">Jobs</a></li>
-					<li><a href="http://jewelbots.tumblr.com/" target="_blank">Blog</a></li>
-					<li><a href="/contact.html">Contact</a></li>
-					<li><a href="/privacy.html">Privacy</a></li><br />
-					<!--<li><a class="small" href="#">Terms & Privacy Policy</a></li>-->
+					<!--<li><a href="/faqs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_faqs', 'POSITION': 'footer'});">Help</a></li>-->
+					<li><a href="/about.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_about', 'POSITION': 'footer'});">Story</a></li>
+					<!--<<li><a href="/team.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_team', 'POSITION': 'footer'});">Team</a></li>-->
+					<li><a href="http://jewelbots.tumblr.com/" target="_blank" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_blog', 'POSITION': 'footer'});">Blog</a></li>
+					<li><a href="/jobs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_jobs', 'POSITION': 'footer'});">Jobs</a></li>
+					<li><a href="/intro-to-wearables-kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_introwk', 'POSITION': 'footer'});">Wearables</a></li>
+					<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_ambassador', 'POSITION': 'footer'});">Ambassador</a></li>
+					<!--<<li><a href="/media_kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_mediakit', 'POSITION': 'footer'});">Media Kit</a></li>-->
+					<li><a href="/privacy.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_privacy', 'POSITION': 'footer'});">Privacy</a></li>
+					<!--<<li><a href="/terms.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_terms', 'POSITION': 'footer'});">Terms</a></li><br />-->
+					<li><a href="/contact.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_contact', 'POSITION': 'footer'});">Contact</a></li>
 				</ul>
 				<p class="address">
-					50 Eldrige St, 5th Floor, New York, NY 10002<br />
+					50 Eldridge Street, 5th Floor, New York, NY 10002<br />
 					<a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a><br />
 					(862) 201-3065<br />
 				</p>
@@ -541,22 +413,14 @@
 					Jewelbots © 2015 &nbsp; | &nbsp; Made with love in NYC &nbsp; | &nbsp; Changing the world one Jewelbot at a time
 				</p>
 				<a class="mxp-interaction_action_clicked_section_footer_mxp" href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-				<br />
-				<br />
 			</div><!--//section_footer -->
-			<div id='invtrflfloatbtn'></div>
-			<script>	
-			var invite_referrals = window.invite_referrals || {}; (function() { 
-				invite_referrals.auth = { bid_e : 'F475306EC8BDE90B07294074877D5B26', bid : '8751', t : '420', email : '', fname : '' };	
-			var script = document.createElement('script');script.async = true;
-			script.src = (document.location.protocol == 'https:' ? "//d11yp7khhhspcr.cloudfront.net" : "//cdn.invitereferrals.com") + '/js/invite-referrals-1.0.js';
-			var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();
-			</script>
+
 		</div><!--//content_container -->
 	</div><!--//site_container -->
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/site-scripts_v5.js"></script>
+	<script type="text/javascript" src="{{ assetPath "js/site-scripts.js" }}"></script>
+	<!-- GOOGLE  ⬇ -->
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -566,126 +430,58 @@
 	  ga('create', 'UA-62323216-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
-	<!--<script type="text/javascript">
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//- - A/B TESTS - 
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//
-		//
+	<!-- GOOGLE  ⬆ -->
+	<!-- xxxxx  ⬇ -->
+	<!-- xxxxx  ⬆ -->
+	<!-- A/B TESTS  ⬇ -->
+	<script type="text/javascript">
 		$(function() {
 			var test = "";
 		 	var test_id = 1 % Math.ceil(2 * Math.random());
 			if (test_id) {
-				mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB7" });
-				$('.test_A').css('display', 'block');
-				$('.test_B').css('display', 'none');
+				mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB8 - modal/fixed" });
+				//$('.test_A').css('display', 'block');
+				//$('.test_B').css('display', 'none');
+				modal_newsletter('open_fixed');
 			} else {
-				mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB7" });
-				$('.test_A').css('display', 'none');
-				$('.test_B').css('display', 'block');
+				mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB8 - modal/fixed" });
+				//$('.test_A').css('display', 'none');
+				//$('.test_B').css('display', 'block');
+				modal_newsletter('open_overlay');
 			}
 		});
-	</script>-->
-
-
-	<script type="text/javascript">
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//-- MIXPANEL - 
-		// ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰
-		//
-		//
-		//-- SALES {STEP: reached_cart, reached_checkout, reached_thankyou / PRODUCT: jewelbot_1pack, jewelbot_2pack, jewelbot_3pack / ACTION: added_to_cart, removed_from_cart, cleared_cart }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-sales_step_reached_cart",        "SALES", {"STEP": "reached_cart"});
-		mixpanel.track_links(".mxp-sales_step_reached_checkout",    "SALES", {"STEP": "reached_checkout"});
-		mixpanel.track_links(".mxp-sales_step_reached_thankyou",    "SALES", {"STEP": "reached_thankyou"});
-		//-- PRODUCT
-		mixpanel.track_links(".mxp-sales_product_jewelbot_1pack",   "SALES", {"PRODUCT": "jewelbot_1pack"});
-		mixpanel.track_links(".mxp-sales_product_jewelbot_2pack",   "SALES", {"PRODUCT": "jewelbot_2pack"});
-		mixpanel.track_links(".mxp-sales_product_jewelbot_3pack",   "SALES", {"PRODUCT": "jewelbot_3pack"});
-		mixpanel.track_links(".mxp-sales_product_jewelbot_wearableskit",   "SALES", {"PRODUCT": "jewelbot_wearableskit"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-sales_action_added_to_cart",     "SALES", {"ACTION": "added_to_cart"});
-		mixpanel.track_links(".mxp-sales_action_removed_from_cart", "SALES", {"ACTION": "removed_from_cart"});
-		mixpanel.track_links(".mxp-sales_action_cleared_cart",      "SALES", {"ACTION": "cleared_cart"});
-		//
-		//
-		//-- NEWSLETTER {STEP: typed_email, submitted_email, subscribed_email, newsletter_step_error_email / ACTION: updated_email, unsubscribed_email / POSITION: modal, footer }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-newsletter_step_typed_email",     		"NEWSLETTER", {"STEP": "typed_email"});
-		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_modal", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});
-		mixpanel.track_forms(".mxp-newsletter_step_submitted_email_footer", "NEWSLETTER", {"STEP": "submitted_email", "POSITION": "footer"});
-		mixpanel.track_links(".mxp-newsletter_step_subscribed_email",		"NEWSLETTER", {"STEP": "subscribed_email"});
-		mixpanel.track_links(".mxp-newsletter_step_error_email",    		"NEWSLETTER", {"STEP": "error_email"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-newsletter_action_updated_email",		"NEWSLETTER", {"ACTION": "updated_email"});
-		mixpanel.track_links(".mxp-newsletter_action_unsubscribed_email",   "NEWSLETTER", {"ACTION": "unsubscribed_email"});
-		//-- POSITION
-		mixpanel.track_links(".mxp-newsletter_position_modal",				"NEWSLETTER", {"POSITION": "modal"});
-		mixpanel.track_links(".mxp-newsletter_position_footer",				"NEWSLETTER", {"POSITION": "footer"});
-		//
-		//
-		//-- INTERACTION {STEP: scrolled_sec_1, scrolled_sec_1, ... scrolled_sec_10, / ACTION: clicked_social_fb, clicked_social_tw, clicked_social_in, clicked_social_pi, clicked_pre_order }
-		//
-		//-- STEP
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_1",      		"INTERACTION", {"STEP": "scrolled_sec_1"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_2",      		"INTERACTION", {"STEP": "scrolled_sec_2"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_3",      		"INTERACTION", {"STEP": "scrolled_sec_3"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_4",      		"INTERACTION", {"STEP": "scrolled_sec_4"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_5",      		"INTERACTION", {"STEP": "scrolled_sec_5"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_6",      		"INTERACTION", {"STEP": "scrolled_sec_6"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_7",      		"INTERACTION", {"STEP": "scrolled_sec_7"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_8",      		"INTERACTION", {"STEP": "scrolled_sec_8"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_9",      		"INTERACTION", {"STEP": "scrolled_sec_9"});
-		mixpanel.track_links(".mxp-interaction_step_scrolled_sec_10",			"INTERACTION", {"STEP": "scrolled_sec_10"});
-		//-- ACTION
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_fb",				"INTERACTION", {"ACTION": "clicked_social_fb"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_tw",				"INTERACTION", {"ACTION": "clicked_social_tw"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_in",				"INTERACTION", {"ACTION": "clicked_social_in"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_social_pi",				"INTERACTION", {"ACTION": "clicked_social_pi"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_header",		"INTERACTION", {"ACTION": "clicked_pre_order_header"}); /* header */
-		mixpanel.track_links(".mxp-interaction_action_clicked_pre_order_hero",			"INTERACTION", {"ACTION": "clicked_pre_order_hero"}); /* hero */
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_app",				"INTERACTION", {"ACTION": "clicked_section_app"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_desktop",			"INTERACTION", {"ACTION": "clicked_section_desktop"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_watch_video",				"INTERACTION", {"ACTION": "clicked_section_video"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_features_details","INTERACTION", {"ACTION": "clicked_section_features_details"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_footer_mxp",		"INTERACTION", {"ACTION": "clicked_section_footer_mxp"});
-		
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_1",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_1"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_2",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_2"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_3",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_3"});
-		mixpanel.track_links(".mxp-interaction_action_clicked_section_meet_feature_4",	"INTERACTION", {"ACTION": "clicked_section_meet_feature_4"});
 	</script>
-
-    <script type="text/javascript">
-        (function(d){
-            var vimeoIframe = d.getElementById('vimeoIframe');
-            vimeoIframe.style.cssText = "position:absolute;width:500px;height:281";
-            vimeoIframe.src ='https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0';
-        })(document);
-    </script>
+	<!-- A/B TESTS  ⬆ -->
+	<!-- RUN  ⬇ -->
 	<script type="text/javascript">
-	adroll_adv_id = "P27U42Q3XBE6ZCSRCWXVAR";
-	adroll_pix_id = "UVVRJMOBUZCFBECOB6ZDVH";
-	/* OPTIONAL: provide email to improve user identification */
-	/* adroll_email = "username@example.com"; */
-	(function () {
-	var _onload = function(){
-	if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-	if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-	var scr = document.createElement("script");
-	var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-	scr.setAttribute('async', 'true');
-	scr.type = "text/javascript";
-	scr.src = host + "/j/roundtrip.js";
-	((document.getElementsByTagName('head') || [null])[0] ||
-	document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-	};
-	if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-	else {window.attachEvent('onload', _onload)}
-	}());
+		$(window).resize(function(){
+			modal_video('size');
+			index_section_sales('swap_3pack');
+		});
 	</script>
+	<!-- RUN  ⬆ -->
+	<!-- ADROLL  ⬇ -->
+	<script type="text/javascript">
+	    adroll_adv_id = "P27U42Q3XBE6ZCSRCWXVAR";
+	    adroll_pix_id = "UVVRJMOBUZCFBECOB6ZDVH";
+	    /* OPTIONAL: provide email to improve user identification */
+	    /* adroll_email = "username@example.com"; */
+	    (function () {
+	        var _onload = function(){
+	            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+	            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+	            var scr = document.createElement("script");
+	            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+	            scr.setAttribute('async', 'true');
+	            scr.type = "text/javascript";
+	            scr.src = host + "/j/roundtrip.js";
+	            ((document.getElementsByTagName('head') || [null])[0] ||
+	                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+	        };
+	        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+	        else {window.attachEvent('onload', _onload)}
+	    }());
+	</script>
+	<!-- ADROLL  ⬆ -->
 </body>
 </html>
