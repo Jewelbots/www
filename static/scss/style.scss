@@ -5000,7 +5000,7 @@ em {
 	height: auto;
 	max-width: 800px;
 	margin: 0 auto 0 auto;
-	padding: 0 35px 60px 35px;
+	padding: 0 35px 60px 35px; /* padding: 0 35px 30px 35px; */
 
 	font-family: "museo-sans", sans-serif;
 	font-style: normal;
@@ -5010,13 +5010,13 @@ em {
 
 	z-index: 4;
 }
-#site_container.newsletter .section_hero div.cta {
-	display: inline-block;
+#site_container.newsletter .section_hero a.cta {
+	display: block;
 	position: relative;
 	width: 260px;
 	height: auto;
-	margin: 0 auto 120px auto;
-	padding: 10px 15px 10px 15px;
+	margin: 0 auto 180px auto;
+	padding: 8px 15px 8px 15px;
 	background-color: rgba(255,60,0,1.0);
 
 	-webkit-border-radius: 5px;
@@ -5042,12 +5042,13 @@ em {
 	text-indent: 0;
 	text-transform: uppercase;
 	text-align: center;
+	color: rgba(255,255,255,1.0);
 
 	cursor: pointer;
 
-	z-index: 5;
+	z-index: 10000;
 }
-#site_container.newsletter .section_hero div.cta:hover {
+#site_container.newsletter .section_hero a.cta:hover {
 	background-color: rgba(255,255,255,1.0);
 
 	font-weight: 700;
