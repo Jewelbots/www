@@ -4832,7 +4832,7 @@ em {
 
 	z-index: 4;
 }
-#site_container.contact .section_hero div.cta {
+#site_container.contact .section_hero a.cta {
 	display: block;
 	position: relative;
 	width: 300px;
@@ -4867,7 +4867,7 @@ em {
 
 	z-index: 5;
 }
-#site_container.contact .section_hero div.cta:hover {
+#site_container.contact .section_hero a.cta:hover {
 	background-color: rgba(255,255,255,1.0);
 
 	font-weight: 700;
