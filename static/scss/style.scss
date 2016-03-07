@@ -2759,6 +2759,25 @@ em {
 	text-transform: none;
 	color: rgba(100,100,100,1.0);
 }
+#site_container.index .section_sale ul.products li a {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 25px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	text-decoration: none;
+	color: rgba(255,60,0,1.0);
+}
 #site_container.index .section_sale ul.products li p.list_price {
 	font-weight: 300;
 	color: rgba(180,180,180,1.0);
@@ -3051,13 +3070,32 @@ em {
 	text-align: left;
 	color: rgba(100,100,100,1.0);
 }
-#site_container.index .section_wearableskit .box .left p.offer_price {
+#site_container.index .section_wearableskit .box .left a {
 	display: block;
 	position: relative;
 	width: auto;
 	height: auto;
 	margin: 0 0 0 0;
 	padding: 0 0 5px 0;
+
+	font-family: "museo-sans", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 0px;
+	text-indent: 0;
+	text-transform: none;
+	text-decoration: none;
+	color: rgba(255,60,0,1.0);
+}
+#site_container.index .section_wearableskit .box .left p.offer_price {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 
 	font-family: "museo-sans", sans-serif;
 	font-style: normal;
@@ -3075,6 +3113,9 @@ em {
 
 	font-weight: 300;
 	color: rgba(180,180,180,1.0);
+}
+#site_container.index .section_wearableskit .box .left p.list_price span {
+	text-decoration: line-through;
 }
 #site_container.index .section_wearableskit .box .left a.cta_buy {
 	display: block;
@@ -3121,6 +3162,11 @@ em {
 	   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
 			box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
 }
+
+
+
+
+
 #site_container.index .section_wearableskit .box .right {
 	display: block;
 	position: absolute;
