@@ -6,6 +6,11 @@ $(document).ready(function(){
 $(window).scroll(function(){
 	header();
 
+	if($(window).scrollTop() > 1000 && open_fixed_delay == 1){
+		$('#modal_newsletter').addClass('fixed');
+		$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+	}
+
 	$(window).resize(); //-- and force
 });
 
@@ -50,6 +55,9 @@ function modal_newsletter(state){
 	if(state=='open_fixed'){
 		$('#modal_newsletter').addClass('fixed');
 		$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+	}
+	if(state=='open_fixed_delay'){
+		open_fixed_delay = 1;
 	}
 	if(state=='close'){
 		$('#content_container').removeClass('blurred');
