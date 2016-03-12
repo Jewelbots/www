@@ -884,6 +884,10 @@ em {
 	display: none;
 }
 
+#modal_newsletter.overlay .modal .save, #modal_newsletter.overlay .modal .news {
+	display: none;
+}
+
 /* @group - modal - (overlay) ------- */
 #modal_newsletter.overlay {
 	display: none;
