@@ -51,6 +51,19 @@ function modal_newsletter(state){
 		$('#modal_newsletter').addClass('overlay');
 		$('#modal_newsletter.overlay').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
 		$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
+
+		$('#modal_newsletter .modal .save').css('display', 'block' );
+		$('#modal_newsletter .modal .news').css('display', 'none' );
+	}
+	if(state=='open_overlay_news'){
+		$('#content_container').addClass('blurred');
+
+		$('#modal_newsletter').addClass('overlay');
+		$('#modal_newsletter.overlay').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+		$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
+
+		$('#modal_newsletter .modal .save').css('display', 'none' );
+		$('#modal_newsletter .modal .news').css('display', 'block' );
 	}
 	if(state=='open_fixed'){
 		$('#modal_newsletter').addClass('fixed');
@@ -69,6 +82,9 @@ function modal_newsletter(state){
 
 				$('#modal_newsletter').removeClass('overlay');
 				$('#modal_newsletter').removeClass('fixed');
+
+				$('#modal_newsletter .modal .save').css('display', 'none' );
+				$('#modal_newsletter .modal .news').css('display', 'none' );
 			});
 		});
 	}
