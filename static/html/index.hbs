@@ -152,41 +152,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				</div><!--//header -->
 			</div><!--//section_header -->
 
-			<div class="section_hero test_A">
-				<h1><br /><br /> Give them an advantage</h1>
+			<div class="section_hero">
+				<h1><br /><br /> Give her the advantage</h1>
 				<p>The world's first programmable friendship bracelet.<br /> Get your kids coding today!</p><br /><br />
-				 &nbsp; &nbsp; <div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'hero'});">Play Video</div> &nbsp; &nbsp; 
-				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Pre-order Now</div>
-				<p class="small">
-					Order yours now to<br />
-					be part of the first shipment in 2016.
-					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
-				</p>
-				<div class="press">
-					<img class="stars" src="assets/images/index_section_hero__stars.png" />
-					<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year«</a>
-					<img class="quote" src="assets/images/index_section_hero__press_wired.png">
-					<ul>
-						<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_hero__press_forbes.png" /></a></li><!--
-					 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_hero__press_bustle.png" /></a></li><!--
-					 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_hero__press_theverge.png" /></a></li><!--
-					 --><li><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_hero__press_psfk.png" /></a></li><!--
-					 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_hero__press_techcrunch.png" /></a></li><!--
-					 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_hero__press_businessinsider.png" /></a></li><!--
-					 --><li><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_hero__press_britco.png" /></a></li><!--
-					 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_hero__press_glamour.png" /></a></li><!--
-					 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_hero__press_teenvogue.png" /></a></li><!--
-					 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_hero__press_yahoo.png" /></a></li><!--
-					 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_hero__press_buzzfeed.png" /></a></li>
-					</ul>
-				</div>
-				<!--<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-				<div class="background"></div>
-			</div><!--//section_hero -->
-
-			<div class="section_hero test_B">
-				<h1><br /><br /> A Friendship Bracelet she can code</h1>
-				<p>Jewelbots are the first open source wearable!</p><br /><br />
 				 &nbsp; &nbsp; <div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'hero'});">Play Video</div> &nbsp; &nbsp; 
 				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Pre-order Now</div>
 				<p class="small">
@@ -508,23 +476,23 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		//	if(var page_source=="newsletter_welcome"){
 				
 		//	} else {
-				if (test_id) {
-					mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB8 - modal/fixed" });
-					$('.test_A').css('display', 'block');
-					$('.test_B').css('display', 'none');
+		//		if (test_id) {
+		//			mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB10 - modal/fixed" });
+				//	$('.test_A').css('display', 'block');
+				//	$('.test_B').css('display', 'none');
 
-					$('.test_A').css('opacity', '1.0');
-					$('.test_B').css('opacity', '0.0');
-					modal_newsletter('open_overlay_news');
-				} else {
-					mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB8 - modal/fixed" });
-					$('.test_A').css('display', 'none');
-					$('.test_B').css('display', 'block');
+				//	$('.test_A').css('opacity', '1.0');
+				//	$('.test_B').css('opacity', '0.0');
+			//		modal_newsletter('open_overlay_news');
+		//		} else {
+		//			mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB10 - modal/fixed" });
+				//	$('.test_A').css('display', 'none');
+				//	$('.test_B').css('display', 'block');
 
-					$('.test_A').css('opacity', '0.0');
-					$('.test_B').css('opacity', '1.0');
+				//	$('.test_A').css('opacity', '0.0');
+				//	$('.test_B').css('opacity', '1.0');
 					modal_newsletter('open_overlay_news');
-				}
+			//	}
 		//	}
 		});
 	</script>
