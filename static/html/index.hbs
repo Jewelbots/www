@@ -144,8 +144,42 @@
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Pre-Order Now</a>
 					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});">Only 947 Left</a>
 				</div><!--//header -->
 			</div><!--//section_header -->
+
+			<div class="section_counter">
+				<h2 class="odometer">99</h2>
+				<h3>discounted units left</h3>
+				<h4>Last Chance for Pre-Order Pricing</h4>
+				<p>
+					We are going to production! WOOT!<br />
+					Get these special preorder prices while supplies last!
+				</p>
+				<ul class="offers">
+					<li>
+						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
+							<h5>JEWELBOT 1-PACK</h5>
+							<span class="list_price">$69</span>
+							<span class="presale_price">49</span>
+						</a>
+					</li>
+					<li>
+						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
+							<h5>TWINNIE 2-PACK</h5>
+							<span class="list_price">$119</span>
+							<span class="presale_price">69</span>
+						</a>
+					</li>
+					<li>
+						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
+							<h5>BESTIE 3-PACK</h5>
+							<span class="list_price">$159</span>
+							<span class="presale_price">89</span>
+						</a>
+					</li>
+				</ul>
+			</div><!--//section_counter -->
 
 			<div class="section_hero">
 				<h1><br /><br /> Give her the advantage</h1>
@@ -303,7 +337,7 @@
 				<div class="clear"></div>
 			</div><!--//section_code -->
 			<div class="section_newsletter">
-				<h3>Join our email list and $10 off your first order.</h3>
+				<h3>Join our email list and receive</h3>
 				<script>mixpanel.track_forms(".mixpanel_section_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "index_section"});</script>
 				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_section_newsletter">
 					<div class="mc-field-group">
@@ -325,25 +359,25 @@
 						<h5>JEWELBOT</h5>
 						<img src="assets/images/index_section_sale__product_jewelbot_1pack.jpg" />
 						<p class="list_price"><span>$79</span> List Price</p>
-						<p>$59 Pre-Order</p>
-						<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>
+						<p>$49 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
 						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Add to cart</a>
-					</li><!--
-				 --><li class="pack_3" id="pack_3_swap">
-						<h5 style="color: rgba(100,100,100,1.0);">BESTIE 3-PACK<br />incl. WEARABLES KIT</h5>
-						<img src="assets/images/index_section_sale__product_jewelbot_3pack_wk.jpg" />
-						<p class="list_price"><span>$159</span> List Price</p>
-						<p>$119 Pre-Order</p>
-						<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>
-						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a>
 					</li><!--
 				 --><li class="pack_2">
 						<h5>TWINNIE 2-PACK</h5>
 						<img src="assets/images/index_section_sale__product_jewelbot_2pack.jpg" />
 						<p class="list_price"><span>$119</span> List Price</p>
-						<p>$89 Pre-Order</p>
-						<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>
+						<p>$69 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
 						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a>
+					</li><!--
+				 --><li class="pack_3"><!-- id="pack_3_swap"-->
+						<h5>BESTIE 3-PACK</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_3pack.jpg" />
+						<p class="list_price"><span>$159</span> List Price</p>
+						<p>$89 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
+						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a>
 						<script>
 							mixpanel.track_links('.mixpanel_1pack', 'SALES', {'PRODUCT': 'jewelbot_1pack'}); mixpanel.track_links('.mixpanel_1pack', 'SALES', {'ACTION': 'added_to_cart'});
 							mixpanel.track_links('.mixpanel_2pack', 'SALES', {'PRODUCT': 'jewelbot_2pack'}); mixpanel.track_links('.mixpanel_2pack', 'SALES', {'ACTION': 'added_to_cart'});
@@ -384,13 +418,13 @@
 					</div>
 				</div>
 				<ul class="info">
-					<li><img src="assets/images/index_section_sale__delivery_jb.png" /><p>Jewelbots Estimated Ship Date: Spring 2016</p></li>
+					<li><img src="assets/images/index_section_sale__delivery_jb.png" /><p>Jewelbots Estimated Ship Date: Late Spring 2016</p></li>
 					<li><img src="assets/images/index_section_sale__refund.png" /><p>Full Refund as long as order has not shipped</p></li>
 					<li><img src="assets/images/index_section_sale__delivery_wk.png" /><p>Wearables Kits ship within 1-2 days</p></li>
 				</ul>
 				<p class="notepresale">
-					<span class="special">Each 3-Pack pre-order includes our programmable Jewelbot Wearables Kit 1.0.</span>
-					<span><strong>This is a pre-order.</strong> Product aims to ship by Spring 2016. Shipping timelines are estimates.</span><br />
+					<!--<span class="special">Each 3-Pack pre-order includes our programmable Jewelbot Wearables Kit 1.0.</span>-->
+					<span><strong>This is a pre-order.</strong> Product aims to ship by late Spring 2016. Shipping timelines are estimates.</span><br />
 					Actual design of charm and bands may vary slightly. Every bracelet will ship with 3 different color bands.<br />
 					Actual colors may differ. <strong>Because this is a pre-order, you are eligible for a full refund</strong> at any time before your merchandise ships.
 				</p>
@@ -465,9 +499,9 @@
 	<!-- GOOGLE  ⬆ -->
 	<!-- A/B TESTS  ⬇ -->
 	<script type="text/javascript">
-		$(function() {
-			var test = "";
-			var test_id = 1 % Math.ceil(2 * Math.random());
+		//$(function() {
+		//	var test = "";
+		//	var test_id = 1 % Math.ceil(2 * Math.random());
 		//	if(var page_source=="newsletter_welcome"){
 				
 		//	} else {
@@ -486,10 +520,10 @@
 
 				//	$('.test_A').css('opacity', '0.0');
 				//	$('.test_B').css('opacity', '1.0');
-					modal_newsletter('open_overlay_news');
+		//			modal_newsletter('open_overlay_news');
 			//	}
 		//	}
-		});
+		//});
 	</script>
 	<!-- A/B TESTS  ⬆ -->
 	<!-- RUN  ⬇ -->
@@ -523,5 +557,19 @@
 	    }());
 	</script>
 	<!-- ADROLL  ⬆ -->
+	<!-- COUNTER  ⬇ -->
+	    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/odometer-theme-default.css" }}" media="screen, projection" />
+		<script>
+			window.odometerOptions = {
+				format: '(dddd)'
+			};
+		</script>
+		<script type="text/javascript" src="{{ assetPath "js/odometer.js" }}"></script>
+		<script>
+		  setTimeout(function(){
+		    $('.odometer').html(947);
+		  }, 500);
+		</script>
+	<!-- COUNTER  ⬆ -->
 </body>
 </html>
