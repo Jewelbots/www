@@ -3253,7 +3253,7 @@ em {
 /* @end */
 /* @group ----- section_wearableskit ------------ */
 #site_container.index .section_wearableskit {
-	display: none;
+	display: block;
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -3264,7 +3264,7 @@ em {
 }
 
 #site_container.index .section_wearableskit .line {
-	display: block;
+	display: none;
 	position: relative;
 	width: 10px;
 	height: 50px;
@@ -3296,7 +3296,7 @@ em {
 }
 
 #site_container.index .section_wearableskit .box {
-	display: block;
+	display: none;
 	position: relative;
 	width: 100%;
 	height: auto;
