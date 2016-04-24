@@ -144,42 +144,11 @@
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Pre-Order Now</a>
 					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
-					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});">Only 821 Left</a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});">Get Yours Now!</a>
 				</div><!--//header -->
 			</div><!--//section_header -->
 
-			<div class="section_counter">
-				<h2 class="odometer">99</h2>
-				<h3>discounted units left</h3>
-				<h4>Last Chance for Pre-Order Pricing</h4>
-				<p>
-					We are going to production! WOOT!<br />
-					Get these special preorder prices while supplies last!
-				</p>
-				<ul class="offers">
-					<li>
-						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
-							<h5>JEWELBOT 1-PACK</h5>
-							<span class="list_price">$69</span>
-							<span class="presale_price">49</span>
-						</a>
-					</li>
-					<li>
-						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
-							<h5>TWINNIE 2-PACK</h5>
-							<span class="list_price">$119</span>
-							<span class="presale_price">69</span>
-						</a>
-					</li>
-					<li>
-						<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_offer', 'POSITION': 'header'});">
-							<h5>SQUAD 3-PACK</h5>
-							<span class="list_price">$159</span>
-							<span class="presale_price">89</span>
-						</a>
-					</li>
-				</ul>
-			</div><!--//section_counter -->
+			<iframe class="section_counter" scrolling="no" seamless="seamless" src="http://www.vicozabel.com/AREA51/___jewelbots/www.jewelbots.com__v.12/counter.html"></iframe>
 
 			<div class="section_hero">
 				<h1><br /><br /> Give her the advantage</h1>
@@ -557,19 +526,5 @@
 	    }());
 	</script>
 	<!-- ADROLL  ⬆ -->
-	<!-- COUNTER  ⬇ -->
-	    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/odometer-theme-default.css" }}" media="screen, projection" />
-		<script>
-			window.odometerOptions = {
-				format: '(dddd)'
-			};
-		</script>
-		<script type="text/javascript" src="{{ assetPath "js/odometer.js" }}"></script>
-		<script>
-		  setTimeout(function(){
-		    $('.odometer').html(821);
-		  }, 500);
-		</script>
-	<!-- COUNTER  ⬆ -->
 </body>
 </html>
