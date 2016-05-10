@@ -30,6 +30,12 @@ $(window).bind('orientationchange', function(event) {
 //-- scroll(id, shift) ------------------------------------//
 function scroll(id, shift){
 	$('html,body').stop().animate({scrollTop: $(id).offset().top -shift}, 700);
+	/*
+	var stop = $(id).offset().top;
+	var delay = 700;
+	$('body,html').animate({scrollTop: stop}, delay);
+	return false;
+	*/
 }
 //
 //
