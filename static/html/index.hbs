@@ -516,14 +516,14 @@
 	<!-- GOOGLE  ⬆ -->
 	<!-- A/B TESTS  ⬇ -->
 	<script type="text/javascript">
-		function index_experiment() {
+		$(function() {
 			var test_id = 1 % Math.ceil(2 * Math.random());  
 			if (test_id) {  
 				mixpanel.track("EXPERIMENT", {"VERSION": "A", "TESTED": "T_0" });
 			} else {
 				mixpanel.track("EXPERIMENT", {"VERSION": "B", "TESTED": "T_0" });
 			}
-		}
+		});
 	</script>
 	<!-- A/B TESTS  ⬆ -->
 	<!-- RUN  ⬇ -->
@@ -531,7 +531,6 @@
 		$(window).resize(function(){
 			modal_video('size');
 			index_section_sales('swap_3pack');
-			index_experiment();
 		});
 	</script>
 	<!-- RUN  ⬆ -->
