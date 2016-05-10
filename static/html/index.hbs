@@ -38,16 +38,20 @@
 	<script src="//use.typekit.net/rbz5qur.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<!-- MIXPANEL  ⬇ -->
-	</script>
-	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-	</script>
-	<!-- // T: bf14c79a96fff9bd324e6bd6715347e8 // L: 9de67913ff56693e76306919cc0fe64e -->
-	<script>
+	<!-- MIXPANEL  ⬇ --><!--T:bf14c79a96fff9bd324e6bd6715347e8 //T2:16bedae35b4c1f57d58a3a43408f35e8 // L:9de67913ff56693e76306919cc0fe64e -->
+	<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+	for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 	mixpanel.init("9de67913ff56693e76306919cc0fe64e", {
 	    loaded: function() {
-			
-			//-- 1) track the page name
+
+			//-- 1) export ID to SHOP
+			var distinct_id = mixpanel.get_distinct_id();
+			var iframe = document.createElement('iframe');
+			iframe.style.display = "none";
+			iframe.src = "https://jewelbots.myshopify.com/?distinct_id="+distinct_id;
+			document.body.appendChild(iframe);
+
+			//-- 2) track the page name
 			var page_source = getUrlVars()["source"];
 			function getUrlVars() {
 			    var vars = {};
@@ -57,28 +61,71 @@
 			    return vars;
 			}
 			mixpanel.track("PAGE", {"NAME": "www_home", "SOURCE": page_source });
-			
-			//-- 2) mention newsletter error
+			mixpanel.track('SHOP', {'STEP': 'tracking_submitted'});
+
+			//-- 3) mention newsletter error
 			if (page_source=="newsletter_error"){
-				alert('Discount code: "Jewelbots10" - Something went wrong. You might be already subscribed. If not, please try again or contact us hi@jewelbots.com');
+				alert('Discount code: "Welcome" - Something went wrong. You might be already subscribed. If not, please try again or contact us hi@jewelbots.com');
 				mixpanel.track("NEWSLETTER", {"STEP": "error_email"});
 			}
-			
-			//-- 3) mention newsletter success
-			if (page_source=="newsletter_welcome"){
-				//
-				// track Newsletter - clicked_preorder
-				mixpanel.track("NEWSLETTER", {"STEP": "clicked_preorder"});
-			}
 
-			//-- 4) export distinct_id and funnel for shopify --> opens an iframe and syncs user ID --> same iframe will be opened on final checkout and thus close the funnel
-			var distinct_id = mixpanel.get_distinct_id();
-			var iframe = document.createElement('iframe');
-		    iframe.style.display = "none";
-		    iframe.src = "https://jewelbots.myshopify.com/pages/mxp-tracking/?step=reached_products&distinct_id="+distinct_id;
-		    document.body.appendChild(iframe);
+			//-- 4) mention newsletter success
+			if (page_source=="newsletter_welcome"){
+				alert('Yay! Use discount code: "Welcome" to get $10 off your order!');
+				mixpanel.track("NEWSLETTER", {"STEP": "got_discount_code"});
+			}
 	    }
 	});
+	</script>
+	<script type="text/javascript">
+
+	function getQueryParam(url, param) {
+	// Expects a raw URL
+	param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	var regexS = "[\\?&]" + param + "=([^&#]*)",
+	regex = new RegExp( regexS ),
+	results = regex.exec(url);
+	if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+		return '';
+	} else {
+		return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+	}
+	};
+
+	function campaignParams() {
+	var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ')
+	, kw = ''
+	, params = {}
+	, first_params = {};
+
+	var index;
+	for (index = 0; index < campaign_keywords.length; ++index) {
+		kw = getQueryParam(document.URL, campaign_keywords[index]);
+		if (kw.length) {
+			params[campaign_keywords[index] + ' [last touch]'] = kw;
+		} else {
+			params[campaign_keywords[index] + ' [last touch]'] = 'www.jewelbots.com';
+		}
+	}
+	for (index = 0; index < campaign_keywords.length; ++index) {
+		kw = getQueryParam(document.URL, campaign_keywords[index]);
+		if (kw.length) {
+			first_params[campaign_keywords[index] + ' [first touch]'] = kw;
+		} else {
+			params[campaign_keywords[index] + ' [last touch]'] = 'www.jewelbots.com';
+		}
+	}
+
+	mixpanel.people.set(params);
+	mixpanel.people.set_once(first_params);
+	mixpanel.register(params);
+	}
+
+	campaignParams();
+
+	</script>
+	<script>
+		mixpanel.identify()
 	</script>
 	<!-- MIXPANEL  ⬆ -->
 	<!-- ZENDESK  ⬇ -->
@@ -330,7 +377,7 @@
 						<p class="list_price"><span>$79</span> List Price</p>
 						<p>$49 Pre-Order</p>
 						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Add to cart</a>
+						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/4818647172:1 -->
 					</li><!--
 				 --><li class="pack_2">
 						<h5>TWINNIE 2-PACK</h5>
@@ -338,7 +385,7 @@
 						<p class="list_price"><span>$119</span> List Price</p>
 						<p>$69 Pre-Order</p>
 						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a>
+						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
 					</li><!--
 				 --><li class="pack_3"><!-- id="pack_3_swap"-->
 						<h5>SQUAD 3-PACK</h5>
@@ -346,13 +393,14 @@
 						<p class="list_price"><span>$159</span> List Price</p>
 						<p>$89 Pre-Order</p>
 						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a>
+						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/12045228868:1 -->
 						<script>
-							mixpanel.track_links('.mixpanel_1pack', 'SALES', {'PRODUCT': 'jewelbot_1pack'}); mixpanel.track_links('.mixpanel_1pack', 'SALES', {'ACTION': 'added_to_cart'});
-							mixpanel.track_links('.mixpanel_2pack', 'SALES', {'PRODUCT': 'jewelbot_2pack'}); mixpanel.track_links('.mixpanel_2pack', 'SALES', {'ACTION': 'added_to_cart'});
-							mixpanel.track_links('.mixpanel_3pack', 'SALES', {'PRODUCT': 'jewelbot_3pack'}); mixpanel.track_links('.mixpanel_3pack', 'SALES', {'ACTION': 'added_to_cart'});
+							mixpanel.track_links('.mixpanel_1pack', 'SHOP', {'PRODUCT': 'jewelbot_1pack'}); mixpanel.track_links('.mixpanel_1pack', 'SHOP', {'STEP': 'added_to_cart'});
+							mixpanel.track_links('.mixpanel_2pack', 'SHOP', {'PRODUCT': 'jewelbot_2pack'}); mixpanel.track_links('.mixpanel_2pack', 'SHOP', {'STEP': 'added_to_cart'});
+							mixpanel.track_links('.mixpanel_3pack', 'SHOP', {'PRODUCT': 'jewelbot_3pack'}); mixpanel.track_links('.mixpanel_3pack', 'SHOP', {'STEP': 'added_to_cart'});
 						</script>
 					</li>
+					<!--<a href="https://jewelbots-2.myshopify.com/cart/19729585926:1" onclick="mixpanel.track('SHOP', {'STEP': 'added_to_cart'});">order - -> checkout T2</a>-->
 				</ul><!--
 			 --><div class="clear"></div>
 		</div><!--//section_sale -->
@@ -468,31 +516,14 @@
 	<!-- GOOGLE  ⬆ -->
 	<!-- A/B TESTS  ⬇ -->
 	<script type="text/javascript">
-		//$(function() {
-		//	var test = "";
-		//	var test_id = 1 % Math.ceil(2 * Math.random());
-		//	if(var page_source=="newsletter_welcome"){
-				
-		//	} else {
-		//		if (test_id) {
-		//			mixpanel.track("AB Tests", {"VERSION": "A", "TESTED": "AB10 - modal/fixed" });
-				//	$('.test_A').css('display', 'block');
-				//	$('.test_B').css('display', 'none');
-
-				//	$('.test_A').css('opacity', '1.0');
-				//	$('.test_B').css('opacity', '0.0');
-			//		modal_newsletter('open_overlay_news');
-		//		} else {
-		//			mixpanel.track("AB Tests", {"VERSION": "B", "TESTED": "AB10 - modal/fixed" });
-				//	$('.test_A').css('display', 'none');
-				//	$('.test_B').css('display', 'block');
-
-				//	$('.test_A').css('opacity', '0.0');
-				//	$('.test_B').css('opacity', '1.0');
-		//			modal_newsletter('open_overlay_news');
-			//	}
-		//	}
-		//});
+		$(function() {
+			var test_id = 1 % Math.ceil(2 * Math.random());  
+			if (test_id) {  
+				mixpanel.track("EXPERIMENT", {"VERSION": "A", "TESTED": "T_0" });
+			} else {
+				mixpanel.track("EXPERIMENT", {"VERSION": "B", "TESTED": "T_0" });
+			}
+		});
 	</script>
 	<!-- A/B TESTS  ⬆ -->
 	<!-- RUN  ⬇ -->
