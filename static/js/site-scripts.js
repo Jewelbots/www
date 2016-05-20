@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
+	index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
 	$(window).resize(); //-- and force
 });
 
@@ -171,7 +171,7 @@ function index_section_hero(state){
 }
 //
 //
-//-- index_section_specs(action) -----------------------------------//
+//-- index_section_specs(action) -----------------------------------------//
 var section_specs = 'no';
 function index_section_specs(action){
 	if(action=='open'){
@@ -185,11 +185,43 @@ function index_section_specs(action){
 }
 //
 //
-//-- index_section_sales(action) -----------------------------------//
-function index_section_sales(action){
-	if(action=='swap_3pack' && $(window).width()<768){
-		var content = document.getElementById('pack_3_swap');
-		var parent = content.parentNode;
-		parent.insertBefore(content, parent.lastChild);
+//-- index_section_faqs(action) ------------------------------------------//
+$('.more').click(function() {
+	/* for all site's more buttons */
+	
+	//-- 1 (if open, change copy)
+	if( $(this).hasClass("more_active") ){
+		$(this).removeClass("more_active");
+		$(this).parent().children('.folder').stop(true, true).slideUp(1000, function() {
+			/* do nothing*/
+		});
+	} else {
+		//-- 2 (open, change copy)
+		$(this).addClass("more_active");
+		$(this).parent().children('.folder').stop(true, true).slideDown(1000, function() {
+			/* do nothing*/
+		});
 	}
-}
+});
+$('.section_faqs .question').click(function() {
+	//-- 1 (if open)
+	if( $(this).parent().children('.answer').hasClass( "answer_active" ) ){
+		$(this).parent().children('.answer').removeClass("answer_active");
+		$(this).parent().children('.answer').stop(true, true).slideUp(300, function() {
+			/* do nothing*/
+		});
+	} else {
+		//-- 2 (close all)
+		$(".answer_active").each(function(){
+			$(this).removeClass("answer_active");
+			$(this).stop(true, true).slideUp(300, function() {
+				/* do nothing*/
+			});
+		});
+		//-- 3 (and open the one in question)		
+		$(this).parent().children('.answer').addClass("answer_active");
+		$(this).parent().children('.answer').stop(true, true).slideDown(300, function() {
+			/* do nothing*/
+		});
+	}
+});
