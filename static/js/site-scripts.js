@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
+	//index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
 	$(window).resize(); //-- and force
 });
 
 $(window).scroll(function(){
 	header();
 
-	if($(window).scrollTop() > 1000 && open_fixed_delay == 1){
-		$('#modal_newsletter').addClass('fixed');
-		$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
-	}
+	//if($(window).scrollTop() > 1000 && open_fixed_delay == 1){
+	//	$('#modal_newsletter').addClass('fixed');
+	//	$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+	//}
 
 	$(window).resize(); //-- and force
 });
