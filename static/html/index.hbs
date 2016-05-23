@@ -258,7 +258,7 @@
 			</div><!--//section_hero -->
 			<div class="section_press_quotes">
 				<ul class="quotes">
-					<li style="opacity: 0.6">
+					<li>
 						<a class="quote" href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank">»This Is the Friendship Bracelet of the Future...«</a>
 						<img class="quote" src="assets/images/index_section_hero__press_britco.png" height="30" />
 					</li>
@@ -267,7 +267,7 @@
 						<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year...«</a>
 						<img class="quote" src="assets/images/index_section_hero__press_wired.png" height="15" />
 					</li>
-					<li style="opacity: 0.6">
+					<li>
 						<a class="quote" href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank">»An introduction to coding motivated by high school tribes...«</a>
 						<img class="quote" src="assets/images/index_section_hero__press_psfk.png" height="30" />
 					</li>
@@ -285,12 +285,14 @@
 				</ul>
 			</div><!--//section_press_quotes -->
 			<div class="section_meet" id="section_meet">
-				<h3>Time for friends</h3>
+				<h3>What to see Jewelbots in action?</h3>
 				<p>A language free, gender neutral friendship bracelet which builds on 
 				friendship and teaches the power of coding.</p>
 				<div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'how'});">Play Video</div> 
-				<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />
+				<!--<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />-->
 			</div><!--//section_meet -->
+			<div class="section_mood">
+			</div><!--//section_mood -->
 			<div class="section_how">
 				<h3>How it works</h3>
 				<h4>1. Become friends</h4>
@@ -531,8 +533,7 @@
 				-->
 
 			</div><!--//section_faqs -->
-			<div class="section_mood">
-			</div><!--//section_mood -->
+
 			<div class="section_footer">
 
 				<div class="section_newsletter">
@@ -607,7 +608,7 @@
 	<script type="text/javascript">
 		$(window).resize(function(){
 			modal_video('size');
-			index_section_sales('swap_3pack');
+		//	index_section_sales('swap_3pack');
 		});
 	</script>
 	<!-- RUN  ⬆ -->
@@ -634,5 +635,24 @@
 	    }());
 	</script>
 	<!-- ADROLL  ⬆ -->
+	<!-- COUNTER  ⬇ -->
+	<link rel="stylesheet" href="{{ assetPath "css/odometer-theme-default.css" }}" />
+	<style>
+		.odometer {
+			font-size: 40px;
+		}
+	</style>
+	<script>
+		window.odometerOptions = {
+			format: '(dddd)'
+		};
+	</script>
+	<script src="{{ assetPath "js/odometer.js" }}"></script>
+	<script>
+	  setTimeout(function(){
+	    $('.odometer').html(321);
+	  }, 500);
+	</script>
+	<!-- COUNTER  ⬆ -->
 </body>
 </html>
