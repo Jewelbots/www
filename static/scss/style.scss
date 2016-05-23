@@ -1507,7 +1507,7 @@ em {
 	margin: 0 0 0 0;
 	padding: 60px 10px 20px 10px;
 	background-color: rgba(80,215,235,1.0);
-	background: url(../../assets/images/index_section_counter__background_2.jpg) no-repeat bottom center;
+	background: url(../../assets/images/index_section_counter__background_3.jpg) no-repeat bottom center;
 
 	-webkit-background-size: cover;
        -moz-background-size: cover;
@@ -2088,6 +2088,7 @@ em {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 	background-color: rgba(0,190,210,1.0);
+	background-color: rgba(160,0,185,1.0);
 
 	-webkit-background-size: cover;
        -moz-background-size: cover;
@@ -2193,10 +2194,10 @@ em {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 
-	opacity: 0.8;
+	opacity: 1.0;
 }
 #site_container.index .section_press_quotes ul.logos li a:hover img {
-	opacity: 1.0;
+	opacity: 0.6;
 }
 
 @media (max-width: 1279px) {}
