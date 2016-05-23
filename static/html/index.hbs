@@ -199,15 +199,15 @@
 						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
 					</a>
 					<ul class="navigation">
-						<li><a href="javascript:void;" onClick="scroll('#section_meet','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Jewelbots</a></li>
-						<li><a href="javascript:void;" onClick="scroll('#section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Features</a></li>
-						<li><a href="javascript:void;" onClick="scroll('#section_code','70');" target="_self" onClick="mmixpanel.track('INTERACTION', {'ACTION': 'clicked_code', 'POSITION': 'header'}); F4__scroll_to_ID('#section_sale','90');">Learn to code</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_meet','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_how','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
+						<li><a href="javascript:void;" onClick="scroll('#section_how','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_code', 'POSITION': 'header'});">Learn to code</a></li>
 						<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Become an Ambassador</a></li>
 					</ul>
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Shop Now</a>
 					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
-					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Pre-Order Discounts Left:</span> <span class="number">321</span></a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Pre-Order Discounts Left:</span> <span class="number">315</span></a>
 				</div><!--//header -->
 			</div><!--//section_header -->
 			<div class="section_counter">
@@ -293,7 +293,7 @@
 			</div><!--//section_meet -->
 			<div class="section_mood">
 			</div><!--//section_mood -->
-			<div class="section_how">
+			<div class="section_how" id="section_how">
 				<h3>How it works</h3>
 				<h4>1. Become friends</h4>
 				<p>Sally, Adam and Shana are best friends. With the push of a button they connect their Jewelbots:</p>
@@ -608,6 +608,7 @@
 	<script type="text/javascript">
 		$(window).resize(function(){
 			modal_video('size');
+			//modal_newsletter('open_fixed');
 		//	index_section_sales('swap_3pack');
 		});
 	</script>
@@ -650,7 +651,7 @@
 	<script src="{{ assetPath "js/odometer.js" }}"></script>
 	<script>
 	  setTimeout(function(){
-	    $('.odometer').html(321);
+	    $('.odometer').html(315);
 	  }, 500);
 	</script>
 	<!-- COUNTER  ⬆ -->
