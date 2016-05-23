@@ -188,8 +188,10 @@
 
 	<div id="site_container" class="index">
 		<div id="content_container">
-
 			<div class="section_header">
+				<div class="offer">
+					<a class="cta_offer" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_offer', 'POSITION': 'header'});"><strong>Limited Time Offer:</strong> Get your Jewelbot now and <strong>receive Pre-Order Discounts ➜</strong></a>
+				</div>
 				<div class="header_default"><!-- //header_default //header_default_nav //header_sticky-->
 					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
 						<img class="logo_icon_small" src="assets/images/index_section_header__icon_small.png" />
@@ -203,75 +205,132 @@
 						<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Become an Ambassador</a></li>
 					</ul>
 
-					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Pre-Order Now</a>
+					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Shop Now</a>
 					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
-					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});">Get Yours Now!</a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Pre-Order Discounts Left:</span> <span class="number">321</span></a>
 				</div><!--//header -->
 			</div><!--//section_header -->
-
-			<iframe class="section_counter" scrolling="no" seamless="seamless" src="http://www.vicozabel.com/AREA51/___jewelbots/www.jewelbots.com__v.12/counter.html"></iframe>
-
-			<div class="section_hero">
-				<h1><br /><br /> Give her the advantage</h1>
-				<p>The world's first programmable friendship bracelet.<br /> Get your kids coding today!</p><br /><br />
-				 &nbsp; &nbsp; <div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'hero'});">Play Video</div> &nbsp; &nbsp; 
-				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Pre-order Now</div>
+			<div class="section_counter">
+				<h2 class="odometer">99</h2>
+				<h3>discounted units left</h3>
+				<h4>Last Chance for Pre-Order Pricing</h4>
+				<ul class="offers">
+					<li>
+						<a class="cta_preorder" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank" >
+							<h5>JEWELBOT 1-PACK</h5>
+							<span class="list_price">$69</span>
+							<span class="presale_price">49</span>
+						</a>
+					</li>
+					<li>
+						<a class="cta_preorder" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank" >
+							<h5>TWINNIE 2-PACK</h5>
+							<span class="list_price">$119</span>
+							<span class="presale_price">69</span>
+						</a>
+					</li>
+					<li>
+						<a class="cta_preorder" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank" >
+							<h5>BESTIE 3-PACK</h5>
+							<span class="list_price">$159</span>
+							<span class="presale_price">89</span>
+						</a>
+					</li>
+				</ul>
+				<h5>Full refunds – no questions asked!</h5>
 				<p class="small">
-					Order yours now to<br />
-					be part of the first shipment in 2016.
-					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
+					<strong>Because this is a pre-order, you are eligible for a full refund at any time before your merchandise ships.</strong><br />
+					Product aims to ship by late Summer 2016. Shipping timelines are estimates.<br />
+					Actual design and color of charm and bands may vary slightly.
 				</p>
-				<div class="press">
-					<img class="stars" src="assets/images/index_section_hero__stars.png" />
-					<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year«</a>
-					<img class="quote" src="assets/images/index_section_hero__press_wired.png">
-					<ul>
-						<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_hero__press_forbes.png" /></a></li><!--
-					 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_hero__press_bustle.png" /></a></li><!--
-					 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_hero__press_theverge.png" /></a></li><!--
-					 --><li><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_hero__press_psfk.png" /></a></li><!--
-					 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_hero__press_techcrunch.png" /></a></li><!--
-					 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_hero__press_businessinsider.png" /></a></li><!--
-					 --><li><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_hero__press_britco.png" /></a></li><!--
-					 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_hero__press_glamour.png" /></a></li><!--
-					 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_hero__press_teenvogue.png" /></a></li><!--
-					 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_hero__press_yahoo.png" /></a></li><!--
-					 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_hero__press_buzzfeed.png" /></a></li>
-					</ul>
+			</div><!--//section_counter -->
+			<div class="section_hero">
+				<div class="left">
+					<h1>The friendship bracelet that teaches kids to code</h1>
+					<div class="cta_preorder" onClick="javascript:scroll('#section_meet', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_learnmore', 'POSITION': 'hero'});">Learn More</div>
 				</div>
-				<!--<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+				<div class="right">
+					<img class="jewelbot" src="assets/images/index_section_hero__jewelbot.png" />
+				</div>
+				<div class="clear"></div>
+				<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<div class="background"></div>
 			</div><!--//section_hero -->
-
-			<div class="section_meet" id="section_meet">
-				<h3>Meet Jewelbots</h3>
-				<p>Jewelbots are more than just pretty jewelry, they are a powerful communication tool.</p>
-				<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />
-				<p>Kids can make their bracelets light up when a friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways! Jewelbots work alone, but are more fun with friends!</p>
-				<ul>
-					<li><img src="assets/images/index_section_meet__leds.png" /><p>4 powerful LEDs with 16.7mill colors</p></li><!--
-					<li><img class="background" src="assets/images/index_section_meet__icon_background_1.png" /><img src="assets/images/index_section_meet__battery.png" /><p>Rechargeable with 2-3 days of battery life</p></li>
-				 --><li><img src="assets/images/index_section_meet__battery.png" /><p>Rechargeable with 2-3 days of battery life</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__usb.png" /><p>Connects to your computer via USB 3.0</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__charms.png" /><p>Customizeable charms and bands</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__vibration.png" /><p>Programmable button and vibration motor</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__bluetooth.png" /><p>Build in Bluetooth 4.0</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__opensource.png" /><p>Open source technology using Arduino IDE</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__mesh.png" /><p>Multiple Jewelbots form a Mesh Network</p></li><!--
-				 --><li><img src="assets/images/index_section_meet__app.png" /><p>iOS & Android compatible</p></li>
+			<div class="section_press_quotes">
+				<ul class="quotes">
+					<li style="opacity: 0.6">
+						<a class="quote" href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank">»This Is the Friendship Bracelet of the Future...«</a>
+						<img class="quote" src="assets/images/index_section_hero__press_britco.png" height="30" />
+					</li>
+					<li>
+						<img class="stars" src="assets/images/index_section_hero__stars.png" />
+						<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year...«</a>
+						<img class="quote" src="assets/images/index_section_hero__press_wired.png" height="15" />
+					</li>
+					<li style="opacity: 0.6">
+						<a class="quote" href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank">»An introduction to coding motivated by high school tribes...«</a>
+						<img class="quote" src="assets/images/index_section_hero__press_psfk.png" height="30" />
+					</li>
 				</ul>
-				<p><img src="assets/images/index_section_meet__spy_2.png" width="100" /><span class="safetynote">We are making a product for kids, and their safety is our number one priority. Jewelbots don’t contain a GPS and we don’t store any personal data of any kind.</span><br /><a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open');">See full specifications</a></p>
+				<ul class="logos">
+					<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_hero__press_forbes.png" /></a></li><!--
+				 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_hero__press_bustle.png" /></a></li><!--
+				 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_hero__press_theverge.png" /></a></li><!--
+				 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_hero__press_techcrunch.png" /></a></li><!--
+				 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_hero__press_businessinsider.png" /></a></li><!--
+				 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_hero__press_glamour.png" /></a></li><!--
+				 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_hero__press_teenvogue.png" /></a></li><!--
+				 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_hero__press_yahoo.png" /></a></li><!--
+				 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_hero__press_buzzfeed.png" /></a></li>
+				</ul>
+			</div><!--//section_press_quotes -->
+			<div class="section_meet" id="section_meet">
+				<h3>Time for friends</h3>
+				<p>A language free, gender neutral friendship bracelet which builds on 
+				friendship and teaches the power of coding.</p>
+				<div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'how'});">Play Video</div> 
+				<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />
 			</div><!--//section_meet -->
+			<div class="section_how">
+				<h3>How it works</h3>
+				<h4>1. Become friends</h4>
+				<p>Sally, Adam and Shana are best friends. With the push of a button they connect their Jewelbots:</p>
+				<img class="nopadding" src="assets/images/index_section_how__1_top.gif" /><!--
+				--><img class="nopadding" src="assets/images/index_section_how__1_middle.gif" /><!--
+				--><img src="assets/images/index_section_how__1_bottom.gif" />
+				<h4>2. Interact and send secret messages</h4>
+				<p>Their paired Jewelbots light up when they are close by. they then can send each other secret buzz codes.</p>
+				<img class="jewelbots" src="assets/images/index_section_how__2.gif" />
+				<h4>3. Learn how to code through the power of friendship </h4>
+				<p>Get the app and add more features through basic If/Then statements.<br />
+				Want more? Connect your Jewelbot to a computer and upload our Jewelbot-Mods or develop your own custom code.</p>
+				<!--<img class="jewelbots" src="assets/images/index_section_how__3.gif" />-->
+				<div class="app">
+					<img class="iphone" src="assets/images/index_section_code__iphone.png" />
+					<img class="iphone_app" src="assets/images/index_section_code__iphone_app.gif" />
+				</div>
+				<ul class="powerofcoding">
+					<li><img src="assets/images/index_section_features__sms.png" />Send SMS/email</li><!--
+				 --><li><img src="assets/images/index_section_features__social.png" />Social media integration</li><!--
+				 --><li><img src="assets/images/index_section_features__weather.png" />Weather updates</li><!--
+				 --><li><img src="assets/images/index_section_features__parents.png" />Notify parents</li><!--
+				 --><li><img src="assets/images/index_section_features__drone.png" />Fly a drone</li><!--
+				 --><li><!--<img src="assets/images/index_section_features__imagine.png" />--><br />...or what about a reminder to drink a glass of water, eat some fruit? Code whatever you imagine...!</li>
+				</ul>
+				<div class="clear"></div>
+				<div class="cta_sale" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Get Your Jewelbot</div>
+				<a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'});">See full specifications</a>
+			</div><!--//section_how -->
 			<div class="section_specs" id="section_specs">
 				<div class="left">
 					<h4>Specifications</h4>
 					<p class="note">* Final colors and specs may vary slightly.</p>
 
 					<h5>What's Included</h5>
-					<p>Every bracelet will ship with 3 different color bands, a Jewelbots charm and a charging cable:</p>
-					<img class="band" src="assets/images/index_section_specs__band_1.png" />
+					<p>Every bracelet will ship with 2x color bands, 2x Jewelbots charms and a charging cable:</p>
+					<!--<img class="band" src="assets/images/index_section_specs__band_1.png" />
 					<img class="band" src="assets/images/index_section_specs__band_2.png" />
-					<img class="band" src="assets/images/index_section_specs__band_3.png" />
+					<img class="band" src="assets/images/index_section_specs__band_3.png" />-->
 					<img class="usb" src="assets/images/index_section_specs__usbcable.png" />
 
 					<h5>Dimensions</h5>
@@ -325,65 +384,8 @@
 				<img class="product" src="assets/images/index_section_specs__exploded.jpg" />
 				<div class="clear"></div>
 			</div><!--//section_specs -->
-			<div class="section_features" id="section_features">
-				<h3>Jewelbots Functionality</h3>
-				<div class="outofthebox">
-					<h4>Out of the box</h4>
-					<ul>
-						<li><img src="assets/images/index_section_features__detect.png" />Detect nearby friends<br /><span>(no phone required)</span></li><!--
-					 --><li><img src="assets/images/index_section_features__messages.png" />Send secret messages</li>
-					</ul>
-				</div><!--
-			 --><div class="powerofcoding">
-					<h4>Through the power of coding</h4>
-					<ul>
-						<li><img src="assets/images/index_section_features__sms.png" />Send SMS/email</li><!--
-					 --><li><img src="assets/images/index_section_features__social.png" />Social media integration</li><!--
-					 --><li><img src="assets/images/index_section_features__weather.png" />Weather updates</li><!--
-					 --><li><img src="assets/images/index_section_features__parents.png" />Notify parents</li><!--
-					 --><li><img src="assets/images/index_section_features__drone.png" />Fly a drone</li><!--
-					 --><li><img src="assets/images/index_section_features__imagine.png" />Whatever they imagine...!</li>
-					</ul>
-				</div>
-				<p>Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?</p>
-			</div><!--//section_features -->
-			<div class="section_code" id="section_code">
-				<div class="topic topic_1">
-					<div class="image"></div>
-					<img class="iphone" src="assets/images/index_section_code__iphone.png" />
-					<img class="iphone_app" src="assets/images/index_section_code__iphone_app.gif" />
-					<div class="copy">
-						<h3>Learn the Basics</h3>
-						<p>Using basic if/then statements, kids begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. They can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they get a hang of it, they can use the <strong>iOS + Android</strong> compatible app to write little mods such as have their Jewelbot light up when they get a new Instagram like. The mod possibilities are endless. And of course – Jewelbots' basic functions can be used without a phone.</p>
-					</div>
-				</div><!--//topic_1 -->
-				<div class="topic topic_2">
-					<div class="image"></div>
-					<div class="copy">
-						<h3>Become a Master</h3>
-						<p>Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the <strong>Arduino IDE</strong>, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?<br/><br/><strong>Arduino</strong> is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects</p>
-					</div>
-				</div><!--//topic_2 -->
-				<div class="clear"></div>
-			</div><!--//section_code -->
-			<div class="section_newsletter">
-				<h3>Join our email list and receive</h3>
-				<script>mixpanel.track_forms(".mixpanel_section_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "index_section"});</script>
-				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_section_newsletter">
-					<div class="mc-field-group">
-						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'index_section'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
-					</div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-					<input type="submit" value="Join + Save" name="subscribe" id="mc-embedded-subscribe" class="btn">
-				</form>
-				<p>Stay tuned to our updates and special offers!<br /> Oh, and you are going to get your discount code right away.</p>
-			</div><!--//section_newsletter -->
 			<div class="section_sale" id="section_sale">
-				<h3>Pre-Order Now and Save</h3><!--
+				<h3>Pre-order now while supplies last</h3><!--
 			 --><ul class="products">
 					<li class="pack_1">
 						<h5>JEWELBOT</h5>
@@ -392,14 +394,6 @@
 						<p>$49 Pre-Order</p>
 						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
 						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/4818647172:1 -->
-					</li><!--
-				 --><li class="pack_2">
-						<h5>TWINNIE 2-PACK</h5>
-						<img src="assets/images/index_section_sale__product_jewelbot_2pack.jpg" />
-						<p class="list_price"><span>$119</span> List Price</p>
-						<p>$69 Pre-Order</p>
-						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
 					</li><!--
 				 --><li class="pack_3"><!-- id="pack_3_swap"-->
 						<h5>SQUAD 3-PACK</h5>
@@ -413,45 +407,22 @@
 							mixpanel.track_links('.mixpanel_2pack', 'SHOP', {'PRODUCT': 'jewelbot_2pack'}); mixpanel.track_links('.mixpanel_2pack', 'SHOP', {'STEP': 'added_to_cart'});
 							mixpanel.track_links('.mixpanel_3pack', 'SHOP', {'PRODUCT': 'jewelbot_3pack'}); mixpanel.track_links('.mixpanel_3pack', 'SHOP', {'STEP': 'added_to_cart'});
 						</script>
+					</li><!--
+				 --><li class="pack_2">
+						<h5>TWINNIE 2-PACK</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_2pack.jpg" />
+						<p class="list_price"><span>$119</span> List Price</p>
+						<p>$69 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
+						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Add to cart</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
 					</li>
 					<!--<a href="https://jewelbots-2.myshopify.com/cart/19729585926:1" onclick="mixpanel.track('SHOP', {'STEP': 'added_to_cart'});">order - -> checkout T2</a>-->
 				</ul><!--
 			 --><div class="clear"></div>
-		</div><!--//section_sale -->
-			<div class="section_wearableskit">
-				<div class="line">&nbsp;</div>
-				<!--<p class="note">Pre-Order a <strong>3-Pack</strong> and get a free <strong>Jewelbots Wearables Kit now.</strong><br />Kit usually ships within 1-2 days after you order so you can start right away.</p>-->
-				<div class="line">&nbsp;</div>
-				<div class="box">
-					<img class="product" src="assets/images/index_section_wearableskit__wearableskit.jpg" />
-					<div class="left">
-						<h3>Jewelbots Wearables Kit (1.0)</h3>
-						<p>The Jewelbots Wearable Kit is a DIY kit, custom designed by the Jewelbots team to give you and a special kid an activity to do together. Pick an item of clothing, sew in LED lights, and program them to light up in fun patterns. Using these kits, you can make all kinds of cool projects right away, all while getting a jumpstart on coding using the Arduino IDE, the same environment you will use to code your Jewelbots!</p>
-						<p class="list_price"><span>$159</span> List Price</p>
-						<p class="offer_price">$119 Pre-Order</p>
-						<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>
-						<!--<a class="cta_buy mixpanel_wk" href="https://jewelbots.myshopify.com/cart/12183934404:1?channel=buy_button" target="_blank">Buy Individually</a>-->
-						<a class="cta_buy mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Add to cart</a>
-						<script>
-							mixpanel.track_links('.mixpanel_wk', 'SALES', {'PRODUCT': 'wearables_kit'}); mixpanel.track_links('.mixpanel_wk', 'SALES', {'ACTION': 'added_to_cart'});
-						</script>
-					</div>
-					<div class="right">
-						<h6>What's in the Kit:</h6>
-						<ul>
-							<li><span>•</span>1x Arduino Gemma</li>
-							<li><span>•</span>2x Batteries (Type 2032)</li>
-							<li><span>•</span>1x Roll of Conductive Thread</li>
-							<li><span>•</span>5x Blue LED Sequins</li>
-							<li><span>•</span>1x Battery Holder</li>
-							<li><span>•</span>1x Set of Needles</li>
-						</ul>
-					</div>
-				</div>
 				<ul class="info">
-					<li><img src="assets/images/index_section_sale__delivery_jb.png" /><p>Estimated Ship Date: Late Spring 2016</p></li>
-					<li><img src="assets/images/index_section_sale__refund.png" /><p>Full Refund as long as order has not shipped</p></li>
-					<li><img src="assets/images/index_section_sale__delivery_wk.png" /><p>Wearables Kits ship within 1-2 days</p></li>
+					<li><img src="assets/images/index_section_sale__delivery_jb.png" /><p>Estimated ship date: late summer 2016</p></li>
+					<li><img src="assets/images/index_section_sale__refund.png" /><p>Full refund as long as order has not shipped</p></li>
+					<li><img src="assets/images/index_section_sale__delivery_wk.png" /><p>International orders welcome</p></li>
 				</ul>
 				<p class="notepresale">
 					<!--<span class="special">Each 3-Pack pre-order includes our programmable Jewelbot Wearables Kit 1.0.</span>-->
@@ -459,34 +430,127 @@
 					Actual design of charm and bands may vary slightly. Every bracelet will ship with 3 different color bands.<br />
 					Actual colors may differ. <strong>Because this is a pre-order, you are eligible for a full refund</strong> at any time before your merchandise ships.
 				</p>
-			</div><!--//section_wearableskit -->
-			<div class="section_video">
-				<div class="background">&nbsp;</div>
-				<h3>Bill Nye says AWESOME!</h3>
-				<div class="cta_video" onClick="javascript:scroll('#site_container','50'); modal_video('open_billnyepromo'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_video_BillNye', 'POSITION': 'section_video'});">Play Video</div>
-				<p>During our Kickstarter-Campaign, Bill Nye took the time to look at Jewelbots.<br /> See what he has to say about Jewelbots.</p>
-			</div><!--//section_video -->
-			<div class="section_press">
-				<img class="stars" src="assets/images/index_section_press__stars.png" />
-				<a class="quote" href="http://www.wired.com/2015/07/somehow-teen-girls-get-coolest-wearable/" target="_blank">»The most interesting wearable I’ve seen this year«</a>
-				<img class="quote" src="assets/images/index_section_press__wired.png">
-				<ul>
-					<li><a href="http://www.forbes.com/sites/leoking/2015/07/31/tech-women-triumph-women-in-tech-jewelbots-ellen-pao-susan-wojcicki/" target="_blank"><img src="assets/images/index_section_press__forbes.png" /></a></li><!--
-				 --><li><a href="http://www.bustle.com/articles/97235-jewelbots-programmable-friendship-bracelets-are-designed-to-get-girls-coding-plus-4-other-toys-getting-girls" target="_blank"><img src="assets/images/index_section_press__bustle.png" /></a></li><!--
-				 --><li><a href="http://www.theverge.com/2015/7/23/9020083/jewelbots-programming-wearable-jewelry" target="_blank"><img src="assets/images/index_section_press__theverge.png" /></a></li><!--
-				 --><li><a href="http://www.psfk.com/2015/06/girls-coding-programmable-bracelets-inspire-girls-to-code.html" target="_blank"><img src="assets/images/index_section_press__psfk.png" /></a></li><!--
-				 --><li><a href="http://techcrunch.com/2015/07/13/jewelbots-is-a-friendship-bracelet-that-teaches-girls-how-to-code/" target="_blank"><img src="assets/images/index_section_press__techcrunch.png" /></a></li><!--
-				 --><li><a href="http://www.businessinsider.com/wearable-tech-is-all-the-rage-at-this-hackathon-for-girls-as-young-as-five-years-old-2015-6" target="_blank"><img src="assets/images/index_section_press__businessinsider.png" /></a></li><!--
-				 --><li><a href="http://www.brit.co/jewelbots-friendship-bracelet-future/" target="_blank"><img src="assets/images/index_section_press__britco.png" /></a></li><!--
-				 --><li><a href="http://www.glamour.com/fashion/blogs/dressed/2015/07/jewelbots-teaches-teen-girls-t" target="_blank"><img src="assets/images/index_section_press__glamour.png" /></a></li><!--
-				 --><li><a href="http://www.teenvogue.com/story/jewelbot-bracelet-code-education" target="_blank"><img src="assets/images/index_section_press__teenvogue.png" /></a></li><!--
-				 --><li><a href="http://finance.yahoo.com/news/startup-bets-wearable-will-solve-a-huge-problem-for-girls-145434164.html" target="_blank"><img src="assets/images/index_section_press__yahoo.png" /></a></li><!--
-				 --><li><a href="http://www.buzzfeed.com/nicolenguyen/hurry-up-and-exist-irl#.evylyjyx6" target="_blank"><img src="assets/images/index_section_press__buzzfeed.png" /></a></li>
-				</ul>
-			</div><!--//section_press -->
+			</div><!--//section_sale -->
+			<div class="section_faqs">
+
+				<h3>Questions and Answers<span class="underline">&nbsp;</span></h3>
+
+				<div class="question_container">
+					<h4 class="question">Q: When will Jewelbots ship?</h4>
+					<div class="answer">
+						We are shipping a first batch of Alpha Jewelbots to testers in May 2016. Afterwards we are fulfilling our kickstarter and pre-sale orders. Our estimated shipping timeline is summer 2016. Please do subscribe to our <a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_newsletter', 'POSITION': 'faqs'});">newsletter</a> or have a look at our <a href="https://www.kickstarter.com/projects/1345510482/jewelbots-friendship-bracelets-that-teach-girls-to" target="_blank">kickstarter page</a>.
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: What features do Jewelbots have out of the box?</h4>
+					<div class="answer">
+						Jewelbots do not require internet service or a cell phone. Out of the box kids can connect with up to 8 different friends, see when they are nearby and send each other secret messages. With access to a computer or smart-phone (Apple/Android) kids can create multiple friend groups and add additional functionality through the power of code.
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: What is the perfect age for Jewelbots?</h4>
+					<div class="answer">
+						Good question! We have tested Jewelbots with kids aged 5 and up. The out of the box functionality - paired with the ability to work without a phone - makes Jewelbots ideal for younger kids. To use some of the more advanced mods and features we recommend that your kid is between 8-13 years old. But then again, with some help, even younger kids can use Jewelbots. This being said, there really is no limit on the other end of the spectrum; we are seeing parents, and for that matter grand-parents of our Alpha testers getting their own Jewelbots ;-)
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: How do Jewelbot’s advanced features work?</h4>
+					<div class="answer">
+						 Out of the box kids can make their bracelets light up when a friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways!
+						<br /><br />
+						Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: Do I need a phone/computer?</h4>
+					<div class="answer">
+						No! However to use the more advanced features such as friend groups and special mods you need to either download the Jewelbots App or connect your Jewelbot to a computer (via USB).
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: 2, 3, 4… – how many friends can you have?</h4>
+					<div class="answer">
+						Out of the box: 4 / after connecting your Jewelbot to your phone you can manage 8 friend groups with up to 16 friends.
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: What devices and operating systems does Jewelbot support?</h4>
+					<div class="answer">
+						We currently support Apple iPads, iPhone and Android devices. For Mac and Windows, we allow you to add code to your Jewelbot. 
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: Details? Give me all the technical specs!</h4>
+					<div class="answer">
+						Here you go: <a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'}); javascript:scroll('#section_specs', '70');">See full specifications</a>
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: Are Jewelbots safe?</h4>
+					<div class="answer">
+						<img src="assets/images/index_section_meet__spy_2.png" width="100" /><br /><br />
+						We are making a product for kids, and their safety is our number one priority. Jewelbots don’t contain a GPS and we don’t store any personal data of any kind.
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: How does the Jewelbot mobile App work?</h4>
+					<div class="answer">
+						Using basic if/then statements, girls begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. They can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they get a hang of it, they can use the app to write little mods and take their skills further:
+						<br /><br />
+						<strong>Instagram Mod:</strong> light up when you get an new like<br />
+						<strong>Twitter Mod:</strong> vibrate when you get a new follower<br />
+						<strong>Facebook Mod:</strong> flash when you get a message from your parents
+						<br /><br />
+						…the mod possibilities are endless.<br />
+						And of course – Jewelbots basic functions can be used without a phone.
+					</div>
+				</div><!--//question_container -->
+				<div class="question_container">
+					<h4 class="question">Q: My kid can code, what's next?</h4>
+					<div class="answer">
+						Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, kids can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?
+						<br /><br />
+						Arduino is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.
+						<br /><br />
+						So yes, there are really no limits to what you can do with Jewelbots. Use them as a button to interact with another bluetooth device? Why not!
+						<br /><br />
+						<img src="assets/images/index_section_code__master.jpg" width="320" />
+					</div>
+				</div><!--//question_container -->
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+				<!--
+				<div class="folder">
+					<div class="question_container">
+						<h4 class="question">Q: This is a question</h4>
+						<div class="answer">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
+					</div><!- -//question_container - ->
+				</div><!- -//folder - ->
+				<span class="more_underline">&nbsp;</span><a class="more" href="javascript:void(0);"></a>
+				-->
+
+			</div><!--//section_faqs -->
 			<div class="section_mood">
 			</div><!--//section_mood -->
 			<div class="section_footer">
+
+				<div class="section_newsletter">
+					<h3>Join our email list and receive $10 off your first order</h3>
+					<script>mixpanel.track_forms(".mixpanel_section_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "index_section"});</script>
+					<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_section_newsletter">
+						<div class="mc-field-group">
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'index_section'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+						<input type="submit" value="Join + Save" name="subscribe" id="mc-embedded-subscribe" class="btn">
+					</form>
+				</div><!--//section_newsletter -->
+
 				<img class="logo" src="assets/images/site_section_footer__logo.png" />
 				<ul class="navigation">
 					<!--<li><a href="/faqs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_faqs', 'POSITION': 'footer'});">Help</a></li>-->
@@ -511,7 +575,6 @@
 				</p>
 				<a class="mxp-interaction_action_clicked_section_footer_mxp" href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
 			</div><!--//section_footer -->
-
 		</div><!--//content_container -->
 	</div><!--//site_container -->
 
