@@ -2659,6 +2659,10 @@ em {
 		width: 50%;
 		min-height: 150px;
 	}
+
+	#site_container.index .section_how {
+		display: none;
+	}
 }
 /* @end */
 /* @group ----- section_specs ------------------- */

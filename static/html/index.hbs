@@ -597,9 +597,10 @@
 		$(function() {
 			var test_id = 1 % Math.ceil(2 * Math.random());  
 			if (test_id) {  
-				mixpanel.track("EXPERIMENT", {"VERSION": "A", "TESTED": "T_0" });
+				mixpanel.track("EXPERIMENT", {"VERSION": "A", "TESTED": "T_9" });
 			} else {
-				mixpanel.track("EXPERIMENT", {"VERSION": "B", "TESTED": "T_0" });
+				mixpanel.track("EXPERIMENT", {"VERSION": "B", "TESTED": "T_9" });
+				$('#site_container.index .section_how').css("display", "none");
 			}
 		});
 	</script>
