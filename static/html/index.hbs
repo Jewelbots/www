@@ -154,14 +154,8 @@
 			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
 				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
-				<div class="save">
-					<h1>Sign up, then save!</h1>
-					<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
-				</div>
-				<div class="news">
-					<h1>The Jewelbots Newsletter</h1>
-					<p>Don't want to miss a thing? Leave your email for all the latest news around Jewelbots.</p>
-				</div>
+				<h1>Hey, don't leave just yet!</h1>
+				<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
 
 				<div class="mc-field-group">
 					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
@@ -171,7 +165,7 @@
 					<div class="response" id="mce-success-response" style="display:none"></div>
 				</div>
 				<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-				<div class="clear"><input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+				<div class="clear"><input type="submit" value="Subscribe + Save" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
 
 			</form>
 		</div>
@@ -263,7 +257,7 @@
 				}
 				</SCRIPT>
 				<div class="cta_video" onClick="javascript:modal_video('open_jewelbotspromo'); mixpanel.track('INTERACTION', {'ACTION': 'modal_video', 'POSITION': 'how'}); $('html,body').scrollTop(0);">Play Video</div> 
-				<!--<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />-->
+				<img class="jewelbots" src="assets/images/index_section_meet__product_jewelbot_5.jpg" />
 			</div><!--//section_meet -->
 			<div class="section_mood">
 			</div><!--//section_mood -->
@@ -608,9 +602,14 @@
 	<script type="text/javascript">
 		$(window).resize(function(){
 			modal_video('size');
-		//	modal_newsletter('open_fixed');
 		//	index_section_sales('swap_3pack');
 		});
+		$("html").bind("mouseleave", function () {
+			modal_newsletter('open_overlay');
+			mixpanel.track('NEWSLETTER', {'STEP': 'prompt_modal_overlay', 'POSITION': 'index'});
+ 			$("html").unbind("mouseleave");
+		});
+
 	</script>
 	<!-- RUN  ⬆ -->
 	<!-- ADROLL  ⬇ -->
