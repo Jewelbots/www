@@ -154,8 +154,8 @@
 			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
 				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
-				<h1>Hey, don't leave just yet!</h1>
-				<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
+				<h1>Enter your email and receive $10 off your first order!</h1>
+				<!--<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>-->
 
 				<div class="mc-field-group">
 					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
@@ -183,9 +183,6 @@
 	<div id="site_container" class="index">
 		<div id="content_container">
 			<div class="section_header">
-				<div class="offer">
-					<a class="cta_offer" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_offer', 'POSITION': 'header'});"><strong>Limited Time Offer:</strong> Get your Jewelbot now and <strong>receive Pre-Order Discounts ➜</strong></a>
-				</div>
 				<div class="header_default"><!-- //header_default //header_default_nav //header_sticky-->
 					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
 						<img class="logo_icon_small" src="assets/images/index_section_header__icon_small.png" />
@@ -204,9 +201,6 @@
 					<!--<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Pre-Order Discounts Left:</span> <span class="number">308</span></a>-->
 				</div><!--//header -->
 			</div><!--//section_header -->
-			
-			<iframe class="section_counter" scrolling="no" seamless="seamless" src="http://www.vicozabel.com/AREA51/___jewelbots/www.jewelbots.com__v.12/counter.html"></iframe>
-			
 			<div class="section_hero">
 				<div class="left">
 					<h1>The friendship bracelet that teaches kids to code</h1>
@@ -248,7 +242,7 @@
 				</ul>
 			</div><!--//section_press_quotes -->
 			<div class="section_meet" id="section_meet">
-				<h3>What to see Jewelbots in action?</h3>
+				<h3>Want to see Jewelbots in action?</h3>
 				<p>A language free, gender neutral friendship bracelet which builds on 
 				friendship and teaches the power of coding.</p>
 				<SCRIPT LANGUAGE=JavaScript>
@@ -635,24 +629,5 @@
 	    }());
 	</script>
 	<!-- ADROLL  ⬆ -->
-	<!-- COUNTER  ⬇ -->
-	<link rel="stylesheet" href="{{ assetPath "css/odometer-theme-default.css" }}" />
-	<style>
-		.odometer {
-			font-size: 40px;
-		}
-	</style>
-	<script>
-		window.odometerOptions = {
-			format: '(dddd)'
-		};
-	</script>
-	<script src="{{ assetPath "js/odometer.js" }}"></script>
-	<script>
-	  setTimeout(function(){
-	    $('.odometer').html(308);
-	  }, 500);
-	</script>
-	<!-- COUNTER  ⬆ -->
 </body>
 </html>
