@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
+	index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
 	$(window).resize(); //-- and force
 });
 
