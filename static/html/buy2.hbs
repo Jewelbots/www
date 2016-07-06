@@ -401,7 +401,7 @@
 					box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
 		}
 		#site_container .section_header .header_default a.cta_newsletter {
-			display: none;
+			display: block;
 			position: absolute;
 			float: right;
 			width: 100px;
@@ -444,7 +444,7 @@
 			color: rgba(255,60,0,0.6);
 		}
 		#site_container .section_header .header_default a.cta_preorder_counter {
-			display: block;
+			display: none;
 			position: absolute;
 			float: right;
 			width: 220px;
@@ -567,7 +567,7 @@
 
 
 		#site_container .section_header .header_sticky a.cta_preorder {
-			right: 270px;
+			right: 140px;
 			top: 15px;
 
 			opacity: 1.0;
@@ -4289,6 +4289,273 @@
 			#site_container.index .section_newsletter form #mc-embedded-subscribe:hover {}
 		}
 		/* @end */
+		/* @group ----- section_counter ----------------- */
+		#site_container.index iframe.section_counter {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 685px;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+		#site_container.index .section_counter {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 60px 10px 20px 10px;
+			background-color: rgba(80,215,235,1.0);
+			background: url(../../assets/images/index_section_counter__background_3.jpg) no-repeat bottom center;
+
+			-webkit-background-size: cover;
+		       -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+		}
+		#site_container.index .section_counter h2.odometer {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+
+			font-family: "museo-sans-rounded",sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 150px;
+			line-height: 150px;
+			letter-spacing: 1px;
+			text-indent: 0;
+			text-transform: uppercase;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+		}
+		#site_container.index .section_counter h3 {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: -46px 0 0 420px;
+			padding: 0 0 0 0;
+
+			font-family: "museo-sans-rounded",sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 12px;
+			letter-spacing: 1px;
+			text-indent: 0;
+			text-transform: uppercase;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+		}
+		#site_container.index .section_counter h4 {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 35px 0 0 0;
+
+			font-family: "museo-sans-rounded",sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 40px;
+			letter-spacing: 1px;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+
+			z-index: 3;
+		}
+		#site_container.index .section_counter h5 {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 0 0 20px 0;
+
+			font-family: "museo-sans",sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 40px;
+			letter-spacing: 1px;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+
+			z-index: 3;
+		}
+		#site_container.index .section_counter p {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 30px 0 0 0;
+
+			font-family: "museo-sans",sans-serif;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0px;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+
+			z-index: 3;
+		}
+		#site_container.index .section_counter p.small {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 10px 0 30px 0;
+
+			font-family: "museo-sans",sans-serif;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0px;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+
+			z-index: 3;
+		}
+
+		#site_container.index .section_counter ul.offers {
+			display: block;
+			position: relative;
+			width: 100%;
+			max-width: 800px;
+			height: auto;
+			margin: 40px auto 40px auto;
+			padding: 0 0 0 0;
+		}
+		#site_container.index .section_counter ul.offers li {
+			display: inline-block;
+			position: relative;
+			width: 28.0%;
+			height: 200px;
+			margin: 0 2% 0 2%;
+			padding: 0 0 0 0;
+			background-color: rgba(10,100,100,0.5);
+
+			-webkit-border-radius: 5px;
+			   -moz-border-radius: 5px;
+			        border-radius: 5px;
+
+			-webkit-transition: .2s ease-in-out;
+			   -moz-transition: .2s ease-in-out;
+			     -o-transition: .2s ease-in-out;
+			    -ms-transition: .2s ease-in-out;
+			        transition: .2s ease-in-out;
+
+					-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);
+					   -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);
+							box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);
+		}
+		#site_container.index .section_counter ul.offers li:hover {
+			background-color: rgba(10,50,40,0.5);
+
+					-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.0);
+					   -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.0);
+							box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.0);
+		}
+		#site_container.index .section_counter ul.offers li a {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+		}
+		#site_container.index .section_counter ul.offers li a h5 {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 30px 0 15px 0;
+
+			font-family: "museo-sans-rounded",sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 25px;
+			letter-spacing: 0;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgba(200,200,200,1.0);
+		}
+		#site_container.index .section_counter ul.offers li a span.list_price {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			color: rgba(200,200,200,1.0);
+
+			font-family: "museo-sans", sans-serif;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 30px;
+			letter-spacing: 0;
+			text-indent: 0;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: line-through;
+		}
+		#site_container.index .section_counter ul.offers li a span.presale_price {
+			display: block;
+			position: relative;
+			width: auto;
+			height: auto;
+			margin: 0 0 0 0;
+			padding: 5px 0 0 0;
+			color: rgba(255,255,255,1.0);
+
+			font-family: "museo-sans-rounded", sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 60px;
+			line-height: 60px;
+			letter-spacing: 0;
+			text-indent: 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+
+		@media (max-width: 656px) {
+			#site_container.index iframe.section_counter {
+				height: 730px;
+			}
+		}
+		@media (max-width: 456px) {
+			#site_container.index iframe.section_counter {
+				height: 780px;
+			}
+		}
+		/* @end */
 	</style>
 
 	<script src="//use.typekit.net/rbz5qur.js"></script>
@@ -4452,11 +4719,14 @@
 						<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Become an Ambassador</a></li>
 					</ul>
 
-					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Shop Now</a>
+					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
 					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
-					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Jewelbot Discounts Left:</span> <span class="number">87</span></a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Jewelbot Discounts Left:</span> <span class="number">27</span></a>
 				</div><!--//header -->
 			</div><!--//section_header -->
+
+			<iframe class="section_counter" scrolling="no" seamless="seamless" src="http://www.vicozabel.com/AREA51/___jewelbots/www.jewelbots.com__v.12/counterB.html"></iframe>
+
 			<div class="section_hero">
 				<div class="left">
 					<img class="jewelbot" src="assets/images/new_index_section_hero__jewelbot.png" />
@@ -4495,7 +4765,7 @@
 					<p>
 						Kids simply connect their Jewelbot to a phone or computer and get started - <strong style="color: rgba(0,205,180,1.0);">no prior experience in coding needed!</strong><br />
 						Our visual programming language introduces the basics of coding and once they get the hang of it, they can test their skills with our coding tutorials and exchange with other kids in our online community - sharing their creations, get inspiration and find help when they get stuck.
-						<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_overview'});">Shop Now</div>
+						<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_overview'});">Get Your Jewelbot</div>
 					</p>
 				</div>
 				<div class="right image_code">
@@ -4629,7 +4899,7 @@
 					</ul>
 				</div>
 				<div class="clear"></div>
-				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Shop Now</div>
+				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
 			</div><!--//section_features -->
 			<div class="section_outofthebox">
 				<p>Out of the Box Features</p>
@@ -4661,7 +4931,7 @@
 				<p>
 					<strong>No Phone or Computer required for all out of the box features!</strong>
 				</p>
-				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Shop Now</div>
+				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
 			</div><!--//section_outofthebox -->
 			<div class="section_code">
 				<h3>Learn how to code</h3>
@@ -4692,7 +4962,7 @@
 					<div class="clear"></div>
 				</ul>
 				<div class="alpha">
-					<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Shop Now</div>
+					<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
 				</div>
 			</div><!--//section_code -->
 			<div class="section_inside">
@@ -4702,7 +4972,7 @@
 					(final colors may vary)<br />
 					Every Jewelbot comes with our free Jewelbots App and access to free coding tutorials and our Online Community-Platform.
 				</p>
-				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_inside'});">Shop Now</div>
+				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_inside'});">Get Your Jewelbot</div>
 			</div><!--//section_inside -->
 			<div class="section_sale" id="section_sale">
 				<p>Full refunds – no questions asked</p>
