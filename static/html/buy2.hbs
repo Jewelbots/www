@@ -1317,7 +1317,7 @@
 				width: 100%;
 				height: auto;
 				left: 0px;
-				top: 0px;
+				top: 0%;
 				right: 0px;
 				bottom: 0px;
 				margin: 0 0 0 0;
@@ -1521,6 +1521,7 @@
 			#modal_newsletter.fixed .modal {
 				width: 100%;
 				left: 0;
+				top: 0;
 				margin: 0 0 0 0;
 			}
 		}
@@ -5208,7 +5209,7 @@
 
 				$('#modal_newsletter').addClass('overlay');
 				$('#modal_newsletter.overlay').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
-				$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
+			//	$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
 
 				$('#modal_newsletter .modal .save').css('display', 'block' );
 				$('#modal_newsletter .modal .news').css('display', 'none' );
