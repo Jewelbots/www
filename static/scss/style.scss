@@ -2640,7 +2640,7 @@ em {
 #site_container.index .section_sale ul.products li {
 	display: inline-block;
 	position: relative;
-	width: 40%;
+	width: 33%;
 	height: auto;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -3432,6 +3432,193 @@ em {
 
 
 /* @end */
+/* @group ----- section_contentgrid ------------- */
+#site_container.index .section_contentgrid {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+#site_container.index .section_contentgrid h3 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 50px 25px 0 25px;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 46px;
+	line-height: 50px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(140,145,150,1.0);
+	color: rgba(0,160,140,1.0);
+	color: rgba(100,105,110,1.0);
+
+	z-index: 10;
+}
+#site_container.index .section_contentgrid p.subheadline {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 25px 50px 25px;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(100,105,110,1.0);
+}
+
+#site_container.index .section_contentgrid ul.content {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	text-align: center;
+}
+#site_container.index .section_contentgrid ul.content li.post {
+	display: inline-block;
+	position: relative;
+	width: 33.33%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	text-align: center;
+}
+#site_container.index .section_contentgrid ul.content li.post h4 {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 50%;
+	margin: 0 0 0 0;
+	padding: 25px 25px 0 25px;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-transform: none;
+	text-align: center;
+	color: rgba(140,145,150,1.0);
+	color: rgba(0,160,140,1.0);
+	color: rgba(100,105,110,1.0);
+
+	z-index: 10;
+}
+#site_container.index .section_contentgrid ul.content li.post img {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	z-index: 1;
+}
+#site_container.index .section_contentgrid ul.content li.post a.cta_read_more {
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 50px;
+	left: 50%;
+	bottom: 30%;
+	margin: 0 0 0 -60px;
+	padding: 0 0 0 0;
+	background-color: rgba(255,60,0,1.0);
+	border: solid 2px rgba(255,60,0,0.6);
+	color: rgba(255,255,255,1.0);
+
+	font-family: "museo-sans", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 46px;
+	letter-spacing: 0;
+	text-indent: 0;
+	text-align: center;
+	text-transform: uppercase;
+
+  -webkit-border-radius: 3px;
+	 -moz-border-radius: 3px;
+		  border-radius: 3px;
+
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+			box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+
+	-webkit-transition: .1s ease-in-out;
+	   -moz-transition: .1s ease-in-out;
+	     -o-transition: .1s ease-in-out;
+	    -ms-transition: .1s ease-in-out;
+	        transition: .1s ease-in-out;
+
+	cursor: pointer;
+
+	z-index: 11;
+}
+#site_container.index .section_contentgrid ul.content li.post a.cta_read_more:hover {
+	background-color: rgba(255,255,255,1.0);
+	border: solid 2px rgba(255,60,0,0.6);
+
+	color: rgba(255,60,0,0.6);
+
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+	   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+			box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+}
+
+@media (max-width: 1279px) {
+
+}
+@media (max-width: 1023px) {
+}
+@media (max-width: 767px) {
+	#site_container.index .section_contentgrid {}
+	#site_container.index .section_contentgrid h3 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+	#site_container.index .section_contentgrid p.subheadline {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	#site_container.index .section_contentgrid ul.content li.post {
+		width: 100%;
+	}
+	#site_container.index .section_contentgrid ul.content li.post h4 {
+		font-size: 20px;
+		line-height: 22px;
+	}
+	#site_container.index .section_contentgrid ul.content li.post a.cta_read_more {
+		bottom: 20px;
+	}
+}
+/* @end */
+
 
 /* ------ JOBS ---------------------------------------------- */
 /* @group ----- section_hero -------------------- */
