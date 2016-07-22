@@ -216,6 +216,29 @@
 				<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<div class="background"></div>
 			</div><!--//section_hero -->
+			<div class="section_contentgrid">
+			<h3>The most recent content from us:</h3><br /><!--
+				<p class="subheadline">Subheadline here - like subscribe to <a href="#">newsletter</a> for fresh content etc.</p>-->
+				<ul class="content">
+					<li class="post">
+						<a href="https://www.youtube.com/watch?v=vGw580BkHQA" target="_blank" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">
+							<img class="quote" src="assets/images/index_section_contentgrid__1.jpg" />
+						</a>						<!--<h4>...</h4>-->
+						<!--<a class="cta_read_more" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">read more</a>-->
+					</li><li class="post">
+						<a href="https://www.youtube.com/watch?v=wGWJ6gzdTHM" target="_blank" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">
+							<img class="quote" src="assets/images/index_section_contentgrid__2.jpg" />
+						</a>						<!--<h4>...</h4>-->
+						<!--<a class="cta_read_more" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">read more</a>-->
+					</li><li class="post">
+						<a href="http://jewelbots.tumblr.com/post/147656037194/5placestostartcoding" target="_blank" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">
+							<img class="quote" src="assets/images/index_section_contentgrid__3.jpg" />
+						</a>
+						<!--<h4>...</h4>-->
+						<!--<a class="cta_read_more" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_content_readmore', 'POSITION': 'contentgrid'});">read more</a>-->
+					</li>
+				</ul>
+			</div><!--//section_contentgrid -->
 			<div class="section_press_quotes">
 				<ul class="quotes">
 					<li>
@@ -355,18 +378,28 @@
 				<h3>Pre-order now while supplies last</h3><!--
 			 --><ul class="products">
 					<li class="pack_1">
-						<h5 style="color: rgba(100,100,100,1.0);">JEWELBOT</h5>
+						<h5>JEWELBOT</h5>
 						<img src="assets/images/index_section_sale__product_jewelbot_1pack.jpg" />
-						<p class="list_price"><span>$69</span> List Price</p>
+						<p class="list_price"><span>$79</span> List Price</p>
 						<p>$49 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
 						<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818647172:1 -->
+					</li><!--
+				 --><li class="pack_3"><!-- id="pack_3_swap"-->
+						<h5>SQUAD 3-PACK</h5>
+						<img src="assets/images/index_section_sale__product_jewelbot_3pack.jpg" />
+						<p class="list_price"><span>$159</span> List Price</p>
+						<p>$99 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
+						<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/12045228868:1" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/12045228868:1 -->
 					</li><!--
 				 --><li class="pack_2">
 						<h5>TWINNIE 2-PACK</h5>
-						<img src="assets/images/new_index_section_sale__product_jewelbot_2pack_1.jpg" />
-						<p>Limited Time Offer: Buy 2, Get 1 Free</p>
-						<p>$99 Pre-Order</p>
-						<a class="cta_preorder mixpanel_2pack" href="https://jewelbots.myshopify.com/cart/21132595588:1" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
+						<img src="assets/images/index_section_sale__product_jewelbot_2pack.jpg" />
+						<p class="list_price"><span>$119</span> List Price</p>
+						<p>$69 Pre-Order</p>
+						<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
+						<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818676612:1" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
 					</li>
 					<script>
 						mixpanel.track_links('.mixpanel_1pack', 'SHOP', {'PRODUCT': 'jewelbot_1pack'}); mixpanel.track_links('.mixpanel_1pack', 'SHOP', {'STEP': 'added_to_cart'});
