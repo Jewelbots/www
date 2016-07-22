@@ -11,4 +11,7 @@ router.get('/kickstarter', function(req,res) {
 router.get('/intro-to-wearables-kit', function(req, res) {
   res.redirect('/intro-to-wearables-kit.html');
 });
+router.get('/alpha', function(req, res) {
+  res.redirect('http://alpha.jewelbots.com')
+});
 module.exports = router;
