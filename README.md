@@ -5,6 +5,7 @@ To 'build' the site:
 
 On MAC OS X:
   - Install [Homebrew](http://brew.sh/)
+  - Make sure you have npm installed
   - Clone repository
   - Run these commands:
 
