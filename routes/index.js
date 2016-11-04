@@ -12,9 +12,6 @@ router.get('/intro-to-wearables-kit', function(req, res) {
   res.redirect('/intro-to-wearables-kit.html');
 });
 router.get('/alpha', function(req, res) {
-  res.redirect('http://alpha.jewelbots.com');
-});
-router.get('/aws', function(req, res) {
-  res.redirect('https://jewliebots.signin.aws.amazon.com/console');
+  res.redirect('http://alpha.jewelbots.com')
 });
 module.exports = router;
