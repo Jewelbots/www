@@ -14,4 +14,13 @@ router.get('/intro-to-wearables-kit', function(req, res) {
 router.get('/alpha', function(req, res) {
   res.redirect('http://alpha.jewelbots.com')
 });
+router.get('/shop', function(req, res) {
+  res.redirect('/shop.html');
+});
+router.get('/go', function(req, res) {
+  res.redirect('/go.html');
+});
+router.get('/forum', function(req, res) {
+  res.redirect('http://45.55.216.133');
+});
 module.exports = router;
