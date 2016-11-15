@@ -12,9 +12,15 @@ router.get('/intro-to-wearables-kit', function(req, res) {
   res.redirect('/intro-to-wearables-kit.html');
 });
 router.get('/alpha', function(req, res) {
-  res.redirect('http://alpha.jewelbots.com');
+  res.redirect('http://alpha.jewelbots.com')
 });
-router.get('/aws', function(req, res) {
-  res.redirect('https://jewliebots.signin.aws.amazon.com/console');
+router.get('/shop', function(req, res) {
+  res.redirect('/shop.html');
+});
+router.get('/go', function(req, res) {
+  res.redirect('/go.html');
+});
+router.get('/forum', function(req, res) {
+  res.redirect('http://45.55.216.133');
 });
 module.exports = router;
