@@ -19,7 +19,6 @@ $(window).resize(function(){
 });
 
 $(window).bind('orientationchange', function(event) {
-
 	$(window).resize(); //-- and force
 });
 
@@ -42,9 +41,9 @@ function scroll(id, shift){
 //-- header(state) -------------------------------------------------------//
 function header(state){
 	if($(window).scrollTop() > 1){
-		$('.index .header_default').addClass('header_sticky');
+		$('.header_default').addClass('header_sticky');
 	} else {
-		$('.index .header_default').removeClass('header_sticky');
+		$('.header_default').removeClass('header_sticky');
 	}
 }
 //
