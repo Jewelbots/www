@@ -118,18 +118,16 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
 					</a>
 					<ul class="navigation">
-						<li><a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">Home</a></li>
-						<li><a href="/about.html" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_story', 'POSITION': 'header'});">Story</a></li>
-						<!--<<li><a href="/team.html" target="+self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_team', 'POSITION': 'header'});">Team</a></li>-->
-						<li><a href="http://jewelbots.tumblr.com/" target="_blank" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_blog', 'POSITION': 'header'});">Blog</a></li>
-						<li><a href="/jobs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_jobs', 'POSITION': 'header'});">Jobs</a></li>
-						<!--<<li><a href="/media_kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_mediakit', 'POSITION': 'header'});">Media Kit</a></li>-->
-						<li><a href="/privacy.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_privacy', 'POSITION': 'header'});">Privacy</a></li>
-						<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_ambassador', 'POSITION': 'header'});">Become an Ambassador</a></li>
+						<li><a href="javascript:void;" onClick="scroll('.section_overview','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
+						<li><a href="javascript:void;" onClick="scroll('.section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
+						<li><a href="/go.html" target="_self">Getting Started</a></li>
+						<li><a href="alpha.jewelbots.com" target="_self">Community</a></li>
+						<li><a href="/contact.html" target="_self">Support</a></li>
 					</ul>
 
-					<a class="cta_preorder" href="/index.html" target="_self"onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Shop Now</a>
-					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Save $10</a>
+					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
+					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Join</a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Jewelbot Discounts Left:</span> <span class="number">27</span></a>
 				</div><!--//header -->
 			</div><!--//section_header -->
 
