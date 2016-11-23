@@ -6888,29 +6888,6 @@ em {
 	padding: 0 0 0 0;
 }
 
-#site_container.go .section_app.color_1 {
-	background-color: rgba(6,216,159,1.0);
-}
-#site_container.go .section_app.color_2 {
-	background-color: rgba(197,113,234,1.0);
-}
-#site_container.go .section_app.color_3 {
-	background-color: rgba(29,96,131,1.0);
-}
-#site_container.go .section_app.color_4 {
-	background-color: rgba(61,158,184,1.0);
-}
-#site_container.go .section_app.color_5 {
-	background-color: rgba(143,34,63,1.0);
-}
-#site_container.go .section_app.color_1 .copy h3, #site_container.go .section_app.color_2 .copy h3, #site_container.go .section_app.color_3 .copy h3 {
-	color: rgba(255,255,255,1.0);
-
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
-}
-#site_container.go .section_app.color_1 .copy p, #site_container.go .section_app.color_2 .copy p, #site_container.go .section_app.color_3 .copy p {
-	color: rgba(255,255,255,1.0);
-}
 
 @media (max-width: 1023px) {
 	#site_container.go .section_app .copy {
@@ -6939,10 +6916,6 @@ em {
 		text-indent: 0;
 		text-transform: uppercase;
 		text-align: left;
-		color: rgba(90,225,200,1.0);
-		color: rgba(255,255,255,1.0);
-
-		text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
 	}
 	#site_container.go .section_app .copy p {
 		display: block;
@@ -6961,8 +6934,6 @@ em {
 		text-indent: 0;
 		text-transform: none;
 		text-align: left;
-		color: rgba(75,210,190,1.0);
-		color: rgba(255,255,255,1.0);
 	}
 
 	#site_container.go .section_app .copy img.iphone_app {
@@ -7036,7 +7007,7 @@ em {
 	position: relative;
 	min-height: 700px;
 	margin: 0 0 0 0;
-	padding: 0 0 0 0;
+	padding: 0 0 30px 0;
 	background-color: rgba(6,216,159,1.0);
 	background-color: #50d7ec;
 	background-image: url(../../assets/images/go_section_forum__background_1.jpg);
@@ -7148,7 +7119,7 @@ em {
 }
 
 @media (max-width: 1023px) {
-	#site_container.go .section_app .copy {
+	#site_container.go .section_forum .copy {
 		display: block;
 		position: relative;
 		width: 100%;
@@ -7157,7 +7128,7 @@ em {
 		margin: 0 auto 0 auto;
 		padding: 100px 60px 0 60px;
 	}
-	#site_container.go .section_app .copy h3 {
+	#site_container.go .section_forum .copy h3 {
 		display: block;
 		position: relative;
 		width: 60%;
@@ -7179,7 +7150,7 @@ em {
 
 		text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
 	}
-	#site_container.go .section_app .copy p {
+	#site_container.go .section_forum .copy p {
 		display: block;
 		position: relative;
 		width: 50%;
@@ -7199,9 +7170,12 @@ em {
 		color: rgba(75,210,190,1.0);
 		color: rgba(255,255,255,1.0);
 	}
+	#site_container.go .section_forum {
+		min-height: 300px;
+	}
 }
 @media (max-width: 767px) {
-	#site_container.go .section_app .copy {
+	#site_container.go .section_forum .copy {
 		display: block;
 		position: relative;
 		width: 100%;
@@ -7210,7 +7184,7 @@ em {
 		padding: 60px 20px 0 20px;
 	
 	}
-	#site_container.go .section_app .copy h3 {
+	#site_container.go .section_forum .copy h3 {
 		width: 100%;
 		margin: 0 0 10px 0;
 		padding: 0 0 0 0;
@@ -7219,7 +7193,7 @@ em {
 		line-height: 36px;
 		text-align: center;
 	}
-	#site_container.go .section_app .copy p {
+	#site_container.go .section_forum .copy p {
 		width: 100%;
 		margin: 0 0 0 0;
 		padding: 0 0 20px 0;
