@@ -225,39 +225,19 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					</div>
 					<div class="instructions answer_active" style="display: block;">
 						<div class="copy">
-							<h3><span>1. </span>Before doing anything you need to charge your Jewelbot.</h3>
-							<ul>
-								<li>
-									<p>Your Jewelbots have traveled a long way to get to you! Plug your Jewelbot in to a computer or a outlet via the micro USB included in your package.</p>
-								</li>
+							<h3><span></span>Before doing anything you need to charge your Jewelbot.</h3>
 
-							</ul>
-							<h3><span>2. </span>Turn on your Jewelbot</h3>
-							<ul>
-								<li>
-									<p>Press the magic button of your Jewelbot.</p>
-								</li>
-								<li>
-									<p>Note: It should light up in rainbow animation mode and vibrate to show it turning on.</p>
-								</li>
-							</ul>
+							<h3><span>1. </span>Lift the charm to reveal micro USB opening</h3>
 
-							<h3><span>3. </span>Remove the charm from your Jewelbot</h3>
-							<ul>
-								<li>
-									<p>Lift charm vertically upward to reveal micro USB opening.</p>
-								</li>
-							</ul>
+							<h3><span>2. </span>Plug your Jewelbot into a power source using a USB cord</h3>
 
-							<h3><span>4. </span>Plug your Jewelbot into a power source using the USB cable</h3>
-							<ul>
-								<li>
-									<p>A red light should appear if charging.</p>
-								</li>
-								<li>
-									<p>When your bot is fully changed, the light will turn green!</p>
-								</li>
-							</ul>
+							<h3><span>3. </span>Press the Magic Button of your Jewelbot</h3>
+								<p>If you are charing your Jewelbot for the first time ever, this step is unecessary. Your Jewelbot will turn on automatically with a rainbow animation and then a red notification light.</p>
+								<p> If not, then make sure your Jewelbot is on when charging in order to get the red notificaiton light.</p>
+
+							<h3>Full charge: 2 hours. Minimum charge: 5 minutes.</h3>
+							  <p>Jewelbot can be turned on after 5 minutes, but immediate usage will have to continue while still plugged in.</p>
+
 						</div><!--//copy -->
 						<div class="video">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/bGhUdu-akh0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -266,49 +246,91 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
 				</div><!--// CHARGE instruction_container -->
+				
 				<div class="instruction_container">
 					<div class="topic">
-						<h2>How to Pair Your Jewelbot with Another?</h2>
+						<h2>How do I update my Jewelbots' firmware?</h2>
 						<!--<p></p>-->
 					</div>
 					<div class="instructions">
 						<div class="copy">
-							<h3><span>1. </span>Turn on your Jewelbot</h3>
-							<ul>
-								<li>
-									<p>Press the magic button of your Jewelbot.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>It should light up in rainbow animation mode and vibrate to show it turning on.</p>
-								</li>
-							</ul>
-							<h3><span>2. </span>Put your device in Pairing Mode</h3>
-							<ul>
-								<li>
-									<p>Hold down the magic button for about 3 seconds.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>It should light up with all white LEDs.</p>
-								</li>
-							</ul>
-							<h3><span>3. </span>Choose a Jewelbot friend to pair with</h3>
-							<ul>
-								<li>
-									<p>Be within two feet of another Jewelbot in pairing mode.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>When both devices have found each other, they will start cycling through single colors.</p>
-								</li>
-							</ul>
-							<h3><span>4. </span>Pair your Jewelbots</h3>
-							<ul>
-								<li>
-									<p>Select one color to be your “friendship color” and push the magic button when it shows up in the cycle.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>Must select the same color to be correctly paired. Restart from step 2 if an error occurs.</p>
-								</li>
-							</ul>
+							<h3><span>1. </span>Install the Arduino Software (IDE)</h3>
+								<p>a. <a href="https://www.arduino.cc/en/Guide/Windows" target="_blank">Windows</a>
+								<br>b. <a href="https://www.arduino.cc/en/Guide/MacOSX" target="_blank">Mac OS X</a></p>
+
+							<h3><span>2. </span>Open the Arduino preferences</h3>
+								<p><b>a. Windows</b> File > Preferences
+								<br><b>b. Mac OS</b> Arduino > Preferences</p>
+
+
+							<h3><span>3. </span>Find the box for "Additional Boards Manager URL"</h3>
+
+							<h3><span>4. </span>Copy and paste the following into the box:</h3>
+								<p> https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json</p>
+							<h3><span>5. </span>Click "okay".</h3>
+
+							<h3><span>6.</span> Restart your Arduino IDE </h3>
+								<p>(close it and reopen the program)</p>
+							<h3><span>7.</span> From the Tools menu, scroll over <i>"Board:"</i> and then select <i>"Boards Manager"</i>.</h3>
+
+							<h3><span>8. </span> Type in "j" in the "Filter your search" box to quickly find the Jewelbots Boards</h3>
+
+							<h3><span>9. </span> Click anywhere in the box for "Jewelbots Firmware Update" to display the "Install" button.</h3>
+								<p>a. While you are here, you can also install the "Jewelbots Arduino Library" and be ready to code your Jewelbot after updating your firmware!</p>
+
+							<h3><span>10. </span> Click on the "Install" button to download.</h3>
+
+							<h3><span>11. </span> Restart your Arduino IDE once more.</h3>
+
+							<h3><span>12. </span> Hit the "New" button for a blank Arduino Sketch.</h3>
+
+							<h3><span>13. </span>Go to the Tools menu again, scroll over <i>"Board:"</i> and selet <i>"Jewelbots Firmware Update"</i>.</h3>
+
+							<h3><span>14. </span> Go to the Tools menu and select the correct port for the Jewelbot. It is easiest if the Jewelbot is the only USB device plugged into the computer.	</h3>
+								<p><b>a. Windows:</b> Select the correct COM XX port
+								<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
+
+							<h3><span>15. </span> Press and hold the Magic Button for more than 2 seconds while your Jewelbot is plugged in	</h3>
+								<p>Note that the charging light (red or green) will turn off </p>
+
+							<h3><span>16. </span>Press the “Upload” button to load the new firmware onto your Jewelbot. </h3>
+							<h3><span>17. </span>During the update, in the Arduino output window (the black space), orange text will be displayed. When completed, it will show “Device Programmed”. The Jewelbot will reboot and display the rainbow animation.</h3>
+								<p>For Mac OS users, it will say “failed to execute script --main--”. Ignore that. </p>
+
+							<h3><span>18. </span>Now your Jewelbot is fully updated! Congrats! </h3>
+
+						</div><!--//copy -->
+						<div class="video">
+
+						</div><!--//video -->
+						<div class="clear"></div>
+						<div class="hr dashed"></div>
+					</div><!--//instructions -->
+				</div><!--// FIMRWARE instruction_container -->
+
+
+				<div class="instruction_container">
+					<div class="topic">
+						<h2>How to pair your Jewelbot with a friend?</h2>
+						<!--<p></p>-->
+					</div>
+					<div class="instructions">
+						<div class="copy">
+							<h3><span>1. </span>Turn on your Jewelbot by pressing the Magic Button</h3>
+						  	<p>It should light in rainbow animation mode and vibrate to show it turning on.  </p>
+
+							<h3><span>2. </span>Put your device in Pairing Mode by holding down the Magic button for 3 seconds</h3>
+								<p>It should light up with all white LEDs. Also, remember it's 3 full seconds (1 mississippi...2 mississippi...)! </p>
+
+							<h3><span>3. </span>Find a friend to pair your Jewelbot with and be within two feet of each other.</h3>
+								<p> When both devies have found each other in pairing mode, they will start cycling through single colors.</p>
+
+							<h3><span>4. </span>Choose a Friendship Color! Make each friend unique by picking different colors.</h3>
+								<p>The Jewelbot will cycle through 4 colors that are your Friendship Color options.</p>
+
+							<h3><span>5. </span>Push the Magic Button when your Friendship Color shows up in the cycle.</h3>
+								<p>Must select the same color to be correctly paired. Restart from step 2 if an error occurs.</p>
+
 						</div><!--//copy -->
 						<div class="video">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/pQFnPt3i_Bk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -317,50 +339,30 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
 				</div><!--// PAIR instruction_container -->
+
 				<div class="instruction_container">
 					<div class="topic">
-						<h2>How to Send Secret Messages?</h2>
+						<h2>How to send Secret Messages?</h2>
 						<!--<p></p>-->
 					</div>
 					<div class="instructions">
 						<div class="copy">
-							<h3><span>1. </span>Turn on your Jewelbot</h3>
-							<ul>
-								<li>
-									<p>Press the magic button of your Jewelbot.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>It should light up in rainbow animation mode and vibrate to show it turning on.</p>
-								</li>
-							</ul>
-							<h3><span>2. </span>Put your Jewelbot in Messaging Mode</h3>
-							<ul>
-								<li>
-									<p>Press the magic button once</p>
-								</li>
-								<li>
-									<p><em>Note: </em> Your device should start cycling through the “friendship colors” that are nearby.</p>
-								</li>
-							</ul>
-							<h3><span>3. </span>Choose a friendship color group to send to</h3>
-							<ul>
-								<li>
-									<p>Press the magic button when the Jewelbot cycles to the color group you want to send a message to.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>This means the message will be sent to everyone with that friendship color.</p>
-								</li>
-							</ul>
-							<h3><span>4. </span>Send a message</h3>
-							<ul>
-								<li>
-									<p>Press the magic button to send vibration taps to your friends.</p>
-									<p>It can either be in the form of a long, where you press and hold for 2-3 seconds, or a short, where you press and hold for 1 second.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>To send another message, you’ll have to start from step one each time.</p>
-								</li>
-							</ul>
+							<p>It’s fun to send secret messages to your friends with Jewelbots! Make sure you pair up with your friends in order to messsage with them. Refer to the “How to pair your Jewelbot” section.
+</p>
+							<h3><span>1. </span>Turn on your Jewelbot by pressing the Magic Button</h3>
+								<p>It should light up in rainbow animation mode to show it turning on.</p>
+
+							<h3><span>2. </span>Put your Jewelbot in Messaging Mode by pressing the Magic Button again.</h3>
+								<p>Your device should start cycling through the "Friendship Colors" that are nearby.</p>
+
+							<h3><span>3. </span>Press the Magic Button when your Jewelbot cycles to the Friendshi Color you want to send a message to.</h3>
+								<p>This means the message will be sent to the friend who you paired with in one of the 4 colors.</p>
+
+							<h3><span>4. </span>Press the Magic Button to send vibration taps to your friends!</h3>
+								<p>It can be a series of taps iin the form of a long, where you press and hold for 2-3 seconds, or a short, where you press and hold for 1 second.</p>
+
+							<h3><span>5. </span>To send another message, start from step one each time.</h3>
+
 						</div><!--//copy -->
 						<div class="video">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/cxUZdo2bC-4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -369,9 +371,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
 				</div><!--// MESSAGE instruction_container -->
+
 				<div class="instruction_container">
 					<div class="topic">
-						<h2>How to change Charms and Bands</h2>
+						<h2>How to change Charms and Bands?</h2>
 						<!--<p></p>-->
 					</div>
 					<div class="instructions">
@@ -385,75 +388,40 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
 				</div><!--// BAND/CHARM instruction_container -->
-				<div class="instruction_container">
-					<div class="topic">
-						<h2>How Do I Code My Jewelbot?</h2>
-						<!--<p></p>-->
-					</div>
-					<div class="instructions">
-						<div class="copy">
-							<h3><span>1. </span>Install the Arduino Software (IDE)</h3>
-							<ul>
-								<li>
-									<p>a. <a href="https://www.arduino.cc/en/Guide/Windows" target="_blank">Windows</a></p>
-									<p>b. <a href="https://www.arduino.cc/en/Guide/MacOSX" target="_blank">Mac OS X</a></p>
-									<p>c. <a href="https://www.arduino.cc/en/Guide/Linux" target="_blank">Linux</a></p>
-									<p>d. <a href="https://www.arduino.cc/en/Guide/PortableIDE" target="_blank">Portable IDE</a></p>
-								</li>
-								<li>
-									<p>Note: It should light up in rainbow animation mode and vibrate to show it turning on.</p>
-								</li>
-							</ul>
 
-							<h3><span>2.</span>Remove the charm from your Jewelbot</h3>
-							<ul>
-								<li>
-									<p>Lift charm vertically upward to reveal micro USB opening.</p>
-								</li>
-							</ul>
-							<h3><span>2.</span>Become familiar with the Arduino language</h3>
-							<ul>
-								<li>
-									<p>a. Arduino programs can be divided into three main parts: structure, values (variables and constants), and functions.</p>
-									<p>b. Here is an <a href="https://www.arduino.cc/en/Reference/HomePage" target="_blank">Arduino language reference table</a></p>
-								</li>
-							</ul>
-							<h3><spand>3. </spand>Add the Jewelbots Board to Your Arduino IDE</h3>
-							<ul>
-								<li>
-									<p>a. From the menu, click “preferences”</p>
-									<p>b. Find “Additional Boards Manager URL” and add the following: <a href="http://jewelbots.github.io/arduino-library/package_jewelbots_index.json" target="_blank">http://jewelbots.github.io/arduino-library/package_jewelbots_index.json</a></p>
-									<p>c. Click “Okay” and restart your Arduino IDE</p>
-									<p>d. From the Tools menu, scroll over “board:” and then select “Boards Manager”.</p>
-									<p>e. Find “Jewelbots nRF51822 Boards (32-bit ARM Cortex-M0)” and click to install it.</p>
-									<p>f. Restart your Arduino IDE once more.</p>
-									<p>g. Go to the Tools menu again, scroll over “board:” and select “JWB nRF51822(V1.0 32KB)”</p>
-								</li>
-							</ul>
-							<h3><span>4. </span>Plug in your Jewelbot to your computer</h3>
-							<ul>
-								<li>
-									<p>a. Lift the charm up to reveal the micro USB port and use your USB cable to connect the Jewelbot to your computer.</p>
-								</li>
-							</ul>
-							<h3><span>5. </span>Put your Jewelbot into Programming Mode</h3>
-							<ul>
-								<li>
-									<p>Press and hold the Magic Button for 5 seconds while your Jewelbot is plugged in.</p>
-								</li>
-								<li>
-									<p><em>Note: </em>All the LEDs should glow purple if done correctly.</p>
-								</li>
-							</ul>
-							<h3><span>6. </span>Now you can code on your Jewelbot!</h3>
-							<ul>
-								<li>
-									<p>Yay!</p>
-								</li>
-							</ul>
-							<h3><span>7. </span>Optional: Try out this sample test code.</h3>
-							<ul>
-								<li>
+
+			<div class="instruction_container">
+				<div class="topic">
+					<h2>How to code your Jewelbot?</h2>
+					<!--<p></p>-->
+				</div>
+				<div class="instructions">
+					<div class="copy">
+						<h3><span>1. </span>Install the Arduino Software (IDE)</h3>
+							<p>a. <a href="https://www.arduino.cc/en/Guide/Windows" target="_blank">Windows</a>
+							<br>b. <a href="https://www.arduino.cc/en/Guide/MacOSX" target="_blank">Mac OS X</a></p>
+
+						<h3><span>2. </span>Add the Jewelbot Board to your Arduino IDE</h3>
+							<p>If you didn't already install it when updating your firmware </p>
+							<p>
+								a. From the menu, click "preferences".
+								<br>b. Find the "Additional Boards Manager URL" and add the following: http://jewelbots.github.io/arduino-library/package_jewelbots_index.json </li>
+								<br>c. Click "Okay" and restart your Arduino IDE.
+								<br>d. From the Tools menu, scroll over "board:" and then select "Boards Manager".
+								<br>e. Find the ""Jewelbots Arduino Library" and click to install it.
+								<br>f. Restart your Arduino IDE once more.
+								<br>g. Go to the Tools menu again, scroll over "Board:" and select "JWB nRF51822(V1.0 32KB)"
+						</p>
+						<h3><span>3. </span>Plug in your Jewelbot to your computer</h3>
+							<p> Lift the charm up to reveal the micro USB port and use your USB cable to connect the Jewelbot to your computer</p>
+
+						<h3><span>4. </span> Go to the Tools menu and select the correct port for the Jewelbot. 	</h3>
+							<p><b>a. Windows:</b> Select the correct COM XX port
+							<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
+
+							<h3><span>6. </span>Now you can code on your Jewelbot! Try out this sample test code.</h3>
+							<p> Copy and paste the sample test code into the Arduino IDE as a new sketch.</p>
+
 									<p>This makes one of the LEDs on your Jewelbot turn blue:</p>
 									<p class="code">
 										<em>
@@ -469,23 +437,24 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 											}<br />
 										</em>
 									</p>
-								</li>
-							</ul>
-							<h3><span>8. </span>Having issues with programming in Arduino IDE?</h3>
-							<ul>
-								<li>
-									<p>Here is the troubleshooting guide: <a href="https://www.arduino.cc/en/Guide/Troubleshooting" target="_blank">https://www.arduino.cc/en/Guide/Troubleshooting</a></p>
-									<p><strong>Jewelbots Github - </strong>Here is our Arduino library: <a href="https://github.com/Jewelbots/arduino-library" target="_blank"></a></p>
-								</li>
-							</ul>
-						</div><!--//copy -->
-						<div class="video">
 
-						</div><!--//video -->
-						<div class="clear"></div>
-					</div><!--//instructions -->
-				</div><!--// CODE instruction_container -->
-			</div><!--//section_instructions -->
+					<h3><span>7. </span>	Test out more code combinations by changing the variables in the “led.on(int, string, time)” method!</h3>
+							<p> The int section can be from 0-3, basic
+									colors are available, and time is in milliseconds.
+							</p>
+ 					<h3><span>8. </span> Learn more about coding your Jewelbot here on the forums!</h3>
+
+
+
+
+					</div><!--//copy -->
+					<div class="video">
+					</div><!--//video -->
+					<div class="clear"></div>
+					<div class="hr dashed"></div>
+				</div><!--//instructions -->
+			</div><!--// CODE instruction_container -->
+		</div><!--//section_instructions -->
 
 
 			<div class="section_forum">
