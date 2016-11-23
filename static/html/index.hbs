@@ -4841,13 +4841,13 @@
 			}
 			if(state=='size'){
 				//-- 2: size video
-			//	if($(window).width() > 1024){
-			///		$('.index .section_code').css('height', $('.index .section_code').width() /1.78 );
-			//		$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
-			//	} else {
+				if($(window).width() > 480){
 					$('.index .section_code').css('height', 'auto' );
 					$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
-			//	}
+				} else {
+					$('.index .section_code').css('height', 'auto' );
+					$('.index .section_code #code_video_iframe').css('height', 260 );
+				}
 			}
 		}
 	</script>
