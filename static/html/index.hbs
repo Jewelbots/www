@@ -294,6 +294,19 @@
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
 		}
+		#site_container .section_header .header_default img.logo_mobile {
+			display: none;
+			position: relative;
+			float: left;
+			width: 70px;
+			height: 70px;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			background-color: rgba(40,240,210,0.5);
+
+			text-indent: -999px;
+			overflow: hidden;
+		}
 
 		#site_container .section_header .header_default ul.navigation {
 			display: block;
@@ -453,7 +466,7 @@
 			right: 30px;
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
-			background-color: rgba(255,60,0,1.0);
+			background-color: rgba(80,215,235,1.0);
 
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
@@ -541,6 +554,9 @@
 		#site_container .section_header .header_sticky img.logo_wordmark {
 			display: none;
 		}
+		#site_container .section_header .header_default img.logo_mobile {
+			display: none;
+		}
 
 		#site_container .section_header .header_sticky ul.navigation {
 			height: 70px;
@@ -567,26 +583,12 @@
 
 
 		#site_container .section_header .header_sticky a.cta_preorder {
-			right: 140px;
+			right: 30px;
 			top: 15px;
 
 			opacity: 1.0;
 		}
 		#site_container .section_header .header_sticky a.cta_preorder:hover {}
-		#site_container .section_header .header_sticky a.cta_newsletter {
-			right: 30px;
-			opacity: 1.0;
-			top: 15px;
-			border: solid 2px rgba(255,255,255,1.0);
-			background-color: rgba(100,100,100,0.0);
-		}
-		#site_container .section_header .header_sticky a.cta_newsletter:hover {}
-		#site_container .section_header .header_sticky a.cta_preorder_counter {
-			right: 30px;
-			opacity: 1.0;
-			top: 15px;
-		}
-		#site_container .section_header .header_sticky a.cta_preorder_counter:hover {}
 
 		/*
 		#site_container .section_header .header_sticky a.cta_preorder {
@@ -597,7 +599,7 @@
 		}
 		#site_container .section_header .header_sticky a.cta_preorder:hover {}
 		#site_container .section_header .header_sticky a.cta_newsletter {
-
+	
 			right: 30px;
 			opacity: 1.0;
 			top: 15px;
@@ -615,24 +617,14 @@
 			#site_container .section_header .header_sticky img.logo_icon_large {}
 			#site_container .section_header .header_sticky img.logo_wordmark {}
 
-			#site_container .section_header .header_sticky ul.navigation {
-				display: none;
-			}
+			#site_container .section_header .header_sticky ul.navigation {}
 			#site_container .section_header .header_sticky ul.navigation li {}
 			#site_container .section_header .header_sticky ul.navigation li a {}
 			#site_container .section_header .header_sticky ul.navigation li a:hover {}
 
 			#site_container .section_header .header_sticky a.cta_preorder {}
 			#site_container .section_header .header_sticky a.cta_preorder:hover {}
-			#site_container .section_header .header_sticky a.cta_newsletter {
-				width: auto;
-				padding: 0 15px 0 15px;
-				right: 15px;
-				opacity: 1.0;
-				top: 15px;
-				border: solid 2px rgba(255,255,255,1.0);
-				background-color: rgba(100,100,100,0.0);
-			}
+			#site_container .section_header .header_sticky a.cta_newsletter {}
 			#site_container .section_header .header_sticky a.cta_newsletter:hover {}
 			#site_container .section_header .header_sticky a.cta_preorder_counter {}
 			#site_container .section_header .header_sticky a.cta_preorder_counter:hover {}
@@ -640,29 +632,68 @@
 		@media (max-width: 767px) {
 			#site_container .section_header .header_sticky {}
 
-			#site_container .section_header .header_sticky img.logo_icon_small {}
+			#site_container .section_header .header_sticky img.logo_icon_small {
+				display: none;
+			}
 			#site_container .section_header .header_sticky img.logo_icon_large {}
 			#site_container .section_header .header_sticky img.logo_wordmark {}
+			#site_container .section_header .header_default img.logo_mobile {
+				display: block;
+				cursor: pointer;
+			}
 
-			#site_container .section_header .header_sticky ul.navigation {}
-			#site_container .section_header .header_sticky ul.navigation li {}
-			#site_container .section_header .header_sticky ul.navigation li a {}
+			#site_container .section_header .header_sticky ul.navigation {
+				display: none;
+				position: relative;
+				width: 100%;
+				height: auto;
+				padding: 20px 20px 20px 5px;
+				background-color: rgba(40,220,190,1.0);
+
+			}
+			#site_container .section_header .header_sticky ul.navigation li {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 0 auto 0 auto;
+				padding: 0 0 0 0;
+			}
+			#site_container .section_header .header_sticky ul.navigation li a {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 15px auto 15px auto;
+				padding: 0 10px 0 10px;
+
+				font-family: "museo-sans", sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 30px;
+				letter-spacing: 0px;
+				text-indent: 0px;
+				text-transform: uppercase;
+				text-align: center;
+				color: rgba(255,255,255,1.0);
+			}
+			#site_container .section_header .header_sticky ul.navigation li a.active {
+				border-bottom: solid 2px rgba(255,255,255,0.6);
+			}
 			#site_container .section_header .header_sticky ul.navigation li a:hover {}
 
 			#site_container .section_header .header_sticky a.cta_preorder {
 				right: 15px;
 			}
 			#site_container .section_header .header_sticky a.cta_preorder:hover {}
-			#site_container .section_header .header_sticky a.cta_preorder_counter {
-				display: none;
-			}
-			#site_container .section_header .header_sticky a.cta_preorder_counter:hover {}
 		}
 		/* @end */
 
 
 
 		/* @end */
+
 		/* @group ----- section_footer ------------------ */
 		#site_container .section_footer {
 			display: block;
@@ -1931,6 +1962,9 @@
 			#site_container.index .section_code .left div.cta_preorder:hover {}
 		}
 		@media (max-width: 767px) {
+			#site_container.index .section_code {
+				margin: 70px 0 0 0;
+			}
 			#site_container.index .section_code iframe#code_video_iframe {
 				margin: 0 0 0px 0;
 			}
@@ -2081,10 +2115,18 @@
 		#site_container.index .section_how ul.powerofcoding {
 			display: block;
 			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 60px 0 0 0;
+			padding: 0 0 0 0;
+			/*
+			display: block;
+			position: relative;
 			width: 50%;
 			height: auto;
 			margin: 60px 0 0 35%;
 			padding: 0 0 0 0;
+			*/
 		}
 		#site_container.index .section_how ul.powerofcoding li {
 			display: inline-block;
@@ -2212,10 +2254,10 @@
 			}
 		}
 		@media (max-width: 1023px) {
-			#site_container.index .section_how ul.powerofcoding {
+			/*#site_container.index .section_how ul.powerofcoding {
 				width: 60%;
 				margin: 20px 0 0 40%;
-			}
+			}*/
 			#site_container.index .section_how ul.powerofcoding li {
 				width: 50%;
 				min-height: 150px;
@@ -4214,6 +4256,7 @@
 						<img class="logo_icon_large" src="assets/images/index_section_header__icon_large.png" />
 						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
 					</a>
+					<img class="logo_mobile" src="assets/images/index_section_header__icon_small.png" />
 					<ul class="navigation">
 						<li><a href="javascript:void;" onClick="scroll('.section_overview','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
 						<li><a href="javascript:void;" onClick="scroll('.section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
@@ -4326,13 +4369,13 @@
 				<p>Their paired Jewelbots light up when they are close by. They then can send each other secret buzz codes.</p>
 				<img class="jewelbots" src="assets/images/index_section_how__2.gif" />
 				<h4>3. Learn how to code through the power of friendship </h4>
-				<p>Get the app and add more features through basic If/Then statements.<br />
-				Want more? Connect your Jewelbot to a computer and upload our Jewelbot mods or develop your own custom code.</p>
+				<p><!--Get the app and add more features through basic If/Then statements.<br />
+				Want more? -->Connect your Jewelbot to a computer and upload our Jewelbot mods or develop your own custom code.</p>
 				<!--<img class="jewelbots" src="assets/images/index_section_how__3.gif" />-->
-				<div class="app">
+				<!--<div class="app">
 					<img class="iphone" src="assets/images/index_section_code__iphone.png" />
 					<img class="iphone_app" src="assets/images/index_section_code__iphone_app.gif" />
-				</div>
+				</div>-->
 				<ul class="powerofcoding">
 					<li><img src="assets/images/index_section_features__sms.png" />Send SMS/email</li><!--
 				 --><li><img src="assets/images/index_section_features__social.png" />Social media integration</li><!--
@@ -4441,8 +4484,11 @@
 						<li>
 								<img src="assets/images/new_index_section_features__icon_3.png" />
 								<h5>Jewelbots App</h5>
-								<p>
+								<!--<p>
 									Our innovative Jewelbots App allows kids without prior coding experience to learn the fundamentals of computer science and to create their own Jewelbots functions.
+								</p>-->
+								<p>
+									Coming Soon! The Jewelbots App. You don’t need the app to play with your Jewelbots, it’s just another fun way to engage! Be sure to sign up for our email list so you know when it’s ready.
 								</p>
 						</li><!--
 					 --><li>
@@ -4614,6 +4660,7 @@
 			//	index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
 			index_section_code('playvideo'); /* uncomment iframe in hero section to play it */
 			$(window).resize(); //-- and force
+			header();
 		});
 
 		$(window).scroll(function(){
@@ -4623,6 +4670,7 @@
 
 		$(window).resize(function(){
 			index_section_code('size');
+			header();
 		});
 
 		$(window).bind('orientationchange', function(event) {
@@ -4642,12 +4690,19 @@
 		//
 		//-- header(state) -------------------------------------------------------//
 		function header(state){
-			if($(window).scrollTop() > 1){
-				$('.index .header_default').addClass('header_sticky');
+			if($(window).width() > 768){
+				if($(window).scrollTop() > 1){
+					$('.index .header_default').addClass('header_sticky');
+				} else {
+					$('.index .header_default').removeClass('header_sticky');
+				}
 			} else {
-				$('.index .header_default').removeClass('header_sticky');
+				$('.index .header_default').addClass('header_sticky');
 			}
 		}
+		$('.logo_mobile').click(function() {
+			$('.header_sticky ul.navigation').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ });
+		});
 		//
 		//
 		//-- modal_newsletter(state) ---------------------------------------------//
@@ -4830,13 +4885,13 @@
 			}
 			if(state=='size'){
 				//-- 2: size video
-			//	if($(window).width() > 1024){
-			///		$('.index .section_code').css('height', $('.index .section_code').width() /1.78 );
-			//		$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
-			//	} else {
+				if($(window).width() > 480){
 					$('.index .section_code').css('height', 'auto' );
 					$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
-			//	}
+				} else {
+					$('.index .section_code').css('height', 'auto' );
+					$('.index .section_code #code_video_iframe').css('height', 260 );
+				}
 			}
 		}
 	</script>

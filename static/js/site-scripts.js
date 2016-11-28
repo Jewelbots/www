@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	index_section_hero('playvideo'); /* uncomment iframe in hero section to play it */
 	$(window).resize(); //-- and force
+	header();
 });
 
 $(window).scroll(function(){
@@ -40,10 +41,14 @@ function scroll(id, shift){
 //
 //-- header(state) -------------------------------------------------------//
 function header(state){
-	if($(window).scrollTop() > 1){
-		$('.header_default').addClass('header_sticky');
+	if($(window).width() > 768){
+		if($(window).scrollTop() > 1){
+			$('.go .header_default').addClass('header_sticky');
+		} else {
+			$('.go .header_default').removeClass('header_sticky');
+		}
 	} else {
-		$('.header_default').removeClass('header_sticky');
+		$('.go .header_default').addClass('header_sticky');
 	}
 }
 //

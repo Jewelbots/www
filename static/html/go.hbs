@@ -117,9 +117,8 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<img class="logo_icon_large" src="assets/images/index_section_header__icon_large.png" />
 						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
 					</a>
+					<img class="logo_mobile" src="assets/images/index_section_header__icon_small.png" />
 					<ul class="navigation">
-						<li><a href="javascript:void;" onClick="scroll('.section_overview','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
-						<li><a href="javascript:void;" onClick="scroll('.section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
 						<li><a href="/go.html" target="_self">Getting Started</a></li>
 						<li><a href="http://alpha.jewelbots.com" target="_self">Community</a></li>
 						<li><a href="/contact.html" target="_self">Support</a></li>
@@ -147,7 +146,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				<h3>Meet your Jewelbot</h3>
 				<p class="subheadline">These are the key parts that make up your Jewelbot:</p>
 				<a class="specs" href="javascript:void;" onClick="javascript:go_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'});">See full specifications</a>
-				<img class="overview" src="assets/images/go_section_meet__background_1.jpg" />
+				<img class="overview large" src="assets/images/go_section_meet__background_1_large.jpg" />
+				<img class="overview medium" src="assets/images/go_section_meet__background_1_medium.jpg" />
+				<img class="overview small" src="assets/images/go_section_meet__background_1_small.jpg" />
 			</div><!--//section_meet -->
 
 			<div class="section_specs" id="section_specs">
@@ -826,12 +827,19 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		//
 		//-- header(state) -------------------------------------------------------//
 		function header(state){
-			if($(window).scrollTop() > 1){
-				$('.go .header_default').addClass('header_sticky');
+			if($(window).width() > 768){
+				if($(window).scrollTop() > 1){
+					$('.go .header_default').addClass('header_sticky');
+				} else {
+					$('.go .header_default').removeClass('header_sticky');
+				}
 			} else {
-				$('.go .header_default').removeClass('header_sticky');
+				$('.go .header_default').addClass('header_sticky');
 			}
 		}
+		$('.logo_mobile').click(function() {
+			$('.header_sticky ul.navigation').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ });
+		});
 		//
 		//
 		//-- modal_newsletter(state) ---------------------------------------------//
