@@ -253,9 +253,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<h2>How do I update my Jewelbots' firmware?</h2>
 						<!--<p></p>-->
 					</div>
+
 					<div class="instructions">
 						<div class="copy">
+
 							<p>Firmware is the code that lives on your Jewelbot. Anytime there is a new update available, you’ll need to update your firmware! We encourage you to always keep your Jewelbot updated, so you can have minimal bugs and the newest features!</p>
+
 							<h3><span>1. </span>Install the Arduino Software (IDE)</h3>
 								<p>a. <a href="https://www.arduino.cc/en/Guide/Windows" target="_blank">Windows</a>
 								<br>b. <a href="https://www.arduino.cc/en/Guide/MacOSX" target="_blank">Mac OS X</a></p>
@@ -264,9 +267,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<h3><span>2. </span>Open the Arduino preferences</h3>
 								<p><b>a. Windows</b> File > Preferences
 								<br><b>b. Mac OS</b> Arduino > Preferences</p>
-
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab1.jpg" />
 
 							<h3><span>3. </span>Find the box for "Additional Boards Manager URL"</h3>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab2.png" />
 
 							<h3><span>4. </span>Copy and paste the following into the box:</h3>
 								<p> https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json</p>
@@ -274,9 +278,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 
 							<h3><span>6.</span> Restart your Arduino IDE </h3>
 								<p>(close it and reopen the program)</p>
+
 							<h3><span>7.</span> From the Tools menu, scroll over <i>"Board:"</i> and then select <i>"Boards Manager"</i>.</h3>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab3.jpg" />
 
 							<h3><span>8. </span> Type in "j" in the "Filter your search" box to quickly find the Jewelbots Boards</h3>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab4.png" />
 
 							<h3><span>9. </span> Click anywhere in the box for "Jewelbots Firmware Update" to display the "Install" button.</h3>
 								<p>a. While you are here, you can also install the "Jewelbots Arduino Library" and be ready to code your Jewelbot after updating your firmware!</p>
@@ -286,19 +293,25 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<h3><span>11. </span> Restart your Arduino IDE once more.</h3>
 
 							<h3><span>12. </span> Hit the "New" button for a blank Arduino Sketch.</h3>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab5.png" />
 
-							<h3><span>13. </span>Go to the Tools menu again, scroll over <i>"Board:"</i> and selet <i>"Jewelbots Firmware Update"</i>.</h3>
+							<h3><span>13. </span>Go to the Tools menu again, scroll over <i>"Board:"</i> and select <i>"Jewelbots Firmware Update"</i>.</h3>
+								<p>It will most likely appeart at the bottom of the menu of Boards.</p>
 
 							<h3><span>14. </span> Go to the Tools menu and select the correct port for the Jewelbot. It is easiest if the Jewelbot is the only USB device plugged into the computer.	</h3>
 								<p><b>a. Windows:</b> Select the correct COM XX port
+									<img class="screengrab" src="assets/images/go_section_instruction_screengrab6a.png" />
 								<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
+									<img class="screengrab" src="assets/images/go_section_instruction_screengrab6b.png" />
 
-							<h3><span>15. </span> Press and hold the Magic Button for 2 seconds while your Jewelbot is plugged in	</h3>
+							<h3><span>15. </span> Press and hold the Magic Button for 2 seconds while your Jewelbot is plugged in	to put your Jewelbot into Upload Mode.</h3>
 								<p>Note that the charging light (red or green) will turn off. Also, remember it's 2 full seconds (1 mississippi...) </p>
 
 							<h3><span>16. </span>Press the “Upload” button to load the new firmware onto your Jewelbot. </h3>
-							<h3><span>17. </span>During the update, in the Arduino output window (the black space), orange text will be displayed. When completed, it will show “Device Programmed”. The Jewelbot will reboot and display the rainbow animation.</h3>
-								<p>For Mac OS users, it will say “failed to execute script --main--”. Ignore that. </p>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab7.jpg" />
+							<h3><span>17. </span>During the update, in the Arduino output window (the black space), orange text will be displayed. When completed, it will show “Device Programmed”.</h3>
+								<p> The Jewelbot will reboot and display the rainbow animation.
+									<br> Note: For Mac OS users, it will say “failed to execute script --main--”. Ignore that. </p>
 
 							<h3><span>18. </span>Now your Jewelbot is fully updated! Congrats! </h3>
 
@@ -401,6 +414,8 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				</div>
 				<div class="instructions">
 					<div class="copy">
+						<p>Before coding, we strongly urge you to make sure you updated your firmware first!!! This is to ensure minimal bugs and gives you the newest features. Please refer to the "How to update your Firmware" section.</p>
+
 						<h3><span>1. </span>Install the Arduino Software (IDE)</h3>
 							<p>a. <a href="https://www.arduino.cc/en/Guide/Windows" target="_blank">Windows</a>
 							<br>b. <a href="https://www.arduino.cc/en/Guide/MacOSX" target="_blank">Mac OS X</a></p>
@@ -409,11 +424,13 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<h3><span>2. </span>Add the Jewelbot Board to your Arduino IDE</h3>
 							<p>If you already instsalled both of the two Jewelbot boards when updating firmware, then you can skip to step 3. </p>
 							<p>
-								a. From the menu, click "preferences".
-								<br>b. Find the "Additional Boards Manager URL" and add the following: http://jewelbots.github.io/arduino-library/package_jewelbots_index.json </li>
+							    	a. From the menu, click "preferences".
+								<br>b. Find the "Additional Boards Manager URL" and add the following: https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json </li>
 								<br>c. Click "Okay" and restart your Arduino IDE.
 								<br>d. From the Tools menu, scroll over "board:" and then select "Boards Manager".
 								<br>e. Find the "Jewelbots Arduino Library" and click to install it.
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab4.png" />
+
 								<br>f. Restart your Arduino IDE once more.
 								<br>g. Go to the Tools menu again, scroll over "Board:" and select "JWB nRF51822(V1.0 32KB)"
 						</p>
@@ -422,7 +439,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 
 						<h3><span>4. </span> Go to the Tools menu and select the correct port for the Jewelbot. 	</h3>
 							<p><b>a. Windows:</b> Select the correct COM XX port
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab6a.png" />
 							<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
+								<img class="screengrab" src="assets/images/go_section_instruction_screengrab6b.png" />
 
 							<h3><span>6. </span>Now you can code on your Jewelbot! Try out this sample test code.</h3>
 							<p> Copy and paste the sample test code into the Arduino IDE as a new sketch.</p>
@@ -442,17 +461,18 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 											}<br />
 										</em>
 									</p>
-					<h3><span>7. </span>Put your Jewelbot into Programmming Mode by plugging in the USB and holding the Magic Button down for two seconds. </h3>
+					<h3><span>7. </span>Before uploading the code, put your Jewelbot into Upload Mode by plugging in the USB and holding the Magic Button down for two seconds. </h3>
 						<p>Remember, two full seconds (1 mississippi...)</p>
-						<p>Either the charging light will go out or your device will flash purple to indicate that coding mode is activated (depending on whether or not you have done the firmware update).</p>
+						<p>Either the charging light will go out (if you did not update your firmware yet) or your device will flash purple and then fade to indicate that coding mode is activated (if you updated your firmware).</p>
 
-					<h3><span>8. </span>  </h3>
+					<h3><span>8. </span> Once the code is uploaded onto your Jewelbot, unplug it to see the results!! </h3>
+						<p>The act of your Jewelbot running your code is it being in Coding Mode! (Isn't that cool?!) </p>
 
 					<h3><span>9. </span>	Test out more code combinations by changing the variables in the “led.on(int, string, time)” method!</h3>
 							<p> The int section can be from 0-3, basic
 									colors are available, and time is in milliseconds.
 							</p>
- 					<h3><span>10. </span> Learn more about coding your Jewelbot here on the forums!</h3>
+ 					<h3><span>10. </span> Learn more about coding your Jewelbot here on the <a href="http://alpha.jewelbots.com/" target="_blank">forums!</a></h3>
 
 
 
@@ -545,6 +565,19 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<h4 class="question">How will I know if my Jewelbot is done charging?</h4>
 						<div class="answer">
 							When fully charged, the Jewelbot will have a green light when the battery is full.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">My Jewelbot is not charging! Why?!</h4>
+						<div class="answer">
+							Some suggestions to solve this would be:
+							<ul>
+							 	<li><span>•</span> Press the Magic Button briefly to make sure your Jewelbot is not in Sleep Mode. Your Jewelbot has to be on in order for it to show notification that it is charging.</li>
+							  <li><span>•</span> Make sure you are using a high quality micro USB; preferably the one we sent with your original package!</li>
+							  <li><span>•</span> Try connecting your Jewelbot to a high quality power source, such as directly to your computer rather than a external USB hub.</li>
+							  <li><span>•</span> Try removing other USB accessories from your computer, and only having the Jewelbot plugged in.</li>
+							</ul>
+							If none of these help, please email us at hi@jewelbots.com
 						</div>
 					</div><!--//question_container -->
 				</div>
