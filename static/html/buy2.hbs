@@ -104,7 +104,7 @@
 		if (kw.length) {
 			params[campaign_keywords[index] + ' [last touch]'] = kw;
 		} else {
-			params[campaign_keywords[index] + ' [last touch]'] = 'www.jewelbots.com';
+			params[campaign_keywords[index] + ' [last touch]'] = 'last not set';
 		}
 	}
 	for (index = 0; index < campaign_keywords.length; ++index) {
@@ -112,7 +112,7 @@
 		if (kw.length) {
 			first_params[campaign_keywords[index] + ' [first touch]'] = kw;
 		} else {
-			params[campaign_keywords[index] + ' [last touch]'] = 'www.jewelbots.com';
+			params[campaign_keywords[index] + ' [first touch]'] = 'first not set';
 		}
 	}
 
