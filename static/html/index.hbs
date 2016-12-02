@@ -243,7 +243,7 @@
 
 		/* @group - header - (default) ------ */
 		#site_container .section_header .header_default {
-			display: block;
+			display: none;
 			position: relative;
 			width: 100%;
 			max-width: 1440px;
@@ -1963,7 +1963,7 @@
 		}
 		@media (max-width: 767px) {
 			#site_container.index .section_code {
-				margin: 70px 0 0 0;
+				margin: 0 0 0 0;
 			}
 			#site_container.index .section_code iframe#code_video_iframe {
 				margin: 0 0 0px 0;
@@ -4251,16 +4251,8 @@
 		<div id="content_container">
 			<div class="section_banner">
 				<h1>
-					Jewelbots now available at <a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank">Target.com</a> and <a href="http://www.mindware.orientaltrading.com/web/browse/processProductsCatalog?sku=13776448" target="_blank">Mindware.com</a>!
+					Jewelbots now available at <a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank">Target.com</a> <a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank"><img src="assets/images/index_target.png"></a>
 				</h1>
-				<ul>
-					<li>
-						<a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank"><img src="assets/images/index_target.png"></a>
-					</li>
-					<li>
-						<a href="http://www.mindware.orientaltrading.com/web/browse/processProductsCatalog?sku=13776448" target="_blank"><img src="assets/images/index_mindware.png"></a>
-					</li>
-				</ul>
 			</div><!--//section_banner -->
 			<style>
 			.section_banner {
@@ -4269,10 +4261,11 @@
 				width: auto;
 				height: auto;
 				margin: 0 0 0 0;
-				padding: 20px 30px 20px 30px;
+				padding: 10px 30px 10px 30px;
 				background: white;
 				text-align: center;
 				z-index: 99999;
+				background-color: #FFF9F4;
 			}
 			.section_banner h1 {
 				display: block;
@@ -4286,7 +4279,7 @@
 				font-style: normal;
 				font-weight: 700;
 				font-size: 20px;
-				line-height: 25px;
+				line-height: 30px;
 				letter-spacing: 0;
 				text-indent: 0;
 				text-transform: none;
@@ -4294,32 +4287,16 @@
 				color: rgba(0,205,180,1.0);
 			}
 			.section_banner a {
-				color: rgba(255,60,0,1.0);
+				color: rgba(200,10,0,1.0);
 			}
-			.section_banner ul {
-				display: block;
-				position: relative;
-				width: auto;
-				height: auto;
-				margin: 20px auto 0 auto;
-				padding: 20px 0 0 0;
-				text-align: center;
-			}
-			.section_banner ul li {
+			.section_banner h1 img {
 				display: inline-block;
 				position: relative;
-				width: 60px;
+				width: 30px;
 				height: auto;
-				margin: 0 20px 0 20px;
+				margin: -2px 0 0 0px;
 				padding: 0 0 0 0;
-			}
-			.section_banner ul li img {
-				display: inline-block;
-				position: relative;
-				width: 100%;
-				height: auto;
-				margin: 0 0 0 0;
-				padding: 0 0 0 0;
+				vertical-align: middle;
 			}
 			</style>
 			<div class="section_header">
