@@ -275,7 +275,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 										<br>This will list all the groups you belong to.
 								<br>b. If you don't belong to the dialout grup then add yourself to it, for example:
 										<br>		sudo gpasswd --add ${USER} dialout
-								<br>c. You then need to resart your computer again for it to be effective.
+								<br>c. You then need to log out and log back in to your computer again for it to be effective.
 
 								</p>
 
@@ -314,13 +314,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 								<p>It will most likely appeart at the bottom of the menu of Boards.</p>
 
 							<h3><span>14. </span> Go to the Tools menu and select the correct port for the Jewelbot. It is easiest if the Jewelbot is the only USB device plugged into the computer.	</h3>
-								<p>a. Windows: Select the correct COM XX port
+								<p><b>a. Windows:</b> Select the correct COM XX port
 									<img class="screengrab" src="assets/images/go_section_instruction_screengrab6a.png" />
-								<br>b. Mac: Select the correct /dev/cu.usberial-XXXXXX
+								<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
 									<img class="screengrab" src="assets/images/go_section_instruction_screengrab6b.png" />
-								<br>c. Linux: Select the correct /dev/ttyUSBX.
-									<img class="screengrab" src="assets/images/go_section_instruction_screengrab10.png" />
-								</p>
 
 							<h3><span>15. </span> Press and hold the Magic Button for 2 seconds while your Jewelbot is plugged in	to put your Jewelbot into Upload Mode.</h3>
 					  			<p>Note that the charging light (red or green) will turn off. Also, remember it's 2 full seconds (1 mississippi...) </p>
@@ -342,10 +339,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 								<br><span>2. </span> Type in "j" in the "Filter your search" box to quickly find the Jewelbots Boards.
 								<img class="screengrab" src="assets/images/go_section_instruction_screengrab4.png" />
 								<br><span>3. </span> Click anywhere in the box for "Jewelbots Firmware Update" to display the "Remove" button.
-
 								<img class="screengrab" src="assets/images/go_section_instruction_screengrab9.jpg" />
 
-								<span>4. </span>  Click "yes" to remove the board.
+								<br><span>4. </span>  Click "yes" to remove the board.
 								<br><span>5. </span>  Click anywhere in the box "Jewelbots Firmware Update"to display the "Install" button again.
 								<br><span>6. </span>  Click "yes" to install the board.
 								<br><span>7. </span>  Continue to "step 11" of the "How do I update my Jewelbots' Firmware?".
@@ -468,7 +464,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 							<br>c. You then need to log out and log back in to your computer again for it to be effective.
 						</p>
 						<h3><span>2. </span>Add the Jewelbot Board to your Arduino IDE</h3>
-							<p>If you already installed both of the two Jewelbot boards when updating firmware, then you can skip to step 3. </p>
+							<p>If you already instsalled both of the two Jewelbot boards when updating firmware, then you can skip to step 3. </p>
 							<p>
 							    	a. From the menu, click "preferences".
 								<br>b. Find the "Additional Boards Manager URL" and add the following: https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json </li>
@@ -487,11 +483,8 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<h3><span>4. </span> Go to the Tools menu and select the correct port for the Jewelbot. 	</h3>
 							<p><b>a. Windows:</b> Select the correct COM XX port
 								<img class="screengrab" src="assets/images/go_section_instruction_screengrab6a.png" />
-							<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX
+							<br><b>b. Mac:</b> Select the correct /dev/cu.usberial-XXXXXX</p>
 								<img class="screengrab" src="assets/images/go_section_instruction_screengrab6b.png" />
-							<br>c. Linux: Select the correct /dev/ttyUSBX.
-								<img class="screengrab" src="assets/images/go_section_instruction_screengrab10.png" />
-							</p>
 
 							<h3><span>6. </span>Now you can code on your Jewelbot! Try out this sample test code.</h3>
 							<p> Copy and paste the sample test code into the Arduino IDE as a new sketch.</p>
@@ -528,24 +521,22 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 
 					<p></p>
 					<p></p>
-
-					<h3>FUTURE JEWELBOTS ARDUINO LIBRARY BOARD UPDATE STEPS</h3>
-						<p>If you wish to update your Arduino Library AGAIN, there is one extra step! </p>
-						<p>It is important to update your Arduino Library. This ensures that any NEW features for programming are added to your Jewelbot! </p>
+					<h3>FUTURE FIRMWARE UPDATE STEPS</h3>
+						<p>If you wish to update your firmware AGAIN, there is one extra step! </p>
+						<p>It is important to update firmware. This ensures that any changes we make to the Jewelbot library are added to your Jewelbot! </p>
 
 						<p><span>1. </span> From the Tools menu, scroll over "Board:" and then select "Boards Manager".
 						<br><span>2. </span> Type in "j" in the "Filter your search" box to quickly find the Jewelbots Boards.
 						<img class="screengrab" src="assets/images/go_section_instruction_screengrab4.png" />
-						<br><span>3. </span> Click anywhere in the box for "Jewelbots Arduino Library" to display the "Remove" button.
-						<img class="screengrab" src="assets/images/go_section_instruction_screengrab11.png" />
+						<br><span>3. </span> Click anywhere in the box for "Jewelbots Firmware Update" to display the "Remove" button.
+						<img class="screengrab" src="assets/images/go_section_instruction_screengrab9.jpg" />
 
 						<br><span>4. </span>  Click "yes" to remove the board.
-						<br><span>5. </span>  Click anywhere in the box "Jewelbots Arduino Library"to display the "Install" button again.
+						<br><span>5. </span>  Click anywhere in the box "Jewelbots Firmware Update"to display the "Install" button again.
 						<br><span>6. </span>  Click "yes" to install the board.
-						<br><span>7. </span>  Continue to "step 2 part f" of the "How to code your Jewelbot?".
+						<br><span>7. </span>  Continue to "step 11" of the "How do I update my Jewelbots' Firmware?".
 						</p>
-						<p> You will have to do this every time you want to update your Arduino Library again. It is super important to update your Arduino Library! It makes sure you have the most recent features available!</p>
-
+						<p> You will have to do this every time you want to update your firmware again. It is super important to update your firmware! It makes sure you have the least amount of bugs to encounter and the most recent features available!</p>
 					</div><!--//copy -->
 					<div class="video">
 					</div><!--//video -->
