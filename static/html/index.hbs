@@ -4232,63 +4232,24 @@
 <body>
 	<div id="modal_newsletter">
 		<div class="modal">
-
+			<script>mixpanel.track_forms(".mixpanel_modal_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});</script>
+			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
 				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
-				
-				<h1 onClick="modal_newsletter('close');">Holiday Sale</h1>
-				<p onClick="modal_newsletter('close');">Order your Jewelbots by <span>12/19</span> in order to make sure they arrive by <span>12/24.</span> </p>
-				<p onClick="modal_newsletter('close');">(Sorry, US only)</p>
-				
-				<style>
-				#modal_newsletter.overlay .modal {
-					background-image: url(../../assets/images/banner.jpg);
-				}
-				#modal_newsletter.overlay .modal h1 {
-					display: block;
-					position: relative;
-					width: auto;
-					height: auto;
-					margin: 60px 0 30px 0;
-					padding: 0 0 0 0;
+				<h1>Hi There! Welcome at Jewelbots!</h1>
+				<p>Join our Email list for Updates and a small gift!</p>
 
-					font-family: "museo-sans-rounded",sans-serif;
-					font-style: normal;
-					font-weight: 700;
-					font-size: 40px;
-					line-height: 36px;
-					letter-spacing: 1px;
-					text-indent: 0;
-					text-transform: none;
-					text-align: center;
-					color: rgba(255,255,255,1.0);
-				}
-				#modal_newsletter.overlay .modal p {
-					display: block;
-					position: relative;
-					width: auto;
-					max-width: 300px;
-					height: auto;
-					margin: 30px auto 0 auto;
-					border-top: solid 1px rgba(200,200,200,0.9);
+				<div class="mc-field-group">
+					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe + Save" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
 
-					font-family: "museo-sans", sans-serif;
-					font-style: normal;
-					font-weight: 300;
-					font-size: 20px;
-					line-height: 30px;
-					letter-spacing: 0px;
-					text-indent: 0;
-					text-transform: none;
-					text-align: center;
-					color: rgba(255,255,255,1.0);
-				}
-				#modal_newsletter.overlay .modal span {
-					font-weight: 700;
-					color: rgba(200,200,220,1.0);
-					text-decoration: underline;
-				}
-				</style>
+			</form>
 		</div>
 		<div class="background" onClick="modal_newsletter('close');"></div>
 	</div><!--//modal_newsletter -->
