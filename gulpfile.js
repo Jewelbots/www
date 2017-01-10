@@ -31,9 +31,7 @@ gulp.task('compile',['scripts', 'sass'], function () {
 });
 
 gulp.task('move-statics', function () {
-  gulp.src(['static/html/robots.txt', 'static/images/favicon.*' ])
-    .pipe(gulp.dest('dist')),
-  gulp.src('static/images/favicon.*')
+  gulp.src(['static/html/robots.txt', 'static/html/favicon.*' ])
     .pipe(gulp.dest('dist')),
   gulp.src('static/images/**')
     .pipe(gulp.dest('dist/assets/images'))
