@@ -1138,17 +1138,17 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		$('.section_faqs .question').click(function() {
 			//-- 1 (if open)
 			if( $(this).parent().children('.answer').hasClass( "answer_active" ) ){
-				$(this).parent().children('.answer').removeClass("answer_active");
-				$(this).parent().children('.answer').stop(true, true).slideUp(300, function() {
+				//$(this).parent().children('.answer').removeClass("answer_active");
+				//$(this).parent().children('.answer').stop(true, true).slideUp(300, function() {
 					/* do nothing*/
-				});
+					//});
 			} else {
 				//-- 2 (close all)
 				$(".answer_active").each(function(){
-					$(this).removeClass("answer_active");
-					$(this).stop(true, true).slideUp(300, function() {
+					//$(this).removeClass("answer_active");
+					//$(this).stop(true, true).slideUp(300, function() {
 						/* do nothing*/
-					});
+						//});
 				});
 				//-- 3 (and open the one in question)
 				$(this).parent().children('.answer').addClass("answer_active");
