@@ -856,7 +856,7 @@
 
 
 		/* @end */
-		
+
 
 
 		/* ------ INDEX --------------------------------------------- */
@@ -2578,6 +2578,166 @@
 			#site_container.index .section_features .cta_preorder:hover {}
 		}
 		/* @end */
+		/* @group ----- section_test -------------- */
+		#site_container.index .section_text {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin: 0 0 0 0;
+			background-color: rgba(80,215,235,1.0);
+			/* background: url(../../assets/images/new_index_section_hero__background_3.jpg) no-repeat bottom center; */
+
+			-webkit-background-size: cover;
+		       -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+
+			font-family: "museo-sans", sans-serif;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-indent: 0;
+			text-transform: none;
+			text-align: center;
+			color: rgb(255,255,255);
+
+			overflow: hidden;
+		}
+
+				#site_container.index .section_text ul.copy {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 20px 30px 40px 30px;
+
+					z-index: 5;
+				}
+				#site_container.index .section_text ul.copy li {
+					display: inline-block;
+					position: relative;
+					width: 33%;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 0 2% 0 2%;
+					vertical-align:top;
+				}
+				#site_container.index .section_text ul.copy li img {
+					display: block;
+					position: relative;
+					width: 60px;
+					height: auto;
+					margin: 0 auto 0 auto;
+					padding: 0 0 0 0;
+				}
+				#site_container.index .section_text ul.copy li h5 {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 10px 0 10px 0;
+
+					font-family: "museo-sans",sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 30px;
+					letter-spacing: 1px;
+					text-indent: 0;
+					text-transform: none;
+					text-align: center;
+					color: rgba(255,255,255,1.0);
+
+					z-index: 3;
+				}
+				#site_container.index .section_text ul.copy li p {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 0 0 0 0;
+
+					font-family: "museo-sans",sans-serif;
+					font-style: normal;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 25px;
+					letter-spacing: 0;
+					text-indent: 0;
+					text-transform: none;
+					text-align: center;
+					color: rgba(255,255,255,1.0);
+
+					z-index: 4;
+				}
+
+
+				@media (max-width: 1279px) {}
+				@media (max-width: 1023px) {}
+				@media (max-width: 767px) {
+					#site_container.index .section_text {}
+
+					#site_container.index .section_text h3 {
+					}
+					#site_container.index .section_text p {
+					}
+
+					#site_container.index .section_text ul.copy {}
+					#site_container.index .section_text ul.copy li {
+						display: inline-block;
+						position: relative;
+						width: 100%;
+						height: auto;
+						margin: 0 0 0 0;
+						padding: 20px 0 0 0;
+					}
+					#site_container.index .section_text ul.copy li h5 {
+						display: block;
+						position: relative;
+						width: 100%;
+						height: auto;
+						margin: 0 0 0 0;
+						padding: 10px 0 10px 0;
+
+						font-family: "museo-sans",sans-serif;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 20px;
+						line-height: 30px;
+						letter-spacing: 1px;
+						text-indent: 0;
+						text-transform: none;
+						text-align: center;
+						color: rgba(255,255,255,1.0);
+
+						z-index: 3;
+					}
+					#site_container.index .section_text ul.copy li p {
+						display: block;
+						position: relative;
+						width: 100%;
+						height: auto;
+						margin: 0 0 0 0;
+						padding: 0 0 0 0;
+
+						font-family: "museo-sans",sans-serif;
+						font-style: normal;
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 25px;
+						letter-spacing: 0;
+						text-indent: 0;
+						text-transform: none;
+						text-align: center;
+						color: rgba(255,255,255,1.0);
+
+						z-index: 4;
+					}
+				}
+		/* END */
 		/* @group ----- section_outofthebox ------------- */
 		#site_container.index .section_outofthebox {
 			display: block;
@@ -2851,7 +3011,7 @@
 			width: 100%;
 			height: auto;
 			margin: 0 0 0 0;
-			padding: 10px 0 35px 0;
+			padding: 38px 0 35px 0;
 
 			font-family: "museo-sans-rounded",sans-serif;
 			font-style: normal;
@@ -2970,7 +3130,7 @@
 			font-family: "museo-sans", sans-serif;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 13px;
+			font-size: 20px;
 			line-height: 25px;
 			letter-spacing: 0px;
 			text-indent: 0;
@@ -3725,7 +3885,7 @@
 <body>
 	<div id="jewelbots_modal">
 		<div class="modal" onClick="jewelbots_modal('close');">
-			
+
 		</div>
 		<div class="background" onClick="jewelbots_modal('close');"></div>
 		<style>
@@ -3853,7 +4013,56 @@
 
 	<div id="site_container" class="index">
 		<div id="content_container">
-			
+			<div class="section_banner">
+				<h1 onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_target_link', 'POSITION': 'header'});">
+					Jewelbots now available at Target.com <img src="assets/images/index_target.png">
+				</h1>
+			</div><!--//section_banner -->
+			<style>
+			.section_banner {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 0 0 0 0;
+				padding: 10px 30px 10px 30px;
+				background: white;
+				text-align: center;
+				z-index: 99999;
+				background-color: #FFF9F4;
+			}
+			.section_banner h1 {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 0 auto 0 auto;
+				padding: 0 0 0 0;
+
+				font-family: "museo-sans-rounded",sans-serif;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 30px;
+				letter-spacing: 0;
+				text-indent: 0;
+				text-transform: none;
+				text-align: center;
+				color: rgba(0,205,180,1.0);
+			}
+			.section_banner a {
+				color: rgba(200,10,0,1.0);
+			}
+			.section_banner h1 img {
+				display: inline-block;
+				position: relative;
+				width: 30px;
+				height: auto;
+				margin: -2px 0 0 0px;
+				padding: 0 0 0 0;
+				vertical-align: middle;
+			}
+			</style>
 			<div class="section_header">
 				<div class="header_default"><!-- //header_default //header_default_nav //header_sticky-->
 					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
@@ -3868,6 +4077,7 @@
 						<li><a href="/go.html" target="_self">Getting Started</a></li>
 						<li><a href="http://alpha.jewelbots.com" target="_self">Community</a></li>
 						<li><a href="/contact.html" target="_self">Support</a></li>
+						<li><a href="/ambassador.html" target="_self">Ambassadors</a></li>
 					</ul>
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
@@ -3875,20 +4085,8 @@
 					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Jewelbot Discounts Left:</span> <span class="number">27</span></a>
 				</div><!--//header -->
 			</div><!--//section_header -->
-			
-			<iframe class="section_counter" scrolling="no" seamless="seamless" src="http://www.vicozabel.com/AREA51/___jewelbots/counter/index.html"></iframe>
-			<style>
-				#site_container.index iframe.section_counter {
-					display: block;
-					position: relative;
-					width: 100%;
-					height: 685px;  /*685*/
-					margin: 0 0 0 0;
-					padding: 0 0 0 0;
-					overflow-x: hidden;
-					overflow-y: hidden;
-				}
-			</style>
+
+
 
 			<div class="section_hero">
 				<div class="left">
@@ -4347,56 +4545,7 @@
 			}
 			/* @end */
 			</style>
-			<div class="section_banner">
-				<h1 onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_target_link', 'POSITION': 'header'});">
-					Jewelbots now available at Target.com <img src="assets/images/index_target.png">
-				</h1>
-			</div><!--//section_banner -->
-			<style>
-			.section_banner {
-				display: block;
-				position: relative;
-				width: auto;
-				height: auto;
-				margin: 0 0 0 0;
-				padding: 10px 30px 10px 30px;
-				background: white;
-				text-align: center;
-				z-index: 99999;
-				background-color: #FFF9F4;
-			}
-			.section_banner h1 {
-				display: block;
-				position: relative;
-				width: auto;
-				height: auto;
-				margin: 0 auto 0 auto;
-				padding: 0 0 0 0;
 
-				font-family: "museo-sans-rounded",sans-serif;
-				font-style: normal;
-				font-weight: 700;
-				font-size: 20px;
-				line-height: 30px;
-				letter-spacing: 0;
-				text-indent: 0;
-				text-transform: none;
-				text-align: center;
-				color: rgba(0,205,180,1.0);
-			}
-			.section_banner a {
-				color: rgba(200,10,0,1.0);
-			}
-			.section_banner h1 img {
-				display: inline-block;
-				position: relative;
-				width: 30px;
-				height: auto;
-				margin: -2px 0 0 0px;
-				padding: 0 0 0 0;
-				vertical-align: middle;
-			}
-			</style>
 			<div class="section_testimonials">
 				<script>
 					setInterval(function(){ section_testimonials(); }, 3000);
@@ -4437,38 +4586,9 @@
 					<li id="dot_3" onClick="javascript:section_testimonials('3'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
 				</ul>
 			</div><!--//section_testimonials -->
-			
-			
-			<div class="section_how" id="section_how">
-				<h3>How it works</h3>
-				<h4>1. Become friends</h4>
-				<p>Sally, Adam and Shana are best friends. With the push of a button they connect their Jewelbots:</p>
-				<img class="nopadding" src="assets/images/index_section_how__1_top.gif" /><!--
-				--><img class="nopadding" src="assets/images/index_section_how__1_middle.gif" /><!--
-				--><img src="assets/images/index_section_how__1_bottom.gif" />
-				<h4>2. Interact and send secret messages</h4>
-				<p>Their paired Jewelbots light up when they are close by. They then can send each other secret buzz codes.</p>
-				<img class="jewelbots" src="assets/images/index_section_how__2.gif" />
-				<h4>3. Learn how to code through the power of friendship </h4>
-				<p><!--Get the app and add more features through basic If/Then statements.<br />
-				Want more? -->Connect your Jewelbot to a computer and upload our Jewelbot mods or develop your own custom code.</p>
-				<!--<img class="jewelbots" src="assets/images/index_section_how__3.gif" />-->
-				<!--<div class="app">
-					<img class="iphone" src="assets/images/index_section_code__iphone.png" />
-					<img class="iphone_app" src="assets/images/index_section_code__iphone_app.gif" />
-				</div>-->
-				<ul class="powerofcoding">
-					<li><img src="assets/images/index_section_features__sms.png" />Send SMS/email</li><!--
-				 --><li><img src="assets/images/index_section_features__social.png" />Social media integration</li><!--
-				 --><li><img src="assets/images/index_section_features__weather.png" />Weather updates</li><!--
-				 --><li><img src="assets/images/index_section_features__parents.png" />Notify parents</li><!--
-				 --><li><img src="assets/images/index_section_features__drone.png" />Fly a drone</li><!--
-				 --><li><!--<img src="assets/images/index_section_features__imagine.png" />--><br />...or what about a reminder to drink a glass of water, eat some fruit? Code whatever you imagine...!</li>
-				</ul>
-				<div class="clear"></div>
-				<div class="cta_sale" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'hero'});">Get Your Jewelbot</div>
-				<a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'});">See full specifications</a>
-			</div><!--//section_how -->
+
+
+
 			<div class="section_specs" id="section_specs">
 				<div class="left">
 					<h4>Specifications</h4>
@@ -4589,6 +4709,29 @@
 				<div class="clear"></div>
 				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
 			</div><!--//section_features -->
+			<div class="section_text">
+			<ul class="copy">
+				<li>
+					<h5>Create Their Own Code</h5>
+					<p>
+						Jewelbots are the perfect tool to introduce kids 7-14 to the principles of programming. Jewelbots are perfect for beginners and our open source Arduino IDE offers a full fledged coding experience for pros. Jewelbots use Arduino - a language also taught in many school's educational programs.
+					</p>
+				</li><!--
+			 --><li>
+					<h5>No Prior Experience Needed</h5>
+					<p>
+						Even without prior exposure to code, or help from a parent, kids can learn how to write their own software for their Jewelbots. Our step-by-step tutorials and online courses take kids by the hand, resulting in a quick sense of achievement and motivational boost.
+					</p>
+				</li><!--
+			 --><li>
+					<h5>Online Community And Tutorials</h5>
+					<p>
+						Want to share what you have done? Get inspired and see what's possible with Jewelbots? Our Online Community offers easy step-by-step tutorials, sample code and articles for kids and parents alike. It's a safe, judgement free environment, and the perfect place to meet new friends and engage with likeminded coders.
+					</p>
+				</li>
+			</ul>
+		</div>
+				<div class="clear"></div>
 			<div class="section_sale" id="section_sale">
 				<h3>Get your Jewelbots</h3>
 				<h6>Most Popular</h6>
@@ -4666,6 +4809,7 @@
 					</li>
 					<div class="clear"></div>
 				</ul>
+
 				<p>
 					<strong>No Phone or Computer required for all out of the box features!</strong>
 				</p>
