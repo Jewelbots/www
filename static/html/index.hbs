@@ -3882,7 +3882,7 @@
 					display: block;
 					position: relative;
 					width: 100%;
-					height: 540px;  /*685*/
+					height: 685px;  /*685*/
 					margin: 0 0 0 0;
 					padding: 0 0 0 0;
 					overflow-x: hidden;
@@ -3890,56 +3890,466 @@
 				}
 			</style>
 
-			<div class="section_code">
-				<h3>Learn how to code</h3>
-				<p>No Prior Experience Needed</p>
+			<div class="section_hero">
 				<div class="left">
-					<h1>The friendship bracelet that teaches kids to code</h1>
-					<div class="cta_preorder" onClick="javascript:scroll('#section_how', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_learnmore', 'POSITION': 'hero'});">Learn More</div>
-				</div>
-				<div class="right">
 					<img class="jewelbot" src="assets/images/index_section_hero__jewelbot.png" />
 				</div>
+				<div class="right">
+					<h1>The friendship bracelet that teaches kids to code!</h1>
+					<h2>Jewelbots are now in limited supply!</h2>
+					<p>Because of the demand for Jewelbots, we now have limited supply! <br />Before they go on backorder, we wanted to give our subscribers first dibs on nabbing them<br /><!-- Hurry, offer -->
+					<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_hero'});">Shop Now</div>
+				</div>
 				<div class="clear"></div>
-				<p class="small">
-					To learn more please<br />
-					scroll down.
-					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
-				</p>
-				<div class="clear"></div>
-				<!--<iframe id="code_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-				<iframe id="code_video_iframe" src="https://player.vimeo.com/video/172983545?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<div class="background">
+				<iframe id="hero_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<div class="background"></div>
+			</div><!--//section_hero -->
+			<style>
+			/* @group ----- section_hero -------------------- */
+			#site_container.index .section_hero {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				/* min-height: 800px; */
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				background-color: rgba(80,215,235,0.0);
+				background: url(../../assets/images/index_section_hero__background_6.jpg) no-repeat center center;
 
-				</div>
-				<ul class="copy">
-					<li>
-						<h5>Create Their Own Code</h5>
-						<p>
-							Jewelbots are the perfect tool to introduce kids 7-14 to the principles of programming. Jewelbots are perfect for beginners and our open source Arduino IDE offers a full fledged coding experience for pros. Jewelbots use Arduino - a language also taught in many school's educational programs.
-						</p>
-					</li><!--
-				 --><li>
-						<h5>No Prior Experience Needed</h5>
-						<p>
-							Even without prior exposure to code, or help from a parent, kids can learn how to write their own software for their Jewelbots. Our step-by-step tutorials and online courses take kids by the hand, resulting in a quick sense of achievement and motivational boost.
-						</p>
-					</li><!--
-				 --><li>
-						<h5>Online Community And Tutorials</h5>
-						<p>
-							Want to share what you have done? Get inspired and see what's possible with Jewelbots? Our Online Community offers easy step-by-step tutorials, sample code and articles for kids and parents alike. It's a safe, judgement free environment, and the perfect place to meet new friends and engage with likeminded coders.
-						</p>
-					</li>
-					<div class="clear"></div>
-				</ul>
-				<div class="alpha">
-					<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
-				</div>
-			</div><!--//section_code -->
+				-webkit-background-size: cover;
+			       -moz-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+
+				font-family: "museo-sans", sans-serif;
+				font-style: normal;
+				letter-spacing: 0px;
+				text-indent: 0;
+				text-transform: none;
+				text-align: center;
+				color: rgb(255,255,255);
+
+				overflow: hidden;
+			}
+			#site_container.index .section_hero iframe#hero_video_iframe {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: auto;
+				left: 0;
+				bottom: 0px;
+
+				z-index: 1;
+				-webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+						filter: blur(5px);
+			}
+			#site_container.index .section_hero .background {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				background-color: rgba(20,20,50,0.5);
+
+				z-index: 2;
+			}
+
+			#site_container.index .section_hero .left {
+				display: block;
+				position: relative;
+				float: left;
+				width: 50%;
+				margin: 0 0 0 0;
+				padding: 0 0 30px 0;
+
+				z-index: 3;
+			}
+			#site_container.index .section_hero .right {
+				display: block;
+				position: relative;
+				float: right;
+				width: 50%;
+				height: auto;
+				margin: 0 0 0 0;
+				padding: 0 30px 30px 0;
+
+				z-index: 4;
+			}
+
+			#site_container.index .section_hero img.jewelbot {
+				display: block;
+				position: relative;
+				float: right;
+				width: 600px;
+				height: auto;
+				margin: 100px 0 100px 50px;
+				padding: 0 0 0 0;
+
+				z-index: 12;
+			}
+			#site_container.index .section_hero h1 {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 0 0 0 0;
+				padding: 200px 0 30px 0;
+
+				font-family: "museo-sans-rounded",sans-serif;
+				font-style: normal;
+				font-weight: 700; /*
+				font-size: 70px;
+				line-height: 70px; */
+				font-size: 44px;
+				line-height: 50px;
+				letter-spacing: 1px;
+				text-indent: 0;
+				text-transform: none;
+				text-align: left;
+				color: rgba(255,255,255,1.0);
+			}
+			#site_container.index .section_hero h2 {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+
+				font-family: "museo-sans-rounded",sans-serif;
+				font-style: normal;
+				font-weight: 700; /*
+				font-size: 70px;
+				line-height: 70px; */
+				font-size: 30px;
+				line-height: 50px;
+				letter-spacing: 1px;
+				text-indent: 0;
+				text-transform: none;
+				text-align: left;
+				color: rgba(255,255,200,1.0);
+			}
+			#site_container.index .section_hero p {
+				display: block;
+				position: relative;
+				width: auto;
+				height: auto;
+				max-width: 800px;
+				margin: 0 auto 0 auto;
+
+				font-family: "museo-sans", sans-serif;
+				font-style: normal;
+				font-weight: 100;
+				font-size: 20px;
+				line-height: 25px;
+				text-transform: none;
+				text-align: left;
+			}
+
+			#site_container.index .section_hero div.cta_video {
+				display: inline-block;
+				position: relative;
+				float: left;
+				width: 180px;
+				height: auto;
+				margin: 40px 0 40px 0;
+				padding: 8px 15px 8px 15px;
+				border: solid 2px rgb(255,255,255);
+				background-color: rgba(255,255,255,0.0);
+
+				-webkit-border-radius: 5px;
+				   -moz-border-radius: 5px;
+				        border-radius: 5px;
+
+				-webkit-transition: .2s ease-in-out;
+				   -moz-transition: .2s ease-in-out;
+				     -o-transition: .2s ease-in-out;
+				    -ms-transition: .2s ease-in-out;
+				        transition: .2s ease-in-out;
+
+				font-family: "museo-sans", sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 40px;
+				letter-spacing: 1px;
+				text-indent: 0;
+				text-transform: uppercase;
+				text-align: center;
+				color: rgba(255,255,255,1.0);
+
+				cursor: pointer;
+
+				z-index: 5;
+			}
+			#site_container.index .section_hero div.cta_video:hover {
+				background-color: rgba(255,255,255,1.0);
+
+				font-weight: 700;
+				color: rgba(255,60,0,0.6);
+			}
+			#site_container.index .section_hero div.cta_preorder {
+				display: inline-block;
+				position: relative;
+				float: left;
+				width: 240px;
+				height: auto;
+				margin: 40px 20px 40px 0;
+				padding: 10px 15px 10px 15px;
+				background-color: rgba(255,60,0,1.0);
+
+				-webkit-border-radius: 5px;
+				   -moz-border-radius: 5px;
+				        border-radius: 5px;
+
+				-webkit-transition: .2s ease-in-out;
+				   -moz-transition: .2s ease-in-out;
+				     -o-transition: .2s ease-in-out;
+				    -ms-transition: .2s ease-in-out;
+				        transition: .2s ease-in-out;
+
+						-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+						   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+								box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+
+				font-family: "museo-sans", sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 40px;
+				letter-spacing: 1px;
+				text-indent: 0;
+				text-transform: uppercase;
+				text-align: center;
+
+				cursor: pointer;
+
+				z-index: 6;
+			}
+			#site_container.index .section_hero div.cta_preorder:hover {
+				background-color: rgba(255,255,255,1.0);
+
+				font-weight: 700;
+				color: rgba(255,60,0,0.6);
+
+				-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+				   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+						box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+						box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.0);
+			}
+
+
+			@media (max-width: 1279px) {}
+			@media (max-width: 1023px) {
+				#site_container.index .section_hero .left {}
+				#site_container.index .section_hero .right {}
+
+				#site_container.index .section_hero img.jewelbot {
+					width: 300px;
+				}
+				#site_container.index .section_hero h1 {
+					margin: 0 0 0 0;
+					padding: 150px 0 30px 0;
+					font-size: 40px;
+					line-height: 40px;
+				}
+				#site_container.index .section_hero h2 {
+					display: block;
+					position: relative;
+					width: auto;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 0 0 0 0;
+
+					font-family: "museo-sans-rounded",sans-serif;
+					font-style: normal;
+					font-weight: 700; /*
+					font-size: 70px;
+					line-height: 70px; */
+					font-size: 30px;
+					line-height: 50px;
+					letter-spacing: 1px;
+					text-indent: 0;
+					text-transform: none;
+					text-align: left;
+					color: rgba(255,255,200,1.0);
+				}
+				#site_container.index .section_hero p {
+					display: block;
+					position: relative;
+					width: auto;
+					height: auto;
+					max-width: 800px;
+					margin: 0 0 20px 0;
+
+					font-family: "museo-sans", sans-serif;
+					font-style: normal;
+					font-weight: 100;
+					font-size: 20px;
+					line-height: 25px;
+					text-transform: none;
+					text-align: left;
+				}
+
+				#site_container.index .section_hero div.cta_video {
+					display: inline-block;
+					position: relative;
+					float: left;
+					width: 180px;
+					height: auto;
+					margin: 20px 0 40px 0;
+					padding: 8px 15px 8px 15px;
+					border: solid 2px rgb(255,255,255);
+					background-color: rgba(255,255,255,0.0);
+
+					-webkit-border-radius: 5px;
+					   -moz-border-radius: 5px;
+					        border-radius: 5px;
+
+					-webkit-transition: .2s ease-in-out;
+					   -moz-transition: .2s ease-in-out;
+					     -o-transition: .2s ease-in-out;
+					    -ms-transition: .2s ease-in-out;
+					        transition: .2s ease-in-out;
+
+					font-family: "museo-sans", sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 40px;
+					letter-spacing: 1px;
+					text-indent: 0;
+					text-transform: uppercase;
+					text-align: center;
+					color: rgba(255,255,255,1.0);
+
+					cursor: pointer;
+
+					z-index: 5;
+				}
+				#site_container.index .section_hero div.cta_video:hover {}
+				#site_container.index .section_hero div.cta_preorder {
+					display: inline-block;
+					position: relative;
+					float: left;
+					width: 180px;
+					height: auto;
+					margin: 20px 20px 0 0;
+					padding: 10px 15px 10px 15px;
+					background-color: rgba(255,60,0,1.0);
+
+					-webkit-border-radius: 5px;
+					   -moz-border-radius: 5px;
+					        border-radius: 5px;
+
+					-webkit-transition: .2s ease-in-out;
+					   -moz-transition: .2s ease-in-out;
+					     -o-transition: .2s ease-in-out;
+					    -ms-transition: .2s ease-in-out;
+					        transition: .2s ease-in-out;
+
+							-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+							   -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+									box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+
+					font-family: "museo-sans", sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 40px;
+					letter-spacing: 1px;
+					text-indent: 0;
+					text-transform: uppercase;
+					text-align: center;
+
+					cursor: pointer;
+
+					z-index: 6;
+				}
+				#site_container.index .section_hero div.cta_preorder:hover {}
+			}
+			@media (max-width: 767px) {
+				#site_container.index .section_hero .left {
+					float: none;
+					width: 100%;
+					padding: 0 20px 50px 20px;
+				}
+				#site_container.index .section_hero .right {
+					float: none;
+					width: 100%;
+					padding: 0 20px 50px 20px;
+				}
+
+				#site_container.index .section_hero img.jewelbot {
+					display: none;
+				}
+				#site_container.index .section_hero h1 {
+					margin: 60px auto 0 auto;
+					padding: 0 20px 0 20px;
+					font-size: 36px;
+					line-height: 40px;
+
+					text-align: center;
+				}
+				#site_container.index .section_hero h2 {
+					display: block;
+					position: relative;
+					width: auto;
+					height: auto;
+					margin: 0 0 0 0;
+					padding: 20px 0 10px 0;
+
+					font-family: "museo-sans-rounded",sans-serif;
+					font-style: normal;
+					font-weight: 700; /*
+					font-size: 70px;
+					line-height: 70px; */
+					font-size: 30px;
+					line-height: 50px;
+					letter-spacing: 1px;
+					text-indent: 0;
+					text-transform: none;
+					text-align: center;
+					color: rgba(255,255,200,1.0);
+				}
+				#site_container.index .section_hero p {
+					display: block;
+					position: relative;
+					width: auto;
+					height: auto;
+					max-width: 800px;
+					margin: 0 auto 0 auto;
+
+					font-family: "museo-sans", sans-serif;
+					font-style: normal;
+					font-weight: 100;
+					font-size: 20px;
+					line-height: 25px;
+					text-transform: none;
+					text-align: center;
+				}
+
+				#site_container.index .section_hero div.cta_video {
+					display: none;
+				}
+				#site_container.index .section_hero div.cta_video:hover {}
+				#site_container.index .section_hero div.cta_preorder {
+					float: none;
+					margin: 30px auto 40px auto;
+				}
+				#site_container.index .section_hero div.cta_preorder:hover {}
+			}
+			/* @end */
+			</style>
 			<div class="section_banner">
 				<h1 onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_target_link', 'POSITION': 'header'});">
-					Jewelbots now available at <a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank">Target.com</a> <a href="http://www.target.com/p/jewelbots/-/A-51848933" target="_blank"><img src="assets/images/index_target.png"></a>
+					Jewelbots now available at Target.com <img src="assets/images/index_target.png">
 				</h1>
 			</div><!--//section_banner -->
 			<style>
@@ -4187,23 +4597,26 @@
 						<li class="pack_1">
 							<h5>JEWELBOT</h5>
 							<img src="assets/images/index_section_sale__product_jewelbot_1pack.jpg" />
-							<p>$69</p>
+							<p class="list_price"><span>&nbsp;</span></p>
+							<p>$69 Sale</p>
 							<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
 							<a class="cta_preorder mixpanel_1pack" href="http://jewelbots.myshopify.com/cart/4818647172:1" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818647172:1 -->
 						</li><!--
 					 --><li class="pack_2">
 							<h5>TWINNIE 2-PACK</h5>
 							<img src="assets/images/index_section_sale__product_jewelbot_2pack_2.png" />
-							<p>$138</p>
+							<p class="list_price"><span>$138</span> List Price</p>
+							<p>$99 Sale</p>
 							<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-							<a class="cta_preorder mixpanel_2pack" href="http://jewelbots.myshopify.com/cart/4818647172:2" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
+							<a class="cta_preorder mixpanel_2pack" href="https://jewelbots.myshopify.com/cart/28428366289::2" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/4818676612:1 -->
 						</li><!--
 					 --><li class="pack_3"><!-- id="pack_3_swap"-->
 							<h5>SQUAD 3-PACK</h5>
 							<img src="assets/images/index_section_sale__product_jewelbot_3pack.jpg" />
-							<p>$207</p>
+							<p class="list_price"><span>$207</span> List Price</p>
+							<p>$139 Sale</p>
 							<!--<a class="offer" href="javascript:void;" onClick="modal_newsletter('open_overlay'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'sales'});">sign up and save $10</a>-->
-							<a class="cta_preorder mixpanel_3pack" href="http://jewelbots.myshopify.com/cart/4818647172:3" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/12045228868:1 -->
+							<a class="cta_preorder mixpanel_3pack" href="https://jewelbots.myshopify.com/cart/28428357073:3" target="_blank">Buy Now</a><!-- http://jewelbots.myshopify.com/cart/12045228868:1 -->
 						</li>
 
 						<script>
