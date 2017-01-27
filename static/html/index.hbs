@@ -2631,7 +2631,7 @@
 					margin: 0 auto 0 auto;
 					padding: 0 0 0 0;
 				}
-				#site_container.index .section_text ul.copy li h5 {
+				#site_container.index .section_text ul.copy li h4 {
 					display: block;
 					position: relative;
 					width: 100%;
@@ -2694,7 +2694,7 @@
 						margin: 0 0 0 0;
 						padding: 20px 0 0 0;
 					}
-					#site_container.index .section_text ul.copy li h5 {
+					#site_container.index .section_text ul.copy li h4 {
 						display: block;
 						position: relative;
 						width: 100%;
@@ -2704,8 +2704,8 @@
 
 						font-family: "museo-sans",sans-serif;
 						font-style: normal;
-						font-weight: 500;
-						font-size: 20px;
+						font-weight: 600;
+						font-size: 40px;
 						line-height: 30px;
 						letter-spacing: 1px;
 						text-indent: 0;
@@ -4546,46 +4546,6 @@
 			/* @end */
 			</style>
 
-			<div class="section_testimonials">
-				<script>
-					setInterval(function(){ section_testimonials(); }, 3000);
-
-					var section_testimonials_current_quote = 1;
-					var section_testimonials_max_quotes = 3;
-					function section_testimonials(){
-						if(section_testimonials_current_quote <= section_testimonials_max_quotes){
-							$('.section_testimonials li').removeClass('active');
-							$('.section_testimonials #quote_'+section_testimonials_current_quote).addClass('active');
-							$('.section_testimonials #dot_'+section_testimonials_current_quote).addClass('active');
-							section_testimonials_current_quote = section_testimonials_current_quote + 1;
-						} else {
-							$('.section_testimonials li').removeClass('active');
-							$('.section_testimonials #quote_1').addClass('active');
-							$('.section_testimonials #dot_1').addClass('active');
-							section_testimonials_current_quote = 1;
-						}
-					}
-				</script>
-				<ul class="quotes">
-					<li id="quote_1">
-						<img class="quote" src="assets/images/index_section_hero__press_britco.png" height="30" />
-						<p>»This Is the Friendship Bracelet of the Future...«</p>
-					</li>
-					<li id="quote_2">
-						<img class="quote" src="assets/images/index_section_hero__press_wired.png" height="30" />
-						<p>»The most interesting wearable I’ve seen this year...«</p>
-					</li>
-					<li id="quote_3">
-						<img class="quote" src="assets/images/index_section_hero__press_psfk.png" height="30" />
-						<p>»An introduction to coding motivated by high school tribes...«</p>
-					</li>
-				</ul>
-				<ul class="interface">
-					<li id="dot_1" onClick="javascript:section_testimonials('1'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
-					<li id="dot_2" onClick="javascript:section_testimonials('2'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
-					<li id="dot_3" onClick="javascript:section_testimonials('3'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
-				</ul>
-			</div><!--//section_testimonials -->
 
 
 
@@ -4709,22 +4669,63 @@
 				<div class="clear"></div>
 				<div class="cta_preorder" onClick="javascript:scroll('#section_sale', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_code'});">Get Your Jewelbot</div>
 			</div><!--//section_features -->
+			<div class="section_testimonials">
+				<script>
+					setInterval(function(){ section_testimonials(); }, 3000);
+
+					var section_testimonials_current_quote = 1;
+					var section_testimonials_max_quotes = 3;
+					function section_testimonials(){
+						if(section_testimonials_current_quote <= section_testimonials_max_quotes){
+							$('.section_testimonials li').removeClass('active');
+							$('.section_testimonials #quote_'+section_testimonials_current_quote).addClass('active');
+							$('.section_testimonials #dot_'+section_testimonials_current_quote).addClass('active');
+							section_testimonials_current_quote = section_testimonials_current_quote + 1;
+						} else {
+							$('.section_testimonials li').removeClass('active');
+							$('.section_testimonials #quote_1').addClass('active');
+							$('.section_testimonials #dot_1').addClass('active');
+							section_testimonials_current_quote = 1;
+						}
+					}
+				</script>
+				<ul class="quotes">
+					<li id="quote_1">
+						<img class="quote" src="assets/images/index_section_hero__press_britco.png" height="30" />
+						<p>»This Is the Friendship Bracelet of the Future...«</p>
+					</li>
+					<li id="quote_2">
+						<img class="quote" src="assets/images/index_section_hero__press_wired.png" height="30" />
+						<p>»The most interesting wearable I’ve seen this year...«</p>
+					</li>
+					<li id="quote_3">
+						<img class="quote" src="assets/images/index_section_hero__press_psfk.png" height="30" />
+						<p>»An introduction to coding motivated by high school tribes...«</p>
+					</li>
+				</ul>
+				<ul class="interface">
+					<li id="dot_1" onClick="javascript:section_testimonials('1'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
+					<li id="dot_2" onClick="javascript:section_testimonials('2'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
+					<li id="dot_3" onClick="javascript:section_testimonials('3'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_section_testimonials'});">●</li>
+				</ul>
+			</div><!--//section_testimonials -->
+
 			<div class="section_text">
 			<ul class="copy">
 				<li>
-					<h5>Create Their Own Code</h5>
+					<h4>Create Their Own Code</h4>
 					<p>
 						Jewelbots are the perfect tool to introduce kids 7-14 to the principles of programming. Jewelbots are perfect for beginners and our open source Arduino IDE offers a full fledged coding experience for pros. Jewelbots use Arduino - a language also taught in many school's educational programs.
 					</p>
 				</li><!--
 			 --><li>
-					<h5>No Prior Experience Needed</h5>
+					<h4>No Prior Experience Needed</h4>
 					<p>
 						Even without prior exposure to code, or help from a parent, kids can learn how to write their own software for their Jewelbots. Our step-by-step tutorials and online courses take kids by the hand, resulting in a quick sense of achievement and motivational boost.
 					</p>
 				</li><!--
 			 --><li>
-					<h5>Online Community And Tutorials</h5>
+					<h4>Online Community And Tutorials</h4>
 					<p>
 						Want to share what you have done? Get inspired and see what's possible with Jewelbots? Our Online Community offers easy step-by-step tutorials, sample code and articles for kids and parents alike. It's a safe, judgement free environment, and the perfect place to meet new friends and engage with likeminded coders.
 					</p>
