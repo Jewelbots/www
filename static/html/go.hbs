@@ -76,36 +76,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 </head>
 <body>
 	<div id="modal_newsletter">
-		<div class="modal">
-			<script>mixpanel.track_forms(".mixpanel_modal_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "modal"});</script>
-			<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_modal_newsletter">
 
-				<a class="close" href="javascript:void();" onClick="modal_newsletter('close');">X</a>
-				<h1>Sign up, then save!</h1>
-				<p>Enter your email and <strong>enjoy $10 off</strong> your first order!</p>
-
-				<div class="mc-field-group">
-					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Enter your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'modal'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
-				</div>
-				<div id="mce-responses" class="clear">
-					<div class="response" id="mce-error-response" style="display:none"></div>
-					<div class="response" id="mce-success-response" style="display:none"></div>
-				</div>
-				<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
-				<div class="clear"><input type="submit" value="Subscribe + Save" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-
-			</form>
-		</div>
-		<div class="background" onClick="modal_newsletter('close');"></div>
 	</div><!--//modal_newsletter -->
 
-	<div id="modal_video">
-		<div class="wrapper">
-			<a class="close" href="javascript:void();" onClick="modal_video('close');">X</a>
-			<iframe id="modal_video_iframe" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
-		<div class="background" onClick="modal_video('close');"></div>
-	</div><!--//modal_video -->
+
 
 	<div id="site_container" class="go">
 		<div id="content_container">
@@ -119,9 +93,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					</a>
 					<img class="logo_mobile" src="assets/images/index_section_header__icon_small.png" />
 					<ul class="navigation">
+						<li><a href="javascript:void;" onClick="scroll('.section_overview','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
+						<li><a href="javascript:void;" onClick="scroll('.section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
 						<li><a href="/go.html" target="_self">Getting Started</a></li>
 						<li><a href="http://alpha.jewelbots.com" target="_self">Community</a></li>
 						<li><a href="/contact.html" target="_self">Support</a></li>
+						<li><a href="/ambassador.html" target="_self">Ambassadors</a></li>
 					</ul>
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
@@ -130,17 +107,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				</div><!--//header -->
 			</div><!--//section_header -->
 
-			<div class="section_hero">
-				<h1>JEWELBOTS GETTING STARTED</h1>
-				<p>Congratulations, you have a Jewelbot! Welcome to our community. Please follow this handy guide to getting your Jewelbot up and running. If at any time you get stuck or need a little more help, you can always email us at <a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a></p>
-				<div class="cta_join" onClick="javascript:scroll('.section_meet', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_learnmore_ambassador', 'POSITION': 'hero'});">Let's go!</div>
-				<p class="small">
-					To learn more please<br />
-					scroll down.
-					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
-				</p>
-				<div class="background"></div>
-			</div><!--//section_hero -->
+
 
 			<div class="section_meet">
 				<h3>Meet your Jewelbot</h3>
@@ -351,7 +318,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 								<br><span>3. </span> 	Click anywhere in the box for "Firmware Update" to display the "Update" button.
 						    <br><span>4. </span>  Click the "Update" button to update the board to the most recent version.
 								</p>
-								
+
 								<p> You will have to do this every time you want to update your Firmware again. It is super important to update your Arduino Library! It makes sure you have the most recent features available!</p>
 								<p>To keep updated with news about Firmware Updates, follow us on <a href="https://twitter.com/jewelbots" target="_blank">Twitter</a> or join our <a href="http://alpha.jewelbots.com/" target="_blank">community forums</a>! </p>
 
