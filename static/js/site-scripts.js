@@ -90,7 +90,7 @@ function index_section_specs(action){
 //-- index_section_faqs(action) ------------------------------------------//
 $('.more').click(function() {
 	/* for all site's more buttons */
-	
+
 	//-- 1 (if open, change copy)
 	if( $(this).hasClass("more_active") ){
 		$(this).removeClass("more_active");
@@ -120,7 +120,7 @@ $('.section_faqs .question').click(function() {
 				/* do nothing*/
 			});
 		});
-		//-- 3 (and open the one in question)		
+		//-- 3 (and open the one in question)
 		$(this).parent().children('.answer').addClass("answer_active");
 		$(this).parent().children('.answer').stop(true, true).slideDown(300, function() {
 			/* do nothing*/

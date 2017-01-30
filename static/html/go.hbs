@@ -34,6 +34,10 @@
 
     <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
     <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
+		<link type="text/css" rel="stylesheet" href="{{ assetPath "css/jquery-ui.min.css" }}" media="screen, projection" />
+
+		<script src="{{ assetPath "js/jquery-3.1.1.min.js" }}"></script>
+		<script src="{{ assetPath "js/jquery-ui.min.js" }}"></script>
 
 	<script src="//use.typekit.net/rbz5qur.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
@@ -44,6 +48,19 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
 mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
 	<script type="text/javascript">
 		//-- 1) track the page name
+		$( function() {
+				$('#accordion').accordion({heightStyle: 'panel', collapsible: true,
+				activate: function(event, ui) {
+             try {
+                 theOffset = ui.newHeader.offset();
+                 $('body,html').animate({
+                     scrollTop: theOffset.top
+                 });
+             } catch(err){}
+         }
+			   });
+			 });
+
 		var page_source = getUrlVars()["source"];
 		function getUrlVars() {
 		    var vars = {};
@@ -53,6 +70,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		    return vars;
 		}
 		mixpanel.track("PAGE", {"NAME": "www_jobs", "SOURCE": page_source });
+
 	</script>
 	<!-- MIXPANEL  ⬆ -->
 	<!-- ZENDESK  ⬇ -->
@@ -109,7 +127,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 
 
 			<div class="section_meet">
-				<h3>Meet your Jewelbot</h3>
+				<h3 >Meet your Jewelbot</h3>
 				<p class="subheadline">These are the key parts that make up your Jewelbot:</p>
 				<a class="specs" href="javascript:void;" onClick="javascript:go_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'});">See full specifications</a>
 				<img class="overview large" src="assets/images/go_section_meet__background_1_large.jpg" />
@@ -182,13 +200,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			</div><!--//section_specs -->
 
 			<div class="section_instructions">
+
 				<h3 class="headline">What do I do first?</h3>
-				<div class="instruction_container">
-					<div class="topic topic_active">
-						<h2>Charge your Jewelbot.</h2>
+				<div id="accordion">
+						<h2 class="topic"><span>Charge your Jewelbot.</span></h2>
 						<!--<p></p>-->
-					</div>
-					<div class="instructions answer_active" style="display: block;">
+					<div class="instructions">
 						<div class="copy">
 							<h3><span></span>Before doing anything, you need to charge your Jewelbot.</h3>
 
@@ -212,13 +229,9 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="clear"></div>
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
-				</div><!--// CHARGE instruction_container -->
 
-				<div class="instruction_container">
-					<div class="topic">
-						<h2>How do I update my Jewelbots' firmware?</h2>
+						<h2 class="topic"><span>How do I update my Jewelbots' firmware?</span></h2>
 						<!--<p></p>-->
-					</div>
 
 					<div class="instructions">
 						<div class="copy">
@@ -328,14 +341,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="clear"></div>
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
-				</div><!--// FIMRWARE instruction_container -->
 
 
-				<div class="instruction_container">
-					<div class="topic">
-						<h2>How to pair your Jewelbot with a friend?</h2>
+						<h2 class="topic"><span>How to pair your Jewelbot with a friend?</span></h2>
 						<!--<p></p>-->
-					</div>
 					<div class="instructions">
 						<div class="copy">
 							<p>Pairing your Jewelbot with a friend can happen completely out of the box without a computer or phone!  </p>
@@ -365,17 +374,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="clear"></div>
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
-				</div><!--// PAIR instruction_container -->
 
-				<div class="instruction_container">
-					<div class="topic">
-						<h2>How to send Secret Messages?</h2>
+						<h2 class="topic"><span>How to send Secret Messages?</span></h2>
 						<!--<p></p>-->
-					</div>
 					<div class="instructions">
 						<div class="copy">
 							<p>It’s fun to send secret messages to your friends with Jewelbots! Make sure you pair up with your friends in order to messsage with them. Refer to the “How to pair your Jewelbot” section.
-</p>
 							<h3><span>1. Make sure your Jewelbot is unplugged.</span></h3>
 								<p> This is because pressing the Magic Button while your Jewelbot is plugged will put your Jewelbot into Upload Mode, which is for coding. </p>
 
@@ -400,13 +404,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="clear"></div>
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
-				</div><!--// MESSAGE instruction_container -->
 
-				<div class="instruction_container">
-					<div class="topic">
-						<h2>How to change Charms and Bands?</h2>
+
+						<h2 class="topic"><span>How to change Charms and Bands?</span></h2>
 						<!--<p></p>-->
-					</div>
 					<div class="instructions">
 						<div class="copy">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/0WjzeV2JxKY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -417,14 +418,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="clear"></div>
 						<div class="hr dashed"></div>
 					</div><!--//instructions -->
-				</div><!--// BAND/CHARM instruction_container -->
 
 
-			<div class="instruction_container">
-				<div class="topic">
-					<h2>How to code your Jewelbot?</h2>
+					<h2 class="topic"><span>How to code your Jewelbot?</span></h2>
 					<!--<p></p>-->
-				</div>
 				<div class="instructions">
 					<div class="copy">
 						<p>Before coding, make sure you update your firmware first!!! This is to ensure minimal bugs and gives you the newest features. Please refer to the "How to update your Firmware" section.</p>
@@ -488,7 +485,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 											}<br />
 										</em>
 									</p>
-
 					<h3><span>7. </span>Before uploading the code, put your Jewelbot into Upload Mode by plugging in the USB and holding the Magic Button down for two seconds. </h3>
 						<p>Remember, two full seconds (1 mississippi...)</p>
 						<p>Either the charging light will go out (if you did not update your firmware yet) or your device will flash purple and then fade to indicate that coding mode is activated (if you updated your firmware).</p>
@@ -501,7 +497,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<h3><span>10. </span>	Test out more code combinations by changing the variables in the “led.on(int, string, time)” method!</h3>
 				    	<img class="screengrab" src="assets/images/go_section_instruction_screengrab15.jpg" />
 							<p> Possible LED positions are NW,NE,SW,SE. The south side being where the USB port is.
-							<br>Possible colors would be RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE. These have to be typed in capitals to work.
+							</ br>Possible colors would be RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE. These have to be typed in capitals to work.
 							</p>
 
  					<h3><span>11. </span> Learn more about coding your Jewelbot here on the <a href="http://alpha.jewelbots.com/" target="_blank">forums!</a></h3>
@@ -529,7 +525,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 					<div class="clear"></div>
 					<div class="hr dashed"></div>
 				</div><!--//instructions -->
-			</div><!--// CODE instruction_container -->
+			</div>
 		</div><!--//section_instructions -->
 
 
@@ -859,7 +855,6 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 		</div><!--//content_container -->
 	</div><!--//site_container -->
 
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$(window).resize(); //-- and force
@@ -1037,34 +1032,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			//$('.instructions .video iframe').height( $('.instructions .video iframe').width()/1.78 );
 			$('.instructions iframe').height( 360 );
 		}
-		$('.instruction_container .topic').click(function() {
-			//-- 1 (if open)
-			if( $(this).parent().children('.instructions').hasClass( "answer_active" ) ){
-				$(this).parent().children('.instructions').removeClass("answer_active");
-				$(this).parent().children('.instructions').stop(true, true).slideUp(600, function() {
-					/* do nothing*/
-				});
-			} else {
-				//-- 2 (close all)
-				$(".topic_active").each(function(){
-					$(this).removeClass("topic_active");
-				});
-				$(".answer_active").each(function(){
-					$(this).removeClass("answer_active");
-					$(this).stop(true, true).slideUp(600, function() {
-						/* do nothing*/
-					});
-				});
-				//-- 3 (and open the one in question)
-				$(this).addClass("topic_active");
-				$(this).parent().children('.instructions').addClass("answer_active");
-				$(this).parent().children('.instructions').stop(true, true).slideDown(600, function() {
-					size_instruction_videos();
-					/* do nothing*/
-				});
-			}
-		});
-		//
+
 		//
 		//-- go_section_faqs(action) ---------------------------------------------//
 		$('.section_faqs .more').click(function() {

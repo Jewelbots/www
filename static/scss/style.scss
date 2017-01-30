@@ -4863,11 +4863,11 @@ em {
 	z-index: 3;
 }
 
-#site_container.go .section_instructions .instruction_container { /* holds all */ }
-#site_container.go .section_instructions .instruction_container .instructions {
+#site_container.go .section_instructions  { /* holds all */ }
+#site_container.go .section_instructions  .instructions {
 	display: none;
 }
-#site_container.go .section_instructions .instruction_container .instructions .copy {
+#site_container.go .section_instructions  .instructions .copy {
 	display: block;
 	position: relative;
 	float: left;
@@ -4876,7 +4876,7 @@ em {
 	margin: 0 0 0 0;
 	padding: 0 15px 0 0;
 }
-#site_container.go .section_instructions .instruction_container .instructions .video {
+#site_container.go .section_instructions  .instructions .video {
 	display: block;
 	position: relative;
 	float: right;
@@ -4885,7 +4885,7 @@ em {
 	margin: 0 0 0 0;
 	padding: 0 0 0 15px;
 }
-#site_container.go .section_instructions .instruction_container .instructions iframe {
+#site_container.go .section_instructions  .instructions iframe {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -4900,12 +4900,11 @@ em {
 	width: 100%;
 	height: auto;
 	margin: 0 0 25px 0;
-	padding: 0 0 25px 0;
+	padding: 20px 0 25px 0;
 	border-bottom: solid 2px rgba(0,205,180,1.0);
-
 	cursor: pointer;
 }
-#site_container.go .section_instructions .topic h2 {
+#site_container.go .section_instructions .topic span {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -8304,4 +8303,48 @@ em {
 		height: 780px;
 	}
 }
+/* @end */
+/* @group ----- accordion -- jquery ----------------- */
+.ui-accordion .ui-accordion-header {
+	display: block;
+	position: relative;
+	width: 100%;
+	background-color: #FFF;
+	height: auto;
+	margin: 0 0 25px 0;
+	padding: 0 0 25px 0;
+	border: solid 2px rgba(0,205,180,1.0);
+	cursor: pointer;
+}
+.ui-accordion .ui-accordion-header h3 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 30px;
+	letter-spacing: 0;
+	text-indent: 10px;
+	text-transform: none;
+	text-align: center;
+	color: rgba(100,110,120,1.0);
+
+}
+.ui-accordion-content-active .topic {
+	border: dashed 1px rgba(0,205,180,1.0);
+	color: rgba(0,205,180,1.0);
+}
+.ui-state-active {
+	border:rgba(0,205,180,1.0);
+	background:rgba(0,205,180,1.0);
+}
+.ui-state-focus { outline-color: rgba(0,205,180,1.0); }
+
+
 /* @end */

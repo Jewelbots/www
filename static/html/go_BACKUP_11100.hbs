@@ -258,7 +258,7 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<div class="copy">
 
 							<p>If your packaging looks like this you have to update your firmware for your Jewelbot.</p>
-					
+
 							<p>If if looks like this, you can skip to pairing.</p>
 
 							<p>Firmware is the code that lives on your Jewelbot. Anytime there is a new update available, you’ll need to update your firmware! We encourage you to always keep your Jewelbot updated, so you can have minimal bugs and the newest features!</p>
@@ -1092,12 +1092,12 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			//$('.instructions .video iframe').height( $('.instructions .video iframe').width()/1.78 );
 			$('.instructions iframe').height( 360 );
 		}
-		$('.instruction_container .topic').click(function() {
+/*		$('.instruction_container .topic').click(function() {
 			//-- 1 (if open)
 			if( $(this).parent().children('.instructions').hasClass( "answer_active" ) ){
 				$(this).parent().children('.instructions').removeClass("answer_active");
 				$(this).parent().children('.instructions').stop(true, true).slideUp(600, function() {
-					/* do nothing*/
+
 				});
 			} else {
 				//-- 2 (close all)
@@ -1107,18 +1107,18 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 				$(".answer_active").each(function(){
 					$(this).removeClass("answer_active");
 					$(this).stop(true, true).slideUp(600, function() {
-						/* do nothing*/
+				
 					});
 				});
-				//-- 3 (and open the one in question)
+
 				$(this).addClass("topic_active");
 				$(this).parent().children('.instructions').addClass("answer_active");
 				$(this).parent().children('.instructions').stop(true, true).slideDown(600, function() {
 					size_instruction_videos();
-					/* do nothing*/
+
 				});
 			}
-		});
+		}); */
 		//
 		//
 		//-- go_section_faqs(action) ---------------------------------------------//
