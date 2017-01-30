@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>FAQs | Jewelbots - The friendship-bracelet for the Smartphone era</title>
+	<meta name="description" lang="en" content="Ignite their curiosity! Jewelbots - programmable friendship bracelets for the modern world." />
+	<meta name="keywords" lang="en" content="jewelbots, wearables, friendship bracelet, nyc, tech, code, learn, open source, iphone, android" />
+
+	<!--
+	***********************************************************************************************************
+
+		www.jewelbots.com
+		v.6.1
+                                _ _           _
+           (♥) _____      _____| | |__   ___ | |_ ___
+           | |/ _ \ \ /\ / / _ \ | '_ \ / _ \| __/ __|
+           | |  __/\ V  V /  __/ | |_) | (_) | |_\__ \
+          _/ |\___| \_/\_/ \___|_|_.__/ \___/ \__|___/
+         |__/
+
+	***********************************************************************************************************
+	-->
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="15" />
+	<meta name="google-site-verification" content="WkWMC2U0n_lT3U1t_-PhLM0CGoeS25ux-D6LGOwu8Fg" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style-reset.css" }}" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{{ assetPath "css/style.css" }}" media="screen, projection" />
+		<link type="text/css" rel="stylesheet" href="{{ assetPath "css/jquery-ui.min.css" }}" media="screen, projection" />
+
+		<script src="{{ assetPath "js/jquery-3.1.1.min.js" }}"></script>
+		<script src="{{ assetPath "js/jquery-ui.min.js" }}"></script>
+
+	<script src="//use.typekit.net/rbz5qur.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!-- MIXPANEL  ⬇ -->
+	<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9bd324e6bd6715347e8 // L:9de67913ff56693e76306919cc0fe64e -->
+	<script type="text/javascript">
+		//-- 1) track the page name
+		$( function() {
+				$('#accordion').accordion({heightStyle: 'panel', collapsible: true,
+				activate: function(event, ui) {
+             try {
+                 theOffset = ui.newHeader.offset();
+                 $('body,html').animate({
+                     scrollTop: theOffset.top
+                 });
+             } catch(err){}
+         }
+			   });
+			 });
+
+		var page_source = getUrlVars()["source"];
+		function getUrlVars() {
+		    var vars = {};
+		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		        vars[key] = value;
+		    });
+		    return vars;
+		}
+		mixpanel.track("PAGE", {"NAME": "www_jobs", "SOURCE": page_source });
+
+	</script>
+	<!-- MIXPANEL  ⬆ -->
+	<!-- ZENDESK  ⬇ -->
+	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","jewelbots.zendesk.com");
+	/*]]>*/</script>
+	<!-- ZENDESK  ⬆ -->
+	<!-- FACEBOOK - pixel  ⬇ -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '108847092786155');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=108847092786155&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- FACEBOOK - pixel  ⬆ -->
+</head>
+<body>
+	<div id="modal_newsletter">
+
+	</div><!--//modal_newsletter -->
+
+
+
+	<div id="site_container" class="faq">
+		<div id="content_container">
+
+			<div class="section_header">
+				<div class="header_default"><!-- //header_default //header_default_nav //header_sticky-->
+					<a href="/index.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_home', 'POSITION': 'header'});">
+						<img class="logo_icon_small" src="assets/images/index_section_header__icon_small.png" />
+						<img class="logo_icon_large" src="assets/images/index_section_header__icon_large.png" />
+						<img class="logo_wordmark" src="assets/images/index_section_header__wordmark.png" />
+					</a>
+					<img class="logo_mobile" src="assets/images/index_section_header__icon_small.png" />
+					<ul class="navigation">
+						<li><a href="javascript:void;" onClick="scroll('.section_overview','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_meet', 'POSITION': 'header'});">Jewelbots</a></li>
+						<li><a href="/go.html" target="_self">Getting Started</a></li>
+						<li><a href="http://alpha.jewelbots.com" target="_self">Community</a></li>
+						<li><a href="/faq.html" target="_self">FAQ</a></li>
+						<li><a href="/contact.html" target="_self">Support</a></li>
+						<li><a href="/ambassador.html" target="_self">Ambassadors</a></li>
+					</ul>
+
+					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
+					<a class="cta_newsletter" href="javascript:void;" onClick="modal_newsletter('open_overlay'); scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_safe', 'POSITION': 'header'});">Join</a>
+					<a class="cta_preorder_counter" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder_counter', 'POSITION': 'header'});"><span class="description">Jewelbot Discounts Left:</span> <span class="number">27</span></a>
+				</div><!--//header -->
+			</div><!--//section_header -->
+
+
+
+
+
+
+			<div class="section_forum">
+				<div class="copy">
+					<h3>FAQs</h3>
+					<p>
+						Did you Just get your Jewelbots? Need help getting started? Have questions about using your Jewelbots? Here are some quick FAQs to help you get started.
+					</p>
+
+					<a class="cta_preorder" href="http://www.jewelbots.com/forum" target="_blank">Need More Help? Visit Our Forum</a>
+				</div><!--//copy -->
+			</div><!--//section_app -->
+
+			<!---<div class="section_app">
+				<div class="copy">
+					<h3>Download the Jewelbots App</h3>
+					<p>
+						Coming Soon! The Jewelbots App. Download the free Jewelbots app for iPhone and Android and add your friends create color groups and set up notifications for yourself. You don’t need the app to play with your Jewelbots, it’s just another fun way to engage! Be sure to sign up for our email list so you know when it’s ready!<br /><br />
+					</p>
+
+
+					<img class="icons" src="assets/images/go_section_app__icons.png" />
+
+					<img class="iphone_app" src="assets/images/go_section_app__iphone.png" />
+					<img class="iphone_app_gif" src="assets/images/go_section_app__iphone_gif.gif" />
+				</div>
+			</div><!--//section_app -->
+
+
+
+			<div class="section_faqs">
+
+				<p class="subheadline">Please contact us at <a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a> for more help.</p>
+				<div><!-- BATTERY - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - -->
+					<h4 class="topic">Battery</h4>
+					<div class="question_container">
+						<h4 class="question">How do I charge my Jewelbot?</h4>
+						<div class="answer">
+							Turn on your Jewelbot. Lift charm up vertically while twisting slightly. Then plug micro USB into the available port on the Jewelbot. Afterwards, plug the USB on the other side of the cable into a power source.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How long should I charge my Jewelbot?</h4>
+						<div class="answer">
+							Approximately 2-3 hours if fully drained of battery.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How long does the battery last before I have to charge it again?</h4>
+						<div class="answer">
+							The Jewelbot can last about 10 hours if constantly on and in use before being charged again.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How will I know if my Jewelbot is charging or not?</h4>
+						<div class="answer">
+							Your Jewelbot has to be turned on when charging. If properly being charged, the Jewelbot will have a red light on.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How will I know if my Jewelbot is done charging?</h4>
+						<div class="answer">
+							When fully charged, the Jewelbot will have a green light when the battery is full.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">My Jewelbot is not charging! Why?!</h4>
+						<div class="answer">
+							Some suggestions to solve this would be:
+							<ul>
+							 	<li><span>•</span> Press the Magic Button briefly to make sure your Jewelbot is not in Sleep Mode. Your Jewelbot has to be on in order for it to show notification that it is charging.</li>
+							  <li><span>•</span> Make sure you are using a high quality micro USB; preferably the one we sent with your original package!</li>
+							  <li><span>•</span> Try connecting your Jewelbot to a high quality power source, such as directly to your computer rather than a external USB hub.</li>
+							  <li><span>•</span> Try removing other USB accessories from your computer, and only having the Jewelbot plugged in.</li>
+							</ul>
+							If none of these help, please email us at hi@jewelbots.com
+						</div>
+					</div><!--//question_container -->
+				</div>
+				<div><!-- PAIRING - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - -->
+					<h4 class="topic">Pairing</h4>
+					<div class="question_container">
+						<h4 class="question">How do I know when my Jewelbot is in pairing mode?</h4>
+						<div class="answer">
+							Your device will flash white on all 4 LEDs if in pairing mode. If another device is detected nearby to also be in pairing mode, then both devices will start cycling between 4 colors. If there are no other Jewelbots around to pair with, hit the magic button again to turn off pairing mode.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Why is my Jewelbot not able to pair correctly with another Jewelbot?</h4>
+						<div class="answer">
+							When you press the magic button of your Jewelbots, it should flash white. If your device detects another Jewelbot in pairing mode nearby, then both will rotate between 4 colors. Pick an LED color to match the two Jewelbots by (it's okay if they are not chosen in sync). You press the magic button to choose the color. Now when the two Jewelbots are close to each other, they will always blink in that color. When they move apart, it should stop blinking that color.
+							<br /><br />
+							If you feel that you have paired them incorrectly, try repeating the pairing steps.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Do I need to have matching friendship colors with the Jewelbot I want to pair with?</h4>
+						<div class="answer">
+							Yes. Friendship features work based around color friend groups.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How far away can Jewelbots be from each other?</h4>
+						<div class="answer">
+							The Jewelbot is able to detect a friend within 30 - 50  feet from each other depending on surroundings. However, pairing must be done when the Jewelbots are within 2 feet of each other. Messaging mode requires a strong connection and works best the closer the Jewelbots are to each other.
+						</div>
+					</div><!--//question_container -->
+				</div>
+				<div><!-- MESSAGING - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - -->
+					<h4 class="topic">Messaging</h4>
+					<div class="question_container">
+						<h4 class="question">How long of a message can I send to another Jewelbot?</h4>
+						<div class="answer">
+							A Jewelbot message can contain up to 16 buzzes of either short or longs.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How long should I wait before sending another message to another Jewelbot?</h4>
+						<div class="answer">
+							You don’t have to wait, just keep sending them! You do have to enter messaging mode and select your friend color group each time before sending a new message though.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Why is there a delay in messages being sent to my Jewelbot or my friend’s Jewelbot?</h4>
+						<div class="answer">
+							Depending on how far away the Jewelbots are from each other, there might be a delay in receiving messages. If too far away, the message might not even be sent entirely.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Why isn’t my Jewelbot sending/receiving messages?</h4>
+						<div class="answer">
+							This may be because it is not properly paired with whoever is trying to send you a message.
+							<br /><br />
+							Your Jewelbot may be too far away from whoever is trying to message you has moved out of range, or lost connection signal. Try turning your Jewelbot on and off.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Why is my Jewelbot receiving messages when I wasn’t sent one?</h4>
+						<div class="answer">
+							If your Jewelbot was sent a message when a friend was in range to you, but you became out of range or lost signal before the message was sent then you might have received that message when your Jewelbot becomes in range or gains signal again.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How come my Jewelbot only cycles through one or two colors even though I have more friendship color groups than that?</h4>
+						<div class="answer">
+							When in messaging mode, the Jewelbot will only cycle through friendship color groups nearby you. (i.e. if only red and green friends are nearby, then it will only cycle between red and green for you to choose from).
+						</div>
+					</div><!--//question_container -->
+				</div>
+				<div><!-- GENERAL - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - -->
+					<h4 class="topic">General</h4>
+					<div class="question_container">
+						<h4 class="question">Why does my Jewelbot light up randomly?</h4>
+						<div class="answer">
+							Your Jewelbot might appear to light up randomly depending on the interaction you have with your friends’ and their Jewelbots.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">What does the rainbow animation lights mean?</h4>
+						<div class="answer">
+							The rainbow animation lights happen to show when your Jewelbot is turning on. Half a rainbow animation with a fading out effect happens to show your Jewelbot is turning off.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How should I clean my Jewelbot?</h4>
+						<div class="answer">
+							Take the charm and band off of the Jewelbot hardware piece. Soak the band and charm in some warm water and dish soap, then scrub it gently with a soft brush or towel.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Is my Jewelbot waterproof?</h4>
+						<div class="answer">
+							Jewelbot devices are water resistant, but not waterproof. This means that it can handle being spilt on or splashed on, but should not be completely submerged in water.
+							<br /><br />
+							For example, Jewelbots can be okay in the rain, but it is suggested that it be avoided or dried after. On the other hand, the Jewelbot device should not be worn in the shower or pool. Water damage is not covered under warranty.
+
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">Where are the Jewelbots for boys?</h4>
+						<div class="answer">
+							Although our device is aimed towards girls, our charm and band combinations are not targeted towards a specific gender. Boys are welcome to enjoy and wear the existing designs!
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">How do I turn off my Jewelbot?</h4>
+						<div class="answer">
+							Press the magic button for 5 seconds then let go. You should see a rainbow animation of lights that fade out.
+						</div>
+					</div><!--//question_container -->
+					<div class="question_container">
+						<h4 class="question">None of these questions are ones that I have</h4>
+						<div class="answer">
+							Please contact us at <a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a> for more help.
+						</div>
+					</div><!--//question_container -->
+				</div>
+
+				<!--<div class="folder">
+					<h4 class="topic">Something Something</h4>
+					<!- - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - ->
+					<div class="question_container">
+						<h4 class="question">What features do Jewelbots have out of the box?</h4>
+						<div class="answer">
+							Jewelbots do not require internet service or a cell phone. Out of the box kids can connect with up to 8 different friends, see when they are nearby and send each other secret messages. With access to a computer or smart-phone (Apple/Android) kids can create multiple friend groups and add additional functionality through the power of code.
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">What is the perfect age for Jewelbots?</h4>
+						<div class="answer">
+							Good question! We have tested Jewelbots with kids aged 5 and up. The out of the box functionality - paired with the ability to work without a phone - makes Jewelbots ideal for younger kids. To use some of the more advanced mods and features we recommend that your kid is between 8-13 years old. But then again, with some help, even younger kids can use Jewelbots. This being said, there really is no limit on the other end of the spectrum; we are seeing parents, and for that matter grandparents of our Alpha testers getting their own Jewelbots ;-)
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">How do Jewelbot’s advanced features work?</h4>
+						<div class="answer">
+							 Out of the box kids can make their bracelets light up when a friend is nearby or send messages to a buddy across the room. They can come up with their own functionality and program their Jewelbot to behave in lots of cool ways!
+							<br /><br />
+							Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, girls can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">Do I need a phone/computer?</h4>
+						<div class="answer">
+							No! However to use the more advanced features such as friend groups and special mods you need to either download the Jewelbots App or connect your Jewelbot to a computer (via USB).
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">2, 3, 4… – how many friends can you have?</h4>
+						<div class="answer">
+							Out of the box: 4 / after connecting your Jewelbot to your phone you can manage 8 friend groups with up to 16 friends.
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">What devices and operating systems does Jewelbot support?</h4>
+						<div class="answer">
+							We currently support Apple iPads, iPhone and Android devices. For Mac and Windows, we allow you to add code to your Jewelbot.
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">Details? Give me all the technical specs!</h4>
+						<div class="answer">
+							Here you go: <a class="specs" href="javascript:void;" onClick="javascript:index_section_specs('open'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_specs', 'POSITION': 'how'}); javascript:scroll('#section_specs', '70');">See full specifications</a>
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">Are Jewelbots safe?</h4>
+						<div class="answer">
+							<img src="assets/images/index_section_meet__spy_2.png" width="100" /><br /><br />
+							We are making a product for kids, and their safety is our number one priority. Jewelbots don’t contain a GPS and we don’t store any personal data of any kind.
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">How does the Jewelbot mobile App work?</h4>
+						<div class="answer">
+							Using basic if/then statements, girls begin to learn the fundamentals of computer science while engaging with their friends and expressing themselves. They can create friend-groups and decide how their Jewelbot lights up and vibrates when they are together. Once they get a hang of it, they can use the app to write little mods and take their skills further:
+							<br /><br />
+							<strong>Instagram Mod:</strong> light up when you get an new like<br />
+							<strong>Twitter Mod:</strong> vibrate when you get a new follower<br />
+							<strong>Facebook Mod:</strong> flash when you get a message from your parents
+							<br /><br />
+							…the mod possibilities are endless.<br />
+							And of course – Jewelbots basic functions can be used without a phone.
+						</div>
+					</div><!- -//question_container - ->
+					<div class="question_container">
+						<h4 class="question">My kid can code, what's next?</h4>
+						<div class="answer">
+							Jewelbots are also open source, so for the curious tinkerer, they offer the perfect platform to explore what is possible with wearable technology communication. Using the Arduino IDE, kids can literally make the bracelets do whatever they dream up. Light up when they get a call on their phone, why not?
+							<br /><br />
+							Arduino is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.
+							<br /><br />
+							So yes, there are really no limits to what you can do with Jewelbots. Use them as a button to interact with another bluetooth device? Why not!
+							<br /><br />
+							<img src="assets/images/index_section_code__master.jpg" width="320" />
+						</div>
+					</div><!- -//question_container - ->
+					<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - ->
+				</div><!- -//folder - ->
+				<a class="more" href="javascript:void(0);">More Answers</a>-->
+			</div><!--//section_faqs -->
+			<div class="section_newsletter">
+				<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+				<h3>Never miss an Update or Coding Tutorial! <br /> Subscribe to our Newsletter:</h3>
+				<script>mixpanel.track_forms(".mixpanel_section_newsletter", 	"NEWSLETTER", {"STEP": "submitted_email", "POSITION": "index_section"});</script>
+				<form method="post" action="/subscribe" id="subscribe" role="form" name="mc-embedded-subscribe-form" class="validate mixpanel_section_newsletter">
+					<div class="mc-field-group">
+						<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="Leave your email!" onfocus="if(this.value==this.defaultValue)this.value=''; mixpanel.track('NEWSLETTER', {'STEP': 'typed_email', 'POSITION': 'index_section'});" onBlur="if(this.value=='')this.value=this.defaultValue;">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_ccc4b9448a982cacc6429f42f_c5c8a04f03" tabindex="-1" value=""></div>
+					<input type="submit" value="+" name="subscribe" id="mc-embedded-subscribe" class="btn">
+				</form>
+			</div><!--//section_newsletter -->
+			<div class="section_footer">
+
+				<img class="logo" src="assets/images/site_section_footer__logo.png" />
+				<ul class="navigation">
+					<!--<li><a href="/faqs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_faqs', 'POSITION': 'footer'});">Help</a></li>-->
+					<li><a href="/about.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_about', 'POSITION': 'footer'});">Story</a></li>
+					<!--<<li><a href="/team.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_team', 'POSITION': 'footer'});">Team</a></li>-->
+					<li><a href="http://jewelbots.tumblr.com/" target="_blank" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_blog', 'POSITION': 'footer'});">Blog</a></li>
+					<li><a class="active" href="/jobs.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_jobs', 'POSITION': 'footer'});">Jobs</a></li>
+					<li><a href="/intro-to-wearables-kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_introwk', 'POSITION': 'footer'});">Wearables</a></li>
+					<li><a href="/become-an-ambassador.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_ambassador', 'POSITION': 'footer'});">Ambassador</a></li>
+					<!--<<li><a href="/media_kit.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_mediakit', 'POSITION': 'footer'});">Media Kit</a></li>-->
+					<li><a href="/privacy.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_privacy', 'POSITION': 'footer'});">Privacy</a></li>
+					<!--<<li><a href="/terms.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_terms', 'POSITION': 'footer'});">Terms</a></li><br />-->
+					<li><a href="/contact.html" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_contact', 'POSITION': 'footer'});">Contact</a></li>
+				</ul>
+				<p class="address">
+					50 Eldridge Street, 5th Floor, New York, NY 10002<br />
+					<a href="mailto:hi@jewelbots.com">hi@jewelbots.com</a><br />
+					(862) 201-3065<br />
+				</p>
+				<p class="credits">
+					Jewelbots © 2017 &nbsp; | &nbsp; Made with love in NYC &nbsp; | &nbsp; Changing the world one Jewelbot at a time
+				</p>
+				<a class="mxp-interaction_action_clicked_section_footer_mxp" href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+			</div><!--//section_footer -->
+
+		</div><!--//content_container -->
+	</div><!--//site_container -->
+
+	<script>
+		$(document).ready(function(){
+			$(window).resize(); //-- and force
+		});
+
+		$(window).scroll(function(){
+			header();
+			$(window).resize(); //-- and force
+		});
+
+		$(window).resize(function(){
+			size_instruction_videos();
+		});
+
+		$(window).bind('orientationchange', function(event) {
+
+			$(window).resize(); //-- and force
+		});
+
+
+		//--------------------------------------------------------------------------------------//
+		//
+		//
+		//-- scroll(id, shift) ------------------------------------//
+		function scroll(id, shift){
+			$('html,body').stop().animate({scrollTop: $(id).offset().top -shift}, 700);
+		}
+		//
+		//
+		//-- header(state) -------------------------------------------------------//
+		function header(state){
+			if($(window).width() > 768){
+				if($(window).scrollTop() > 1){
+					$('.faq .header_default').addClass('header_sticky');
+				} else {
+					$('.faq .header_default').removeClass('header_sticky');
+				}
+			} else {
+				$('.faq .header_default').addClass('header_sticky');
+			}
+		}
+		$('.logo_mobile').click(function() {
+			$('.header_sticky ul.navigation').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ });
+		});
+		//
+		//
+		//-- modal_newsletter(state) ---------------------------------------------//
+		function modal_newsletter(state){
+			if(state=='open_overlay'){
+				$('#content_container').addClass('blurred');
+
+				$('#modal_newsletter').addClass('overlay');
+				$('#modal_newsletter.overlay').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+			//	$('#modal_newsletter.overlay .modal').stop().show().animate({'top':'50%'}, 200, function() { /* do nothing */ });
+
+				$('#modal_newsletter .modal .save').css('display', 'block' );
+				$('#modal_newsletter .modal .news').css('display', 'none' );
+			}
+			if(state=='open_fixed'){
+				$('#modal_newsletter').addClass('fixed');
+				$('#modal_newsletter').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+			}
+			if(state=='open_fixed_delay'){
+				open_fixed_delay = 1;
+			}
+			if(state=='close'){
+				$('#content_container').removeClass('blurred');
+
+				$('#modal_newsletter .modal').stop().animate({'opacity':'0.0', 'top':'-50%'}, 500, function() {
+					$('#modal_newsletter').stop().animate({'opacity':'0.0'}, 200, function() {
+						$('#modal_newsletter').stop().hide();
+						$('#modal_newsletter .modal').css('opacity', '1.0' );
+
+						$('#modal_newsletter').removeClass('overlay');
+						$('#modal_newsletter').removeClass('fixed');
+
+						$('#modal_newsletter .modal .save').css('display', 'none' );
+						$('#modal_newsletter .modal .news').css('display', 'none' );
+					});
+				});
+			}
+		}
+		//
+		//
+		//-- modal_video(state) --------------------------------------------------//
+		function modal_video(state){
+			if(state=='open_jewelbotspromo'){
+				$('#content_container').addClass('blurred');
+
+				$('#modal_video').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+
+				//-- 1: load video
+				(function(d){
+					var modal_video_iframe = d.getElementById('modal_video_iframe');
+					modal_video_iframe.src ='https://player.vimeo.com/video/155051675?autoplay=1&loop=0&title=0&byline=0&portrait=0';
+				})(document);
+				//-- 2: size video
+				modal_video('size');
+			}
+			if(state=='open_billnyepromo'){
+				$('#content_container').addClass('blurred');
+
+				$('#modal_video').stop().show().animate({'opacity':'1.0'}, 500, function() { /* do nothing */ });
+
+				//-- 1: load video
+				(function(d){
+					var modal_video_iframe = d.getElementById('modal_video_iframe');
+					modal_video_iframe.src ='https://www.youtube.com/embed/XL7JzO4QjXw?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1';
+				})(document);
+				//-- 2: size video
+				modal_video('size');
+			}
+			if(state=='size'){
+				$('#modal_video .wrapper').css('height', $('#modal_video .wrapper').width() / 1.78 );
+
+				if( $(window).width() / $(window).height() < 1.78 ){
+					$('#modal_video').css('position', 'fixed' );
+					$('#modal_video .wrapper').css('margin-top', ( $(window).height()-$('#modal_video .wrapper').height() ) / 2  );
+				} else {
+					$('#modal_video').css('position', 'absolute' );
+					$('#modal_video .wrapper').css('margin-top', '50px' );
+				}
+			}
+			if(state=='close'){
+				$('#content_container').removeClass('blurred');
+
+				$('#modal_video').stop().animate({'opacity':'0.0'}, 200, function() {
+					$('#modal_video').stop().hide();
+				});
+				//-- 1: unload video
+				(function(d){
+					var modal_video_iframe = d.getElementById('modal_video_iframe');
+					modal_video_iframe.src ='foo';
+				})(document);
+			}
+		}
+		//
+		//
+		//-- index_section_hero(state) -------------------------------------------//
+		function index_section_hero(state){
+			if(state=='playvideo'){
+				//-- 1: load video
+				(function(d){
+					var hero_video_iframe = d.getElementById('hero_video_iframe');
+					hero_video_iframe.src ='https://player.vimeo.com/video/153084824?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0';
+				})(document);
+				//-- 2: size video
+				if($(window).width() / $(window).height() < 1.78){
+					$('.index .section_hero iframe').css('height', $(window).height() +0 );
+					$('.index .section_hero iframe').css('width', ($(window).height() +0 )*1.78 );
+				} else {
+					$('.index .section_hero iframe').css('width', $(window).width() +0 );
+					$('.index .section_hero iframe').css('height', ($(window).width() +0 )/1.78 );
+				}
+			}
+		}
+		//
+	
+		//
+		//
+		//-- go_section_instruction(action) --------------------------------------//
+		function size_instruction_videos(){
+			//$('.instructions .video iframe').height( $('.instructions .video iframe').width()/1.78 );
+			$('.instructions iframe').height( 360 );
+		}
+
+		//
+		//-- go_section_faqs(action) ---------------------------------------------//
+		$('.section_faqs .more').click(function() {
+			/* for all site's more buttons */
+
+			//-- 1 (if open, change copy)
+			if( $(this).hasClass("more_active") ){
+				$(this).removeClass("more_active");
+				$(this).parent().children('.folder').stop(true, true).slideUp(1000, function() {
+					/* do nothing*/
+				});
+			} else {
+				//-- 2 (open, change copy)
+				$(this).addClass("more_active");
+				$(this).css("display", "none");
+				$(this).parent().children('.folder').stop(true, true).slideDown(1000, function() {
+					/* do nothing*/
+
+				});
+			}
+		});
+		$('.section_faqs .question').click(function() {
+			//-- 1 (if open)
+			if( $(this).parent().children('.answer').hasClass( "answer_active" ) ){
+				//$(this).parent().children('.answer').removeClass("answer_active");
+				//$(this).parent().children('.answer').stop(true, true).slideUp(300, function() {
+					/* do nothing*/
+					//});
+			} else {
+				//-- 2 (close all)
+				$(".answer_active").each(function(){
+					//$(this).removeClass("answer_active");
+					//$(this).stop(true, true).slideUp(300, function() {
+						/* do nothing*/
+						//});
+				});
+				//-- 3 (and open the one in question)
+				$(this).parent().children('.answer').addClass("answer_active");
+				$(this).parent().children('.answer').stop(true, true).slideDown(300, function() {
+					/* do nothing*/
+				});
+			}
+		});
+		//
+		//
+		//-- index_section_code(state) -------------------------------------------//
+		function index_section_code(state){
+			if(state=='playvideo'){
+				//-- 1: load video
+				(function(d){
+					var code_video_iframe = d.getElementById('code_video_iframe');
+					code_video_iframe.src ='https://player.vimeo.com/video/172983545?autoplay=1&loop=1&title=0&byline=0&portrait=0';
+				})(document);
+
+			}
+			if(state=='size'){
+				//-- 2: size video
+				if($(window).width() > 1024){
+					$('.index .section_code').css('height', $('.index .section_code').width() /1.78 );
+					$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
+				} else {
+					$('.index .section_code').css('height', 'auto' );
+					$('.index .section_code #code_video_iframe').css('height', $('.index .section_code').width() /1.78 );
+				}
+			}
+		}
+	</script>
+	<script type="text/javascript" src="assets/js/site-scripts-bd231 59802.js"></script>
+	<!-- GOOGLE  ⬇ -->
+	<script type="text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-62323216-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<!-- GOOGLE  ⬆ -->
+	<!-- RUN  ⬇ -->
+	<script type="text/javascript">
+		//modal_newsletter('open_overlay');
+	</script>
+	<!-- RUN  ⬆ -->
+</body>
+</html>

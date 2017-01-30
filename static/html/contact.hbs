@@ -122,7 +122,10 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 						<li><a href="javascript:void;" onClick="scroll('.section_features','70');" target="_self" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_features', 'POSITION': 'header'});">Features</a></li>
 						<li><a href="/go.html" target="_self">Getting Started</a></li>
 						<li><a href="http://alpha.jewelbots.com" target="_self">Community</a></li>
+						<li><a href="/faq.html" target="_self">FAQ</a></li>
 						<li><a href="/contact.html" target="_self">Support</a></li>
+						<li><a href="/ambassador.html" target="_self">Ambassadors</a></li>
+
 					</ul>
 
 					<a class="cta_preorder" href="javascript:void;" target="_self" onClick="scroll('#section_sale','70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_preorder', 'POSITION': 'header'});">Get Your Jewelbot</a>
@@ -132,19 +135,14 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 			</div><!--//section_header -->
 
 			<div class="section_hero">
-				<h1>There are a many ways for you to get in touch with us here at Jewelbots.</h1>
-				<div class="cta_join" onClick="javascript:scroll('.section_copy', '70'); mixpanel.track('INTERACTION', {'ACTION': 'clicked_learnmore_con tact', 'POSITION': 'hero'});">Learn More</div>
-				<p class="small">
-					To learn more please<br />
-					scroll down.
-					<img class="arrow" src="assets/images/site_section_hero__arrow_down.png" />
-				</p>
+				<h1>There are a many ways for you to get in touch!</h1>
+
 				<div class="background"></div>
 			</div><!--//section_hero -->
 
 			<div class="section_copy">
-				<h3>We'd love to help!</h3>
-				<p>Did you just get your device? Head over to our <a href="/go.html">getting started page.</a></p>
+				<h2>We'd love to help!</h2>
+				<p>Did you just get your device? If so, head over to our <a href="/go.html">getting started page for instructions.</a></p>
 				<p>Having trouble with setup? Head over to our <a href="http://alpha.jewelbots.com">forums</a> where you can check out our <a href="http://alpha.jewelbots.com/c/help/troubleshooting-faq">FAQs</a> and <a href="http://alpha.jewelbots.com/c/help">ask us questions</a> directly.
 				<p>You can also go there to ask us <a href="http://alpha.jewelbots.com/c/help/questions-about-my-order">questions about your order.</a></p>
 				<p>You can also email us at <a href="mailto:hi@jewelbots.com" onClick="mixpanel.track('INTERACTION', {'ACTION': 'clicked_pre_order_hero'});">hi@jewelbots.com</a>
@@ -209,6 +207,23 @@ mixpanel.init("9de67913ff56693e76306919cc0fe64e");</script><!--T:bf14c79a96fff9b
 	<!-- RUN  ⬆ -->
 	<!-- ADROLL  ⬇ -->
 	<script type="text/javascript">
+	//
+	//-- header(state) -------------------------------------------------------//
+	function header(state){
+		if($(window).width() > 768){
+			if($(window).scrollTop() > 1){
+				$('.contact .header_default').addClass('header_sticky');
+			} else {
+				$('.contact .header_default').removeClass('header_sticky');
+			}
+		} else {
+			$('.contact .header_default').addClass('header_sticky');
+		}
+	}
+	$('.logo_mobile').click(function() {
+		$('.header_sticky ul.navigation').stop(true, true).slideToggle( 'slow', function() { /* do nothing */ });
+	});
+	//
 	    adroll_adv_id = "P27U42Q3XBE6ZCSRCWXVAR";
 	    adroll_pix_id = "UVVRJMOBUZCFBECOB6ZDVH";
 	    /* OPTIONAL: provide email to improve user identification */

@@ -26,4 +26,7 @@ router.get('/forum', function(req, res) {
 router.get('/forums', function(req, res) {
   res.redirect('http://alpha.jewelbots.com');
 });
+router.get('/faq', function(req, res) {
+  res.redirect('/faq.html');
+});
 module.exports = router;
