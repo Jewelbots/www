@@ -1038,6 +1038,9 @@ em {
 		margin: 0 0 0 0;
 		padding: 30px 0 30px 0;
 	}
+	.section_copy h3 {
+		line-height: 20px;
+	}
 }
 /* @end */
 
@@ -5215,6 +5218,34 @@ em {
 		padding: 50px 25px 50px 25px;
 
 		text-align: left;
+	}
+	#site_container.go .section_instructions .instruction_container .instructions .copy {
+		float: none;
+		width: 100%;
+	}
+	#site_container.go .section_instructions .instruction_container .instructions .video {
+		float: none;
+		width: 100%;
+	}
+	#site_container.go .section_instructions .instructions .video {
+		float: none;
+		width: 100%;
+	}
+	#site_container.go .section_instructions img {
+		display: block;
+		position: relative;
+		float: right;
+		width: 40%;
+		height: auto;
+		margin: 0 0 0 30px;
+		padding: 0 0 0 0;
+	}
+	#site_container.go .section_instructions .instructions .copy {
+		width: 100%;
+		float: none;
+	}
+	#site_container.go .section_instructions h3 {
+		line-height: 20px;
 	}
 }
 /* @end */
