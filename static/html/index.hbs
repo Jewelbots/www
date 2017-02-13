@@ -6,6 +6,7 @@
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	</head>
 	<body>
+		You are being redirected to: <a href="https://shop.jewelbots.com">https://shop.jewelbots.com</a>
 		<script>
 			//
 			//
@@ -17,7 +18,11 @@
 			//
 			//
 			// JavaScript code to redirect a URL
-			window.location.replace('https://shop.jewelbots.com/?utm_campaign='+utm_campaign+'&utm_medium='+utm_medium+'&utm_source='+utm_source);
+			if(utm_campaign != null || utm_medium != null || utm_source != null){
+				window.location.replace('https://shop.jewelbots.com/?utm_campaign='+utm_campaign+'&utm_medium='+utm_medium+'&utm_source='+utm_source);
+			} else {
+				window.location.replace('https://shop.jewelbots.com');
+			}
 		</script>
 	</body>
 </html>
