@@ -8,6 +8,8 @@ On MAC OS X:
   - Clone repository
   - Run these commands:
 
+ `npm install`
+ `npm install -g gulp`
 `chmod +X ./bootstrap.sh`  
 `sudo ./bootstrap.sh`
 
